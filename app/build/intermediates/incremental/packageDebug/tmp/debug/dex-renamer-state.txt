@@ -1,0 +1,4 @@
+#Wed Mar 01 12:37:56 WEST 2023
+base.0=D\:\\MasterCard NFC Reader\\Samples\\sample-mpos-application-src\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

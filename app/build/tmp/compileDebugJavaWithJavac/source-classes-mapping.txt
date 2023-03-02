@@ -1,0 +1,93 @@
+com/mastercard/sampleapp/mpos/Tags.java
+ com.mastercard.sampleapp.mpos.Tags
+com/mastercard/sampleapp/mpos/BrandIdentifier.java
+ com.mastercard.sampleapp.mpos.BrandIdentifier
+com/mastercard/sampleapp/listener/DataProvider.java
+ com.mastercard.sampleapp.listener.DataProvider
+com/mastercard/sampleapp/activity/BaseActivity.java
+ com.mastercard.sampleapp.activity.BaseActivity
+com/mastercard/sampleapp/implementations/nfc/NFCManager.java
+ com.mastercard.sampleapp.implementations.nfc.NFCManager
+com/mastercard/sampleapp/implementations/OutcomeObserver.java
+ com.mastercard.sampleapp.implementations.OutcomeObserver
+ com.mastercard.sampleapp.implementations.OutcomeObserver$1
+com/mastercard/sampleapp/implementations/TransactionProcessLoggerImplementation.java
+ com.mastercard.sampleapp.implementations.TransactionProcessLoggerImplementation
+com/mastercard/sampleapp/implementations/PosPaymentData.java
+ com.mastercard.sampleapp.implementations.PosPaymentData
+com/mastercard/sampleapp/listener/TransactionListener.java
+ com.mastercard.sampleapp.listener.TransactionListener
+com/mastercard/sampleapp/models/LogType.java
+ com.mastercard.sampleapp.models.LogType
+com/mastercard/sampleapp/permissions/PermissionHelper.java
+ com.mastercard.sampleapp.permissions.PermissionHelper
+com/mastercard/sampleapp/mpos/PaymentNetwork.java
+ com.mastercard.sampleapp.mpos.PaymentNetwork
+com/mastercard/sampleapp/models/Interface.java
+ com.mastercard.sampleapp.models.Interface
+com/mastercard/sampleapp/widgets/ProgressWheel.java
+ com.mastercard.sampleapp.widgets.ProgressWheel
+ com.mastercard.sampleapp.widgets.ProgressWheel$1
+com/mastercard/sampleapp/implementations/nfc/ReaderCallbackImpl.java
+ com.mastercard.sampleapp.implementations.nfc.ReaderCallbackImpl
+com/mastercard/sampleapp/utils/FileUtils.java
+ com.mastercard.sampleapp.utils.FileUtils
+ com.mastercard.sampleapp.utils.FileUtils$1
+com/mastercard/sampleapp/implementations/CardCommProviderStub.java
+ com.mastercard.sampleapp.implementations.CardCommProviderStub
+com/mastercard/sampleapp/implementations/ScriptImplementation.java
+ com.mastercard.sampleapp.implementations.ScriptImplementation
+ com.mastercard.sampleapp.implementations.ScriptImplementation$1
+com/mastercard/sampleapp/fragment/TerminalOptionsFragment.java
+ com.mastercard.sampleapp.fragment.TerminalOptionsFragment
+com/mastercard/sampleapp/utils/DataManager.java
+ com.mastercard.sampleapp.utils.DataManager
+ com.mastercard.sampleapp.utils.DataManager$CountryCode
+ com.mastercard.sampleapp.utils.DataManager$CurrencyCode
+ com.mastercard.sampleapp.utils.DataManager$TransactionType
+com/mastercard/sampleapp/api/SampleDataProviderImpl.java
+ com.mastercard.sampleapp.api.SampleDataProviderImpl
+com/mastercard/sampleapp/BuildConfig.java
+ com.mastercard.sampleapp.BuildConfig
+com/mastercard/sampleapp/implementations/ResourceProviderImplementation.java
+ com.mastercard.sampleapp.implementations.ResourceProviderImplementation
+com/mastercard/sampleapp/implementations/nfc/TagEventListener.java
+ com.mastercard.sampleapp.implementations.nfc.TagEventListener
+com/mastercard/sampleapp/fragment/BaseFragment.java
+ com.mastercard.sampleapp.fragment.BaseFragment
+com/mastercard/sampleapp/implementations/nfc/NfcProvider.java
+ com.mastercard.sampleapp.implementations.nfc.NfcProvider
+ com.mastercard.sampleapp.implementations.nfc.NfcProvider$1
+ com.mastercard.sampleapp.implementations.nfc.NfcProvider$ConnectionObjectImpl
+com/mastercard/sampleapp/implementations/UnpredictableNumberImplementation.java
+ com.mastercard.sampleapp.implementations.UnpredictableNumberImplementation
+com/mastercard/sampleapp/api/BaseApi.java
+ com.mastercard.sampleapp.api.BaseApi
+ com.mastercard.sampleapp.api.BaseApi$1
+com/mastercard/sampleapp/fragment/LibraryInfoFragment.java
+ com.mastercard.sampleapp.fragment.LibraryInfoFragment
+com/mastercard/sampleapp/fragment/TransactionLogsFragment.java
+ com.mastercard.sampleapp.fragment.TransactionLogsFragment
+ com.mastercard.sampleapp.fragment.TransactionLogsFragment$1
+com/mastercard/sampleapp/models/MposLibraryStatus.java
+ com.mastercard.sampleapp.models.MposLibraryStatus
+com/mastercard/sampleapp/implementations/DisplayImplementation.java
+ com.mastercard.sampleapp.implementations.DisplayImplementation
+com/mastercard/sampleapp/fragment/TransactionOptionsFragment.java
+ com.mastercard.sampleapp.fragment.TransactionOptionsFragment
+com/mastercard/sampleapp/mpos/MposApplication.java
+ com.mastercard.sampleapp.mpos.MposApplication
+ com.mastercard.sampleapp.mpos.MposApplication$1
+com/mastercard/sampleapp/fragment/LogTypeSelectionFragment.java
+ com.mastercard.sampleapp.fragment.LogTypeSelectionFragment
+ com.mastercard.sampleapp.fragment.LogTypeSelectionFragment$1
+com/mastercard/sampleapp/fragment/ProcessingFragment.java
+ com.mastercard.sampleapp.fragment.ProcessingFragment
+ com.mastercard.sampleapp.fragment.ProcessingFragment$1
+ com.mastercard.sampleapp.fragment.ProcessingFragment$2
+ com.mastercard.sampleapp.fragment.ProcessingFragment$3
+com/mastercard/sampleapp/fragment/HomeFragment.java
+ com.mastercard.sampleapp.fragment.HomeFragment
+com/mastercard/sampleapp/activity/HomeActivity.java
+ com.mastercard.sampleapp.activity.HomeActivity
+ com.mastercard.sampleapp.activity.HomeActivity$1

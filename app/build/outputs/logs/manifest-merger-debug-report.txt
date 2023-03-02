@@ -1,0 +1,135 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:recyclerview-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a9b93975d9d8cafe1bf21e700be0e7af\transformed\recyclerview-v7-25.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:17:1-27:12
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+	package
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.NFC
+ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:5:5-62
+	android:name
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:5:22-59
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:7:22-78
+application
+ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:9:5-26:19
+MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:25:5-20
+	android:supportsRtl
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:13:9-41
+	android:icon
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:15:9-40
+	android:name
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:10:9-69
+activity#com.mastercard.sampleapp.activity.HomeActivity
+ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:17:9-25:20
+	android:theme
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:19:13-56
+	android:name
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:18:13-74
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:23:27-74
+uses-sdk
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a9b93975d9d8cafe1bf21e700be0e7af\transformed\recyclerview-v7-25.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a9b93975d9d8cafe1bf21e700be0e7af\transformed\recyclerview-v7-25.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:21:5-23:58
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
