@@ -105,7 +105,7 @@
         "name": "Terminal Action Code - Denial",
         "tag": "DF8121",
         "implementations": ["EMV", "EMV/DE"],
-        "value": "844000000C"
+        "value": "840000000C"
     }, {
         "name": "Terminal Action Code - Online",
         "tag": "DF8122",

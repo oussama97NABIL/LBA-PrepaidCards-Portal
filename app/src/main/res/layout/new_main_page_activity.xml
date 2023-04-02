@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgound_login"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5" >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_dark"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/scanButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/scan_b"
+            android:background="@drawable/custom_red_square_button"
+            android:scaleType="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Scan \n &amp; Pay"
+            android:visibility="gone"
+            android:fontFamily="black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/scanButton" />
+
+        <Button
+            android:id="@+id/resetApp"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/custom_red_button"
+            android:fontFamily="regular"
+            android:orientation="vertical"
+            android:text="Reset App"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.881" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        >
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15sp"
+            android:padding="5sp"
+            android:text=""
+            android:textColor="@color/red"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="16dp"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/imageButton3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/custom_gray_square_button"
+            app:iconGravity="textTop"
+            app:backgroundTint="@null"
+            app:iconPadding="20dp"
+            app:icon="@drawable/invite_friend"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAllCaps="false"
+            android:text="Invite a Friend"
+            android:fontFamily="regular"
+            android:textSize="12sp"
+            android:textColor="@color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/imageButton2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/custom_gray_square_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="#F3F3F3"
+            app:backgroundTint="@null"
+            app:icon="@drawable/ic_branch_locator_phase2"
+            app:iconGravity="top"
+            app:iconSize="@dimen/_25sdp"
+            android:fontFamily="regular"
+            app:iconPadding="@dimen/_2sdp"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+            app:layout_constraintStart_toEndOf="@id/imageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="10sp"
+            android:textAllCaps="false"
+            android:text="Branch/ATM Locator" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/imageButton4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_gray_square_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="#F3F3F3"
+            app:backgroundTint="@null"
+            app:icon="@drawable/call_us_b"
+            app:iconGravity="textTop"
+            android:fontFamily="regular"
+            app:iconPadding="5dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAllCaps="false"
+            android:text="Contact Us"
+            android:onClick="ShowPopup2"
+            />
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp"
+
+            >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordFieldLayout"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:helperTextTextColor="@color/colorGrey"
+            style="@style/MyTextInputLayout_overlay"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="true"
+                android:inputType="textPassword"
+                android:focusableInTouchMode="true"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+      <!--  <Button
+            android:id="@+id/imageButton28"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="53dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/custom_red_button"
+            app:layout_constraintTop_toBottomOf="@id/passwordFieldLayout"
+
+            android:visibility="gone"
+            android:text="CONFIRM"
+            android:textColor="@color/white"
+            />-->
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_red_button"
+            android:text="Login"
+            android:layout_below="@id/passwordFieldLayout"
+            android:textColor="@color/white"
+            android:fontFamily="regular"
+            android:layout_gravity="center"/>
+        <ImageButton
+            android:id="@+id/btnBiometric"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:layout_below="@id/passwordFieldLayout"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/custom_red_square_button"
+            app:srcCompat="@drawable/fingerprint_icon_b" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/forg_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Forgotten your Password ?"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout" />
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_below="@+id/relativeLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forg_pass"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginBottom="35dp"
+            android:text="Terms &amp; Conditions"
+            android:fontFamily="bold"
+
+
+            />
+
+        <!--
+         <ImageButton
+            android:id="@+id/forg_pass"
+            android:layout_width="68dp"
+            android:layout_height="76dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="400dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/imageButton4"
+            android:layout_toRightOf="@+id/imageButton4"
+            android:background="@drawable/button_border_pass"
+            app:srcCompat="@drawable/forg_pass3" />
+        -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/header_layout"
+        layout="@layout/header_layout" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_layout"
+        android:background="@color/tr_background_gray"
+        >
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Card To Card"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:textStyle="bold"/>
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_layout"
+        android:layout_below="@+id/layout1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="5dp"
+                android:width="150dp"
+                android:text="SOURCE CARD"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="14dp"/>
+            <Spinner
+                android:id="@+id/spindebitAccount"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                style="@style/spinner_style"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:width="150dp"
+                android:text="BALANCE"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/TxtBalance"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_column="4"
+                android:width="150dp"
+
+                style="@style/spinner_style"
+                android:inputType="number"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:width="150dp"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:text="SELECT BENEFICIARY"
+                android:textSize="14dp"
+                />
+            <Spinner
+                android:id="@+id/spinBenef"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                style="@style/spinner_style"/>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:width="150dp"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:text="PAYEE BANK"
+                android:textSize="14dp"
+                />
+
+            <TextView
+                android:id="@+id/ACHBank"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                style="@style/spinner_style"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:width="150dp"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:text="Payee Branch"
+                android:textSize="14dp"
+                />
+
+            <EditText
+                android:id="@+id/spinACHBranch"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                style="@style/spinner_style"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:width="150dp"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:text="CREDIT ACCOUNT"
+                android:textSize="14dp"
+                />
+            <TextView
+                android:id="@+id/TxtCreditAccount"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                style="@style/spinner_style"
+                android:inputType="number"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:width="150dp"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:text="PAYEE NAME"
+                android:textSize="14dp"
+                />
+            <EditText
+                android:id="@+id/TxtPayeeName"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                style="@style/spinner_style"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:width="150dp"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:text="AMOUNT"
+                android:textSize="14dp"
+                />
+            <EditText
+                android:id="@+id/TxtAmount"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                style="@style/spinner_style"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:width="150dp"
+                android:textAlignment="gravity"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:text="PAYMENT DETAILS"
+                android:textSize="14dp"
+                />
+            <EditText
+                android:id="@+id/TxtPaymentDetails"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                style="@style/spinner_style"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/footer_layout"
+        layout="@layout/footer_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        />
+
+</RelativeLayout>

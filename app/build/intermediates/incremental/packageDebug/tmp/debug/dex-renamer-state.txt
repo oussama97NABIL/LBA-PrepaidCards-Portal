@@ -1,4 +1,4 @@
-#Wed Mar 01 12:37:56 WEST 2023
-base.0=D\:\\MasterCard NFC Reader\\Samples\\sample-mpos-application-src\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Sun Apr 02 16:04:20 WET 2023
+base.0=C\:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

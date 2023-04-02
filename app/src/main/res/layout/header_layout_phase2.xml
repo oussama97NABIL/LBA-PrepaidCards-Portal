@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:background="@color/white">
+
+
+    <ImageButton
+        android:id="@+id/button_sign_out"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="111dp"
+        android:layout_marginLeft="-66dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="23dp"
+        android:layout_toEndOf="@+id/home_button"
+        android:layout_toRightOf="@+id/home_button"
+        android:background="@color/white"
+        android:onClick="doLogout2"
+        android:padding="5sp"
+        app:srcCompat="@drawable/ic_logout_phase2" />
+    <!--
+        <TextView
+            android:id="@+id/Greetmsg"
+            android:layout_width="122dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="46dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="30dp"
+            android:text="welcome"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/showUser"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView13"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="-15dp"
+            android:layout_marginBottom="18dp"
+            android:text="younes ab"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnBalances"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-13dp"
+            android:layout_marginLeft="-170dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="25dp"
+            android:layout_toStartOf="@+id/button_sign_out"
+            android:layout_toLeftOf="@+id/button_sign_out"
+            android:layout_toEndOf="@+id/home_button"
+            android:layout_toRightOf="@+id/home_button"
+            android:background="@drawable/button_border"
+            android:text="Balances"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp" />
+    -->
+    <ImageButton
+        android:id="@+id/home_button"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="21dp"
+        android:padding="5sp"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/ic_home_phase2_black" />
+
+    <ImageButton
+        android:id="@+id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:background="@drawable/button_border_log"
+        app:srcCompat="@drawable/back_black" />
+
+
+</RelativeLayout>

@@ -1,16 +1,35 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\MasterCard NFC Reader\\Samples\\sample-mpos-application-src\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\86117c9ba03b878a159a5d40e015aff3\\transformed\\appcompat-v7-25.0.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\oussa\\.gradle\\caches\\transforms-3\\97e7ec19bd11dff7ae3d399ac9d0fa5b\\transformed\\core-1.5.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
                         "endColumns": "65",
                         "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\oussa\\.gradle\\caches\\transforms-3\\d76f35a08c08216004feed386d7db8d0\\transformed\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
                     }
                 }
             ]

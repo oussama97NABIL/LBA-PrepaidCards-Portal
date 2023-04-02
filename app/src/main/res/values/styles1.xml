@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"> -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+
+    </style>
+
+    <style name="CustomFontDialog" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/spinner_bg</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="text_drawer_heading">
+
+    <item name="android:textSize">@dimen/text_size_normal</item>
+
+    <item name="android:textStyle">bold</item>
+
+    <item name="android:textColor">@color/colorWhite</item>
+
+</style>
+
+
+<style name="text_drawer_normal">
+
+    <item name="android:textSize">@dimen/text_size_small</item>
+
+    <item name="android:textColor">@color/colorPrimaryDark</item>
+
+</style>
+
+
+<style name="text_heading">
+
+    <item name="android:textSize">@dimen/text_size_large</item>
+
+    <item name="android:textStyle">bold</item>
+
+    <item name="android:textColor">@color/colorDarkGrey</item>
+
+</style>
+
+
+    <style name="text_normal">
+
+    <item name="android:textColor">@color/colorDarkGrey</item>
+
+    <item name="android:textSize">@dimen/text_size_normal</item>
+
+</style>
+
+
+    <style name="edit_text">
+
+    <item name="android:layout_height">50dp</item>
+
+    <item name="android:layout_width">match_parent</item>
+
+    <item name="android:layout_marginTop">5dp</item>
+
+    <item name="android:textColor">@color/colorGrey</item>
+
+    <item name="android:padding">10dp</item>
+
+</style>
+
+
+    <style name="button">
+
+    <item name="android:background">@drawable/button</item>
+
+    <item name="android:textColor">@color/colorWhite</item>
+
+    <item name="android:padding">2dp</item>
+
+</style>
+
+
+    <style name="cancelButton">
+
+    <item name="android:background">@drawable/cancel_button</item>
+
+    <item name="android:textColor">@color/colorWhite</item>
+
+    <item name="android:padding">2dp</item>
+
+</style>
+
+    <style name="MyTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <!-- border color -->
+        <item name="boxStrokeColor">@color/text_grey</item>
+
+        <!-- The color of the label when it is collapsed and the text field is active -->
+        <item name="hintTextColor">@color/text_grey</item>
+        <!-- The color of the label in all other text field states (such as resting and disabled) -->
+        <item name="android:textColorHint">@color/text_grey</item>
+    </style>
+
+    <style name="MyTextInputLayout_overlay">
+        <item name="colorOnSurface">@color/cardview_dark_background</item>
+        <item name="colorPrimary">@color/text_grey</item>
+    </style>
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/transparent</item>
+    </style>
+
+    <!--
+
+        <style name="Widget.Design.TextInputLayout" parent="AppTheme">
+            <item name="hintTextAppearance">@style/AppTheme.TextFloatLabelAppearance</item>
+            <item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>
+            <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+            <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
+        </style>
+
+        <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">-->
+    <!-- Floating label appearance here -->
+    <!--  <item name="android:textColor">@color/text_grey_light</item>
+            <item name="android:textSize">13sp</item>
+        </style>
+
+        <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">-->
+    <!-- Error message appearance here -->
+    <!--    <item name="android:textColor">#ff0000</item>
+            <item name="android:textSize">13sp</item>
+        </style>
+-->
+
+</resources>

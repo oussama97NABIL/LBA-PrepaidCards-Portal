@@ -1,7 +1,8 @@
 // #### Version 2.0 (<BundleVersion>.<fileVersion>)
 // NOTE:
 // terminalTags format is "name:value". name must NOT be modified. value must in hex conforming to the length of existing value
-{"READER_PROFILES" : [{
+{"READER_PROFILES" : [
+    {
     "name": "MPOS",
     "type": "Multi",
     "initReaderData": "initNoData",
@@ -15,7 +16,8 @@
         "Transaction Category Code:52",                      // Retail Sale
         "Terminal Type:21",                                  // Online only merchant attended
         "Transaction Type:TRANSACTION_TYPE_PURCHASE"]
-}, {
+},
+    {
     "name": "PPS_MChip1",
     "show": "V3Test",
     "type": "Single",

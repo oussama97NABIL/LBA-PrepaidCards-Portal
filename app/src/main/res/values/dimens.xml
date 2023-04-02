@@ -9,4 +9,6 @@
     <dimen name="text_size_large">16dp</dimen>
     <dimen name="text_size_normal">12dp</dimen>
     <dimen name="text_size_small">9dp</dimen>
+
+
 </resources>

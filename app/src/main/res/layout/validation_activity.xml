@@ -1,0 +1,1909 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/heading_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_height="55.0dip"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/validation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:text="Title"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_layout"
+        android:layout_column="0"
+        android:layout_gravity="center_vertical"
+
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+            <TableRow
+                android:id="@+id/rowTrType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="OPERATION TYPE"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtTrType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="PHONE NUMBER"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+      <TableRow
+                android:id="@+id/Account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="ACCOUNT"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDailyTrLimit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/limitType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text=""
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/txtDailyTrLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowMonthlyTrLimit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="MONTHLY LIMIT"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtMonthlyTrLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_column="5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDebitAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="DebitAccount"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/TxtDebitAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowBalance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="Balance"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/TxtBalance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_column="5"
+                    android:textSize="@dimen/_13ssp"
+                    android:inputType="none"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="FREQUENCY"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtFrequency"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowCreditAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/LblCreditAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="@string/CreditAccount"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/TxtCreditAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_column="5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowNetwork"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/LblNetwork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="Network"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtNetwork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_column="5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowBeneficiaryMobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/LblBeneficiaryMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="180dp"
+                    android:text="benificiary Mobile"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtBeneficiaryMobile"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowGIPBank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/LblGIPBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="GIP Bank"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtGIPBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowACHBank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/LblACHBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="ACHBank"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/TxtACHBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowACHBranch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/LblACHBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="@string/ACHBranch"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/TxtACHBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_column="5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowPayeeName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/LblGIPPayeeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="GIPPayeeName"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/TxtGIPPayeeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDSTVAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/LblDSTVAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="DSTV Account"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtDSTVAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowService"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="Service"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtService"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowBundle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="Bundle"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtBundle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowVodafoneAcc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="Vodafone Account"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtVodafoneAcc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowAmount"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="match_parent"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="@string/Amount"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/TxtAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowNumPages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="Number Of Pages"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtNumPages"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowChequeNum"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="Cheque Number"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtChequeNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowReason"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="Reason"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtReason"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowPaymentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="170dp"
+                    android:text="NARRATION"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtPaymentDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowTrPurpose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="170dp"
+                    android:text="TRANSACTION PURPOSE"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtTrPurpose"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowProvider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="PROVIDER"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/Txtprovider"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowReceiverPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="RECEIVER PHONE"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtReceiverPhone"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowReceiverName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="RECEIVER NAME"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtReceiverName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowECGAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:textSize="@dimen/_13ssp"
+                    android:width="150dp"
+                    android:text="ECG ACCOUNT"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtECGAccount"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowECGClientName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="ECG CLIENT NAME"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtECGClientName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowECGAmountDue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="ECG AMOUNT DUE"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtECGAmountDue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="CARD NUMBER"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtCardNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/id1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="CARD NUMBER"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/id2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <!-- younes -->
+            <TableRow
+                android:id="@+id/rowIssuee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="ISSUED TO"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtIssuee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowCountry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="DESTINATION COUNTRY"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/Txtcountry"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="START DATE"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtStartDate"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="END DATE"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtEndDate"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowdepDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="DEPARTURE DATE"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtdepDate"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowarrDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="ARRIVAL DATE"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtarrDate"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowCard4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="Card number (4 digits)"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtCard4"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="EMAIL"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtEmail"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowContact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:textSize="@dimen/_13ssp"
+                    android:width="150dp"
+                    android:text="CONTACT NUMBER"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtContact"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/rowAgent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="TRAVEL AGENT"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtAgent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowHotel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="HOTEL"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtHotel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowUniversity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="UNIVERSITY"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtUniversity"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowChurch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="CHURCH"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtChurch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowSchool"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="SCHOOL"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtSchool"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="STUDENT NAME"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtStudentName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowStudentID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="STUDENT ID"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtStudentID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowIndexNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="INDEX NUMBER"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtIndexNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowClass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text=" CLASS "
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtClass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowBooking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="BOOKING REFERENCE"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtBooking"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowAcctBenf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="BENEFICIARY AMOUNT"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtAcctBenf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowBenefName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="BENEFICIARY NAME"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtBenefName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowBank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="BENEFICIARY BANK"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtBank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowOp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="BENEFICIARY OPERATION"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtOp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowBranch"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="match_parent"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="USER BRANCH"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/TxtBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowBizCert"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="BUSINESS CERT No"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/TxtBizCert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowDob"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/dobTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="DATE OF BIRTH"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/TxtDob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_column="5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowPIN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="PIN"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtPIN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowPINConf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="PIN CONFIRMATION"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtPINConf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowPass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="PASSWORD"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtPass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowPassConf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="PASSWORD CONFIRMATION"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtPassConf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowProxyId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="PROXY ID"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtProxyId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowCardType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="CARD TYPE"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtCardType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowAtmLimit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="ATM LIMIT"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtAtmLimit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowAtmAmount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="ATM LIMIT AMOUNT"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtAtmAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowPosLimit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="POS LIMIT"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtPosLimit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/rowPosAmount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:text="POS LIMIT AMOUNT"
+                    android:textSize="@dimen/_13ssp"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtPosAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/paymentType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:width="150dp"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="TYPE OF PAYMENT"
+                    android:textAlignment="gravity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/TxtPaymentType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+<!-- Younes -->
+        </TableLayout>
+
+
+        <TableRow
+            android:id="@+id/pinCodeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="visible" >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TxtCodeLayout"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="Pin"
+                app:helperTextTextColor="@color/grey5"
+                style="@style/MyTextInputLayout_overlay"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageButton2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TxtCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:inputType="numberPassword"
+                    android:focusableInTouchMode="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:id="@+id/forgotPinTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/forget_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:hint="Forgot Your PIN ?"
+                android:clickable="true"
+                android:textColorHint="@color/red_color"
+                android:maxLength="6"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/red_color"/>
+
+
+        </TableRow>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/_30sdp">
+
+
+        <Button
+            android:id="@+id/btnNOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:background="@drawable/custom_white_button"
+            android:clickable="true"
+            android:enabled="true"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:elevation="5dp"
+            android:text="Cancel"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_red_button"
+            android:clickable="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:enabled="true"
+            android:text="Ok"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,25 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="move">#4B1D5A</color>
+    <color name="bg_login_screen">#ff0b3f79</color>
+    <color name="label_color">#ffe1eaf1</color>
+    <color name="label_dark_color">#ff21384a</color>
+    <color name="red_color">#ff94382b</color>
+    <color name="dark_grey_color">#ff393a3b</color>
+    <color name="header">#ff9f1a07</color>
+    <color name="red">#ffde9a99</color>
+    <color name="green">#ff00ff00</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#fff</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="text_shadow_white">#FFFFFF</color>
+    <color name="text_grey">#ff424242</color>
+    <color name="blue_bg">#ff2ea3db</color>
+    <color name="colorGold">#FFD700</color>
+    <color name="line_light_grey">#ffc1c1c1</color>
+    <color name="lightest_grey_bg">#fff1f1f1</color>
+    <color name="deep_red">#ff950100</color>
+    <color name="colorRed">#ff950100</color>
+    <color name="text_green">#ff567c02</color>
+    <color name="colorGreen">#ff567c02</color>
+    <color name="colorDarkGrey">#5A5A5A</color>
+    <color name="text_blue">#ff057daf</color>
+    <color name="text_blue_dark">#ff00608a</color>
+    <color name="text_grey_heading">#ff697082</color>
+    <color name="text_grey_light">#ff6a707e</color>
+    <color name="bg_table_row_color1">#ffd2d2d2</color>
+    <color name="bg_table_row_color2">#ffbfbfbf</color>
+    <color name="bg_table_row_color3">#ff2ea3db</color>
+    <color name="Black">#ff000000</color>
+    <color name="light_gray">#ffd8d8d8</color>
+    <color name="tile_recent_light_grey">#ff8f8f8f</color>
+    <color name="btn_blue">#ff2e87cc</color>
+    <color name="btn_blue_hover">#ff1e6dab</color>
+    <color name="btn_red">#ff972818</color>
+    <color name="btn_red_hover">#ffd03a24</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="yellow_bg">#fff29b16</color>
+    <color name="grey_bg">#ffe4e4e4</color>
+    <color name="green_bg">#ff74981a</color>
+    <color name="cbg_red">#D94136</color>
 
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorAccent">#f38b00</color>
+    <!-- Phase 2 colors-->
+    <color name="button_dark_red">#9D272A</color>
+    <color name="button_light_red">#E52D37</color>
+    <color name="background_gra_color">#E3E3E3</color>
+    <color name="text_color_black">#333333</color>
+    <color name="text_gray">#91909A</color>
 
+
+    <!-- grey for menu -->
+    <color name="grey1">#2E2E2E</color>
+    <color name="grey2">#303030</color>
+    <color name="grey3">#484848</color>
+    <color name="grey4">#585858</color>
+    <color name="grey5">#686868</color>
+    <color name="grey6">#E0E0E0</color>
+    <!-- grt=ry for the transaction pages -->
+
+    <color name="tr_text_grey">#C1C0C8</color>
+    <color name="tr_background_gray">#3C3C3D</color>
+    <!--Splashscreen-->
+    <color name="colorPrimary">#FFCCCCCC</color>
+    <color name="colorYellow">#FFFF00</color>
+    <color name="colorPrimaryDark">#181A24</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorTransparentPink">#FF9EA1</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparentWhite">#cccccc</color>
+    <color name="colorStandardBlack">#262626</color>
+    <color name="colorDarkBlue">#001621</color>
+    <color name="colorCyanBlue">#0B9BE2</color>
+    <color name="colorMidBlue">#032B3F</color>
+    <color name="colorCoinBackground">#01242b</color>
     <color name="colorBackground">#e3dfd7</color>
-    <color name="colorGrey">#969696</color>
 
-    <!--Mastercard Colors-->
-    <color name="colorLightGrey">#e3dfd7</color>
-    <color name="colorDarkGrey">#141413</color>
-    <color name="colorRed">#d22a2f</color>
-    <color name="colorOrange">#ff671b</color>
-    <color name="colorGold">#f38b00</color>
-    <color name="colorYellow">#ffc81f</color>
-    <color name="colorGreen">#8db92e</color>
-
-    <!-- Progress wheel -->
-    <color name="progress_wheel_bar_green">#8db92e</color>
-    <color name="progress_wheel_bar_orange">#ff671b</color>
-    <color name="progress_wheel_bar_red">#d22a2f</color>
+    <!--hajer 28/06/2022 -->
+    <color name="colorGrey">#707070</color>
 </resources>

@@ -3,12 +3,12 @@
 buildscript {
     repositories {
         mavenLocal()
-       /* maven {
-            // virtual repo configured at Mastercard artifactory pointing to Google Maven
-            url 'https://artifacts.mastercard.int/artifactory/maven-all/'
-        }*/
+        /* maven {
+             // virtual repo configured at Mastercard artifactory pointing to Google Maven
+             url 'https://artifacts.mastercard.int/artifactory/maven-all/'
+         }*/
         jcenter {
-         //   url 'http://jcenter.bintray.com:80'
+            //   url 'http://jcenter.bintray.com:80'
         }
         google()
     }
@@ -25,7 +25,7 @@ allprojects {
     repositories {
         mavenLocal()
         jcenter {
-           // url 'http://jcenter.bintray.com:80'
+            // url 'http://jcenter.bintray.com:80'
         }
         google()
     }

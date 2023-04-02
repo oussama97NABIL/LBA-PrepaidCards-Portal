@@ -1,135 +1,223 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
-MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:recyclerview-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a9b93975d9d8cafe1bf21e700be0e7af\transformed\recyclerview-v7-25.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:17:1-27:12
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:1-33:12
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\oussa\.gradle\caches\transforms-3\f794c157ce27c216c504b2261e60ef5d\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\oussa\.gradle\caches\transforms-3\c649c7616e40631ba13966002d4bc285\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:17:1-29:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\oussa\.gradle\caches\transforms-3\d76f35a08c08216004feed386d7db8d0\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\1bc1de6a32330280351f65a0393bdf57\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\oussa\.gradle\caches\transforms-3\62be83210208ccdc6bef32902742be53\transformed\jetified-sdp-android-1.0.6\AndroidManifest.xml:2:1-11:12
+MERGED from [com.intuit.ssp:ssp-android:1.0.6] C:\Users\oussa\.gradle\caches\transforms-3\668279eb7e55e942e0d3b7431f1c8315\transformed\jetified-ssp-android-1.0.6\AndroidManifest.xml:2:1-11:12
+MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\oussa\.gradle\caches\transforms-3\84f6e3bd0c403320481a9b658b5eab43\transformed\jetified-roundedimageview-2.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\d5ce58f194e6eb15743ad13effdd09da\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\d2646664f8d9727246d320f24126df9c\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\oussa\.gradle\caches\transforms-3\e7a7361ce08649d63b0b54755f88f036\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\oussa\.gradle\caches\transforms-3\b04e496035f8c1e2f42c46472bb2ce42\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\08a78bb58e82e932da1f82c2b8b82824\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\0a2c06990f10f8bf77c6b2eafaa2d2f7\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\3cb859c1ac0dd29d128e917789be4254\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\8ede10147567c2507cc51ace41c13ea6\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.2.5] C:\Users\oussa\.gradle\caches\transforms-3\edff366e6e5cfbac1c2a94d013c7e39f\transformed\fragment-1.2.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\774abcf94f58543d0777d2543f40d89e\transformed\jetified-activity-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\973d1c6591a02ca84f2ddc5ef5b8076a\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\70c058259436dcd4c71d85461afd1b6a\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\c0d52683149a4f63c5e66613b9f51e2e\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\6d6e532017af0c907cd34d38d04e17fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\d35f0010fbff61dfb15ae12685344215\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.5.0] C:\Users\oussa\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\58c33f79541fa64793747c2f03ce017d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\5267a53a2d15588de00a1bdb2c39ebb8\transformed\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\a59437bec093e25b88e1ed0cf3a9ded1\transformed\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\oussa\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\02660f3bb5ba5d35d36b84f966b5477a\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\fb3449e72dc29f308cc217ab7482dbfb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\oussa\.gradle\caches\transforms-3\d6b2c6310d0da332cb9475defea77305\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\2d52251ccbf37567fe83dbfcfab10bfb\transformed\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\oussa\.gradle\caches\transforms-3\72de0627c0c71c2c0ac6e20b5aa28ba3\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\5dc1b0d68d5be8d395af6b357c3240c1\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\eb3bd80f829817dc46cef00554f9b4ab\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\998ecad2e598076d0444e5b886cc28b2\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\511e2a36f18b29fdf3f425e3962668f8\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\dad45be7fb3d40cd3f820bd1d6623c5b\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:3:5-39
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:1-33:12
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:1-28:12
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:1-33:12
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:2:11-69
-uses-permission#android.permission.NFC
-ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:5:5-62
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:5:22-59
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:7:5-81
-	android:name
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:7:22-78
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:9:5-26:19
-MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:25:5-20
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:5:5-31:19
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\oussa\.gradle\caches\transforms-3\f794c157ce27c216c504b2261e60ef5d\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\oussa\.gradle\caches\transforms-3\f794c157ce27c216c504b2261e60ef5d\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\oussa\.gradle\caches\transforms-3\c649c7616e40631ba13966002d4bc285\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\oussa\.gradle\caches\transforms-3\c649c7616e40631ba13966002d4bc285\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.5.0] C:\Users\oussa\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] C:\Users\oussa\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\oussa\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\oussa\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.5.0] C:\Users\oussa\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:9:9-35
 	android:label
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:8:9-41
 	android:icon
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:15:9-40
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:10:9-40
+uses-library#org.apache.http.legacy
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:11:9-89
+	android:required
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:11:62-87
 	android:name
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:10:9-69
-activity#com.mastercard.sampleapp.activity.HomeActivity
-ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:17:9-25:20
-	android:theme
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:19:13-56
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:11:23-61
+activity#com.LBA.prepaidPortal.activity.HomeActivity
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:12:9-15:20
+	android:exported
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:14:13-37
 	android:name
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:18:13-74
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:13:13-71
+activity#com.LBA.prepaidPortal.activity.Z_WelcomeActivity
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:16:9-64
+	android:name
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:16:19-61
+activity#com.LBA.prepaidPortal.activity.BaseActivity
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:17:9-20:20
+	android:exported
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:19:13-37
+	android:name
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:18:13-71
+activity#com.LBA.MainActivity
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:22:9-30:20
+	android:exported
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:24:13-36
+	android:name
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:23:13-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:20:13-24:29
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:28:27-74
 uses-sdk
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\86117c9ba03b878a159a5d40e015aff3\transformed\appcompat-v7-25.0.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a5e31eac6ffb94fffc2f7da87d3fbb40\transformed\transition-25.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:25.0.0] C:\Users\User\.gradle\caches\transforms-3\f7a4186b85a506fecb5a014b631dfa87\transformed\support-v4-25.0.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\587e0989d2a2b4990439c8377073f981\transformed\animated-vector-drawable-25.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-vector-drawable:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6ec02a360fbc7ccf480e42cf825a5124\transformed\support-vector-drawable-25.0.0\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a9b93975d9d8cafe1bf21e700be0e7af\transformed\recyclerview-v7-25.0.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.0.0] C:\Users\User\.gradle\caches\transforms-3\a9b93975d9d8cafe1bf21e700be0e7af\transformed\recyclerview-v7-25.0.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:25.0.0] C:\Users\User\.gradle\caches\transforms-3\2562d28e09ffc2f70eba495ad158ad3c\transformed\support-fragment-25.0.0\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\9a8fbeb458867ea912fdc1162778ac84\transformed\support-media-compat-25.0.0\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:25.0.0] C:\Users\User\.gradle\caches\transforms-3\38d4ab6fc4deaa54320bf5b81ee2d9f9\transformed\support-core-utils-25.0.0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.0.0] C:\Users\User\.gradle\caches\transforms-3\6af3842b148bc225506a4665c09b0741\transformed\support-core-ui-25.0.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.0.0] C:\Users\User\.gradle\caches\transforms-3\cda5eb52fbcc6cfe1cc667ff7bf756f9\transformed\support-compat-25.0.0\AndroidManifest.xml:21:5-23:58
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.0.0] C:\Users\User\.gradle\caches\transforms-3\0ab9368ce7052c08a0bf44e1cc9340f2\transformed\design-25.0.0\AndroidManifest.xml:23:9-59
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\oussa\.gradle\caches\transforms-3\f794c157ce27c216c504b2261e60ef5d\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\oussa\.gradle\caches\transforms-3\f794c157ce27c216c504b2261e60ef5d\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\oussa\.gradle\caches\transforms-3\c649c7616e40631ba13966002d4bc285\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\oussa\.gradle\caches\transforms-3\c649c7616e40631ba13966002d4bc285\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\oussa\.gradle\caches\transforms-3\d76f35a08c08216004feed386d7db8d0\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\oussa\.gradle\caches\transforms-3\d76f35a08c08216004feed386d7db8d0\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\1bc1de6a32330280351f65a0393bdf57\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\1bc1de6a32330280351f65a0393bdf57\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\oussa\.gradle\caches\transforms-3\62be83210208ccdc6bef32902742be53\transformed\jetified-sdp-android-1.0.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\oussa\.gradle\caches\transforms-3\62be83210208ccdc6bef32902742be53\transformed\jetified-sdp-android-1.0.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.intuit.ssp:ssp-android:1.0.6] C:\Users\oussa\.gradle\caches\transforms-3\668279eb7e55e942e0d3b7431f1c8315\transformed\jetified-ssp-android-1.0.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.intuit.ssp:ssp-android:1.0.6] C:\Users\oussa\.gradle\caches\transforms-3\668279eb7e55e942e0d3b7431f1c8315\transformed\jetified-ssp-android-1.0.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\oussa\.gradle\caches\transforms-3\84f6e3bd0c403320481a9b658b5eab43\transformed\jetified-roundedimageview-2.3.0\AndroidManifest.xml:7:5-43
+MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\oussa\.gradle\caches\transforms-3\84f6e3bd0c403320481a9b658b5eab43\transformed\jetified-roundedimageview-2.3.0\AndroidManifest.xml:7:5-43
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\d5ce58f194e6eb15743ad13effdd09da\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\d5ce58f194e6eb15743ad13effdd09da\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\d2646664f8d9727246d320f24126df9c\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\d2646664f8d9727246d320f24126df9c\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\oussa\.gradle\caches\transforms-3\e7a7361ce08649d63b0b54755f88f036\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\oussa\.gradle\caches\transforms-3\e7a7361ce08649d63b0b54755f88f036\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\oussa\.gradle\caches\transforms-3\b04e496035f8c1e2f42c46472bb2ce42\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\oussa\.gradle\caches\transforms-3\b04e496035f8c1e2f42c46472bb2ce42\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\08a78bb58e82e932da1f82c2b8b82824\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\08a78bb58e82e932da1f82c2b8b82824\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\0a2c06990f10f8bf77c6b2eafaa2d2f7\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\0a2c06990f10f8bf77c6b2eafaa2d2f7\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\3cb859c1ac0dd29d128e917789be4254\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\3cb859c1ac0dd29d128e917789be4254\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\8ede10147567c2507cc51ace41c13ea6\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\8ede10147567c2507cc51ace41c13ea6\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.2.5] C:\Users\oussa\.gradle\caches\transforms-3\edff366e6e5cfbac1c2a94d013c7e39f\transformed\fragment-1.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.5] C:\Users\oussa\.gradle\caches\transforms-3\edff366e6e5cfbac1c2a94d013c7e39f\transformed\fragment-1.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\774abcf94f58543d0777d2543f40d89e\transformed\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\774abcf94f58543d0777d2543f40d89e\transformed\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\973d1c6591a02ca84f2ddc5ef5b8076a\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\973d1c6591a02ca84f2ddc5ef5b8076a\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\70c058259436dcd4c71d85461afd1b6a\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\70c058259436dcd4c71d85461afd1b6a\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\c0d52683149a4f63c5e66613b9f51e2e\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\c0d52683149a4f63c5e66613b9f51e2e\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\6d6e532017af0c907cd34d38d04e17fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\6d6e532017af0c907cd34d38d04e17fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\d35f0010fbff61dfb15ae12685344215\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\d35f0010fbff61dfb15ae12685344215\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.5.0] C:\Users\oussa\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\oussa\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\58c33f79541fa64793747c2f03ce017d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\58c33f79541fa64793747c2f03ce017d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\5267a53a2d15588de00a1bdb2c39ebb8\transformed\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\5267a53a2d15588de00a1bdb2c39ebb8\transformed\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\a59437bec093e25b88e1ed0cf3a9ded1\transformed\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\a59437bec093e25b88e1ed0cf3a9ded1\transformed\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\oussa\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\oussa\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\02660f3bb5ba5d35d36b84f966b5477a\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\02660f3bb5ba5d35d36b84f966b5477a\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\fb3449e72dc29f308cc217ab7482dbfb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\fb3449e72dc29f308cc217ab7482dbfb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\oussa\.gradle\caches\transforms-3\d6b2c6310d0da332cb9475defea77305\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\oussa\.gradle\caches\transforms-3\d6b2c6310d0da332cb9475defea77305\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\2d52251ccbf37567fe83dbfcfab10bfb\transformed\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\oussa\.gradle\caches\transforms-3\2d52251ccbf37567fe83dbfcfab10bfb\transformed\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\oussa\.gradle\caches\transforms-3\72de0627c0c71c2c0ac6e20b5aa28ba3\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\oussa\.gradle\caches\transforms-3\72de0627c0c71c2c0ac6e20b5aa28ba3\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\5dc1b0d68d5be8d395af6b357c3240c1\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\5dc1b0d68d5be8d395af6b357c3240c1\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\eb3bd80f829817dc46cef00554f9b4ab\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\eb3bd80f829817dc46cef00554f9b4ab\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\998ecad2e598076d0444e5b886cc28b2\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\998ecad2e598076d0444e5b886cc28b2\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\511e2a36f18b29fdf3f425e3962668f8\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\511e2a36f18b29fdf3f425e3962668f8\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\dad45be7fb3d40cd3f820bd1d6623c5b\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\oussa\.gradle\caches\transforms-3\dad45be7fb3d40cd3f820bd1d6623c5b\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-		ADDED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
-		INJECTED from D:\MasterCard NFC Reader\Samples\sample-mpos-application-src\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.USE_BIOMETRIC
+ADDED from [androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:24:5-72
+	android:name
+		ADDED from [androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:24:22-69
+uses-permission#android.permission.USE_FINGERPRINT
+ADDED from [androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
+	android:name
+		ADDED from [androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
