@@ -41,10 +41,6 @@
                     android:id="@+id/card_card"
                     android:icon="@drawable/baseline_credit_card_24"
                     android:title="Card To Card " />
-                <item
-                    android:id="@+id/card_services"
-                    android:icon="@drawable/baseline_credit_card_24"
-                    android:title="G-Money Wallet To Card " />
             </menu>
         </item>
         <item
@@ -60,10 +56,6 @@
                     android:id="@+id/card_limit"
                     android:icon="@drawable/baseline_credit_card_24"
                     android:title="Card Limit " />
-                <item
-                    android:id="@+id/new_pin"
-                    android:icon="@drawable/baseline_credit_card_24"
-                    android:title="New Pin" />
             </menu>
         </item>
 

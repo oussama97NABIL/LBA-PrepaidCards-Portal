@@ -10,65 +10,22 @@
 
 
 
-    <include
-        android:id="@+id/header_layout"
-        layout="@layout/header_layout"
-        android:visibility="gone"/>
 
-
-
-
-
-    <LinearLayout
-        android:id="@+id/layout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/header_layout"
-        android:background="@color/tr_background_gray"
-        >
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Reset PIN"
-        android:textColor="@color/colorWhite"
-        android:textSize="22dp"
-        android:textStyle="bold"/>
-<!--
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/textView14"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="115dp"
-        android:layout_marginRight="100px"
-        android:background="@color/grey5" />
--->
-    </LinearLayout>
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/footer_layout"
-        android:layout_below="@+id/layout1"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="17dp"
-        android:layout_marginEnd="134dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp">
 
         <LinearLayout

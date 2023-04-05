@@ -151,14 +151,7 @@ public class CardLimit extends BaseFragment implements View.OnClickListener {
         canlBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
 
 
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
+
         canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,14 +161,7 @@ public class CardLimit extends BaseFragment implements View.OnClickListener {
             }
         });
         back = (ImageButton) mRootView.findViewById(R.id.Back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
+
 
 
 
@@ -184,7 +170,7 @@ public class CardLimit extends BaseFragment implements View.OnClickListener {
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
        // spincard.setAdapter(spinnerArrayAdapter);
         //btnStopCard = (Button) findViewById(R.id.btnStopCard);
-        loadActivatedCard();
+        //loadActivatedCard();
 
 
 
@@ -277,7 +263,7 @@ public class CardLimit extends BaseFragment implements View.OnClickListener {
         getMenuInflater().inflate(R.menu.menu_account_balance, menu);
         return true;
     }*/
-   private void loadActivatedCard() {
+   /*private void loadActivatedCard() {
 
        try {
            operation = operationGetList;
@@ -300,7 +286,7 @@ public class CardLimit extends BaseFragment implements View.OnClickListener {
                    });
            //alertDialog.show();
        }
-   }
+   }*/
 
 
 

@@ -118,14 +118,7 @@ public class AccountToCard extends BaseFragment implements View.OnClickListener 
 
         //     showUser.setText(Globals.fname);
         OpenTime();
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
+
         canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,15 +128,7 @@ public class AccountToCard extends BaseFragment implements View.OnClickListener 
             }
         });
 
-        this.back = (ImageButton) mRootView.findViewById(R.id.Back);
-        this.back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
+
 
        /* MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.accountsList);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -344,7 +329,7 @@ public class AccountToCard extends BaseFragment implements View.OnClickListener 
     public void onClick(View view) {
         final int id = 0;
         Log.e("TAG", "onClick: 111111111111111111111111111111111111111111111111");
-        if (view.getId() == R.id.spincard) {
+        if (view.getId() == R.id.spindebitAccount) {
 
             Log.e("TAG", "onClick: 222222222222222222222222222222222222222");
             initProgrees();
@@ -981,7 +966,7 @@ public class AccountToCard extends BaseFragment implements View.OnClickListener 
 
             //Card.GetCardsToActivateList();
             try {
-                Card.CardDetails();
+                Card.AccountToCard();
                 dismissProgress();
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -1036,6 +1021,7 @@ public class AccountToCard extends BaseFragment implements View.OnClickListener 
 
 
     }*/
+
     }
     public void OpenTime() {
         Calendar c = Calendar.getInstance();

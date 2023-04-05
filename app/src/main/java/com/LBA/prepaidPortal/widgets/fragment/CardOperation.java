@@ -150,14 +150,7 @@ public class CardOperation extends BaseFragment implements View.OnClickListener 
         canlBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
 
 
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
+
         /*canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -167,14 +160,7 @@ public class CardOperation extends BaseFragment implements View.OnClickListener 
             }
         });*/
         back = (ImageButton) mRootView.findViewById(R.id.Back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
+
 
 
        /* MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.maskedCardsList);

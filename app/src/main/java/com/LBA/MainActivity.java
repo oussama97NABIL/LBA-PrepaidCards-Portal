@@ -163,7 +163,7 @@ public class MainActivity extends AbstractActivity  {
 
                 //omar
                 //oussama 2/15/2032
-               // User.login(userCode, password, Globals.authenCode,1);
+               User.login(userCode, password, Globals.authenCode,1);
                 //User.GetToken();
 
 

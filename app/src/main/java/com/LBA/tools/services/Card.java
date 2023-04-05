@@ -41,15 +41,35 @@ public class Card {
 
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("cardToken","4386992978531511");
+        jsonObject.put("cardToken", Globals.authenToken );
 
 
-        JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceCardDetails, jsonObject);
+        JSONObject jsonRespObject = HTTPClient.sendPostJSONcardDetail(Globals.serviceAccountToCard, jsonObject);
         Log.e("TAG", "CardDetails: "+jsonRespObject);
 
-        if(jsonRespObject.has("respCode") && !jsonRespObject.getString("respCode").equals("00"))
+        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
             // throw new Exception("Pin request already done");
-            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("respCode")?jsonRespObject.getString("respCode"):"")+"]>");
+            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
+        // Globals.transactionId=jsonRespObject.getString(Globals.transactionIdTag);
+
+    }
+    static public void AccountToCard() throws Exception{
+
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("cardToken", Globals.authenToken );
+        jsonObject.put("accountNumber", Globals.authenToken );
+        jsonObject.put("amount", Globals.authenToken );
+        jsonObject.put("currency", Globals.authenToken );
+        jsonObject.put("memo", Globals.authenToken );
+
+
+        JSONObject jsonRespObject = HTTPClient.sendPostJSONcardDetail(Globals.serviceCardDetails, jsonObject);
+        Log.e("TAG", "CardDetails: "+jsonRespObject);
+
+        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+            // throw new Exception("Pin request already done");
+            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
         // Globals.transactionId=jsonRespObject.getString(Globals.transactionIdTag);
 
     }

@@ -117,14 +117,7 @@ public class CardToCard extends BaseFragment implements View.OnClickListener {
 
         //     showUser.setText(Globals.fname);
         OpenTime();
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
+
         canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,14 +128,7 @@ public class CardToCard extends BaseFragment implements View.OnClickListener {
         });
 
         this.back = (ImageButton) mRootView.findViewById(R.id.Back);
-        this.back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
+
 
        /* MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.accountsList);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

@@ -1,6 +1,7 @@
 package com.LBA.prepaidPortal.widgets.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -50,15 +51,14 @@ import java.util.Date;
 import java.util.Locale;
 
 
-public class CardInformation1 extends BaseFragment implements View.OnClickListener {
+public class CardInformation1 extends BaseFragment implements AdapterView.OnItemSelectedListener {
     Spinner spincard;
 
     private EditText startDate,endDate;
     private View mRootView;
 
     private EditText AmountAtm,AmountPos;
-    //TextView showUser;
-    ImageButton homeBtn;
+    //TextView s
     Button nxtBtn;
     ImageButton canlBtn;
 
@@ -75,6 +75,8 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
     private TextView textView4;
     private TextView textView5;
     private TextView textView6;
+    private EditText bankCode;
+    private EditText bankName;
 
     static private final String TAG = CardInformation1.class.getSimpleName();
 
@@ -97,7 +99,6 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.card_information_fragment1, container, false);
-        homeBtn = (ImageButton) mRootView.findViewById(R.id.home_button);
 
         //btnOk = (Button) findViewById(R.id.btnOk);
        /* textView = (TextView) findViewById(R.id.textView);
@@ -130,16 +131,19 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
 
         dateFormatter = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
 
-        findViewsById();
+        //findViewsById();
         setDateTimeField();
 
         textView_heading = (TextView) mRootView.findViewById(R.id.textView14);
 
         spincard = (Spinner) mRootView.findViewById(R.id.spincard);
+        bankCode = (EditText) mRootView.findViewById(R.id.bankCode);
+        bankName = (EditText) mRootView.findViewById(R.id.bankName);
 
 
         AmountAtm = (EditText) mRootView.findViewById(R.id.TxtAmount);
         AmountPos = (EditText) mRootView.findViewById(R.id.TxtAmount1);
+
 
 
 
@@ -156,7 +160,6 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
         textView5.setTypeface(tf);
         textView6.setTypeface(tf);*/
 
-        homeBtn = (ImageButton) mRootView.findViewById(R.id.home_button);
         nxtBtn = (Button) mRootView.findViewById(R.id.imageButton23);
         canlBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
 
@@ -170,61 +173,51 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
                 task.execute();
             }
         });*/
-        back = (ImageButton) mRootView.findViewById(R.id.Back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
 
 
-       /* MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.maskedCardsList);
+       MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.maskedCardsList);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spincard.setAdapter(spinnerArrayAdapter);*/
+        spincard.setAdapter(spinnerArrayAdapter);
+        spincard.setOnItemSelectedListener(this);
+
         //btnStopCard = (Button) findViewById(R.id.btnStopCard);
        // loadActivatedCard();
 
         OpenTime();
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                HomeTask task = new HomeTask(HomeActivity.class);
-                task.execute();
-            }
-        });
 
 
         nxtBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    if (selectedCard == null || selectedCard.length() == 0) {
-                        //Toast.makeText(CardLimitActivity.this, "Card" + " " + getResources().getString(R.string.isMandator), Toast.LENGTH_LONG).show();
+                    Log.e(TAG, "onClick: "+ " spincard.getSelectedItemPosition() == 0 "+spincard.getSelectedItemPosition() );
 
-                        androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                    if (selectedCard == null || selectedCard.length() == 0 || spincard.getSelectedItemPosition() == 0) {
+                        //Toast.makeText(CardLimitActivity.this, "Card" + " " + getResources().getString(R.string.isMandator), Toast.LENGTH_LONG).show();
+                        Log.e(TAG, "onClick: "+ " select a card popup" );
+                        AlertDialog alertDialog = new AlertDialog.Builder(getActivity().getApplicationContext()).create();
                         alertDialog.setMessage("Card" + " " + getResources().getString(R.string.isMandator));
-                        alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.dismiss();
-
                                     }
                                 });
                         alertDialog.show();
                         return;
                     }
 
-                    GoToValidation();
+                    initProgrees();
+                    CustomTask task = new CustomTask(getActivity().getApplicationContext());
+                    task.execute();
+                   // GoToValidation();
                 } catch (Exception e) {
                     Log.d("check input", "btnLoad.setOnClickListener()", e);
                     //  Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                    androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                   AlertDialog alertDialog = new AlertDialog.Builder(getActivity().getApplicationContext()).create();
                     alertDialog.setMessage(e.getMessage());
-                    alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();
@@ -238,11 +231,11 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
      return mRootView;
 
     }
-    @Override
+   /* @Override
     public void onClick(View view) {
         final int id = 0;
         Log.e(TAG, "onClick: 111111111111111111111111111111111111111111111111");
-        if (view.getId() == R.id.spincard) {
+        if (view.getId() == R.id.startDate) {
 
             Log.e(TAG, "onClick: 222222222222222222222222222222222222222");
             initProgrees();
@@ -250,7 +243,7 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
             task.execute();
 
         }
-    }
+    }*/
 
    /* private void loadActivatedCard() {
 
@@ -337,9 +330,11 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
 
 
     public void onItemSelected(AdapterView<?> parent, View arg1, int pos, long id) {
+        Log.e(TAG, "onItemSelected: -------------------------------------- " );
         if (parent instanceof Spinner && pos > 0) {
             switch (parent.getId()) {
                 case R.id.spincard:
+                    Log.e(TAG, "onItemSelected :  inside the switch -------------------------------------- " );
                     this.selectedCard = Globals.maskedCardsList.get(pos);
                     break;
 
@@ -398,7 +393,6 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
-
                             }
                         });
                 alertDialog.show();
@@ -818,14 +812,13 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
     // handle dates
     private void findViewsById() {
         startDate = (EditText) mRootView.findViewById(R.id.startDate);
-        startDate.setInputType(InputType.TYPE_NULL);
-        startDate.requestFocus();
-        endDate = (EditText) mRootView.findViewById(R.id.endDate);
-        endDate.setInputType(InputType.TYPE_NULL);
+        /*startDate.setInputType(InputType.TYPE_NULL);
+        startDate.requestFocus();*/
+
+
     }
     private void setDateTimeField() {
-        startDate.setOnClickListener(this);
-        endDate.setOnClickListener(this);
+
         Calendar newCalendar = Calendar.getInstance();
         fromDatePickerDialog = new DatePickerDialog(getActivity().getApplicationContext(), new DatePickerDialog.OnDateSetListener() {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
@@ -860,11 +853,12 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
         String balanceData;
 
         public CustomTask(Context applicationContext) {
+            Log.e(TAG, "CustomTask(): " );
         }
 
         protected String doInBackground(String... param) {
 
-
+            Log.e(TAG, "Do InBackground: " );
             //Card.GetCardsToActivateList();
             try {
                 Card.CardDetails();
@@ -875,20 +869,58 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
 
             return null;
         }
-        /*protected void onPostExecute(String param) {
+       protected void onPostExecute(String result) {
+            dismissProgress();
+            super.onPostExecute(result);
+
+            if(spincard!=null ){
+                Log.e(TAG, "bankcode:*********************************************" );
+                bankCode.setText((CharSequence) bankCode);
+                bankCode.setTextSize(18);
+                bankName.setText((CharSequence) bankName);
+                bankName.setTextSize(18);
+            }
+            if(result!=null && result.contains("801")){
+                // Toast.makeText(AccountBalanceActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                alertDialog.setMessage("SESSION EXPIRED");
+                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+
+            if(result!=null && !result.contains("801")) {
+                // Toast.makeText(AccountBalanceActivity.this, result, Toast.LENGTH_LONG).show();
+
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                alertDialog.setMessage(result);
+                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        }
+       /* protected void onPostExecute(String param) {
             dismissProgress();
             super.onPostExecute(param);
 
 
             if(param!=null && param.contains("801")){
                 //  Toast.makeText(CardLimitActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
-                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
                 alertDialog.setMessage("SESSION EXPIRED");
                 alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
-                                doLogout(null);
+                                //doLogout(null);
                             }
                         });
                 alertDialog.show();
@@ -897,7 +929,7 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
 
             if(param!=null && !param.contains("801")) {
                 //  Toast.makeText(CardLimitActivity.this, param, Toast.LENGTH_LONG).show();
-                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
                 alertDialog.setMessage(param);
                 alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
@@ -913,7 +945,7 @@ public class CardInformation1 extends BaseFragment implements View.OnClickListen
                     GoToConfirmation();
                 else{
                     if(Globals.maskedCardsList!=null && Globals.maskedCardsList.size()>0) {
-                        MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(CardLimitActivity.this, R.layout.spinner_item, Globals.maskedCardsList);
+                        MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.maskedCardsList);
                         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                         spincard.setAdapter(spinnerArrayAdapter);
                     }

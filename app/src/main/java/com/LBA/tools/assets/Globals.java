@@ -109,6 +109,8 @@ public class Globals {
     static public final String serviceExpenseLimitList = "/ExpenseLimitList";
     static public final String servicePINRequest = "/PINRequest";
     static public final String serviceCardDetails= "/CardDetails";
+    static public final String service10LastTransactions= "/getLast10Transaction";
+    static public final String serviceAccountToCard= "/accountToCard";
     static public final String serviceStopCard = "/StopCard";
     static public final String serviceCardsNotActiveList = "/CardsNotActiveList";
     static public final String serviceCardsToUnblockList = "/CardsStopList";
@@ -254,11 +256,20 @@ public class Globals {
     static public String sessionId = " "; // YOUNES TEST
     static public String authenCode; // MAW20160521
     static public String authenToken; // MAW20160611
+
     static public List<String> accountsList;
     static public List<String> cardsList;
     static public  ArrayList<HistoryEntry> historyEntryList = new ArrayList<>();
     static public List<String> cardsToActivateList = new ArrayList<String>(); // MAW20170226
-    static public List<String> maskedCardsList;
+    static public List<String> maskedCardsList = new ArrayList<String>();;
+    // static data to change later
+
+    static {
+        maskedCardsList.add("Select a card");
+        maskedCardsList.add("card 1");
+        maskedCardsList.add("card 2");
+        maskedCardsList.add("card 3");
+    }
     static public List<String> maskedCardsToActivateList = new ArrayList<String>(); // MAW20170226
     static public List<AccountHabEntry> accountsHabList;
     static public List<BankEntry> banksList;
@@ -289,6 +300,7 @@ public class Globals {
         airtimeNetworkEntryList.add(new AirtimeNetworkEntry("Tigo","62003"));
         airtimeNetworkEntryList.add(new AirtimeNetworkEntry("Vodafone","62002"));
     }
+
 
     static public List<AirtimeNetworkEntry> providersEntryList = new ArrayList<AirtimeNetworkEntry>();
 

@@ -22,7 +22,8 @@ import com.LBA.prepaidPortal.widgets.fragment.CardOperation;
 import com.LBA.prepaidPortal.widgets.fragment.CardToCard;
 import com.LBA.prepaidPortal.widgets.fragment.GMoneyWalletToCard;
 import com.LBA.prepaidPortal.widgets.fragment.GenerateStatement;
-import com.LBA.prepaidPortal.widgets.fragment.Last10Transaction;
+import com.LBA.prepaidPortal.widgets.fragment.Last10Transactions;
+import com.LBA.prepaidPortal.widgets.fragment.NewPin;
 import com.google.android.material.navigation.NavigationView;
 import com.LBA.prepaidPortal.widgets.fragment.HomeFragment;
 
@@ -94,16 +95,13 @@ public class HomeActivity extends AbstractActivity
             fragment = new GenerateStatement();
         }
         else if (id == R.id.last_transaction){
-            fragment = new Last10Transaction();
+            fragment = new Last10Transactions();
         }
         else if (id == R.id.account_card){
             fragment = new AccountToCard();
         }
         else if (id == R.id.card_card){
             fragment = new CardToCard();
-        }
-        else if (id == R.id.card_services){
-            fragment = new GMoneyWalletToCard();
         }
         else if (id == R.id.card_operation){
             fragment = new CardOperation();

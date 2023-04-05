@@ -2792,6 +2792,7 @@ id BOTTOM_END
 id BOTTOM_START
 id Back
 id BenefBtn
+id Branch
 id CTRL
 id FUNCTION
 id Fund_Card
@@ -2969,6 +2970,10 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id bankCode
+id bankName
+id bankcode
+id bankcodeView
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2981,6 +2986,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id branchView
 id btnBalances
 id btnBiometric
 id btnNOk
@@ -3002,7 +3008,6 @@ id card_information
 id card_limit
 id card_operation
 id card_service
-id card_services
 id carryVelocity
 id center
 id center_horizontal
@@ -3191,7 +3196,6 @@ id linearLayout2
 id linearLayout3
 id linearLayout4
 id listMode
-id listView
 id list_item
 id ll1
 id loginbtn
@@ -3263,7 +3267,6 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
-id new_pin
 id noScroll
 id noState
 id none
@@ -3304,6 +3307,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id referencenum
+id refrencenumvie
 id relativeLayout
 id repeat
 id resetApp
@@ -3429,6 +3434,7 @@ id spacer
 id spinACHBranch
 id spinBenef
 id spincard
+id spincard1
 id spindebitAccount
 id spline
 id split_action_bar
@@ -3660,12 +3666,12 @@ layout fragment_card_limit
 layout fragment_card_operation
 layout fragment_generate_statement
 layout fragment_home
-layout fragment_last10_transaction
 layout gmoneywallet_to_card_fragment
 layout header_layout
 layout header_layout_phase2
 layout header_layout_welcome
 layout header_layout_white
+layout last_10_transactions
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

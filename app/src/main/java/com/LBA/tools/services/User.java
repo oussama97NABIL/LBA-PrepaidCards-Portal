@@ -52,9 +52,9 @@ public class User {
         }
         Log.e("login: ", ""+jsonRespObject);
 
-        if (jsonRespObject.getString("reponseCode").equals("803")) {
+        if (jsonRespObject.getString("responseCode").equals("803")) {
             Globals.sessionId = jsonRespObject.getString("sessionId");
-            throw new Exception(jsonRespObject.getString("reponseCode"));
+            throw new Exception(jsonRespObject.getString("responseCode"));
         }
        /*
             if(jsonRespObject.has("respCode") && !jsonRespObject.getString("respCode").equals("000") && !jsonRespObject.getString("respCode").equals("802"))
@@ -63,12 +63,15 @@ public class User {
 
         Globals.notificationViewed = false;
 
-        Globals.ERmsg = jsonRespObject.getString("reponseCode");
+        Globals.ERmsg = jsonRespObject.getString("responseCode");
         //Log.d("", "" + Globals.ERmsg);
 
-        if (jsonRespObject.has("reponseCode") && !jsonRespObject.getString("reponseCode").equals("00")) {
-            throw new Exception("" + (jsonRespObject.has("reponseCode") ? jsonRespObject.getString("reponseCode") : "") + "");
+        if (jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00")) {
+            throw new Exception("" + (jsonRespObject.has("responseCode") ? jsonRespObject.getString("responseCode") : "") + "");
         }
+
+        Globals.authenToken = jsonRespObject.getString("token");
+        Log.e("TAG", "login: Globals.authenToken" + Globals.authenToken);
        /* Globals.sessionId = jsonRespObject.getString("sessionId");
         Log.e("login: sessionId =>  ",Globals.sessionId );
         Globals.fname = jsonRespObject.getString("fname"); // younes
@@ -654,8 +657,8 @@ public class User {
         */
         //hajer 04:03:2022 end
 
-      /*  if (jsonRespObject.getString("reponseCode").equals("802"))
-            throw new Exception("REFRESH AUTHENTICATION <reponseCode=[" + jsonRespObject.getString("reponseCode") + "]>");*/
+      /*  if (jsonRespObject.getString("responseCode").equals("802"))
+            throw new Exception("REFRESH AUTHENTICATION <responseCode=[" + jsonRespObject.getString("responseCode") + "]>");*/
 
         return;
     }
