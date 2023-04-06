@@ -11,7 +11,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,7 +30,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.LBA.prepaidPortal.R;
+import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.tools.assets.Globals;
+import com.LBA.tools.misc.CardInformationDetail;
 import com.LBA.tools.misc.MySpinnerAdapter;
 import com.LBA.tools.services.Card;
 import com.LBA.tools.services.General;
@@ -67,8 +68,13 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
     private TextView textView4;
     private TextView textView5;
     private TextView textView6;
+    private EditText bankCode;
+    private EditText bankName;
+    private EditText clientCode;
+    private EditText Branch;
+    private EditText ClientType;
 
-    //static private final String TAG = CardInformationHind.class.getSimpleName();
+    static private final String TAG = CardInformationHin.class.getSimpleName();
 
 
     String selectedCard;
@@ -78,9 +84,9 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
     final String operationGetList="GET_LIST";
     final String operationActivateCard="ACTIVATE_CARD";
     String operation="";
-    Date DateSys = new Date();
-    Date DateUsrS= new Date();
-    Date DateUsrE= new Date();
+    java.util.Date DateSys = new java.util.Date();
+    java.util.Date DateUsrS= new java.util.Date();
+    java.util.Date DateUsrE= new Date();
 
     String DefaultUnameValue = "";
 
@@ -121,12 +127,14 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
 
         dateFormatter = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
 
-        findViewsById();
+        //findViewsById();
         setDateTimeField();
 
         textView_heading = (TextView) mRootView.findViewById(R.id.textView14);
 
         spincard = (Spinner) mRootView.findViewById(R.id.spincard);
+        bankCode = (EditText) mRootView.findViewById(R.id.bankCode);
+        bankName = (EditText) mRootView.findViewById(R.id.bankName);
 
 
         AmountAtm = (EditText) mRootView.findViewById(R.id.TxtAmount);
@@ -134,7 +142,8 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
 
 
 
-       // Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
+
+        // Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         /*textView_heading.setTypeface(tf);
         AmountAtm.setTypeface(tf);
         AmountPos.setTypeface(tf);*/
@@ -152,23 +161,23 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
 
 
 
-       /* canlBtn.setOnClickListener(new View.OnClickListener() {
+        canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 initProgrees();
-                HomeTask task = new HomeTask(CardsServicesActivity.class);
+                HomeTask task = new HomeTask(HomeActivity.class);
                 task.execute();
             }
-        });*/
+        });
 
 
-       MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.maskedCardsList);
+        MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.maskedCardsList);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spincard.setAdapter(spinnerArrayAdapter);
         spincard.setOnItemSelectedListener(this);
 
         //btnStopCard = (Button) findViewById(R.id.btnStopCard);
-       // loadActivatedCard();
+        // loadActivatedCard();
 
         OpenTime();
 
@@ -177,11 +186,11 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
             @Override
             public void onClick(View v) {
                 try {
-                    Log.e("TAG", "onClick: "+ " spincard.getSelectedItemPosition() == 0 "+spincard.getSelectedItemPosition() );
+                    Log.e(TAG, "onClick: "+ " spincard.getSelectedItemPosition() == 0 "+spincard.getSelectedItemPosition() );
 
                     if (selectedCard == null || selectedCard.length() == 0 || spincard.getSelectedItemPosition() == 0) {
                         //Toast.makeText(CardLimitActivity.this, "Card" + " " + getResources().getString(R.string.isMandator), Toast.LENGTH_LONG).show();
-                        Log.e("TAG", "onClick: "+ " select a card popup" );
+                        Log.e(TAG, "onClick: "+ " select a card popup" );
                         AlertDialog alertDialog = new AlertDialog.Builder(getActivity().getApplicationContext()).create();
                         alertDialog.setMessage("Card" + " " + getResources().getString(R.string.isMandator));
 
@@ -198,11 +207,11 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
                     initProgrees();
                     CustomTask task = new CustomTask(getActivity().getApplicationContext());
                     task.execute();
-                   // GoToValidation();
+                    // GoToValidation();
                 } catch (Exception e) {
                     Log.d("check input", "btnLoad.setOnClickListener()", e);
                     //  Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                   AlertDialog alertDialog = new AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity().getApplicationContext()).create();
                     alertDialog.setMessage(e.getMessage());
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                             new DialogInterface.OnClickListener() {
@@ -215,7 +224,7 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
                 }
             }
         });
-     return mRootView;
+        return mRootView;
 
     }
    /* @Override
@@ -258,12 +267,12 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
     }*/
 
 
-   /* @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_account_balance, menu);
-        return true;
-    }*/
+    /* @Override
+     public boolean onCreateOptionsMenu(Menu menu) {
+         // Inflate the menu; this adds items to the action bar if it is present.
+         getMenuInflater().inflate(R.menu.menu_account_balance, menu);
+         return true;
+     }*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -317,12 +326,17 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
 
 
     public void onItemSelected(AdapterView<?> parent, View arg1, int pos, long id) {
-        Log.e("TAG", "onItemSelected: -------------------------------------- " );
+        Log.e(TAG, "onItemSelected: -------------------------------------- " );
         if (parent instanceof Spinner && pos > 0) {
             switch (parent.getId()) {
                 case R.id.spincard:
-                    Log.e("TAG", "onItemSelected :  inside the switch -------------------------------------- " );
+                    Log.e(TAG, "onItemSelected :  inside the switch -------------------------------------- " );
                     this.selectedCard = Globals.maskedCardsList.get(pos);
+
+                    initProgrees();
+                    CustomTask task = new CustomTask(getActivity().getApplicationContext());
+                    task.execute();
+
                     break;
 
             }
@@ -509,91 +523,91 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
         dialog.show();
         */
 
-       /* dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    operation = operationActivateCard;
-                    dialog.dismiss();
-                    if(startDate.getText().toString().isEmpty() ) {
-                        startDate.setText("");
-                    }
-                    if(endDate.getText().toString().isEmpty() ){
-                        endDate.setText("");
-                    }
-                    if(AmountAtm.getText().toString().isEmpty()){
-                        AmountAtm.setText("0.0");
-                    }
-                    if(AmountPos.getText().toString().isEmpty()){
-                        AmountPos.setText("0.0");
-                    }
-                    initProgrees();
+    /* dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             try {
+                 operation = operationActivateCard;
+                 dialog.dismiss();
+                 if(startDate.getText().toString().isEmpty() ) {
+                     startDate.setText("");
+                 }
+                 if(endDate.getText().toString().isEmpty() ){
+                     endDate.setText("");
+                 }
+                 if(AmountAtm.getText().toString().isEmpty()){
+                     AmountAtm.setText("0.0");
+                 }
+                 if(AmountPos.getText().toString().isEmpty()){
+                     AmountPos.setText("0.0");
+                 }
+                 initProgrees();
 
-                    if(Globals.useOTP) {
-                        //General.sendOTP();
-                        try {
-                            Globals.pinEntered=txtCode.getText().toString();
-                            General.checkOTP(txtCode.getText().toString());
-                            dialog.dismiss();
+                 if(Globals.useOTP) {
+                     //General.sendOTP();
+                     try {
+                         Globals.pinEntered=txtCode.getText().toString();
+                         General.checkOTP(txtCode.getText().toString());
+                         dialog.dismiss();
 
-                            new CustomTask().execute();
-                        } catch (Exception e) {
-                            Log.d(TAG, "btnLoad.setOnClickListener()", e);
-                            if(Globals.ERpin.equals("USER BLOCKED CONTACT BRANCH")){
-                                doLogout(null);
-                            }
-                            else if(Globals.ERpin.contains("801")){
-                                //   Toast.makeText(CardLimitActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
-                                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
-                                alertDialog.setMessage( "SESSION EXPIRED");
-                                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                                        new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                dialog.dismiss();
-                                                doLogout(null);
+                         new CustomTask().execute();
+                     } catch (Exception e) {
+                         Log.d(TAG, "btnLoad.setOnClickListener()", e);
+                         if(Globals.ERpin.equals("USER BLOCKED CONTACT BRANCH")){
+                             doLogout(null);
+                         }
+                         else if(Globals.ERpin.contains("801")){
+                             //   Toast.makeText(CardLimitActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
+                             androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                             alertDialog.setMessage( "SESSION EXPIRED");
+                             alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                     new DialogInterface.OnClickListener() {
+                                         public void onClick(DialogInterface dialog, int which) {
+                                             dialog.dismiss();
+                                             doLogout(null);
 
 
-                                            }
-                                        });
-                                alertDialog.show();
-                            }
-                            else {
-                                //    Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
-                                alertDialog.setMessage(e.getMessage());
-                                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                                        new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                dialog.dismiss();
+                                         }
+                                     });
+                             alertDialog.show();
+                         }
+                         else {
+                             //    Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                             androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                             alertDialog.setMessage(e.getMessage());
+                             alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                     new DialogInterface.OnClickListener() {
+                                         public void onClick(DialogInterface dialog, int which) {
+                                             dialog.dismiss();
 
-                                            }
-                                        });
-                                alertDialog.show();
-                            }
-                        }                        // new CustomTask().execute();
+                                         }
+                                     });
+                             alertDialog.show();
+                         }
+                     }                        // new CustomTask().execute();
 
-                    }
-                    else{
-                        new CustomTask().execute();
-                    }
-                } catch (Exception e) {
-                    Log.d("otp", "btnLoad.setOnClickListener()", e);
-                    //  Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                    androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
-                    alertDialog.setMessage( e.getMessage());
-                    alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
+                 }
+                 else{
+                     new CustomTask().execute();
+                 }
+             } catch (Exception e) {
+                 Log.d("otp", "btnLoad.setOnClickListener()", e);
+                 //  Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                 androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                 alertDialog.setMessage( e.getMessage());
+                 alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                         new DialogInterface.OnClickListener() {
+                             public void onClick(DialogInterface dialog, int which) {
+                                 dialog.dismiss();
 
-                                }
-                            });
-                    alertDialog.show();
-                }
-            }
-        });
-        dialog.show();
-    }*/
+                             }
+                         });
+                 alertDialog.show();
+             }
+         }
+     });
+     dialog.show();
+ }*/
     @SuppressLint("NewApi")
     public void OTPVerification()
     {
@@ -652,11 +666,11 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
 
                     new CustomTask(getActivity().getApplicationContext()).execute();
                 } catch (Exception e) {
-                    Log.d("TAG", "btnLoad.setOnClickListener()", e);
+                    Log.d(TAG, "btnLoad.setOnClickListener()", e);
                    /* if(Globals.ERpin.equals("USER BLOCKED CONTACT BRANCH")){
                         doLogout(null);
                     }*/
-                     if (Globals.ERpin.contains("801")){
+                    if (Globals.ERpin.contains("801")){
                         //   Toast.makeText(CardLimitActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
                         androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
                         alertDialog.setMessage( "SESSION EXPIRED");
@@ -693,40 +707,40 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
     }
     @SuppressLint("NewApi")
     public void GoToConfirmation()
-        {
-            final Dialog dialog = new Dialog(getActivity().getApplicationContext(), android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.request_conf_act);
-            // set title
-            TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
-            validation_title.setText("Confirmation");
-            TextView validation_Content = (TextView) dialog.findViewById(R.id.textView);
-            validation_Content.setText("Card limit changed successfully");
-            //final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
-            //txtCode.setText("Your Request has been sent Successfully");
-            dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    try {
-                        dialog.dismiss();
-                       // CardLimitActivity.this.finish();
-                    } catch (Exception e) {
-                        Log.d("otp", "btnLoad.setOnClickListener()", e);
-                        // Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                        androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
-                        alertDialog.setMessage(e.getMessage());
-                        alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
+    {
+        final Dialog dialog = new Dialog(getActivity().getApplicationContext(), android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.request_conf_act);
+        // set title
+        TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
+        validation_title.setText("Confirmation");
+        TextView validation_Content = (TextView) dialog.findViewById(R.id.textView);
+        validation_Content.setText("Card limit changed successfully");
+        //final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
+        //txtCode.setText("Your Request has been sent Successfully");
+        dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    dialog.dismiss();
+                    // CardLimitActivity.this.finish();
+                } catch (Exception e) {
+                    Log.d("otp", "btnLoad.setOnClickListener()", e);
+                    // Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                    alertDialog.setMessage(e.getMessage());
+                    alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
 
-                                    }
-                                });
-                        alertDialog.show();
-                    }
+                                }
+                            });
+                    alertDialog.show();
                 }
-            });
-        }
+            }
+        });
+    }
         /*dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
             public void onDismiss(final DialogInterface dialog) {
                 CardInformation1.this.finish();
@@ -799,8 +813,8 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
     // handle dates
     private void findViewsById() {
         startDate = (EditText) mRootView.findViewById(R.id.startDate);
-        startDate.setInputType(InputType.TYPE_NULL);
-        startDate.requestFocus();
+        /*startDate.setInputType(InputType.TYPE_NULL);
+        startDate.requestFocus();*/
 
 
     }
@@ -840,12 +854,12 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
         String balanceData;
 
         public CustomTask(Context applicationContext) {
-            Log.e("TAG", "CustomTask(): " );
+            Log.e(TAG, "CustomTask(): " );
         }
 
         protected String doInBackground(String... param) {
 
-            Log.e("TAG", "Do InBackground: " );
+            Log.e(TAG, "Do InBackground: " );
             //Card.GetCardsToActivateList();
             try {
                 Card.CardDetails();
@@ -856,20 +870,60 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
 
             return null;
         }
-        /*protected void onPostExecute(String param) {
+        protected void onPostExecute(String result) {
+            dismissProgress();
+            super.onPostExecute(result);
+            CardInformationDetail c = new CardInformationDetail();
+
+            if(spincard!=null ){
+                Log.e(TAG, "bankcode:*********************************************" );
+
+                bankCode.setText("null");
+                bankCode.setTextSize(18);
+                bankName.setText("null");
+                bankName.setTextSize(18);
+            }
+            if(result!=null && result.contains("801")){
+                // Toast.makeText(AccountBalanceActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                alertDialog.setMessage("SESSION EXPIRED");
+                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+
+            if(result!=null && !result.contains("801")) {
+                // Toast.makeText(AccountBalanceActivity.this, result, Toast.LENGTH_LONG).show();
+
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                alertDialog.setMessage(result);
+                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        }
+       /* protected void onPostExecute(String param) {
             dismissProgress();
             super.onPostExecute(param);
 
 
             if(param!=null && param.contains("801")){
                 //  Toast.makeText(CardLimitActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
-                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
                 alertDialog.setMessage("SESSION EXPIRED");
                 alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
-                                doLogout(null);
+                                //doLogout(null);
                             }
                         });
                 alertDialog.show();
@@ -878,7 +932,7 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
 
             if(param!=null && !param.contains("801")) {
                 //  Toast.makeText(CardLimitActivity.this, param, Toast.LENGTH_LONG).show();
-                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
                 alertDialog.setMessage(param);
                 alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
@@ -894,7 +948,7 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
                     GoToConfirmation();
                 else{
                     if(Globals.maskedCardsList!=null && Globals.maskedCardsList.size()>0) {
-                        MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(CardLimitActivity.this, R.layout.spinner_item, Globals.maskedCardsList);
+                        MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.maskedCardsList);
                         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                         spincard.setAdapter(spinnerArrayAdapter);
                     }

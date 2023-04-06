@@ -50,7 +50,7 @@ public class User {
         if (jsonRespObject.has("sessionId")){
             Globals.sessionId = jsonRespObject.getString("sessionId");
         }
-        Log.e("login: ", ""+jsonRespObject);
+        Log.e("login: resp", ""+jsonRespObject);
 
         if (jsonRespObject.getString("responseCode").equals("803")) {
             Globals.sessionId = jsonRespObject.getString("sessionId");

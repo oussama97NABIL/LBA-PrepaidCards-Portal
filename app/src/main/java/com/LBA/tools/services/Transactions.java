@@ -12,9 +12,7 @@ public class Transactions {
 
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("cardToken", Globals.authenToken );
-
-
+        jsonObject.put("token", Globals.authenToken );
         JSONObject jsonRespObject = HTTPClient.sendPostJSONLastTransactions(Globals.service10LastTransactions, jsonObject);
         Log.e("TAG", "getLastTransactoins: "+jsonRespObject);
 

@@ -273,15 +273,22 @@ public class HTTPClient extends AbstractActivity {
 
 
             final String url = Globals.serverURL+service;
-            final String AUTH_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODA2MjUzNzksImp0aSI6IjQyODE5OTMxMDg3NzU4MzAiLCJ1c2VyTWFuYWdlbWVudCI6eyJ1c2VyQ29kZSI6IjQyODE5OTMxMDg3NzU4MzAiLCJicmFuY2giOiI1NjAwMSIsImJhbmsiOiIyMDA0OCIsInVzZXJOYW1lIjoiU0FJRE9VIFNPVyIsInVzZXJUeXBlIjoiSSIsInVzZXJQYXNzd29yZCI6ImE5NTg3YzI1YTM3MDg3ZGNiNWJjZGNhNDQwNDRhNDk5IiwibnVtYmVyT2ZUcmllcyI6MCwibnVtYmVyT2ZUcmllc0FsbG93ZWQiOjMsImNvbm5lY3RlZCI6IlkiLCJmaXJzdENvbm5lY3Rpb24iOiJOIiwibmJyZVNlc3Npb25BbGxvd2VkIjowLCJuYnJlU2Vlc2lvbkNvbm5lY3RlZCI6MCwibGVuZ3RoUGFzc3dvcmQiOm51bGwsImNvbXBsZXhpdHlGbGFnIjpudWxsLCJleHBpcmF0aW9uUGFzc3dvcmQiOjAsImRhdGVTdGFydFBhc3MiOm51bGwsImRhdGVFbmRQYXNzIjpudWxsLCJibG9ja0FjY2VzcyI6Ik4iLCJsYW5ndWFnZUNvZGUiOm51bGwsInNlc3Npb25JZCI6bnVsbCwicmVxdWVzdEZvcmdvdFB3ZCI6bnVsbH0sImlhdCI6MTY4MDYyNDc3OX0.VNHfF2lO63m1knXfW_St81ho-_99rNJVsakuLwLQaKE";
+            //final String  AUTH_VALUE = "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODA3ODkyMzAsImp0aSI6IjQyODE5OTMxMDg3NzU4MzAiLCJ1c2VyTWFuYWdlbWVudCI6eyJ1c2VyQ29kZSI6IjQyODE5OTMxMDg3NzU4MzAiLCJicmFuY2giOiI1NjAwMSIsImJhbmsiOiIyMDA0OCIsInVzZXJOYW1lIjoiU0FJRE9VIFNPVyIsInVzZXJUeXBlIjoiSSIsInVzZXJQYXNzd29yZCI6ImE5NTg3YzI1YTM3MDg3ZGNiNWJjZGNhNDQwNDRhNDk5IiwibnVtYmVyT2ZUcmllcyI6MCwibnVtYmVyT2ZUcmllc0FsbG93ZWQiOjMsImNvbm5lY3RlZCI6IlkiLCJmaXJzdENvbm5lY3Rpb24iOiJOIiwibmJyZVNlc3Npb25BbGxvd2VkIjowLCJuYnJlU2Vlc2lvbkNvbm5lY3RlZCI6MCwibGVuZ3RoUGFzc3dvcmQiOm51bGwsImNvbXBsZXhpdHlGbGFnIjpudWxsLCJleHBpcmF0aW9uUGFzc3dvcmQiOjAsImRhdGVTdGFydFBhc3MiOm51bGwsImRhdGVFbmRQYXNzIjpudWxsLCJibG9ja0FjY2VzcyI6Ik4iLCJsYW5ndWFnZUNvZGUiOm51bGwsInNlc3Npb25JZCI6bnVsbCwicmVxdWVzdEZvcmdvdFB3ZCI6bnVsbH0sImlhdCI6MTY4MDc4ODYzMH0.6nGrR3z0XsnBnV-Ben5Ry8drRaUhc7OVcl0JbevbKpE";
+            //final String AUTH_KEY = "Authorization"; // Globals.authenToken;
+            final String AUTH_KEY = "Authorization";
 
             final String AUTH_VALUE = Globals.authenToken;
+            Log.e("", "sendPostJSONcardDetail: ", );
             HttpPost httpPost = new HttpPost(url);
             Log.d("url",url);
             httpPost.addHeader("Accept", "application/json");
+            //httpPost.addHeader("Accept", "*/*");
+
             httpPost.addHeader("Content-Type", "application/json");
-            httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
-            httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
+             httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
+             httpPost.addHeader("Authorization", AUTH_VALUE);
+           //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
+
             StringEntity se = new StringEntity(jsonObject.toString());
             httpPost.setEntity(se);
             HttpResponse httpResponse = httpClient.execute(httpPost);
@@ -395,7 +402,7 @@ public class HTTPClient extends AbstractActivity {
 
 
             final String url = Globals.serverURL+service;
-            final String AUTH_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODA1MzU0NjEsImp0aSI6IjQyODE5OTMxMDg3NzU4MzAiLCJ1c2VyTWFuYWdlbWVudCI6eyJ1c2VyQ29kZSI6IjQyODE5OTMxMDg3NzU4MzAiLCJicmFuY2giOiI1NjAwMSIsImJhbmsiOiIyMDA0OCIsInVzZXJOYW1lIjoiU0FJRE9VIFNPVyIsInVzZXJUeXBlIjoiSSIsInVzZXJQYXNzd29yZCI6ImE5NTg3YzI1YTM3MDg3ZGNiNWJjZGNhNDQwNDRhNDk5IiwibnVtYmVyT2ZUcmllcyI6MCwibnVtYmVyT2ZUcmllc0FsbG93ZWQiOjMsImNvbm5lY3RlZCI6IlkiLCJmaXJzdENvbm5lY3Rpb24iOiJOIiwibmJyZVNlc3Npb25BbGxvd2VkIjowLCJuYnJlU2Vlc2lvbkNvbm5lY3RlZCI6MCwibGVuZ3RoUGFzc3dvcmQiOm51bGwsImNvbXBsZXhpdHlGbGFnIjpudWxsLCJleHBpcmF0aW9uUGFzc3dvcmQiOjAsImRhdGVTdGFydFBhc3MiOm51bGwsImRhdGVFbmRQYXNzIjpudWxsLCJibG9ja0FjY2VzcyI6Ik4iLCJsYW5ndWFnZUNvZGUiOm51bGwsInNlc3Npb25JZCI6bnVsbCwicmVxdWVzdEZvcmdvdFB3ZCI6bnVsbH0sImlhdCI6MTY4MDUzNDg2MX0.2MxbmNKFazrFgvjVemmH4RIMQTPIbqqTXW69GsU62g4";
+            final String AUTH_KEY = "bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODA3MDMyMzIsImp0aSI6IjQyODE5OTMxMDg3NzU4MzAiLCJ1c2VyTWFuYWdlbWVudCI6eyJ1c2VyQ29kZSI6IjQyODE5OTMxMDg3NzU4MzAiLCJicmFuY2giOiI1NjAwMSIsImJhbmsiOiIyMDA0OCIsInVzZXJOYW1lIjoiU0FJRE9VIFNPVyIsInVzZXJUeXBlIjoiSSIsInVzZXJQYXNzd29yZCI6ImE5NTg3YzI1YTM3MDg3ZGNiNWJjZGNhNDQwNDRhNDk5IiwibnVtYmVyT2ZUcmllcyI6MCwibnVtYmVyT2ZUcmllc0FsbG93ZWQiOjMsImNvbm5lY3RlZCI6IlkiLCJmaXJzdENvbm5lY3Rpb24iOiJOIiwibmJyZVNlc3Npb25BbGxvd2VkIjowLCJuYnJlU2Vlc2lvbkNvbm5lY3RlZCI6MCwibGVuZ3RoUGFzc3dvcmQiOm51bGwsImNvbXBsZXhpdHlGbGFnIjpudWxsLCJleHBpcmF0aW9uUGFzc3dvcmQiOjAsImRhdGVTdGFydFBhc3MiOm51bGwsImRhdGVFbmRQYXNzIjpudWxsLCJibG9ja0FjY2VzcyI6Ik4iLCJsYW5ndWFnZUNvZGUiOm51bGwsInNlc3Npb25JZCI6bnVsbCwicmVxdWVzdEZvcmdvdFB3ZCI6bnVsbH0sImlhdCI6MTY4MDcwMjYzMn0.7wELAs_Uy08tFCGg-eqB3zbkrqshNHge07cg3QbFGtk";
 
             final String AUTH_VALUE = Globals.authenToken;
             HttpPost httpPost = new HttpPost(url);

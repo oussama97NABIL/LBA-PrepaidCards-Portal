@@ -966,7 +966,7 @@ public class CardToCard extends BaseFragment implements View.OnClickListener {
 
             //Card.GetCardsToActivateList();
             try {
-                Card.CardDetails();
+               // Card.CardDetails();
                 dismissProgress();
             } catch (Exception ex) {
                 ex.printStackTrace();

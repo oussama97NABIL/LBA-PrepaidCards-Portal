@@ -28,7 +28,10 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.LBA.prepaidPortal.R;
+import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.tools.assets.Globals;
+import com.LBA.tools.misc.CardInformationDetail;
+import com.LBA.tools.misc.MySpinnerAdapter;
 import com.LBA.tools.services.Card;
 import com.LBA.tools.services.General;
 import com.LBA.tools.services.Transactions;
@@ -40,7 +43,7 @@ import java.util.Date;
 import java.util.Locale;
 
 
-public class Last10Transactions extends BaseFragment implements View.OnClickListener {
+public class Last10Transactions extends BaseFragment implements AdapterView.OnItemSelectedListener {
     Spinner spincard;
 
     private EditText startDate,endDate;
@@ -51,6 +54,9 @@ public class Last10Transactions extends BaseFragment implements View.OnClickList
     ImageButton homeBtn;
     Button nxtBtn;
     ImageButton canlBtn;
+    EditText amount;
+    EditText referenceNumber;
+    EditText location;
 
     private SimpleDateFormat dateFormatter;
     private DatePickerDialog fromDatePickerDialog;
@@ -146,26 +152,30 @@ public class Last10Transactions extends BaseFragment implements View.OnClickList
         homeBtn = (ImageButton) mRootView.findViewById(R.id.home_button);
         nxtBtn = (Button) mRootView.findViewById(R.id.imageButton23);
         canlBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
+        amount = (EditText) mRootView.findViewById(R.id.TxtAmount);
+        referenceNumber = (EditText) mRootView.findViewById(R.id.referenceNumber);
+        location = (EditText) mRootView.findViewById(R.id.location);
 
 
 
-        /*canlBtn.setOnClickListener(new View.OnClickListener() {
+
+
+        canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 initProgrees();
-                HomeTask task = new HomeTask(CardsServicesActivity.class);
+                HomeTask task = new HomeTask(HomeActivity.class);
                 task.execute();
             }
-        });*/
+        });
         back = (ImageButton) mRootView.findViewById(R.id.Back);
 
 
 
-       /* MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.maskedCardsList);
+        MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), R.layout.spinner_item, Globals.maskedCardsList);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spincard.setAdapter(spinnerArrayAdapter);*/
-        //btnStopCard = (Button) findViewById(R.id.btnStopCard);
-       // loadActivatedCard();
+        spincard.setAdapter(spinnerArrayAdapter);
+        spincard.setOnItemSelectedListener(this);
 
 
         nxtBtn.setOnClickListener(new View.OnClickListener() {
@@ -208,19 +218,7 @@ public class Last10Transactions extends BaseFragment implements View.OnClickList
      return mRootView;
 
     }
-    @Override
-    public void onClick(View view) {
-        final int id = 0;
-        Log.e(TAG, "onClick: 111111111111111111111111111111111111111111111111");
-        if (view.getId() == R.id.spincard1) {
 
-            Log.e(TAG, "onClick: 222222222222222222222222222222222222222");
-            initProgrees();
-            CustomTask task = new CustomTask(getActivity().getApplicationContext());
-            task.execute();
-
-        }
-    }
    /* private void loadActivatedCard() {
 
         try {
@@ -306,12 +304,17 @@ public class Last10Transactions extends BaseFragment implements View.OnClickList
 
 
     public void onItemSelected(AdapterView<?> parent, View arg1, int pos, long id) {
+        Log.e(TAG, "onItemSelected: -------------------------------------- " );
         if (parent instanceof Spinner && pos > 0) {
             switch (parent.getId()) {
                 case R.id.spincard1:
+                    Log.e(TAG, "onItemSelected :  inside the switch -------------------------------------- " );
                     this.selectedCard = Globals.maskedCardsList.get(pos);
-                    break;
 
+                    initProgrees();
+                    CustomTask task = new CustomTask(getActivity().getApplicationContext());
+                    task.execute();
+                    break;
             }
         }
     }
@@ -844,53 +847,48 @@ public class Last10Transactions extends BaseFragment implements View.OnClickList
 
             return null;
         }
-        /*protected void onPostExecute(String param) {
+        protected void onPostExecute(String result) {
             dismissProgress();
-            super.onPostExecute(param);
+            super.onPostExecute(result);
 
 
-            if(param!=null && param.contains("801")){
-                //  Toast.makeText(CardLimitActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
-                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+            if(spincard!=null ){
+                Log.e(TAG, "bankcode:*********************************************" );
+
+                amount.setText("null");
+                amount.setTextSize(18);
+                referenceNumber.setText("null");
+                referenceNumber.setTextSize(18);
+                location.setText("null");
+                location.setTextSize(18);
+            }
+            if(result!=null && result.contains("801")){
+                // Toast.makeText(AccountBalanceActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
                 alertDialog.setMessage("SESSION EXPIRED");
                 alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
-                                doLogout(null);
                             }
                         });
                 alertDialog.show();
-
             }
 
-            if(param!=null && !param.contains("801")) {
-                //  Toast.makeText(CardLimitActivity.this, param, Toast.LENGTH_LONG).show();
-                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
-                alertDialog.setMessage(param);
+            if(result!=null && !result.contains("801")) {
+                // Toast.makeText(AccountBalanceActivity.this, result, Toast.LENGTH_LONG).show();
+
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                alertDialog.setMessage(result);
                 alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
-
                             }
                         });
                 alertDialog.show();
             }
-            else {
-                if(operation.equals(operationActivateCard))
-                    GoToConfirmation();
-                else{
-                    if(Globals.maskedCardsList!=null && Globals.maskedCardsList.size()>0) {
-                        MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(CardLimitActivity.this, R.layout.spinner_item, Globals.maskedCardsList);
-                        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        spincard.setAdapter(spinnerArrayAdapter);
-                    }
-                }
-            }
-
-
-    }*/
+        }
     }
     public static Bitmap decodeToBase64(String input) {
         byte[] decodedByte = Base64.decode(input, 0);

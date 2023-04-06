@@ -32,6 +32,7 @@ import androidx.annotation.Nullable;
 import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.tools.assets.Globals;
+import com.LBA.tools.misc.CardInformationDetail;
 import com.LBA.tools.services.Card;
 import com.LBA.tools.services.General;
 
@@ -151,14 +152,14 @@ public class CardOperation extends BaseFragment implements View.OnClickListener 
 
 
 
-        /*canlBtn.setOnClickListener(new View.OnClickListener() {
+        canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 initProgrees();
-                HomeTask task = new HomeTask(CardsServicesActivity.class);
+                HomeTask task = new HomeTask(HomeActivity.class);
                 task.execute();
             }
-        });*/
+        });
         back = (ImageButton) mRootView.findViewById(R.id.Back);
 
 
@@ -838,7 +839,7 @@ public class CardOperation extends BaseFragment implements View.OnClickListener 
 
             //Card.GetCardsToActivateList();
             try {
-                Card.CardDetails();
+                //Card.CardDetails();
                 dismissProgress();
             } catch (Exception ex) {
                 ex.printStackTrace();

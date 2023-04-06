@@ -10,6 +10,7 @@ import com.LBA.tools.misc.BankEntry;
 import com.LBA.tools.misc.BeneficiaryEntry;
 import com.LBA.tools.misc.BranchEntry;
 import com.LBA.tools.misc.BranchGeoEntry;
+import com.LBA.tools.misc.CardInformationDetail;
 import com.LBA.tools.misc.EStatementEntry;
 import com.LBA.tools.misc.ExpenseLimitEntry;
 import com.LBA.tools.misc.ExpenseTrackingBean;
@@ -259,9 +260,11 @@ public class Globals {
 
     static public List<String> accountsList;
     static public List<String> cardsList;
+    static public CardInformationDetail cardOnline = new CardInformationDetail();
     static public  ArrayList<HistoryEntry> historyEntryList = new ArrayList<>();
     static public List<String> cardsToActivateList = new ArrayList<String>(); // MAW20170226
-    static public List<String> maskedCardsList = new ArrayList<String>();;
+    static public List<String> maskedCardsList = new ArrayList<String>();
+    static public List<CardInformationDetail> transactionList = new ArrayList<CardInformationDetail>();
     // static data to change later
 
     static {
@@ -276,7 +279,7 @@ public class Globals {
     static public List<BankEntry> achBanksList;
     static public List<BankEntry> gipBanksList;
     static public List<BranchEntry> branchesList;
-    static public List<T24TrxHistDetails> transactionList = new ArrayList<T24TrxHistDetails>();
+
     static public List<ExpenseTrackingBean> expenseTrackingList = new ArrayList<ExpenseTrackingBean>();
     static public HashMap<String, List<ExpenseTrackingBean>> expenseTrackingmap = new LinkedHashMap<String, List<ExpenseTrackingBean>>();
     static public HashMap<String, ArrayList<ExpenseTrackingDetailsBean>> expenseTrackingDetailsMap = new LinkedHashMap<String, ArrayList<ExpenseTrackingDetailsBean>>();

@@ -17,13 +17,13 @@ import com.LBA.prepaidPortal.R;
 
 import com.LBA.prepaidPortal.widgets.fragment.AccountToCard;
 import com.LBA.prepaidPortal.widgets.fragment.CardInformation1;
+import com.LBA.prepaidPortal.widgets.fragment.CardInformationHin;
 import com.LBA.prepaidPortal.widgets.fragment.CardLimit;
 import com.LBA.prepaidPortal.widgets.fragment.CardOperation;
 import com.LBA.prepaidPortal.widgets.fragment.CardToCard;
-import com.LBA.prepaidPortal.widgets.fragment.GMoneyWalletToCard;
-import com.LBA.prepaidPortal.widgets.fragment.GenerateStatement;
+
+import com.LBA.prepaidPortal.widgets.fragment.GetBalance;
 import com.LBA.prepaidPortal.widgets.fragment.Last10Transactions;
-import com.LBA.prepaidPortal.widgets.fragment.NewPin;
 import com.google.android.material.navigation.NavigationView;
 import com.LBA.prepaidPortal.widgets.fragment.HomeFragment;
 
@@ -92,7 +92,7 @@ public class HomeActivity extends AbstractActivity
             fragment = new CardInformation1();
         }
         else if (id == R.id.generate_statement){
-            fragment = new GenerateStatement();
+            fragment = new GetBalance();
         }
         else if (id == R.id.last_transaction){
             fragment = new Last10Transactions();

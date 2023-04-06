@@ -47,17 +47,12 @@
                 android:textColor="@color/black"
                 android:textSize="14dp" />
 
-
             <Spinner
                 android:id="@+id/spincard"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 style="@style/spinner_style"
                 />
-
-
-
-
 
             <TextView
                 android:layout_width="fill_parent"
@@ -132,7 +127,7 @@
 
 
             <EditText
-                android:id="@+id/TxtAmount1"
+                android:id="@+id/ClientCode"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 android:layout_column="4"
@@ -184,7 +179,7 @@
 
 
             <EditText
-                android:id="@+id/bankcode"
+                android:id="@+id/ClientType"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 android:layout_column="4"

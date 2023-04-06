@@ -219,7 +219,7 @@ public class Account {
 
     static public void GetTransactionList(String accountNumber,String dateStart,String dateEnd) throws Exception{
 
-        List<T24TrxHistDetails> listTrx =new ArrayList<T24TrxHistDetails>();
+        /*List<T24TrxHistDetails> listTrx =new ArrayList<T24TrxHistDetails>();
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("user", Globals.user);
         jsonObject.put("password", Globals.password);
@@ -249,7 +249,7 @@ public class Account {
                     arrayTransactionList.getJSONObject(i).getString("closingBalance")
             ));
            // Log.d("getTRList",Globals.transactionList.toString());
-        }
+        }*/
 
    /*     Globals.TrxList.clear();
         JSONArray arrayTransactionList = jsonRespObject.getJSONArray("transactionList");

@@ -965,7 +965,7 @@ public class GMoneyWalletToCard extends BaseFragment implements View.OnClickList
 
             //Card.GetCardsToActivateList();
             try {
-                Card.CardDetails();
+                //Card.CardDetails();
                 dismissProgress();
             } catch (Exception ex) {
                 ex.printStackTrace();

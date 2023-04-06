@@ -2767,6 +2767,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable transfers_phase2
 drawable user_avatar
+drawable white_rect
 font cabinsketchregular
 font chakrapetchbold
 font josefinslabbold
@@ -2774,6 +2775,7 @@ font josefinslabitalic
 font josefinslabregular
 font josefinslabsemibold
 font josefinslabthin
+font miloot_bold
 font monotonregular
 font poiretoneregular
 font reeniebeanie
@@ -2794,6 +2796,8 @@ id Back
 id BenefBtn
 id Branch
 id CTRL
+id ClientCode
+id ClientType
 id FUNCTION
 id Fund_Card
 id LblACHBank
@@ -2970,10 +2974,12 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id balance
 id bankCode
 id bankName
 id bankcode
 id bankcodeView
+id bankname
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2986,9 +2992,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id branch
 id branchView
 id btnBalances
 id btnBiometric
+id btnLoad
 id btnNOk
 id btnOk
 id btnSignIn
@@ -3026,6 +3034,8 @@ id chronometer
 id circle_center
 id clamp
 id clear_text
+id client_type
+id clientcode
 id clip_horizontal
 id clip_vertical
 id clockwise
@@ -3045,6 +3055,7 @@ id coordinator
 id cos
 id counterclockwise
 id country_text
+id currency
 id currency_text
 id currentState
 id current_interface_text
@@ -3196,8 +3207,10 @@ id linearLayout2
 id linearLayout3
 id linearLayout4
 id listMode
+id listView
 id list_item
 id ll1
+id location
 id loginbtn
 id masked
 id match_constraint
@@ -3307,7 +3320,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id referencenum
+id referenceNumber
 id refrencenumvie
 id relativeLayout
 id repeat
@@ -3432,6 +3445,7 @@ id snapMargins
 id south
 id spacer
 id spinACHBranch
+id spinAccountNumber
 id spinBenef
 id spincard
 id spincard1
@@ -3500,6 +3514,7 @@ id textView6
 id textView7
 id textView8
 id textView9
+id textView_heading
 id textViewemail
 id text_input_end_icon
 id text_input_error_icon
@@ -3550,6 +3565,9 @@ id userWelcomeCard
 id username
 id validation_title
 id vertical_only
+id view7
+id view8
+id view9
 id viewPagerImageSlider
 id viewPagerImageSlider2
 id view_offset_helper
@@ -3637,6 +3655,8 @@ layout account_to_card_fragment
 layout activity_home
 layout activity_main
 layout app_bar_home
+layout card_detail
+layout card_detail_result
 layout card_information_fragment1
 layout card_to_card_fragment
 layout code_verification_activity
@@ -3666,6 +3686,7 @@ layout fragment_card_limit
 layout fragment_card_operation
 layout fragment_generate_statement
 layout fragment_home
+layout get_balance
 layout gmoneywallet_to_card_fragment
 layout header_layout
 layout header_layout_phase2
@@ -3725,6 +3746,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout page_title
 layout request_conf_act
 layout sdp_example
 layout select_dialog_item_material
