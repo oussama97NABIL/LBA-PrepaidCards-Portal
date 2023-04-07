@@ -1165,6 +1165,7 @@ color colorTransparentWhite
 color colorWhite
 color colorYellow
 color dark_grey_color
+color dark_grey_color1
 color deep_red
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
@@ -2643,6 +2644,7 @@ drawable back
 drawable back_black
 drawable backgound_login
 drawable background_2
+drawable banque_agricole
 drawable baseline_account_box_24
 drawable baseline_account_circle_24
 drawable baseline_arrow_drop_up_24
@@ -2953,7 +2955,6 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id additional_info_text
 id airplane
 id airtimeAndData
 id alertTitle
@@ -2963,6 +2964,7 @@ id allStates
 id always
 id amount
 id amount_edit_text
+id amount_list
 id animateToEnd
 id animateToStart
 id antiClockwise
@@ -2974,6 +2976,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id availablebalance
 id balance
 id bankCode
 id bankName
@@ -3010,6 +3013,7 @@ id button_start
 id cache_measures
 id callMeasure
 id cancel_button
+id cardNumber
 id cardServices
 id card_card
 id card_information
@@ -3058,12 +3062,12 @@ id country_text
 id currency
 id currency_text
 id currentState
-id current_interface_text
 id custom
 id customPanel
 id cut
 id cycle
 id cycle2
+id date
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3179,6 +3183,7 @@ id imageButton28
 id imageButton3
 id imageButton4
 id imageButton5
+id imageView
 id imageView3
 id imageView4
 id immediateStop
@@ -3321,6 +3326,8 @@ id radio
 id ratio
 id rectangles
 id referenceNumber
+id referencenumber
+id refrence_number
 id refrencenumvie
 id relativeLayout
 id repeat
@@ -3445,7 +3452,6 @@ id snapMargins
 id south
 id spacer
 id spinACHBranch
-id spinAccountNumber
 id spinBenef
 id spincard
 id spincard1
@@ -3467,7 +3473,6 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
-id status_text
 id stop
 id strength
 id stretch
@@ -3537,6 +3542,8 @@ id topPanel
 id touch_outside
 id train
 id transactionId
+id transaction_type
+id transactiontype
 id transfer
 id transitionToEnd
 id transitionToStart
@@ -3651,12 +3658,13 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout account_to_card_detail
 layout account_to_card_fragment
 layout activity_home
 layout activity_main
+layout activity_transaction_result
 layout app_bar_home
 layout card_detail
-layout card_detail_result
 layout card_information_fragment1
 layout card_to_card_fragment
 layout code_verification_activity
@@ -3687,6 +3695,7 @@ layout fragment_card_operation
 layout fragment_generate_statement
 layout fragment_home
 layout get_balance
+layout get_last10transaction
 layout gmoneywallet_to_card_fragment
 layout header_layout
 layout header_layout_phase2
@@ -3758,6 +3767,7 @@ layout spinner_item
 layout splash_screen_user
 layout ssp_example
 layout support_simple_spinner_dropdown_item
+layout td_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
 layout test_design_checkbox

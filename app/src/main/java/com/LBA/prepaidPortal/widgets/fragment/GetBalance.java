@@ -18,13 +18,12 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.LBA.prepaidPortal.R;
-import com.LBA.prepaidPortal.activity.CardInformationResult;
-import com.LBA.prepaidPortal.activity.GetBalanceResult;
 import com.LBA.tools.assets.Globals;
 import com.LBA.tools.misc.MySpinnerAdapter;
 import com.LBA.tools.services.Card;
 
 import java.text.SimpleDateFormat;
+import java.util.Currency;
 import java.util.Locale;
 
 
@@ -40,8 +39,10 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
     private SimpleDateFormat dateFormatter;
     private int nCounter=0;
     private String selectedAccount;
-    TextView Balance;
-    TextView Currency;
+    EditText availableBalance;
+    EditText Balance;
+    EditText currency;
+
 
     TextView textView_heading;
     TextView textView;
@@ -58,53 +59,14 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
 
         getActivity().setTitle("Get Balance");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
-        btnLoad=(Button) mRootView.findViewById(R.id.btnLoad);
-        spinCardNumber = (Spinner) mRootView.findViewById(R.id.spinAccountNumber);
-        Balance = (TextView) mRootView.findViewById(R.id.balance);
-        Currency = (TextView) mRootView.findViewById(R.id.currency);
-        // ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Globals.accountsList);
-        MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, Globals.accountsList);
-        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //spinCardNumber.setAdapter(spinnerArrayAdapter);
-        spinCardNumber.setOnItemSelectedListener(this);
+        availableBalance = (EditText) mRootView.findViewById(R.id.availablebalance);
+        Balance = (EditText) mRootView.findViewById(R.id.balance);
+        currency = (EditText) mRootView.findViewById(R.id.currency);
 
-        textView_heading = (TextView) mRootView.findViewById(R.id.textView_heading);
-        textView = (TextView) mRootView.findViewById(R.id.textView);
-        textView2 = (TextView) mRootView.findViewById(R.id.textView2);
-        textView3 = (TextView) mRootView.findViewById(R.id.textView3);
+        getBalance();
 
 
-        if(Globals.transactionList!=null && Globals.transactionList.size()>0)
-            Globals.transactionList.clear();
 
-        btnLoad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(spinCardNumber.getSelectedItemPosition()==0){
-                    Toast.makeText(getActivity().getApplicationContext(), "Source account" + " " + getResources().getString(R.string.isMandator), Toast.LENGTH_LONG).show();
-                    spinCardNumber.requestFocus();
-                    return;
-                }
-
-                /*if (fromDateEtxt.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(getActivity().getApplicationContext(), "From Date is Mandatory", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (toDateEtxt.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(getActivity().getApplicationContext(), "To Date is Mandatory", Toast.LENGTH_LONG).show();
-                    return;
-                }*/
-                try {
-                    //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
-                    initProgrees();
-                    new CustomTask().execute();
-                } catch (Exception e) {
-                    //Log.d(TAG, "btnLoad.setOnClickListener()", e);
-                    Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                }
-
-            }
-        });
 
         /**
          TextView txtBalance;
@@ -163,6 +125,16 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
         }
     }
 
+    public void getBalance(){
+        try {
+            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+            initProgrees();
+            new CustomTask().execute();
+        } catch (Exception e) {
+            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
+            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -197,9 +169,9 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
     private class CustomTask extends AsyncTask<String, String, String> {
         protected String doInBackground(String... param) {
             try {
-                Card.CardDetails();
-                Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), GetBalanceResult.class);
-                startActivity(myWelcomeAct);
+                Card.GetBalance();
+                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
+                //startActivity(myWelcomeAct);
                 return null;
             } catch (Exception e) {
                 e.printStackTrace();
@@ -222,6 +194,9 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
 
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+            availableBalance.setText(Globals.availableBalance);
+            Balance.setText(Globals.balance);
+            currency.setText(Globals.currency);
         }
     }
 }

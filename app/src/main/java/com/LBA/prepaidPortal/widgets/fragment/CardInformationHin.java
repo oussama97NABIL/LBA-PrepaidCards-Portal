@@ -32,7 +32,7 @@ import androidx.annotation.Nullable;
 import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.tools.assets.Globals;
-import com.LBA.tools.misc.CardInformationDetail;
+import com.LBA.tools.misc.LastTransactionDetail;
 import com.LBA.tools.misc.MySpinnerAdapter;
 import com.LBA.tools.services.Card;
 import com.LBA.tools.services.General;
@@ -873,7 +873,7 @@ public class CardInformationHin extends BaseFragment implements AdapterView.OnIt
         protected void onPostExecute(String result) {
             dismissProgress();
             super.onPostExecute(result);
-            CardInformationDetail c = new CardInformationDetail();
+            LastTransactionDetail c = new LastTransactionDetail();
 
             if(spincard!=null ){
                 Log.e(TAG, "bankcode:*********************************************" );

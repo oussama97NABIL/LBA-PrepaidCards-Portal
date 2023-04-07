@@ -146,6 +146,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
 
         Log.e("onCreate: ", "  Globals.userType : "+  Globals.userType);
+        getActivity().setTitle("Home Activity\n");
         super.onCreate(savedInstanceState);
         mRootView = inflater.inflate(R.layout.z_menu_test, container, false);
 
@@ -179,7 +180,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         userImage = (RoundedImageView) mRootView.findViewById(R.id.userImage);
 
         //---------------      --------------------------
-        Spannable word = new SpannableString("Hello ");
+        Spannable word = new SpannableString("Hello User Bienvenu");
 
         //3/28/2023  word.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.cbg_red)), 0, word.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 

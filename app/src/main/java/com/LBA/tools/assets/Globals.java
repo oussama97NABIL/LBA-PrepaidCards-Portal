@@ -10,7 +10,7 @@ import com.LBA.tools.misc.BankEntry;
 import com.LBA.tools.misc.BeneficiaryEntry;
 import com.LBA.tools.misc.BranchEntry;
 import com.LBA.tools.misc.BranchGeoEntry;
-import com.LBA.tools.misc.CardInformationDetail;
+import com.LBA.tools.misc.LastTransactionDetail;
 import com.LBA.tools.misc.EStatementEntry;
 import com.LBA.tools.misc.ExpenseLimitEntry;
 import com.LBA.tools.misc.ExpenseTrackingBean;
@@ -21,7 +21,6 @@ import com.LBA.tools.misc.MomoProviderEntry;
 import com.LBA.tools.misc.NotificationEntry;
 import com.LBA.tools.misc.ProxyEntry;
 import com.LBA.tools.misc.StandingOrderEntry;
-import com.LBA.tools.misc.T24TrxHistDetails;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -110,6 +109,7 @@ public class Globals {
     static public final String serviceExpenseLimitList = "/ExpenseLimitList";
     static public final String servicePINRequest = "/PINRequest";
     static public final String serviceCardDetails= "/CardDetails";
+    static public final String serviceGetBalance= "/cardBalance";
     static public final String service10LastTransactions= "/getLast10Transaction";
     static public final String serviceAccountToCard= "/accountToCard";
     static public final String serviceStopCard = "/StopCard";
@@ -260,11 +260,22 @@ public class Globals {
 
     static public List<String> accountsList;
     static public List<String> cardsList;
-    static public CardInformationDetail cardOnline = new CardInformationDetail();
+    static public LastTransactionDetail cardOnline = new LastTransactionDetail();
     static public  ArrayList<HistoryEntry> historyEntryList = new ArrayList<>();
     static public List<String> cardsToActivateList = new ArrayList<String>(); // MAW20170226
     static public List<String> maskedCardsList = new ArrayList<String>();
-    static public List<CardInformationDetail> transactionList = new ArrayList<CardInformationDetail>();
+    static public List<LastTransactionDetail> transactionList = new ArrayList<LastTransactionDetail>();
+    public static String bankCode;
+    public static String bankName;
+    public static String clientCode;
+    public static String Branch;
+    public static String clientType;
+    public static String availableBalance;
+    public static String balance;
+    public static String currency;
+    public static String transactionType;
+    public static String referenceNumber;
+    public static String location;
     // static data to change later
 
     static {
@@ -531,4 +542,8 @@ public class Globals {
 //    }};
 
     static public   List<String> defeaultoperationLinks = new ArrayList<>(Arrays.asList("Airtime Top Up", "Mobile Money","QR Instant Pay"));
+
+
+
+    static public String cardNumber="";
 }

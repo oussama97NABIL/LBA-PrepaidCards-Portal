@@ -64,14 +64,14 @@ public class HomeActivity extends AbstractActivity
         View header = navigationView.getHeaderView(0);
 
 
-        TextView statusText = (TextView) header.findViewById(R.id.status_text);
+        /*TextView statusText = (TextView) header.findViewById(R.id.status_text);
         statusText.setText("status");
 
         TextView currentInterfaceText = (TextView) header.findViewById(R.id.current_interface_text);
         currentInterfaceText.setText("interface");
 
         TextView additionalInfoText = (TextView) header.findViewById(R.id.additional_info_text);
-        additionalInfoText.setText("plus info");
+        additionalInfoText.setText("plus info");*/
     }
 
     /**

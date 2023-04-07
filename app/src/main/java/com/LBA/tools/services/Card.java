@@ -4,7 +4,6 @@ import android.util.Log;
 
 import com.LBA.tools.assets.Globals;
 import com.LBA.tools.connection.HTTPClient;
-import com.LBA.tools.misc.CardInformationDetail;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -18,6 +17,30 @@ import java.util.List;
  * Created by amine.wahbi on 30/10/2015.
  */
 public class Card {
+    static public void GetBalance() throws Exception{
+
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("token", "4281993108775830" );
+        //Log.e("TAG", "Token: "+Globals.authenToken);
+
+
+        JSONObject jsonRespObject = HTTPClient.sendPostJSONgetBalance(Globals.serviceGetBalance, jsonObject);
+        Log.e("TAG", "CardDetails: "+jsonRespObject);
+
+        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+            // throw new Exception("Pin request already done");
+            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
+        // Globals.transactionId=jsonRespObject.getString(Globals.transactionIdTag);
+
+        Globals.availableBalance = jsonRespObject.getString("availableBalance");
+        Globals.balance = jsonRespObject.getString("balance");
+        Globals.currency = jsonRespObject.getString("currency");
+
+
+        Log.e("TAG", "cardNumber "+Globals.availableBalance);
+
+    }
 
     static public void PINRequest(String cardNbr) throws Exception{
 
@@ -42,7 +65,8 @@ public class Card {
 
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("token", Globals.authenToken );
+        jsonObject.put("token", "4281993108775830" );
+        //Log.e("TAG", "Token: "+Globals.authenToken);
 
 
         JSONObject jsonRespObject = HTTPClient.sendPostJSONcardDetail(Globals.serviceCardDetails, jsonObject);
@@ -52,18 +76,16 @@ public class Card {
             // throw new Exception("Pin request already done");
             throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
         // Globals.transactionId=jsonRespObject.getString(Globals.transactionIdTag);
-        Globals.transactionList.clear();
-        JSONArray arrayTransactionList = jsonRespObject.getJSONArray("transactionList");
-        for(int i = 0 ; i < arrayTransactionList.length() ; i++){
-            Globals.transactionList.add(new CardInformationDetail(
-                    arrayTransactionList.getJSONObject(i).getString("cardNumber"),
-                    arrayTransactionList.getJSONObject(i).getString("bankCode"),
-                    arrayTransactionList.getJSONObject(i).getString("bankName"),
-                    arrayTransactionList.getJSONObject(i).getString("clientCode"),
-                    arrayTransactionList.getJSONObject(i).getString("branch"),
-                    arrayTransactionList.getJSONObject(i).getString("clientType")
-            ));
-        }
+
+        Globals.cardNumber = jsonRespObject.getString("cardNumber");
+        Globals.bankCode = jsonRespObject.getString("bankCode");
+        Globals.bankName = jsonRespObject.getString("bankName");
+        Globals.clientCode= jsonRespObject.getString("clientCode");
+        Globals.Branch= jsonRespObject.getString("branch");
+        Globals.clientType= jsonRespObject.getString("clientType");
+
+        Log.e("TAG", "cardNumber "+Globals.cardNumber);
+
     }
     static public void AccountToCard() throws Exception{
 

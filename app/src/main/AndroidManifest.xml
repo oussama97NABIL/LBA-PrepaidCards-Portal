@@ -14,6 +14,7 @@
             android:exported="false">
         </activity>
         <activity android:name=".activity.Z_WelcomeActivity" />
+        <activity android:name=".activity.LastTransactionResult" />
         <activity
             android:name="com.LBA.prepaidPortal.activity.BaseActivity"
             android:exported="false">

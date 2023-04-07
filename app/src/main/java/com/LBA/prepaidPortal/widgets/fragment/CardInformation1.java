@@ -1,31 +1,15 @@
 package com.LBA.prepaidPortal.widgets.fragment;
 
-import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.InputType;
-import android.util.Base64;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,18 +17,10 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.LBA.prepaidPortal.R;
-import com.LBA.prepaidPortal.activity.CardInformationResult;
-import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.tools.assets.Globals;
-import com.LBA.tools.misc.CardInformationDetail;
-import com.LBA.tools.misc.MySpinnerAdapter;
 import com.LBA.tools.services.Card;
-import com.LBA.tools.services.General;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 
@@ -78,53 +54,13 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
 
         getActivity().setTitle("Get card information");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
-        btnLoad=(Button) mRootView.findViewById(R.id.btnLoad);
-        spinCardNumber = (Spinner) mRootView.findViewById(R.id.spinAccountNumber);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
-        // ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Globals.accountsList);
-        MySpinnerAdapter spinnerArrayAdapter = new MySpinnerAdapter(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, Globals.accountsList);
-        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //spinCardNumber.setAdapter(spinnerArrayAdapter);
-        spinCardNumber.setOnItemSelectedListener(this);
 
-        textView_heading = (TextView) mRootView.findViewById(R.id.textView_heading);
-        textView = (TextView) mRootView.findViewById(R.id.textView);
-        textView2 = (TextView) mRootView.findViewById(R.id.textView2);
-        textView3 = (TextView) mRootView.findViewById(R.id.textView3);
+        getCardInformations();
 
 
-        if(Globals.transactionList!=null && Globals.transactionList.size()>0)
-            Globals.transactionList.clear();
 
-        btnLoad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(spinCardNumber.getSelectedItemPosition()==0){
-                    Toast.makeText(getActivity().getApplicationContext(), "Source account" + " " + getResources().getString(R.string.isMandator), Toast.LENGTH_LONG).show();
-                    spinCardNumber.requestFocus();
-                    return;
-                }
-
-                /*if (fromDateEtxt.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(getActivity().getApplicationContext(), "From Date is Mandatory", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (toDateEtxt.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(getActivity().getApplicationContext(), "To Date is Mandatory", Toast.LENGTH_LONG).show();
-                    return;
-                }*/
-                try {
-                    //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
-                    initProgrees();
-                    new CustomTask().execute();
-                } catch (Exception e) {
-                    //Log.d(TAG, "btnLoad.setOnClickListener()", e);
-                    Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                }
-
-            }
-        });
 
         /**
          TextView txtBalance;
@@ -183,6 +119,16 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
         }
     }
 
+    public void getCardInformations(){
+        try {
+            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+            initProgrees();
+            new CustomTask().execute();
+        } catch (Exception e) {
+            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
+            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -218,8 +164,8 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
         protected String doInBackground(String... param) {
             try {
                 Card.CardDetails();
-                Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
-                startActivity(myWelcomeAct);
+               // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
+                //startActivity(myWelcomeAct);
                 return null;
             } catch (Exception e) {
                 e.printStackTrace();
@@ -242,6 +188,27 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
 
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+
+
+
+
+            BankCode = (EditText) mRootView.findViewById(R.id.bankcode);
+            BankCode.setText(Globals.bankCode);
+            BankName = (EditText) mRootView.findViewById(R.id.bankname);
+            BankName.setText(Globals.bankName);
+            EditText clientCode = (EditText) mRootView.findViewById(R.id.clientcode);
+            clientCode.setText(Globals.clientCode);
+
+            EditText branch = (EditText) mRootView.findViewById(R.id.branch);
+            branch.setText(Globals.Branch);
+
+            EditText client_type = (EditText) mRootView.findViewById(R.id.client_type);
+            client_type.setText(Globals.clientType);
+
+            EditText cardNumber = (EditText) mRootView.findViewById(R.id.cardNumber);
+            cardNumber.setText(Globals.cardNumber);
+
+
         }
     }
 }

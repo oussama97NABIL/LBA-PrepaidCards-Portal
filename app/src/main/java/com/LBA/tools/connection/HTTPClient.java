@@ -273,12 +273,11 @@ public class HTTPClient extends AbstractActivity {
 
 
             final String url = Globals.serverURL+service;
-            //final String  AUTH_VALUE = "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODA3ODkyMzAsImp0aSI6IjQyODE5OTMxMDg3NzU4MzAiLCJ1c2VyTWFuYWdlbWVudCI6eyJ1c2VyQ29kZSI6IjQyODE5OTMxMDg3NzU4MzAiLCJicmFuY2giOiI1NjAwMSIsImJhbmsiOiIyMDA0OCIsInVzZXJOYW1lIjoiU0FJRE9VIFNPVyIsInVzZXJUeXBlIjoiSSIsInVzZXJQYXNzd29yZCI6ImE5NTg3YzI1YTM3MDg3ZGNiNWJjZGNhNDQwNDRhNDk5IiwibnVtYmVyT2ZUcmllcyI6MCwibnVtYmVyT2ZUcmllc0FsbG93ZWQiOjMsImNvbm5lY3RlZCI6IlkiLCJmaXJzdENvbm5lY3Rpb24iOiJOIiwibmJyZVNlc3Npb25BbGxvd2VkIjowLCJuYnJlU2Vlc2lvbkNvbm5lY3RlZCI6MCwibGVuZ3RoUGFzc3dvcmQiOm51bGwsImNvbXBsZXhpdHlGbGFnIjpudWxsLCJleHBpcmF0aW9uUGFzc3dvcmQiOjAsImRhdGVTdGFydFBhc3MiOm51bGwsImRhdGVFbmRQYXNzIjpudWxsLCJibG9ja0FjY2VzcyI6Ik4iLCJsYW5ndWFnZUNvZGUiOm51bGwsInNlc3Npb25JZCI6bnVsbCwicmVxdWVzdEZvcmdvdFB3ZCI6bnVsbH0sImlhdCI6MTY4MDc4ODYzMH0.6nGrR3z0XsnBnV-Ben5Ry8drRaUhc7OVcl0JbevbKpE";
-            //final String AUTH_KEY = "Authorization"; // Globals.authenToken;
             final String AUTH_KEY = "Authorization";
 
             final String AUTH_VALUE = Globals.authenToken;
-            Log.e("", "sendPostJSONcardDetail: ", );
+            Log.d(" log AUTH_VALUE", AUTH_VALUE );
+
             HttpPost httpPost = new HttpPost(url);
             Log.d("url",url);
             httpPost.addHeader("Accept", "application/json");
@@ -286,8 +285,81 @@ public class HTTPClient extends AbstractActivity {
 
             httpPost.addHeader("Content-Type", "application/json");
              httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
-             httpPost.addHeader("Authorization", AUTH_VALUE);
+
+             httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
+            Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
            //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
+
+            StringEntity se = new StringEntity(jsonObject.toString());
+            httpPost.setEntity(se);
+            HttpResponse httpResponse = httpClient.execute(httpPost);
+            if (httpResponse.getStatusLine().getStatusCode() != 200) {
+                // throw new Exception("sendPostJSON() failed" + httpResponse.getStatusLine().getStatusCode());
+                throw new Exception("SERVER ERROR "+httpResponse.getStatusLine().getStatusCode()+". TRY LATER");
+            }
+            else{
+                BufferedReader reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+                while ((inputLine = reader.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                reader.close();
+                JSONObject jsonRespObject = new JSONObject(response.toString());
+
+
+                return jsonRespObject;
+            }
+        } catch(Exception e){
+            Log.d("IB","getNewHttpClient",e);
+            e.printStackTrace();
+            throw new Exception("COMMUNICATION ERROR. TRY LATER");
+        }/* finally {
+            // younes
+            if(httpClient.getConnectionManager()!=null)
+                //httpclient.close();
+             httpClient.getConnectionManager().shutdown();
+
+}*/
+        finally {
+            /**
+             if(httpclient!=null)
+             httpclient.close();
+             **/
+
+        }
+    }
+    static public JSONObject  sendPostJSONgetBalance(String service, JSONObject jsonObject) throws Exception {
+        int statusCode=-1;
+        // CloseableHttpClient httpclient = null;
+        HttpClient httpClient = null;
+        Globals.transactionId = null;
+        try {
+            //swap here between Test version and live version  with comment and uncomment even one
+            //hajer 20/06/2022
+            httpClient = getNewHttpClient();  //for test version
+            //httpClient = getProdHttpClient(); //for live version
+
+
+            final String url = Globals.serverURL+service;
+            //final String  AUTH_VALUE = "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODA3ODkyMzAsImp0aSI6IjQyODE5OTMxMDg3NzU4MzAiLCJ1c2VyTWFuYWdlbWVudCI6eyJ1c2VyQ29kZSI6IjQyODE5OTMxMDg3NzU4MzAiLCJicmFuY2giOiI1NjAwMSIsImJhbmsiOiIyMDA0OCIsInVzZXJOYW1lIjoiU0FJRE9VIFNPVyIsInVzZXJUeXBlIjoiSSIsInVzZXJQYXNzd29yZCI6ImE5NTg3YzI1YTM3MDg3ZGNiNWJjZGNhNDQwNDRhNDk5IiwibnVtYmVyT2ZUcmllcyI6MCwibnVtYmVyT2ZUcmllc0FsbG93ZWQiOjMsImNvbm5lY3RlZCI6IlkiLCJmaXJzdENvbm5lY3Rpb24iOiJOIiwibmJyZVNlc3Npb25BbGxvd2VkIjowLCJuYnJlU2Vlc2lvbkNvbm5lY3RlZCI6MCwibGVuZ3RoUGFzc3dvcmQiOm51bGwsImNvbXBsZXhpdHlGbGFnIjpudWxsLCJleHBpcmF0aW9uUGFzc3dvcmQiOjAsImRhdGVTdGFydFBhc3MiOm51bGwsImRhdGVFbmRQYXNzIjpudWxsLCJibG9ja0FjY2VzcyI6Ik4iLCJsYW5ndWFnZUNvZGUiOm51bGwsInNlc3Npb25JZCI6bnVsbCwicmVxdWVzdEZvcmdvdFB3ZCI6bnVsbH0sImlhdCI6MTY4MDc4ODYzMH0.6nGrR3z0XsnBnV-Ben5Ry8drRaUhc7OVcl0JbevbKpE";
+            //final String AUTH_KEY = "Authorization"; // Globals.authenToken;
+            final String AUTH_KEY = "Authorization";
+
+            final String AUTH_VALUE = Globals.authenToken;
+            Log.d(" log AUTH_VALUE", AUTH_VALUE );
+
+            HttpPost httpPost = new HttpPost(url);
+            Log.d("url",url);
+            httpPost.addHeader("Accept", "application/json");
+            //httpPost.addHeader("Accept", "*/*");
+
+            httpPost.addHeader("Content-Type", "application/json");
+            httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
+
+            httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
+            Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
+            //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
 
             StringEntity se = new StringEntity(jsonObject.toString());
             httpPost.setEntity(se);
@@ -402,7 +474,6 @@ public class HTTPClient extends AbstractActivity {
 
 
             final String url = Globals.serverURL+service;
-            final String AUTH_KEY = "bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODA3MDMyMzIsImp0aSI6IjQyODE5OTMxMDg3NzU4MzAiLCJ1c2VyTWFuYWdlbWVudCI6eyJ1c2VyQ29kZSI6IjQyODE5OTMxMDg3NzU4MzAiLCJicmFuY2giOiI1NjAwMSIsImJhbmsiOiIyMDA0OCIsInVzZXJOYW1lIjoiU0FJRE9VIFNPVyIsInVzZXJUeXBlIjoiSSIsInVzZXJQYXNzd29yZCI6ImE5NTg3YzI1YTM3MDg3ZGNiNWJjZGNhNDQwNDRhNDk5IiwibnVtYmVyT2ZUcmllcyI6MCwibnVtYmVyT2ZUcmllc0FsbG93ZWQiOjMsImNvbm5lY3RlZCI6IlkiLCJmaXJzdENvbm5lY3Rpb24iOiJOIiwibmJyZVNlc3Npb25BbGxvd2VkIjowLCJuYnJlU2Vlc2lvbkNvbm5lY3RlZCI6MCwibGVuZ3RoUGFzc3dvcmQiOm51bGwsImNvbXBsZXhpdHlGbGFnIjpudWxsLCJleHBpcmF0aW9uUGFzc3dvcmQiOjAsImRhdGVTdGFydFBhc3MiOm51bGwsImRhdGVFbmRQYXNzIjpudWxsLCJibG9ja0FjY2VzcyI6Ik4iLCJsYW5ndWFnZUNvZGUiOm51bGwsInNlc3Npb25JZCI6bnVsbCwicmVxdWVzdEZvcmdvdFB3ZCI6bnVsbH0sImlhdCI6MTY4MDcwMjYzMn0.7wELAs_Uy08tFCGg-eqB3zbkrqshNHge07cg3QbFGtk";
 
             final String AUTH_VALUE = Globals.authenToken;
             HttpPost httpPost = new HttpPost(url);
@@ -410,7 +481,7 @@ public class HTTPClient extends AbstractActivity {
             httpPost.addHeader("Accept", "application/json");
             httpPost.addHeader("Content-Type", "application/json");
             httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
-            httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
+            httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
             StringEntity se = new StringEntity(jsonObject.toString());
             httpPost.setEntity(se);
             HttpResponse httpResponse = httpClient.execute(httpPost);
