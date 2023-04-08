@@ -58,7 +58,9 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.LBA.MainActivity;
 import com.LBA.prepaidPortal.R;
+import com.LBA.prepaidPortal.activity.SharedPrefManager;
 import com.LBA.prepaidPortal.activity.Z_WelcomeActivity;
 import com.LBA.tools.assets.Globals;
 import com.LBA.tools.services.Notifications;
@@ -80,6 +82,7 @@ import java.util.List;
 
 public class HomeFragment extends BaseFragment implements View.OnClickListener {
     NavigationView navigationView;
+    SharedPrefManager sharedPrefManager;
 
     CardView AccBtn;
     //ImageButton BillBtn;
@@ -149,6 +152,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         getActivity().setTitle("Home Activity\n");
         super.onCreate(savedInstanceState);
         mRootView = inflater.inflate(R.layout.z_menu_test, container, false);
+        sharedPrefManager = new SharedPrefManager(getActivity().getApplicationContext());
 
 
         notificationText = mRootView.findViewById(R.id.notificationText);
@@ -664,4 +668,21 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     public void onClick(View view) {
 
     }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        switch (item.getItemId()){
+            case R.id.button_sign_out:
+                LogoutUser();
+                break;
+        }
+    }
+    private void LogoutUser(){
+        sharedPrefManager.logout();
+        Intent intent = new Intent(getActivity().getApplicationContext(),MainActivity.class);
+        intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK|intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+
+        Toast.makeText(getActivity().getApplicationContext(), "You have been logged out", Toast.LENGTH_SHORT).show();
+    }
+
 }
