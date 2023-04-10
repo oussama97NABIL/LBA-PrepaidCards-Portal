@@ -1084,6 +1084,9 @@ bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
 color Black
+color DebianRed
+color GoldenFoil
+color MurasakiPurple
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -2744,6 +2747,7 @@ drawable mtrl_navigation_bar_item_background
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
+drawable murasakipurple
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -2989,6 +2993,7 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id bg_spalsh
+id bienvenu
 id blocking
 id bottom
 id bounce
@@ -3075,7 +3080,6 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
-id desc
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3172,6 +3176,7 @@ id iconBeneficiary
 id icon_group
 id id1
 id id2
+id identifiant
 id ifRoom
 id ignore
 id ignoreRequest
@@ -3251,6 +3256,7 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id motdepasse
 id motion_base
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
@@ -3658,8 +3664,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout account_to_card_detail
-layout account_to_card_fragment
+layout account_to_card
 layout activity_home
 layout activity_main
 layout activity_transaction_result

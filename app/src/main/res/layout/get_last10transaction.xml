@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fancy="http://schemas.android.com/apk/res-auto">
+
+
+
+	<include layout="@layout/page_title" />
+	<ScrollView android:scrollbars="none" android:paddingTop="8dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<LinearLayout android:paddingTop="8dp" android:orientation="vertical" android:paddingBottom="60.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+			<LinearLayout
+				android:elevation="4dp"
+				android:layout_width="fill_parent"
+				android:background="@drawable/white_rect"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="19.299988dip" android:layout_marginRight="19.299988dip"
+				android:orientation="vertical"
+				android:paddingLeft="19.199982dip"
+				android:paddingTop="22.099976dip"
+				android:paddingRight="19.199982dip"
+				android:paddingBottom="18.699982dip">
+
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView android:fontFamily="@font/miloot_bold"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="12dp"
+						android:layout_weight="1.0"
+						android:text="TRANSACTION TYPE"
+						android:textAllCaps="true"
+						android:textColor="#ff6e7f8d"
+						android:textSize="12.0sp"
+						android:textStyle="bold" />
+
+					<EditText android:fontFamily="@font/miloot_bold"
+						android:id="@+id/transactiontype"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/transparent"
+						android:layout_weight="1.0"
+						android:inputType="text"
+						android:textSize="17.299988sp" />
+
+					<View
+						android:id="@+id/view9"
+						android:layout_width="match_parent"
+						android:layout_height="1.0dip"
+						android:layout_marginTop="5.0dip"
+						android:layout_weight="1.0"
+						android:background="#ffeff0f4" />
+
+					<LinearLayout
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<TextView android:fontFamily="@font/miloot_bold"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="12dp"
+							android:layout_weight="1.0"
+							android:text="AMOUNT"
+							android:layout_marginTop="8dp"
+							android:textAllCaps="true"
+							android:textColor="#ff6e7f8d"
+							android:textSize="12.0sp"
+							android:textStyle="bold" />
+
+						<EditText android:fontFamily="@font/miloot_bold"
+							android:id="@+id/amount"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:background="@color/transparent"
+							android:layout_weight="1.0"
+							android:inputType="text"
+							android:textSize="17.299988sp" />
+
+						<View
+							android:id="@+id/view7"
+							android:layout_width="match_parent"
+							android:layout_height="1.0dip"
+							android:layout_marginTop="5.0dip"
+							android:layout_weight="1.0"
+							android:background="#ffeff0f4" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<TextView android:fontFamily="@font/miloot_bold"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="12dp"
+							android:layout_weight="1.0"
+							android:text="currency"
+							android:layout_marginTop="8dp"
+							android:textAllCaps="true"
+							android:textColor="#ff6e7f8d"
+							android:textSize="12.0sp"
+							android:textStyle="bold" />
+
+						<EditText android:fontFamily="@font/miloot_bold"
+							android:id="@+id/currency"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:inputType="date"
+							android:layout_weight="1.0"
+							android:background="@color/transparent"
+							android:textSize="17.299988sp" />
+						<TextView android:fontFamily="@font/miloot_bold"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="12dp"
+							android:layout_weight="1.0"
+							android:text="REFERENCE NUMBER"
+							android:layout_marginTop="8dp"
+							android:textAllCaps="true"
+							android:textColor="#ff6e7f8d"
+							android:textSize="12.0sp"
+							android:textStyle="bold" />
+
+						<EditText android:fontFamily="@font/miloot_bold"
+							android:id="@+id/refrence_number"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:inputType="date"
+							android:layout_weight="1.0"
+							android:background="@color/transparent"
+							android:textSize="17.299988sp" />
+						<TextView android:fontFamily="@font/miloot_bold"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="12dp"
+							android:layout_weight="1.0"
+							android:text="LOCATION"
+							android:layout_marginTop="8dp"
+							android:textAllCaps="true"
+							android:textColor="#ff6e7f8d"
+							android:textSize="12.0sp"
+							android:textStyle="bold" />
+
+						<EditText android:fontFamily="@font/miloot_bold"
+							android:id="@+id/location"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:inputType="date"
+							android:layout_weight="1.0"
+							android:background="@color/transparent"
+							android:textSize="17.299988sp" />
+
+
+						<View
+							android:id="@+id/view8"
+							android:layout_width="match_parent"
+							android:layout_height="1.0dip"
+							android:layout_marginTop="5.0dip"
+							android:layout_weight="1.0"
+							android:background="#ffeff0f4" />
+					</LinearLayout>
+
+				</LinearLayout>
+			</LinearLayout>
+
+			<Button  android:textStyle="bold" android:id="@+id/btnLoad" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="19.299988dip" android:layout_marginTop="10.0dip" android:layout_marginRight="19.299988dip" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:text="SEARCH"  />
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

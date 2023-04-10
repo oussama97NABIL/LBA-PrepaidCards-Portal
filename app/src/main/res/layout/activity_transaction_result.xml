@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:paddingTop="30dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:elevation="4dp"
+        android:layout_width="fill_parent"
+        android:background="@drawable/white_rect"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19.299988dip" android:layout_marginRight="19.299988dip"
+        android:orientation="vertical"
+        android:paddingLeft="19.199982dip"
+        android:layout_marginTop="30dp"
+
+        android:paddingRight="19.199982dip"
+        android:paddingBottom="18.699982dip"
+        android:layout_below="@layout/app_bar_home">
+    <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/heading_layout"
+            android:layout_alignParentBottom="false"></ListView>
+
+    </LinearLayout>
+    <include
+        android:id="@+id/footer_layout"
+        layout="@layout/footer_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        />
+
+
+</RelativeLayout>

@@ -11,9 +11,7 @@
     >
 
 
-    <include
-        android:id="@id/header_layout"
-        layout="@layout/header_layout_white" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -67,7 +65,7 @@
                 android:id="@+id/userImage"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_50sdp"
-                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
@@ -78,24 +76,22 @@
         <!--  </com.google.android.material.card.MaterialCardView>-->
 
 
-
         <Button
             android:id="@+id/updateGhCard"
-            android:layout_width="@dimen/_110sdp"
-            android:layout_height="@dimen/_22sdp"
+            android:layout_width="183dp"
+            android:layout_height="49dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/_38sdp"
-            android:layout_marginLeft="@dimen/_38sdp"
-            android:text="Update GH Card"
+            android:layout_marginStart="@dimen/_15sdp"
             android:background="@drawable/custom_grey_button"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Update prepaid portal card"
             android:textColor="@color/white"
-            android:textStyle="bold"
 
-            app:layout_constraintTop_toBottomOf="@id/userWelcomeCard"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            android:fontFamily="@font/roboto_regular"/>
+            app:layout_constraintTop_toBottomOf="@id/userWelcomeCard" />
 
 
         <Button
@@ -105,7 +101,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_15sdp"
             android:text="Hide"
             android:background="@drawable/custom_red_button"
             android:textColor="@color/white"
@@ -116,13 +112,15 @@
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPagerImageSlider2"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="360dp"
+            android:layout_height="100dp"
+
+            android:layout_marginTop="36dp"
+            android:background="@drawable/banque_agricole"
             android:paddingLeft="@dimen/_20sdp"
             android:paddingRight="@dimen/_20sdp"
             app:layout_constraintTop_toBottomOf="@+id/txtHide"
-            android:layout_marginTop="@dimen/_8sdp"
-            />
+            tools:layout_editor_absoluteX="55dp" />
 
         <TextView
             android:id="@+id/textView14"
@@ -133,8 +131,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="@dimen/_38sdp"
             android:layout_marginLeft="@dimen/_38sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:text="For you"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="Banque Agricole"
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/viewPagerImageSlider2"
             app:layout_constraintStart_toStartOf="parent"
@@ -144,10 +142,10 @@
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPagerImageSlider"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_150sdp"
+            android:layout_height="@dimen/_1sdp"
             app:layout_constraintTop_toBottomOf="@+id/textView14"
             android:paddingStart="@dimen/_80sdp"
-            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_1sdp"
             android:paddingEnd="@dimen/_80sdp"
             />
 
@@ -178,7 +176,7 @@
             android:textColor="@color/colorWhite"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_30sdp"
             android:fontFamily="@font/roboto_bold"
             app:layout_constraintTop_toBottomOf="@id/viewPagerImageSlider2"
 
@@ -236,7 +234,7 @@
                                 android:layout_marginEnd="@dimen/_5sdp"
                                 android:layout_marginBottom="@dimen/_5sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Account \nServices"
+                                android:text="Account \n service"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
@@ -264,19 +262,23 @@
                             android:layout_width="match_parent"
                             android:background="@drawable/custom_black_container_main_menu"
                             android:layout_height="match_parent">
+
                             <TextView
                                 android:id="@+id/textView6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/bus1"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:text="AirTime\n&amp; Data"
-                                android:textColor="@color/white"
                                 android:layout_alignParentLeft="true"
-                                android:padding="@dimen/_5sdp"
-
                                 android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Get\nBalance"
+                                android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
                             <ImageView
@@ -326,7 +328,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Transfers"
+                                android:text="Last 10\n Transaction"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
@@ -368,7 +370,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Mobile Money"
+                                android:text="Account to\ncard"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
@@ -408,19 +410,23 @@
                             android:layout_width="match_parent"
                             android:background="@drawable/custom_black_container_main_menu"
                             android:layout_height="match_parent">
+
                             <TextView
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/train"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:text="Payments"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:padding="@dimen/_5sdp"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Card to\ncard"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
                             <ImageView
                                 android:id="@+id/train"
@@ -449,29 +455,37 @@
                             android:layout_width="match_parent"
                             android:background="@drawable/custom_black_container_main_menu"
                             android:layout_height="match_parent">
+
                             <TextView
                                 android:id="@+id/textView25"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/ghqr_img"
-                                android:layout_centerHorizontal="true"
-                                android:padding="@dimen/_5sdp"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_10sdp"
 
-                                android:text="GhQR"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Card \nOperation"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
-                                android:layout_margin="@dimen/_10sdp"
                                 app:fontFamily="@font/roboto_bold" />
+
                             <ImageView
                                 android:id="@+id/ghqr_img"
                                 android:layout_width="@dimen/_45sdp"
                                 android:layout_height="@dimen/_45sdp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="@dimen/_10sdp"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
                                 app:srcCompat="@drawable/gh_qr" />
 
                         </RelativeLayout>
@@ -503,20 +517,23 @@
                             android:background="@drawable/custom_black_container_main_menu"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
+
                             <TextView
                                 android:id="@+id/textView4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_5sdp"
                                 android:layout_marginTop="@dimen/_5sdp"
-                                android:text="Card\nServices"
-                                android:layout_margin="@dimen/_5sdp"
 
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:textSize="18sp"
+                                android:text="Card\nLimit"
                                 android:textColor="@color/white"
+                                android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
 
                             <ImageView
@@ -543,19 +560,22 @@
                             android:layout_width="match_parent"
                             android:background="@drawable/custom_black_container_main_menu"
                             android:layout_height="match_parent">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/iconBeneficiary"
-                                android:layout_centerHorizontal="true"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_10sdp"
                                 android:layout_marginTop="@dimen/_10sdp"
-                                android:text="Beneficiary"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:textSize="18sp"
+                                android:text="Beneficiary"
                                 android:textColor="@color/white"
+                                android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
                             <ImageView
                                 android:id="@+id/iconBeneficiary"
@@ -639,10 +659,12 @@
                             android:id="@+id/textView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
                             android:padding="@dimen/_5sdp"
-                            android:text="Expense\nManager"
+                            android:text="Card Information"
                             android:textColor="@color/white"
                             android:textSize="18sp"
                             app:fontFamily="@font/roboto_bold" />

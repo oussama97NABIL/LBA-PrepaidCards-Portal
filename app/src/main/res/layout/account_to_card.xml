@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/root"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@color/white"
+	android:orientation="vertical">
+
+
+
+	<include layout="@layout/page_title" />
+
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:paddingTop="8dp"
+		android:scrollbars="none">
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:clipToPadding="false"
+			android:orientation="vertical"
+			android:paddingTop="1dp"
+			android:paddingBottom="60.0dip">
+
+			<LinearLayout
+				android:layout_width="334dp"
+				android:layout_height="495dp"
+				android:layout_marginLeft="19.299988dip"
+				android:layout_marginRight="19.299988dip"
+				android:background="@drawable/white_rect"
+				android:elevation="4dp"
+				android:orientation="vertical"
+				android:paddingLeft="19.199982dip"
+				android:paddingTop="10dp"
+				android:paddingRight="40dp"
+				android:paddingBottom="18.699982dip">
+
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="12dp"
+						android:layout_weight="1.0"
+						android:fontFamily="@font/miloot_bold"
+						android:text="CARD TOKEN"
+						android:textAllCaps="true"
+						android:textColor="@color/MurasakiPurple"
+						android:textSize="12.0sp"
+						android:textStyle="bold" />
+
+					<EditText
+						android:id="@+id/cardNumber"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:background="@color/transparent"
+						android:fontFamily="@font/miloot_bold"
+						android:inputType="date"
+						android:textSize="17.299988sp" />
+
+					<View
+						android:id="@+id/view9"
+						android:layout_width="match_parent"
+						android:layout_height="1.0dip"
+						android:layout_marginTop="5.0dip"
+						android:layout_weight="1.0"
+						android:background="#ffeff0f4" />
+
+					<LinearLayout
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="8dp"
+							android:layout_marginBottom="12dp"
+							android:layout_weight="1.0"
+							android:fontFamily="@font/miloot_bold"
+							android:text="ACCOUNT NUMBER"
+							android:textAllCaps="true"
+							android:textColor="@color/MurasakiPurple"
+							android:textSize="12.0sp"
+							android:textStyle="bold" />
+
+						<EditText
+							android:id="@+id/bankcode"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:background="@color/transparent"
+							android:fontFamily="@font/miloot_bold"
+							android:inputType="text"
+							android:textSize="17.299988sp" />
+
+						<View
+							android:id="@+id/view7"
+							android:layout_width="match_parent"
+							android:layout_height="1.0dip"
+							android:layout_marginTop="5.0dip"
+							android:layout_weight="1.0"
+							android:background="#ffeff0f4" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="8dp"
+							android:layout_marginBottom="12dp"
+							android:layout_weight="1.0"
+							android:fontFamily="@font/miloot_bold"
+							android:text="AMOUNT"
+							android:textAllCaps="true"
+							android:textColor="@color/MurasakiPurple"
+							android:textSize="12.0sp"
+							android:textStyle="bold" />
+
+						<EditText
+							android:id="@+id/bankname"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:background="@color/transparent"
+							android:fontFamily="@font/miloot_bold"
+							android:inputType="date"
+							android:textSize="17.299988sp" />
+
+						<View
+							android:id="@+id/view7"
+							android:layout_width="match_parent"
+							android:layout_height="1.0dip"
+							android:layout_marginTop="5.0dip"
+							android:layout_weight="1.0"
+							android:background="#ffeff0f4" />
+
+						<TextView
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="8dp"
+							android:layout_marginBottom="12dp"
+							android:layout_weight="1.0"
+							android:fontFamily="@font/miloot_bold"
+							android:text="CURRENCY"
+							android:textAllCaps="true"
+							android:textColor="@color/MurasakiPurple"
+							android:textSize="12.0sp"
+							android:textStyle="bold" />
+
+						<EditText
+							android:id="@+id/clientcode"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:background="@color/transparent"
+							android:fontFamily="@font/miloot_bold"
+							android:inputType="text"
+							android:textSize="17.299988sp" />
+
+						<View
+							android:id="@+id/view7"
+							android:layout_width="match_parent"
+							android:layout_height="1.0dip"
+							android:layout_marginTop="5.0dip"
+							android:layout_weight="1.0"
+							android:background="#ffeff0f4" />
+
+						<TextView
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="8dp"
+							android:layout_marginBottom="12dp"
+							android:layout_weight="1.0"
+							android:fontFamily="@font/miloot_bold"
+							android:text="MEMO"
+							android:textAllCaps="true"
+							android:textColor="@color/MurasakiPurple"
+							android:textSize="12.0sp"
+							android:textStyle="bold" />
+
+						<EditText
+							android:id="@+id/branch"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:background="@color/transparent"
+							android:fontFamily="@font/miloot_bold"
+							android:inputType="text"
+							android:textSize="17.299988sp" />
+
+						<View
+							android:id="@+id/view7"
+							android:layout_width="match_parent"
+							android:layout_height="1.0dip"
+							android:layout_marginTop="5.0dip"
+							android:layout_weight="1.0"
+							android:background="#ffeff0f4" />
+
+
+					</LinearLayout>
+
+				</LinearLayout>
+			</LinearLayout>
+
+			<!--<Button  android:textStyle="bold" android:id="@+id/btnLoad" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="19.299988dip" android:layout_marginTop="10.0dip" android:layout_marginRight="19.299988dip" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:text="SEARCH"  />
+
+
+		-->
+
+		</LinearLayout>
+
+	</ScrollView>
+	<include
+		android:id="@+id/footer_layout"
+		layout="@layout/footer_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentLeft="true"
+		/>
+
+</RelativeLayout>

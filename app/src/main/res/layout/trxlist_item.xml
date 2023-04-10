@@ -30,14 +30,6 @@
             android:textColor="@color/black"
             android:textSize="16dp"
             android:textStyle="bold" />
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="desc"
-            android:textColor="@color/black"
-            android:textSize="12dp" />
     </LinearLayout>
     <TextView
         android:id="@+id/amount_list"

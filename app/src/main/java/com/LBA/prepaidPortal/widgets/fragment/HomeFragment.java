@@ -264,9 +264,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 //        sliderItems2.add(new SliderItem(R.drawable.up_slider_6));
 
 
-        //hajer 03/04/2022 start
-//3/28/2023        if(Globals.Ads.isEmpty() || Globals.Ads == null ) {
-//            viewPager2_up.setAdapter(new StaticSliderAdapter(sliderItems2,viewPager2_up, this));
+
+       // if(Globals.Ads.isEmpty() || Globals.Ads == null ) {
+  //         viewPager2_up.setAdapter(new StaticSliderAdapter(sliderItems2,viewPager2_up, this));
 //        }else {
 //            viewPager2_up.setAdapter(new SliderAdapter(Globals.Ads, viewPager2_up, this));
 //        }

@@ -1083,6 +1083,9 @@ int bool abc_allow_stacked_button_bar 0x7f050001
 int bool abc_config_actionMenuItemAllCaps 0x7f050002
 int bool mtrl_btn_textappearance_all_caps 0x7f050003
 int color Black 0x7f060000
+int color DebianRed 0x7f060116
+int color GoldenFoil 0x7f060117
+int color MurasakiPurple 0x7f060118
 int color abc_background_cache_hint_selector_material_dark 0x7f060001
 int color abc_background_cache_hint_selector_material_light 0x7f060002
 int color abc_btn_colored_borderless_text_material 0x7f060003
@@ -2743,6 +2746,7 @@ int drawable mtrl_navigation_bar_item_background 0x7f0800c5
 int drawable mtrl_popupmenu_background 0x7f0800c6
 int drawable mtrl_popupmenu_background_dark 0x7f0800c7
 int drawable mtrl_tabs_default_indicator 0x7f0800c8
+int drawable murasakipurple 0x7f0800e3
 int drawable navigation_empty_icon 0x7f0800c9
 int drawable notification_action_background 0x7f0800ca
 int drawable notification_bg 0x7f0800cb
@@ -2988,6 +2992,7 @@ int id beginOnFirstDraw 0x7f0a00c4
 int id beginning 0x7f0a00c5
 int id bestChoice 0x7f0a00c6
 int id bg_spalsh 0x7f0a00c7
+int id bienvenu 0x7f0a0322
 int id blocking 0x7f0a00c8
 int id bottom 0x7f0a00c9
 int id bounce 0x7f0a00ca
@@ -3074,7 +3079,6 @@ int id decor_content_parent 0x7f0a011a
 int id default_activity_button 0x7f0a011b
 int id deltaRelative 0x7f0a011c
 int id dependency_ordering 0x7f0a011d
-int id desc 0x7f0a011e
 int id design_bottom_sheet 0x7f0a011f
 int id design_menu_item_action_area 0x7f0a0120
 int id design_menu_item_action_area_stub 0x7f0a0121
@@ -3171,6 +3175,7 @@ int id iconBeneficiary 0x7f0a017b
 int id icon_group 0x7f0a017c
 int id id1 0x7f0a017d
 int id id2 0x7f0a017e
+int id identifiant 0x7f0a0323
 int id ifRoom 0x7f0a017f
 int id ignore 0x7f0a0180
 int id ignoreRequest 0x7f0a0181
@@ -3250,6 +3255,7 @@ int id month_navigation_fragment_toggle 0x7f0a01ca
 int id month_navigation_next 0x7f0a01cb
 int id month_navigation_previous 0x7f0a01cc
 int id month_title 0x7f0a01cd
+int id motdepasse 0x7f0a0324
 int id motion_base 0x7f0a01ce
 int id mtrl_anchor_parent 0x7f0a01cf
 int id mtrl_calendar_day_selector_frame 0x7f0a01d0
@@ -3657,8 +3663,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0d0018
 int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
-int layout account_to_card_detail 0x7f0d001c
-int layout account_to_card_fragment 0x7f0d001d
+int layout account_to_card 0x7f0d009c
 int layout activity_home 0x7f0d001e
 int layout activity_main 0x7f0d001f
 int layout activity_transaction_result 0x7f0d0020
