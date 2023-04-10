@@ -18,7 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.LBA.prepaidPortal.R;
-import com.LBA.prepaidPortal.widgets.fragment.CardLimit;
+
 import com.LBA.prepaidPortal.widgets.fragment.Last10Transactions;
 import com.LBA.tools.assets.Globals;
 

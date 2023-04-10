@@ -675,6 +675,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 LogoutUser();
                 break;
         }
+        return true;
     }
     private void LogoutUser(){
         sharedPrefManager.logout();

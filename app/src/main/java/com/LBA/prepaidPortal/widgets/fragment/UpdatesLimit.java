@@ -6,20 +6,14 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +44,7 @@ import java.util.Date;
 import java.util.Locale;
 
 
-public class CardLimit extends BaseFragment implements View.OnClickListener {
+public class UpdatesLimit extends BaseFragment implements View.OnClickListener {
     Spinner spincard;
 
     private EditText startDate,endDate;
@@ -76,7 +70,7 @@ public class CardLimit extends BaseFragment implements View.OnClickListener {
     private TextView textView5;
     private TextView textView6;
 
-    static private final String TAG = CardLimit.class.getSimpleName();
+    static private final String TAG = UpdatesLimit.class.getSimpleName();
 
 
     String selectedCard;
@@ -94,7 +88,8 @@ public class CardLimit extends BaseFragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        mRootView = inflater.inflate(R.layout.fragment_card_limit, container, false);
+        mRootView = inflater.inflate(R.layout.update_limit, container, false);
+        getActivity().setTitle("Update Limits");
         RelativeLayout yourBackgroundView = (RelativeLayout) mRootView.findViewById(R.id.root);
 
         /*SharedPreferences settings = getSharedPreferences("appBack",

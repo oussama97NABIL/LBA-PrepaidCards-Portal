@@ -73,7 +73,8 @@ public class CardToCard extends BaseFragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        mRootView = inflater.inflate(R.layout.card_to_card_fragment, container, false);
+        mRootView = inflater.inflate(R.layout.card_to_card, container, false);
+        getActivity().setTitle("Card To Card");
         textViewHeading = (TextView) mRootView.findViewById(R.id.textView14);
         textView = (TextView) mRootView.findViewById(R.id.textView);
         textView2 = (TextView) mRootView.findViewById(R.id.textView2);
@@ -365,12 +366,12 @@ public class CardToCard extends BaseFragment implements View.OnClickListener {
     }*/
 
 
-   /* @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_account_balance, menu);
-        return true;
-    }*/
+    /* @Override
+     public boolean onCreateOptionsMenu(Menu menu) {
+         // Inflate the menu; this adds items to the action bar if it is present.
+         getMenuInflater().inflate(R.menu.menu_account_balance, menu);
+         return true;
+     }*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -615,91 +616,91 @@ public class CardToCard extends BaseFragment implements View.OnClickListener {
         dialog.show();
         */
 
-       /* dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    operation = operationActivateCard;
-                    dialog.dismiss();
-                    if(startDate.getText().toString().isEmpty() ) {
-                        startDate.setText("");
-                    }
-                    if(endDate.getText().toString().isEmpty() ){
-                        endDate.setText("");
-                    }
-                    if(AmountAtm.getText().toString().isEmpty()){
-                        AmountAtm.setText("0.0");
-                    }
-                    if(AmountPos.getText().toString().isEmpty()){
-                        AmountPos.setText("0.0");
-                    }
-                    initProgrees();
+    /* dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             try {
+                 operation = operationActivateCard;
+                 dialog.dismiss();
+                 if(startDate.getText().toString().isEmpty() ) {
+                     startDate.setText("");
+                 }
+                 if(endDate.getText().toString().isEmpty() ){
+                     endDate.setText("");
+                 }
+                 if(AmountAtm.getText().toString().isEmpty()){
+                     AmountAtm.setText("0.0");
+                 }
+                 if(AmountPos.getText().toString().isEmpty()){
+                     AmountPos.setText("0.0");
+                 }
+                 initProgrees();
 
-                    if(Globals.useOTP) {
-                        //General.sendOTP();
-                        try {
-                            Globals.pinEntered=txtCode.getText().toString();
-                            General.checkOTP(txtCode.getText().toString());
-                            dialog.dismiss();
+                 if(Globals.useOTP) {
+                     //General.sendOTP();
+                     try {
+                         Globals.pinEntered=txtCode.getText().toString();
+                         General.checkOTP(txtCode.getText().toString());
+                         dialog.dismiss();
 
-                            new CustomTask().execute();
-                        } catch (Exception e) {
-                            Log.d(TAG, "btnLoad.setOnClickListener()", e);
-                            if(Globals.ERpin.equals("USER BLOCKED CONTACT BRANCH")){
-                                doLogout(null);
-                            }
-                            else if(Globals.ERpin.contains("801")){
-                                //   Toast.makeText(CardLimitActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
-                                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
-                                alertDialog.setMessage( "SESSION EXPIRED");
-                                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                                        new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                dialog.dismiss();
-                                                doLogout(null);
+                         new CustomTask().execute();
+                     } catch (Exception e) {
+                         Log.d(TAG, "btnLoad.setOnClickListener()", e);
+                         if(Globals.ERpin.equals("USER BLOCKED CONTACT BRANCH")){
+                             doLogout(null);
+                         }
+                         else if(Globals.ERpin.contains("801")){
+                             //   Toast.makeText(CardLimitActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
+                             androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                             alertDialog.setMessage( "SESSION EXPIRED");
+                             alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                     new DialogInterface.OnClickListener() {
+                                         public void onClick(DialogInterface dialog, int which) {
+                                             dialog.dismiss();
+                                             doLogout(null);
 
 
-                                            }
-                                        });
-                                alertDialog.show();
-                            }
-                            else {
-                                //    Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
-                                alertDialog.setMessage(e.getMessage());
-                                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                                        new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                dialog.dismiss();
+                                         }
+                                     });
+                             alertDialog.show();
+                         }
+                         else {
+                             //    Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                             androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                             alertDialog.setMessage(e.getMessage());
+                             alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                     new DialogInterface.OnClickListener() {
+                                         public void onClick(DialogInterface dialog, int which) {
+                                             dialog.dismiss();
 
-                                            }
-                                        });
-                                alertDialog.show();
-                            }
-                        }                        // new CustomTask().execute();
+                                         }
+                                     });
+                             alertDialog.show();
+                         }
+                     }                        // new CustomTask().execute();
 
-                    }
-                    else{
-                        new CustomTask().execute();
-                    }
-                } catch (Exception e) {
-                    Log.d("otp", "btnLoad.setOnClickListener()", e);
-                    //  Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                    androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
-                    alertDialog.setMessage( e.getMessage());
-                    alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
+                 }
+                 else{
+                     new CustomTask().execute();
+                 }
+             } catch (Exception e) {
+                 Log.d("otp", "btnLoad.setOnClickListener()", e);
+                 //  Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                 androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(CardLimitActivity.this).create();
+                 alertDialog.setMessage( e.getMessage());
+                 alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                         new DialogInterface.OnClickListener() {
+                             public void onClick(DialogInterface dialog, int which) {
+                                 dialog.dismiss();
 
-                                }
-                            });
-                    alertDialog.show();
-                }
-            }
-        });
-        dialog.show();
-    }*/
+                             }
+                         });
+                 alertDialog.show();
+             }
+         }
+     });
+     dialog.show();
+ }*/
     @SuppressLint("NewApi")
     public void OTPVerification()
     {
@@ -762,7 +763,7 @@ public class CardToCard extends BaseFragment implements View.OnClickListener {
                    /* if(Globals.ERpin.equals("USER BLOCKED CONTACT BRANCH")){
                         doLogout(null);
                     }*/
-                     if (Globals.ERpin.contains("801")){
+                    if (Globals.ERpin.contains("801")){
                         //   Toast.makeText(CardLimitActivity.this, "SESSION EXPIRED", Toast.LENGTH_LONG).show();
                         androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
                         alertDialog.setMessage( "SESSION EXPIRED");
@@ -799,40 +800,40 @@ public class CardToCard extends BaseFragment implements View.OnClickListener {
     }
     @SuppressLint("NewApi")
     public void GoToConfirmation()
-        {
-            final Dialog dialog = new Dialog(getActivity().getApplicationContext(), android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.request_conf_act);
-            // set title
-            TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
-            validation_title.setText("Confirmation");
-            TextView validation_Content = (TextView) dialog.findViewById(R.id.textView);
-            validation_Content.setText("Card limit changed successfully");
-            //final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
-            //txtCode.setText("Your Request has been sent Successfully");
-            dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    try {
-                        dialog.dismiss();
-                       // CardLimitActivity.this.finish();
-                    } catch (Exception e) {
-                        Log.d("otp", "btnLoad.setOnClickListener()", e);
-                        // Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                        androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
-                        alertDialog.setMessage(e.getMessage());
-                        alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
+    {
+        final Dialog dialog = new Dialog(getActivity().getApplicationContext(), android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.request_conf_act);
+        // set title
+        TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
+        validation_title.setText("Confirmation");
+        TextView validation_Content = (TextView) dialog.findViewById(R.id.textView);
+        validation_Content.setText("Card limit changed successfully");
+        //final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
+        //txtCode.setText("Your Request has been sent Successfully");
+        dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    dialog.dismiss();
+                    // CardLimitActivity.this.finish();
+                } catch (Exception e) {
+                    Log.d("otp", "btnLoad.setOnClickListener()", e);
+                    // Toast.makeText(CardLimitActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                    alertDialog.setMessage(e.getMessage());
+                    alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
 
-                                    }
-                                });
-                        alertDialog.show();
-                    }
+                                }
+                            });
+                    alertDialog.show();
                 }
-            });
-        }
+            }
+        });
+    }
         /*dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
             public void onDismiss(final DialogInterface dialog) {
                 CardInformation1.this.finish();
@@ -966,7 +967,7 @@ public class CardToCard extends BaseFragment implements View.OnClickListener {
 
             //Card.GetCardsToActivateList();
             try {
-               // Card.CardDetails();
+                // Card.CardDetails();
                 dismissProgress();
             } catch (Exception ex) {
                 ex.printStackTrace();

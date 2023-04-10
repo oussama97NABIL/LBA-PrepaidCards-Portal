@@ -16,12 +16,12 @@
         "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_phase2_black.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_menu.xml.flat",
-        "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_menu.xml"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_baseline_account_circle_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\baseline_account_circle_24.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_menu.xml.flat",
+        "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_menu.xml"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_baseline_person_outline_24.png.flat",
@@ -156,6 +156,10 @@
         "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\splash_screen_user.xml"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_block_card.xml.flat",
+        "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\block_card.xml"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_history.png.flat",
         "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_history.png"
     },
@@ -278,6 +282,10 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_backgound_login.png.flat",
         "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\backgound_login.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_update_limit.xml.flat",
+        "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\update_limit.xml"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_img_4.png.flat",
@@ -688,6 +696,10 @@
         "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\baseline_account_circle_24.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_card_to_card.xml.flat",
+        "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\card_to_card.xml"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_img_6.png.flat",
         "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\img_6.png"
     },
@@ -1014,10 +1026,6 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_branch_locator_phase2.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_branch_locator_phase2.xml"
-    },
-    {
-        "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_account_to_card1.xml.flat",
-        "source": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\fragment_account_to_card1.xml"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\AndroidStudioProjects\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_header_layout_welcome.xml.flat",

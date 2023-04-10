@@ -51,11 +51,11 @@
                 <item
                     android:id="@+id/card_operation"
                     android:icon="@drawable/baseline_account_box_24"
-                    android:title="Card Operation" />
+                    android:title="Block Card" />
                 <item
                     android:id="@+id/card_limit"
                     android:icon="@drawable/baseline_credit_card_24"
-                    android:title="Card Limit " />
+                    android:title="Update Limits " />
             </menu>
         </item>
 
