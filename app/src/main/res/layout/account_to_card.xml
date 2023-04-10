@@ -209,7 +209,37 @@
 							android:layout_weight="1.0"
 							android:background="#ffeff0f4" />
 
+						<TextView
+							android:id="@+id/imageView"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="8dp"
+							android:layout_marginBottom="12dp"
+							android:layout_weight="1.0"
+							android:fontFamily="@font/miloot_bold"
+							android:text="CLIENT TYPE"
+							android:textAllCaps="true"
+							android:textColor="@color/MurasakiPurple"
+							android:textSize="12.0sp"
+							android:textStyle="bold" />
 
+						<EditText
+							android:id="@+id/client_type"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:background="@color/transparent"
+							android:fontFamily="@font/miloot_bold"
+							android:inputType="text"
+							android:textSize="17.299988sp" />
+
+						<View
+							android:id="@+id/view8"
+							android:layout_width="match_parent"
+							android:layout_height="1.0dip"
+							android:layout_marginTop="5.0dip"
+							android:layout_weight="1.0"
+							android:background="#ffeff0f4" />
 					</LinearLayout>
 
 				</LinearLayout>
