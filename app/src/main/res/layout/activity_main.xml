@@ -4,19 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img"
+    android:background="#c7e4e0"
     tools:context="com.LBA.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/murasakipurple"
+        />
+
 
     <TextView
+        android:id="@+id/signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signin"
-        android:text="Sign in"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Connectez Vous"
         android:textColor="#FF000000"
         android:textSize="35dp"
-        android:textStyle="bold"
-        android:layout_margin="50dp"
-        android:gravity="center"/>
+         />
+    <TextView
+        android:id="@+id/bienvenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/signin"
+        android:gravity="center"
+        android:text="Bienvenu sur le Portail Prépayé"
+        android:textColor="#FF000000"
+        android:textSize="18dp"
+        />
+    <TextView
+        android:id="@+id/identifiant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/signin"
+        android:text="Identifiant"
+        android:textStyle="bold|italic"
+        android:textColor="@color/DebianRed"
+        android:textSize="18dp"
+        />
 
     <EditText
         android:id="@+id/username"
@@ -24,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/signin"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
@@ -36,6 +73,20 @@
         android:textColor="#FF000000"
         android:textColorHint="#FF000000"
         android:textSize="25dp" />
+    <TextView
+        android:id="@+id/motdepasse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/username"
+        android:text="Mot de Passe"
+        android:textStyle="bold|italic"
+        android:textColor="@color/DebianRed"
+        android:textSize="18dp"
+        />
 
     <EditText
         android:id="@+id/password"
@@ -43,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/username"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="65dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
@@ -57,29 +108,36 @@
         android:textSize="25dp"
         android:inputType="textPassword"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/black"
-        android:text="LOGIN" ></com.google.android.material.button.MaterialButton>
+
 
     <TextView
         android:id="@+id/forgotpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/loginbtn"
+        android:layout_below="@id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
+        android:paddingLeft="200dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Forgot password ?"
-        android:textColor="@color/black" />
+        android:text="Mot de passe oublié"
+        android:textColor="@color/blue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbtn"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/DebianRed"
+        android:text="LOGIN"></com.google.android.material.button.MaterialButton>
+
+
 </RelativeLayout>
