@@ -179,7 +179,7 @@ public class LastTransactionResult extends AbstractActivity  {
                     tvTitle.setText("Reference Number: ");
                 } else
                 if (Globals.transactionList.get(pos).getTransactionType() != null && Globals.transactionList.get(pos).getTransactionType().length() > 0) {
-                    tvTransaction.setTextColor(getResources().getColor(R.color.black));
+                    tvTransaction.setTextColor(getResources().getColor(R.color.MurasakiPurple));
                     tvTransaction.setText(Globals.transactionList.get(pos).getDate());
                 }
 

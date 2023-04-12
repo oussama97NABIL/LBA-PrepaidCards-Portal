@@ -58,6 +58,11 @@
                     android:title="Update Limits " />
             </menu>
         </item>
+        <item
+            android:id="@+id/Logout"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="Logout "
+            />
 
 
     </group>

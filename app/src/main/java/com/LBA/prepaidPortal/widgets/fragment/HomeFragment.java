@@ -186,7 +186,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         //---------------      --------------------------
         Spannable word = new SpannableString("Hello User Bienvenu");
 
-        //3/28/2023  word.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.cbg_red)), 0, word.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        word.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.MurasakiPurple)), 0, word.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         welcomText.setText(word);
         Spannable wordTwo = new SpannableString(Globals.firstName);

@@ -1,153 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:id="@+id/root"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:background="@color/white"
 	android:orientation="vertical">
-
-
-
 	<include layout="@layout/page_title" />
-	<ScrollView android:scrollbars="none" android:paddingTop="8dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
-		<LinearLayout android:paddingTop="8dp" android:orientation="vertical" android:paddingBottom="60.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<LinearLayout
 
-			<LinearLayout
-				android:layout_width="334dp"
-				android:layout_height="273dp"
-				android:layout_marginLeft="19.299988dip"
-				android:layout_marginRight="19.299988dip"
-				android:background="@drawable/white_rect"
-				android:elevation="4dp"
-				android:orientation="vertical"
-				android:paddingLeft="19.199982dip"
-				android:paddingTop="10dp"
-				android:paddingRight="40dp"
-				android:paddingBottom="18.699982dip">
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
 
-				<LinearLayout
-					android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
-					android:orientation="vertical">
+		<LinearLayout
+			android:id="@+id/ll1"
+			android:layout_width="match_parent"
+			android:layout_height="27dp"
+			android:layout_weight="5">
+		</LinearLayout>
 
-					<TextView
-						android:layout_width="fill_parent"
-						android:layout_height="wrap_content"
-						android:layout_marginBottom="12dp"
-						android:layout_weight="1.0"
-						android:fontFamily="@font/miloot_bold"
-						android:text="AVAILABLE BALANCE"
-						android:textAllCaps="true"
-						android:textColor="@color/MurasakiPurple"
-						android:textSize="12.0sp"
-						android:textStyle="bold" />
 
-					<EditText
-						android:id="@+id/availablebalance"
-						android:layout_width="fill_parent"
-						android:layout_height="wrap_content"
-						android:layout_weight="1.0"
-						android:background="@color/transparent"
-						android:fontFamily="@font/miloot_bold"
-						android:inputType="text"
-						android:textSize="17.299988sp" />
 
-					<View
-						android:id="@+id/view9"
-						android:layout_width="match_parent"
-						android:layout_height="1.0dip"
-						android:layout_marginTop="5.0dip"
-						android:layout_weight="1.0"
-						android:background="#ffeff0f4" />
+		<LinearLayout
+			android:id="@+id/ll3"
+			android:layout_width="match_parent"
+			android:layout_height="150dp"
+			android:layout_weight="2"
+			android:orientation="vertical">
 
-					<LinearLayout
-						android:layout_width="fill_parent"
-						android:layout_height="wrap_content"
-						android:orientation="vertical">
+			<TextView
+				android:id="@+id/txt1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="16dp"
+				android:layout_marginTop="20dp"
+				android:fontFamily="@font/roboto_light"
+				android:text="Get Balance"
+				android:textColor="@color/black"
+				android:textSize="36dp" />
 
-						<TextView
-							android:layout_width="fill_parent"
-							android:layout_height="wrap_content"
-							android:layout_marginTop="8dp"
-							android:layout_marginBottom="12dp"
-							android:layout_weight="1.0"
-							android:fontFamily="@font/miloot_bold"
-							android:text="balance"
-							android:textAllCaps="true"
-							android:textColor="@color/MurasakiPurple"
-							android:textSize="12.0sp"
-							android:textStyle="bold" />
-
-						<EditText
-							android:id="@+id/balance"
-							android:layout_width="fill_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1.0"
-							android:background="@color/transparent"
-							android:fontFamily="@font/miloot_bold"
-							android:inputType="text"
-							android:textSize="17.299988sp" />
-
-						<View
-							android:id="@+id/view7"
-							android:layout_width="match_parent"
-							android:layout_height="1.0dip"
-							android:layout_marginTop="5.0dip"
-							android:layout_weight="1.0"
-							android:background="#ffeff0f4" />
-
-					</LinearLayout>
-
-					<LinearLayout
-						android:layout_width="fill_parent"
-						android:layout_height="wrap_content"
-						android:orientation="vertical">
-
-						<TextView
-							android:layout_width="fill_parent"
-							android:layout_height="wrap_content"
-							android:layout_marginTop="8dp"
-							android:layout_marginBottom="12dp"
-							android:layout_weight="1.0"
-							android:fontFamily="@font/miloot_bold"
-							android:text="currency"
-							android:textAllCaps="true"
-							android:textColor="@color/MurasakiPurple"
-							android:textSize="12.0sp"
-							android:textStyle="bold" />
-
-						<EditText
-							android:id="@+id/currency"
-							android:layout_width="fill_parent"
-							android:layout_height="wrap_content"
-							android:layout_weight="1.0"
-							android:background="@color/transparent"
-							android:fontFamily="@font/miloot_bold"
-							android:inputType="date"
-							android:textSize="17.299988sp" />
-
-						<View
-							android:id="@+id/view8"
-							android:layout_width="match_parent"
-							android:layout_height="1.0dip"
-							android:layout_marginTop="5.0dip"
-							android:layout_weight="1.0"
-							android:background="#ffeff0f4" />
-					</LinearLayout>
-
-				</LinearLayout>
-			</LinearLayout>
 
 		</LinearLayout>
-	</ScrollView>
-	<include
-		android:id="@+id/footer_layout"
-		layout="@layout/footer_layout"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-		android:layout_alignParentRight="true"
-		android:layout_alignParentLeft="true"
-		/>
+
+
+		<ScrollView
+			android:id="@+id/scroll_view"
+			android:layout_width="match_parent"
+			android:layout_height="599dp"
+			android:layout_marginStart="5dp"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="7dp"
+			android:layout_marginEnd="5dp"
+			android:layout_marginRight="16dp"
+			android:layout_marginBottom="20dp"
+			android:layout_weight="2">
+
+			<LinearLayout
+				android:id="@+id/ll2"
+				android:layout_width="500dp"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/mobilelLayout"
+					android:layout_width="376dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Available Balance*"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/availablebalance"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="false"
+						android:focusableInTouchMode="false"
+						android:inputType="text"
+
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/accountNbrLayout"
+					android:layout_width="378dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Balance*"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/balance"
+						android:layout_width="377dp"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="false"
+						android:focusableInTouchMode="false"
+						android:inputType="text"
+
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/refrealCodeLayout"
+					android:layout_width="378dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Currency"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/currency"
+						android:layout_width="380dp"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="false"
+						android:focusableInTouchMode="false"
+						android:inputType="text"
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<!--  ???  <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint=""
+            style="@style/MyTextInputLayout_overlay"
+            android:layout_marginStart="16dp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textViewemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/customerSpinnerLayout"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="DOMICILE BRANCH">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/customerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                tools:ignore="KeyboardInaccessibleWidget" />
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+				<!--     <EditText
+            android:id="@+id/dob"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:width="150dp"
+            android:paddingRight="5dp"
+            android:inputType="textPersonName"
+            android:drawableRight="@drawable/calendar"
+            android:textColor="@color/black"
+            /> -->
+
+				<!--   <EditText
+            android:id="@+id/pin"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:width="150dp"
+            android:background="@drawable/button_border_fields"
+            android:inputType="numberPassword"
+            android:textAlignment="gravity"
+            android:maxLength="6"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+-->
+
+				<!--<EditText
+            android:id="@+id/pinConf"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:maxLength="6"
+            android:width="150dp"
+            android:background="@drawable/button_border_fields"
+            android:inputType="numberPassword"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />-->
+
+				<!--   <EditText
+            android:id="@+id/pass"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:width="150dp"
+            android:inputType="textPassword"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />-->
+
+				<!--
+
+        <EditText
+            android:id="@+id/passConf"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:width="150dp"
+            android:background="@drawable/button_border_fields"
+            android:inputType="textPassword"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />-->
+
+
+			</LinearLayout>
+
+
+		</ScrollView>
+
+		<include
+			android:id="@+id/footer_layout"
+			layout="@layout/footer_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="150dp" />
+	</LinearLayout>
+
+
 </RelativeLayout>

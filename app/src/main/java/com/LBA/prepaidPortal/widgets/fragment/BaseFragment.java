@@ -23,6 +23,7 @@ import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.AbstractActivity;
 import com.LBA.prepaidPortal.activity.ApptimeoutManager;
 import com.LBA.prepaidPortal.activity.NewMainPage;
+import com.LBA.prepaidPortal.activity.SharedPrefManager;
 import com.LBA.tools.assets.Globals;
 import com.LBA.tools.services.User;
 
@@ -54,6 +55,7 @@ public class BaseFragment extends Fragment {
     //start fatim 08042022
     protected  int delay=0;
     protected ApptimeoutManager apptimeoutManager;
+
 
 
 

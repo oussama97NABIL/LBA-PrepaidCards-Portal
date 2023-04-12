@@ -1,6 +1,9 @@
 package com.LBA.prepaidPortal.widgets.fragment;
 
+import static com.LBA.tools.assets.Globals.transactionType;
+
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,12 +22,15 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.LBA.prepaidPortal.R;
+import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.prepaidPortal.activity.LastTransactionResult;
 import com.LBA.tools.assets.Globals;
+import com.LBA.tools.misc.LastTransactionDetail;
 import com.LBA.tools.services.Card;
 import com.LBA.tools.services.Transactions;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Locale;
 
 
@@ -41,6 +48,7 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
     private String selectedAccount;
     TextView BankCode;
     TextView BankName;
+    ImageButton canlBtn;
 
     TextView textView_heading;
     TextView textView;
@@ -58,7 +66,8 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        mRootView = inflater.inflate(R.layout.get_last10transaction, container, false);
+        mRootView = inflater.inflate(R.layout.get_last_transaction_new, container, false);
+        LastTransactionDetail l = new LastTransactionDetail();
 
         getActivity().setTitle("Get last 10 transactions\n");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
@@ -81,6 +90,17 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
         textView = (TextView) mRootView.findViewById(R.id.textView);
         textView2 = (TextView) mRootView.findViewById(R.id.textView2);
         textView3 = (TextView) mRootView.findViewById(R.id.textView3);
+        canlBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
+        OpenTime();
+
+        canlBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initProgrees();
+                HomeTask task = new HomeTask(HomeActivity.class);
+                task.execute();
+            }
+        });
 
 
         if(Globals.transactionList!=null && Globals.transactionList.size()>0)
@@ -204,6 +224,7 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
         // TODO Auto-generated method stub
     }
     private class CustomTask extends AsyncTask<String, String, String> {
+
         protected String doInBackground(String... param) {
             try {
                 Transactions.GetLast10Transactions();
@@ -232,11 +253,61 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
 
-            TransactionType.setText(Globals.transactionType);
+            TransactionType.setText(transactionType);
             Amount.setText(Globals.balance);
             Currency.setText(Globals.currency);
             ReferenceNumber.setText(Globals.referenceNumber);
             Location.setText(Globals.location);
         }
+    }
+    private class HomeTask extends AsyncTask<String, String, String> {
+        Class activity;
+        public HomeTask(Class pActivity) {
+            super();
+            activity=pActivity;
+        }
+        protected String doInBackground(String... param) {
+            try {
+                Intent myAccountServicesAct = new Intent(getActivity().getApplicationContext(), activity);
+                startActivity(myAccountServicesAct);
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            dismissProgress();
+            super.onPostExecute(param);
+            if(param!=null) {
+                //   Toast.makeText(CardLimitActivity.this, param, Toast.LENGTH_SHORT).show();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                alertDialog.setMessage(param);
+                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+
+                            }
+                        });
+                alertDialog.show();
+            }
+        }
+    }
+    public void OpenTime() {
+        Calendar c = Calendar.getInstance();
+        int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+        String msg = "";
+
+        if (timeOfDay >= 0 && timeOfDay < 12) {
+            msg = "Good Morning";
+        } else if (timeOfDay >= 12 && timeOfDay < 16) {
+            msg = "Good Afternoon";
+        } else if (timeOfDay >= 16 && timeOfDay < 21) {
+            msg = "Good Evening";
+        } else if (timeOfDay >= 21 && timeOfDay < 24) {
+            msg = "Good Evening";
+        }
+        //    Greetmsg.setText(msg);
     }
 }

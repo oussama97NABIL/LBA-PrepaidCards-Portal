@@ -9,6 +9,6 @@
 	android:layout_marginBottom="16.0dp"
 	android:background="@color/transparent"
 	android:textAppearance="?android:textAppearanceLarge"
-	android:textColor="@color/black"
+	android:textColor="@color/MurasakiPurple"
 	android:textStyle="bold"
 	xmlns:android="http://schemas.android.com/apk/res/android" />

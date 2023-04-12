@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-	xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fancy="http://schemas.android.com/apk/res-auto">
-
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/root"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@color/white"
+	android:orientation="vertical">
 
 
 	<include layout="@layout/page_title" />
@@ -32,7 +36,7 @@
 						android:layout_weight="1.0"
 						android:text="TRANSACTION TYPE"
 						android:textAllCaps="true"
-						android:textColor="#ff6e7f8d"
+						android:textColor="@color/MurasakiPurple"
 						android:textSize="12.0sp"
 						android:textStyle="bold" />
 
@@ -66,7 +70,7 @@
 							android:text="AMOUNT"
 							android:layout_marginTop="8dp"
 							android:textAllCaps="true"
-							android:textColor="#ff6e7f8d"
+							android:textColor="@color/MurasakiPurple"
 							android:textSize="12.0sp"
 							android:textStyle="bold" />
 
@@ -102,7 +106,7 @@
 							android:text="currency"
 							android:layout_marginTop="8dp"
 							android:textAllCaps="true"
-							android:textColor="#ff6e7f8d"
+							android:textColor="@color/MurasakiPurple"
 							android:textSize="12.0sp"
 							android:textStyle="bold" />
 
@@ -114,6 +118,13 @@
 							android:layout_weight="1.0"
 							android:background="@color/transparent"
 							android:textSize="17.299988sp" />
+						<View
+							android:id="@+id/view9"
+							android:layout_width="match_parent"
+							android:layout_height="1.0dip"
+							android:layout_marginTop="5.0dip"
+							android:layout_weight="1.0"
+							android:background="#ffeff0f4" />
 						<TextView android:fontFamily="@font/miloot_bold"
 							android:layout_width="fill_parent"
 							android:layout_height="wrap_content"
@@ -122,7 +133,7 @@
 							android:text="REFERENCE NUMBER"
 							android:layout_marginTop="8dp"
 							android:textAllCaps="true"
-							android:textColor="#ff6e7f8d"
+							android:textColor="@color/MurasakiPurple"
 							android:textSize="12.0sp"
 							android:textStyle="bold" />
 
@@ -134,6 +145,13 @@
 							android:layout_weight="1.0"
 							android:background="@color/transparent"
 							android:textSize="17.299988sp" />
+						<View
+							android:id="@+id/view9"
+							android:layout_width="match_parent"
+							android:layout_height="1.0dip"
+							android:layout_marginTop="5.0dip"
+							android:layout_weight="1.0"
+							android:background="#ffeff0f4" />
 						<TextView android:fontFamily="@font/miloot_bold"
 							android:layout_width="fill_parent"
 							android:layout_height="wrap_content"
@@ -142,7 +160,7 @@
 							android:text="LOCATION"
 							android:layout_marginTop="8dp"
 							android:textAllCaps="true"
-							android:textColor="#ff6e7f8d"
+							android:textColor="@color/MurasakiPurple"
 							android:textSize="12.0sp"
 							android:textStyle="bold" />
 
@@ -168,7 +186,22 @@
 				</LinearLayout>
 			</LinearLayout>
 
-			<Button  android:textStyle="bold" android:id="@+id/btnLoad" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="19.299988dip" android:layout_marginTop="10.0dip" android:layout_marginRight="19.299988dip" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:text="SEARCH"  />
+			<Button
+				android:id="@+id/btnLoad"
+				android:layout_width="271dp"
+				android:layout_height="55dp"
+				android:layout_alignParentBottom="true"
+				android:layout_marginLeft="60dp"
+				android:layout_marginTop="10.0dip"
+				android:layout_marginRight="19.299988dip"
+				android:layout_marginBottom="10.0dip"
+				android:backgroundTint="@color/DebianRed"
+				android:clickable="true"
+				android:paddingTop="12.0dip"
+				android:paddingBottom="12.0dip"
+				android:text="Get Transactions"
+				android:textStyle="bold" />
+
 		</LinearLayout>
 	</ScrollView>
-</LinearLayout>
+</RelativeLayout>>

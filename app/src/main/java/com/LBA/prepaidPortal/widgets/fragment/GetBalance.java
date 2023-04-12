@@ -1,6 +1,7 @@
 package com.LBA.prepaidPortal.widgets.fragment;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,11 +20,13 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.LBA.prepaidPortal.R;
+import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.tools.assets.Globals;
 import com.LBA.tools.misc.MySpinnerAdapter;
 import com.LBA.tools.services.Card;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Currency;
 import java.util.Locale;
 
@@ -37,11 +41,12 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
     private DatePickerDialog fromDatePickerDialog;
     private DatePickerDialog toDatePickerDialog;
     private SimpleDateFormat dateFormatter;
-    private int nCounter=0;
+    private int nCounter = 0;
     private String selectedAccount;
     EditText availableBalance;
     EditText Balance;
     EditText currency;
+    ImageButton canlBtn;
 
 
     TextView textView_heading;
@@ -51,6 +56,7 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
     View mRootView;
 
     static private final String TAG = GetBalance.class.getSimpleName();
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -62,10 +68,19 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
         availableBalance = (EditText) mRootView.findViewById(R.id.availablebalance);
         Balance = (EditText) mRootView.findViewById(R.id.balance);
         currency = (EditText) mRootView.findViewById(R.id.currency);
+        canlBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
+        OpenTime();
+
+        canlBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initProgrees();
+                HomeTask task = new HomeTask(HomeActivity.class);
+                task.execute();
+            }
+        });
 
         getBalance();
-
-
 
 
         /**
@@ -89,6 +104,7 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
 
         return mRootView;
     }
+
     /*private void findViewsById() {
         fromDateEtxt = (EditText) findViewById(R.id.etxt_fromdate);
         fromDateEtxt.setInputType(InputType.TYPE_NULL);
@@ -125,7 +141,7 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
         }
     }
 
-    public void getBalance(){
+    public void getBalance() {
         try {
             //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
             initProgrees();
@@ -135,6 +151,7 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -147,8 +164,9 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
         }
         return super.onOptionsItemSelected(item);
     }
+
     public void onItemSelected(AdapterView<?> parent, View arg1, int pos, long id) {
-        if(parent instanceof Spinner && pos>0) {
+        if (parent instanceof Spinner && pos > 0) {
             this.selectedAccount = (String) parent.getItemAtPosition(pos);
             /*try {
                 if(nCounter>0) {
@@ -163,9 +181,11 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
             }*/
         }
     }
+
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
+
     private class CustomTask extends AsyncTask<String, String, String> {
         protected String doInBackground(String... param) {
             try {
@@ -178,11 +198,12 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
                 return e.getMessage();
             }
         }
+
         protected void onPostExecute(String param) {
             dismissProgress();
             super.onPostExecute(param);
 
-            if(param!=null && param.contains("801")){
+            if (param != null && param.contains("801")) {
                 Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
                 try {
                     // doLogout(null);
@@ -192,11 +213,62 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
                 return;
             }
 
-            if(param!=null)
+            if (param != null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
             availableBalance.setText(Globals.availableBalance);
             Balance.setText(Globals.balance);
             currency.setText(Globals.currency);
         }
     }
-}
+    private class HomeTask extends AsyncTask<String, String, String> {
+        Class activity;
+        public HomeTask(Class pActivity) {
+            super();
+            activity=pActivity;
+        }
+        protected String doInBackground(String... param) {
+            try {
+                Intent myAccountServicesAct = new Intent(getActivity().getApplicationContext(), activity);
+                startActivity(myAccountServicesAct);
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            dismissProgress();
+            super.onPostExecute(param);
+            if(param!=null) {
+                //   Toast.makeText(CardLimitActivity.this, param, Toast.LENGTH_SHORT).show();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                alertDialog.setMessage(param);
+                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+
+                            }
+                        });
+                alertDialog.show();
+            }
+        }
+    }
+    public void OpenTime() {
+        Calendar c = Calendar.getInstance();
+        int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+        String msg = "";
+
+        if (timeOfDay >= 0 && timeOfDay < 12) {
+            msg = "Good Morning";
+        } else if (timeOfDay >= 12 && timeOfDay < 16) {
+            msg = "Good Afternoon";
+        } else if (timeOfDay >= 16 && timeOfDay < 21) {
+            msg = "Good Evening";
+        } else if (timeOfDay >= 21 && timeOfDay < 24) {
+            msg = "Good Evening";
+        }
+        //    Greetmsg.setText(msg);
+    }
+   }
+

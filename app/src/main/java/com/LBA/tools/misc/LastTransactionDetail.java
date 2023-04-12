@@ -17,6 +17,11 @@ public class LastTransactionDetail {
         Location = location;
     }
 
+    public LastTransactionDetail(String transactionType) {
+        TransactionType = transactionType;
+    }
+
+
     public LastTransactionDetail() {
     }
 

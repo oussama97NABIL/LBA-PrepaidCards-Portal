@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/root"
+	android:orientation="vertical">
+	<include layout="@layout/page_title" />
+	<LinearLayout
+
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:id="@+id/ll1"
+			android:layout_width="match_parent"
+			android:layout_height="27dp"
+			android:layout_weight="5">
+		</LinearLayout>
+
+
+
+		<LinearLayout
+			android:id="@+id/ll3"
+			android:layout_width="match_parent"
+			android:layout_height="150dp"
+			android:layout_weight="2"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/txt1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="16dp"
+				android:layout_marginTop="20dp"
+				android:fontFamily="@font/roboto_light"
+				android:text="Get last transactions"
+				android:textColor="@color/black"
+				android:textSize="36dp" />
+		</LinearLayout>
+
+
+		<ScrollView
+			android:id="@+id/scroll_view"
+			android:layout_width="match_parent"
+			android:layout_height="422dp"
+			android:layout_marginStart="5dp"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="7dp"
+			android:layout_marginEnd="5dp"
+			android:layout_marginRight="16dp"
+			android:layout_marginBottom="200dp"
+			android:layout_weight="2">
+
+			<LinearLayout
+				android:id="@+id/ll2"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/mobilelLayout"
+					android:layout_width="374dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Transaction Type*"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/transactiontype"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="false"
+						android:focusableInTouchMode="false"
+						android:inputType="text"
+
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/accountNbrLayout"
+					android:layout_width="375dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Amount*"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/amount"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="false"
+						android:focusableInTouchMode="false"
+						android:inputType="text"
+
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/refrealCodeLayout"
+					android:layout_width="374dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Currency"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/currency"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="false"
+						android:focusableInTouchMode="false"
+						android:inputType="text"
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<!--  ???  <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint=""
+            style="@style/MyTextInputLayout_overlay"
+            android:layout_marginStart="16dp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textViewemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/customerSpinnerLayout"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="DOMICILE BRANCH">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/customerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                tools:ignore="KeyboardInaccessibleWidget" />
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+				<!--     <EditText
+            android:id="@+id/dob"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:width="150dp"
+            android:paddingRight="5dp"
+            android:inputType="textPersonName"
+            android:drawableRight="@drawable/calendar"
+            android:textColor="@color/black"
+            /> -->
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="374dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Reference Number*"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/refrence_number"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="false"
+						android:focusableInTouchMode="false"
+						android:inputType="text"
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/location1"
+					android:layout_width="374dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Location*"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/location"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="false"
+						android:focusableInTouchMode="false"
+						android:inputType="text"
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+				<!--   <EditText
+            android:id="@+id/pin"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:width="150dp"
+            android:background="@drawable/button_border_fields"
+            android:inputType="numberPassword"
+            android:textAlignment="gravity"
+            android:maxLength="6"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+-->
+
+				<!--<EditText
+            android:id="@+id/pinConf"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:maxLength="6"
+            android:width="150dp"
+            android:background="@drawable/button_border_fields"
+            android:inputType="numberPassword"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />-->
+
+				<!--   <EditText
+            android:id="@+id/pass"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:width="150dp"
+            android:inputType="textPassword"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />-->
+
+				<!--
+
+        <EditText
+            android:id="@+id/passConf"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="7"
+            android:width="150dp"
+            android:background="@drawable/button_border_fields"
+            android:inputType="textPassword"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />-->
+
+
+			</LinearLayout>
+
+
+		</ScrollView>
+
+		<include
+			android:id="@+id/footer_layout"
+			layout="@layout/footer_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="130dp" />
+		<Button
+			android:id="@+id/btnLoad"
+			android:layout_width="271dp"
+			android:layout_height="55dp"
+			android:layout_alignParentBottom="true"
+			android:layout_marginLeft="60dp"
+			android:layout_marginTop="-300dp"
+			android:layout_marginRight="19.299988dip"
+			android:layout_marginBottom="10.0dip"
+			android:backgroundTint="@color/DebianRed"
+			android:clickable="true"
+			android:paddingTop="12.0dip"
+			android:paddingBottom="12.0dip"
+			android:text="Get Transactions"
+			android:textStyle="bold" />
+	</LinearLayout>
+
+
+</RelativeLayout>

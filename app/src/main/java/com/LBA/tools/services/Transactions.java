@@ -33,6 +33,7 @@ public class Transactions {
                     arrayTransactionList.getJSONObject(i).getString("referenceNumber"),
                     arrayTransactionList.getJSONObject(i).getString("location")
             ));
+
         }
     }
 }
