@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="fill_parent"
+android:background="@color/white">
+
+<include
+    android:id="@+id/header_layout"
+    layout="@layout/header_layout"
+    />
+
+<RelativeLayout
+    android:id="@+id/heading_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="55.0dip"
+    android:layout_below="@id/header_layout"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="100px"
+    >
+
+
+    <TextView
+        android:id="@+id/textView_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8.0dp"
+        android:layout_marginTop="12.0dip"
+        android:text="Liste de Transaction"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+</RelativeLayout>
+
+<LinearLayout
+
+
+    android:id="@+id/details"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/heading_layout"
+    android:layout_marginStart="100px"
+    android:layout_marginLeft="100px"
+    android:layout_marginTop="14dp"
+    android:layout_marginEnd="100px"
+    android:layout_marginRight="100px"
+    android:layout_marginBottom="30px"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="4"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:width="150dp"
+        android:text="ACCOUNT"
+        android:textAlignment="gravity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+
+    <Spinner
+        android:id="@+id/spinAccountNumber"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/editbox_dropdown_dark_frame" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_column="4"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp"
+    android:width="150dp"
+    android:text="Date de début"
+    android:textAlignment="gravity"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:textColor="@color/white"  />
+
+    <EditText
+        android:id="@+id/etxt_fromdate"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        android:inputType="textPersonName"
+        android:textColorHint="#A8A8A8"
+        android:textColor="@color/white"/>
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="4"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:width="150dp"
+            android:text="date de fin"
+            android:textAlignment="gravity"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/etxt_todate"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@android:drawable/editbox_dropdown_dark_frame"
+            android:inputType="textPersonName"
+            android:textColorHint="#A8A8A8"
+            android:textColor="@color/white"
+            ></EditText>
+    <Button
+        android:id="@+id/btnLoad"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="50dp"
+        android:background="@color/cbg_red"
+        android:padding="5dp"
+        android:text="SEARCH"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+</LinearLayout>
+<!--
+<View
+    android:id="@+id/divider3"
+    android:layout_width="350dp"
+    android:layout_height="5dp"
+    android:layout_marginLeft="30.0dp"
+    android:layout_marginTop="120dp"
+    android:background="@color/cbg_red"
+    android:color="@color/cbg_red" />
+-->
+</RelativeLayout>

@@ -36,7 +36,7 @@
 				android:layout_marginLeft="16dp"
 				android:layout_marginTop="20dp"
 				android:fontFamily="@font/roboto_light"
-				android:text="Account To Card"
+				android:text="compte à carte"
 				android:textColor="@color/black"
 				android:textSize="36dp" />
 
@@ -67,11 +67,12 @@
 					android:layout_width="376dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Card Token*"
+					android:hint="Card Number*"
+					android:text="4281993108775830"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/cardtoken"
+						android:id="@+id/cardNumber"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:clickable="true"
@@ -100,36 +101,16 @@
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
+						android:enabled="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
 						android:inputType="text"
 
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
 
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/refrealCodeLayout"
-					android:layout_width="378dp"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="16dp"
-					android:hint="Currency"
-					app:errorEnabled="true">
 
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/currency"
-						android:layout_width="380dp"
-						android:layout_height="wrap_content"
-						android:clickable="true"
-						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
-						android:inputType="text"
-						android:textColor="@color/black" />
-
-				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/refrealCodeLayout"
 					android:layout_width="378dp"
@@ -144,9 +125,9 @@
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
+						android:enabled="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
 						android:inputType="text"
 						android:textColor="@color/black" />
 
@@ -165,34 +146,14 @@
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
+						android:enabled="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
 						android:inputType="text"
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/refrealCodeLayout"
-					android:layout_width="378dp"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="16dp"
-					android:hint="Client Type"
-					app:errorEnabled="true">
 
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/clienttype"
-						android:layout_width="380dp"
-						android:layout_height="wrap_content"
-						android:clickable="true"
-						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
-						android:inputType="text"
-						android:textColor="@color/black" />
-
-				</com.google.android.material.textfield.TextInputLayout>
 
 				<!--  ???  <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLayout"

@@ -46,14 +46,14 @@
 
             <TextView
                 android:id="@+id/userWelcome"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/userImage"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginLeft="-2dp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_centerHorizontal="true"
-                android:gravity="center"
+
                 android:layout_toRightOf="@id/userImage"
                 android:padding="@dimen/_10sdp"
                 android:text=""
@@ -78,46 +78,45 @@
 
         <Button
             android:id="@+id/updateGhCard"
-            android:layout_width="183dp"
-            android:layout_height="49dp"
+            android:layout_width="320dp"
+            android:layout_height="56dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="@dimen/_15sdp"
             android:background="@drawable/custom_grey_button"
             android:fontFamily="@font/roboto_regular"
-            android:text="Update prepaid portal card"
+            android:text="Bienvenu à la banque agricole"
+            android:textSize="13sp"
             android:textColor="@color/white"
-            android:textStyle="bold"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userWelcomeCard" />
-        <Button
-            android:id="@+id/txtHide"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_22sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="@dimen/_15sdp"
-            android:text="Hide"
-            android:background="@drawable/custom_red_button"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/userWelcomeCard"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:fontFamily="@font/roboto_regular"/>
 
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPagerImageSlider2"
-            android:layout_width="360dp"
-            android:layout_height="100dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobilelLayout"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="Card Number*"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/updateGhCard"
+            tools:layout_editor_absoluteX="16dp">
 
-            android:layout_marginTop="36dp"
-            android:background="@drawable/banque_agricole"
-            android:paddingLeft="@dimen/_20sdp"
-            android:paddingRight="@dimen/_20sdp"
-            app:layout_constraintTop_toBottomOf="@+id/txtHide"
-            tools:layout_editor_absoluteX="55dp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ems="10"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/textView14"
@@ -126,12 +125,12 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/_38sdp"
+            android:layout_marginStart="20dp"
             android:layout_marginLeft="@dimen/_38sdp"
-            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginTop="2dp"
             android:text="Banque Agricole"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/viewPagerImageSlider2"
+            app:layout_constraintTop_toBottomOf="@id/mobilelLayout"
             app:layout_constraintStart_toStartOf="parent"
             android:textSize="@dimen/_14ssp"
             android:fontFamily="@font/roboto_regular"/>
@@ -168,14 +167,14 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_22sdp"
             android:background="@drawable/custom_red_button"
-            android:text="Balances"
+            android:text="Solde"
             android:layout_marginLeft="@dimen/_40sdp"
             android:textColor="@color/colorWhite"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/roboto_bold"
-            app:layout_constraintTop_toBottomOf="@id/viewPagerImageSlider2"
+            app:layout_constraintTop_toBottomOf="@id/mobilelLayout"
             />
 
         <!--    <LinearLayout
@@ -230,19 +229,24 @@
                                 android:layout_marginEnd="@dimen/_5sdp"
                                 android:layout_marginBottom="@dimen/_5sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Account \n service"
+                                android:text="Carte à\n Carte"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
+
                             <ImageView
                                 android:id="@+id/bus"
-                                android:layout_width="@dimen/_35sdp"
-                                android:layout_height="@dimen/_35sdp"
-                                android:layout_centerHorizontal="true"
+                                android:layout_width="31dp"
+                                android:layout_height="38dp"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentBottom="true"
-                                android:layout_margin="@dimen/_10sdp"
-                                app:srcCompat="@drawable/account_services" />
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginRight="28dp"
+                                android:layout_marginBottom="23dp"
+                                app:srcCompat="@drawable/bills_phase2" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
@@ -273,18 +277,23 @@
                                 android:layout_marginEnd="@dimen/_5sdp"
                                 android:layout_marginBottom="@dimen/_5sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Get\nBalance"
+                                android:text="Retourner\nLe solde"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
+
                             <ImageView
                                 android:id="@+id/bus1"
-                                android:layout_width="@dimen/_35sdp"
-                                android:layout_height="@dimen/_35sdp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="@dimen/_10sdp"
+                                android:layout_width="31dp"
+                                android:layout_height="38dp"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginRight="28dp"
+                                android:layout_marginBottom="23dp"
                                 app:srcCompat="@drawable/airtime_data" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
@@ -324,18 +333,23 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Last 10\n Transaction"
+                                android:text="Dernière 10\n Transaction"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
+
                             <ImageView
                                 android:id="@+id/cycle"
-                                android:layout_width="@dimen/_35sdp"
-                                android:layout_height="@dimen/_35sdp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="@dimen/_10sdp"
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginRight="28dp"
+                                android:layout_marginBottom="23dp"
                                 app:srcCompat="@drawable/transfers_phase2" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
@@ -366,18 +380,23 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Account to\ncard"
+                                android:text="Compte à\ncarte"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
+
                             <ImageView
                                 android:id="@+id/MMBtn_img"
-                                android:layout_width="@dimen/_45sdp"
-                                android:layout_height="@dimen/_45sdp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="@dimen/_10sdp"
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginRight="28dp"
+                                android:layout_marginBottom="23dp"
                                 app:srcCompat="@drawable/ic_mobile_money" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
@@ -420,19 +439,23 @@
                                 android:layout_marginEnd="@dimen/_5sdp"
                                 android:layout_marginBottom="@dimen/_5sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Card to\ncard"
+                                android:text="Bloquer la\ncarte"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
+
                             <ImageView
                                 android:id="@+id/train"
-                                android:layout_width="@dimen/_35sdp"
-                                android:layout_height="@dimen/_35sdp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="@dimen/_15sdp"
-                                android:layout_margin="@dimen/_10sdp"
+                                android:layout_width="30dp"
+                                android:layout_height="35dp"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginRight="28dp"
+                                android:layout_marginBottom="23dp"
+                                android:layout_marginEnd="@dimen/_10sdp"
                                 app:srcCompat="@drawable/bills_phase2" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
@@ -466,23 +489,27 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Card \nOperation"
+                                android:text="Limite de \nmise à jour"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
 
                             <ImageView
                                 android:id="@+id/ghqr_img"
-                                android:layout_width="@dimen/_45sdp"
-                                android:layout_height="@dimen/_45sdp"
+                                android:layout_width="30dp"
+                                android:layout_height="42dp"
+                                android:backgroundTint="@color/white"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginStart="@dimen/_10sdp"
                                 android:layout_marginTop="@dimen/_10sdp"
                                 android:layout_marginEnd="@dimen/_10sdp"
-                                android:layout_marginBottom="@dimen/_10sdp"
-                                app:srcCompat="@drawable/gh_qr" />
+                                android:layout_marginRight="28dp"
+                                android:layout_marginBottom="23dp"
+                                app:srcCompat="@drawable/airtime_data"
+
+                               />
 
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
@@ -490,192 +517,6 @@
                 </LinearLayout>
 
                 <!-- ************** Add beneficiary and  Mobile Money-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_100sdp"
-                    android:paddingRight="@dimen/_10sdp"
-                    android:paddingLeft="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    android:layout_below="@+id/linearLayout4"
-                    android:layout_alignParentStart="true"
-                    >
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardServices"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
-                        app:cardCornerRadius="@dimen/_17sdp"
-                        app:cardElevation="@dimen/_5sdp"
-                        app:cardBackgroundColor="@color/transparent"
-                        android:layout_weight="1">
-                        <RelativeLayout
-                            android:background="@drawable/custom_black_container_main_menu"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:id="@+id/textView4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentTop="true"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginStart="@dimen/_5sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:padding="@dimen/_5sdp"
-                                android:text="Card\nLimit"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                app:fontFamily="@font/roboto_bold" />
-
-                            <ImageView
-                                android:id="@+id/imageView3"
-                                android:layout_width="@dimen/_35sdp"
-                                android:layout_height="@dimen/_35sdp"
-                                android:layout_margin="@dimen/_10sdp"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_centerHorizontal="true"
-                                app:srcCompat="@drawable/card_services" />
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/BenefBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
-                        app:cardCornerRadius="@dimen/_17sdp"
-                        app:cardElevation="@dimen/_5sdp"
-                        app:cardBackgroundColor="@color/transparent"
-                        android:layout_weight="1">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:background="@drawable/custom_black_container_main_menu"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/iconBeneficiary"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentTop="true"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginStart="@dimen/_10sdp"
-                                android:layout_marginTop="@dimen/_10sdp"
-                                android:layout_marginEnd="@dimen/_10sdp"
-                                android:layout_marginBottom="@dimen/_10sdp"
-                                android:padding="@dimen/_5sdp"
-                                android:text="Beneficiary"
-                                android:textColor="@color/white"
-                                android:textSize="18sp"
-                                app:fontFamily="@font/roboto_bold" />
-                            <ImageView
-                                android:id="@+id/iconBeneficiary"
-                                android:layout_width="@dimen/_35sdp"
-                                android:layout_height="@dimen/_35sdp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_margin="@dimen/_10sdp"
-                                app:srcCompat="@drawable/account_services" />
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>                    <LinearLayout
-                android:layout_width="match_parent"
-                android:id="@+id/linearLayout4"
-                android:layout_height="@dimen/_100sdp"
-                android:paddingRight="@dimen/_10sdp"
-                android:paddingLeft="@dimen/_10sdp"
-                android:orientation="horizontal"
-                android:layout_below="@+id/linearLayout3"
-                android:layout_alignParentStart="true"
-                >
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/payproxy"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    app:cardBackgroundColor="@color/transparent"
-                    android:layout_margin="@dimen/_5sdp"
-                    app:cardCornerRadius="@dimen/_17sdp"
-                    app:cardElevation="@dimen/_5sdp"
-                    android:layout_weight="1"
-                    android:visibility="gone">
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:background="@drawable/custom_black_container_main_menu"
-                        android:layout_height="match_parent">
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/cycle2"
-                            android:layout_centerHorizontal="true"
-                            android:padding="@dimen/_5sdp"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentTop="true"
-                            android:text="Proxy\nPay"
-                            android:layout_margin="@dimen/_5sdp"
-                            android:textSize="18sp"
-                            android:textColor="@color/white"
-                            app:fontFamily="@font/roboto_bold" />
-                        <ImageView
-                            android:id="@+id/cycle2"
-                            android:layout_width="@dimen/_35sdp"
-                            android:layout_height="@dimen/_35sdp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_margin="@dimen/_10sdp"
-
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
-                            app:srcCompat="@drawable/proxypay" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/expenseManager"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    app:cardBackgroundColor="@color/transparent"
-                    android:layout_margin="@dimen/_5sdp"
-
-                    app:cardCornerRadius="@dimen/_17sdp"
-                    app:cardElevation="@dimen/_5sdp"
-                    android:layout_weight="1">
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:background="@drawable/custom_black_container_main_menu"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/textView9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginEnd="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:padding="@dimen/_5sdp"
-                            android:text="Card Information"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            app:fontFamily="@font/roboto_bold" />
-                        <ImageView
-                            android:id="@+id/airplane"
-                            android:layout_width="@dimen/_35sdp"
-                            android:layout_height="@dimen/_35sdp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_margin="@dimen/_10sdp"
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
-                            app:srcCompat="@drawable/pie_chart" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
 
             </LinearLayout>
         </ScrollView>

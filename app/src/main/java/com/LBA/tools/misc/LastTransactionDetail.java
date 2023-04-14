@@ -72,4 +72,16 @@ public class LastTransactionDetail {
     public void setLocation(String location) {
         Location = location;
     }
+
+    @Override
+    public String toString() {
+        return "LastTransactionDetail{" +
+                "TransactionType='" + TransactionType + '\'' +
+                ", Amount='" + Amount + '\'' +
+                ", Currency='" + Currency + '\'' +
+                ", Date='" + Date + '\'' +
+                ", ReferenceNumber='" + ReferenceNumber + '\'' +
+                ", Location='" + Location + '\'' +
+                '}';
+    }
 }

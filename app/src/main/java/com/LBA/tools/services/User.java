@@ -47,28 +47,21 @@ public class User {
 
         JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceSignIn, jsonObject);
         //hajer 24/06/2022
-        if (jsonRespObject.has("sessionId")){
-            Globals.sessionId = jsonRespObject.getString("sessionId");
-        }
-        Log.e("login: resp", ""+jsonRespObject);
 
-        if (jsonRespObject.getString("responseCode").equals("803")) {
-            Globals.sessionId = jsonRespObject.getString("sessionId");
-            throw new Exception(jsonRespObject.getString("responseCode"));
-        }
-       /*
-            if(jsonRespObject.has("respCode") && !jsonRespObject.getString("respCode").equals("000") && !jsonRespObject.getString("respCode").equals("802"))
-            throw new Exception("LOGIN REJECTED <RespCode=["+(jsonRespObject.has("respCode")?jsonRespObject.getString("respCode"):"")+"]>");
-            */
+
+        Log.e("TAG", "Login: "+jsonRespObject);
+
+        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+            // throw new Exception("Pin request already done");
+            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
+
 
         Globals.notificationViewed = false;
 
         Globals.ERmsg = jsonRespObject.getString("responseCode");
         //Log.d("", "" + Globals.ERmsg);
 
-        if (jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00")) {
-            throw new Exception("" + (jsonRespObject.has("responseCode") ? jsonRespObject.getString("responseCode") : "") + "");
-        }
+        Globals.userWelcome = jsonRespObject.getString("clientName");
 
         Globals.authenToken = jsonRespObject.getString("token");
         Log.e("TAG", "login: Globals.authenToken" + Globals.authenToken);
@@ -660,7 +653,6 @@ public class User {
       /*  if (jsonRespObject.getString("responseCode").equals("802"))
             throw new Exception("REFRESH AUTHENTICATION <responseCode=[" + jsonRespObject.getString("responseCode") + "]>");*/
 
-        return;
     }
 
     static public void changePwd(String userCode, String password, String newPwd, String newPwdConf) throws Exception {

@@ -30,6 +30,7 @@ import com.LBA.prepaidPortal.widgets.fragment.CardToCard;
 
 import com.LBA.prepaidPortal.widgets.fragment.GetBalance;
 import com.LBA.prepaidPortal.widgets.fragment.Last10Transactions;
+import com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity;
 import com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit;
 import com.google.android.material.navigation.NavigationView;
 import com.LBA.prepaidPortal.widgets.fragment.HomeFragment;
@@ -42,11 +43,8 @@ public class HomeActivity extends AbstractActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         initWidget();
-
         displaySelectedFragment(R.id.home_fragment);
-
     }
 
 
@@ -103,7 +101,7 @@ public class HomeActivity extends AbstractActivity
             fragment = new GetBalance();
         }
         else if (id == R.id.last_transaction){
-            fragment = new Last10Transactions();
+            fragment = new TransactionListActivity();
         }
         else if (id == R.id.account_card){
             fragment = new AccountToCard();
@@ -144,9 +142,9 @@ public class HomeActivity extends AbstractActivity
 
     private void logoutMenu(HomeActivity homeActivity){
         AlertDialog.Builder builder = new AlertDialog.Builder(homeActivity);
-        builder.setTitle("Logout");
-        builder.setMessage("Are you sure you want to logout ? ");
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setTitle("Se déconnecter");
+        builder.setMessage("Etes vous sûre de vouloire se déconnecter ? ");
+        builder.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 finish();
@@ -154,7 +152,7 @@ public class HomeActivity extends AbstractActivity
                 startActivity(intent);
             }
         });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Non", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();

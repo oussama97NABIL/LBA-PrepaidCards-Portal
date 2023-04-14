@@ -110,7 +110,7 @@ public class Z_WelcomeActivity extends AbstractActivity  {
     TextView textView4;
     TextView textView5;
     TextView textView6 ,welcomText;
-    Button txtHide;
+  //  Button txtHide;
     String encodedImage = null;
     boolean hidePager = false;
     String notificationId = "";
@@ -156,40 +156,23 @@ public class Z_WelcomeActivity extends AbstractActivity  {
 
         // getNotifications();
 
-        ConstraintLayout yourBackgroundView = (ConstraintLayout) findViewById(R.id.root);
 
-        SharedPreferences settings = getSharedPreferences("appBack",
-                Context.MODE_PRIVATE);
+
         notificationText = findViewById(R.id.notificationText);
 
-        String imageS  = settings.getString("background", DefaultUnameValue);
-        Log.d("Retr image from device", imageS);
-        Bitmap imageB;
-        if(!imageS.equals("")) {
-            imageB = decodeToBase64(imageS);
-            Drawable d = new BitmapDrawable(getResources(),imageB);
 
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN){
-                yourBackgroundView.setBackgroundDrawable(d);
-            } else {
-                yourBackgroundView.setBackground(d);
-            }
-        }
-        else{
-            //keep it black
-        }
+
 
         AccBtn = (CardView) findViewById(R.id.accountServices);
         //BillBtn = (ImageButton) findViewById(R.id.BillBtn);
         //ReqBtn = (CardView) findViewById(R.id.requests);
         TrBtn = (CardView) findViewById(R.id.transfer);
-        expenseManager = (CardView) findViewById(R.id.expenseManager);
-        CardBtn = (CardView) findViewById(R.id.cardServices);
+        //expenseManager = (CardView) findViewById(R.id.expenseManager);
+
         //StnBtn = (ImageButton) findViewById(R.id.StnBtn);
         QRBtn = (CardView) findViewById(R.id.ghqr);
         MMBtn = (CardView) findViewById(R.id.MMBtn);
-        BenefBtn = (CardView) findViewById(R.id.BenefBtn);
-        payproxy = (CardView) findViewById(R.id.payproxy);
+        //payproxy = (CardView) findViewById(R.id.payproxy);
         AirBtn = (CardView) findViewById(R.id.airtimeAndData);
         PaymentBtn = (CardView) findViewById(R.id.PaymentBtn);
         Setting = (ImageButton)findViewById(R.id.Setting);
@@ -198,7 +181,7 @@ public class Z_WelcomeActivity extends AbstractActivity  {
         //proxy =(ImageButton) findViewById(R.id.proxy);
         balances = (Button) findViewById(R.id.btnBalances);
         welcomText = (TextView) findViewById(R.id.userWelcome);
-        txtHide = (Button) findViewById(R.id.txtHide);
+//        txtHide = (Button) findViewById(R.id.txtHide);
         //showUser = (TextView) findViewById(R.id.showUser);
         //textView13 = (TextView) findViewById(R.id.textView13);
         updateGhCard = (Button) findViewById(R.id.updateGhCard);
@@ -273,9 +256,6 @@ public class Z_WelcomeActivity extends AbstractActivity  {
         viewPager2.setPageTransformer(compositePageTransformer);
 
         //------------ pubs ViewPager2 UP Adds ------------------------
-
-        viewPager2_up = findViewById(R.id.viewPagerImageSlider2);
-
         /*  Here , i'm preparing a list of images from drawable
          *    after the websService is ready we will get them from the api
          *  */
@@ -555,20 +535,7 @@ public class Z_WelcomeActivity extends AbstractActivity  {
 //                task.execute();
 //            }
 //        });
-        txtHide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!hidePager){
-                    viewPager2_up.setVisibility(View.GONE);
-                    txtHide.setText("Show");
-                    hidePager = true;
-                }else{
-                    viewPager2_up.setVisibility(View.VISIBLE);
-                    txtHide.setText("Hide");
-                    hidePager = false;
-                }
-            }
-        });
+
         //hajer 28/06/2022 start
         updateGhCard.setOnClickListener(new View.OnClickListener() {
             @Override

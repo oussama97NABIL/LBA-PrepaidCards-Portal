@@ -63,7 +63,7 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.get_balance, container, false);
 
-        getActivity().setTitle("Get Balance");
+        getActivity().setTitle("Retourner le solde");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         availableBalance = (EditText) mRootView.findViewById(R.id.availablebalance);
         Balance = (EditText) mRootView.findViewById(R.id.balance);

@@ -111,7 +111,11 @@ public class Globals {
     static public final String serviceCardDetails= "/CardDetails";
     static public final String serviceGetBalance= "/cardBalance";
     static public final String service10LastTransactions= "/getLast10Transaction";
+
     static public final String serviceAccountToCard= "/accountToCard";
+    static public final String serviceCardToCard= "/cardToCard";
+    static public final String serviceBlockCard= "/blockCard";
+    static public final String serviceUpdateLimit= "/updateLimits";
     static public final String serviceStopCard = "/StopCard";
     static public final String serviceCardsNotActiveList = "/CardsNotActiveList";
     static public final String serviceCardsToUnblockList = "/CardsStopList";
@@ -144,6 +148,7 @@ public class Globals {
     static public String emailCustomer="";
     static public String telephone="";
     static public String nameCustomer="";
+    static public String userWelcome="";
     static public  List<String> accountnbr = new ArrayList<String>();
     static public int  globalNumberOfTries=0;
     static public final String serviceSignUp = "/SignUp";

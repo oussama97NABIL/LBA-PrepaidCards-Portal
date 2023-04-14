@@ -58,7 +58,7 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.card_detail, container, false);
 
-        getActivity().setTitle("Get card information");
+        getActivity().setTitle("Obtenir les informations sur la carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);

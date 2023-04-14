@@ -33,9 +33,9 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="16dp"
-				android:layout_marginTop="20dp"
+				android:layout_marginTop="-3dp"
 				android:fontFamily="@font/roboto_light"
-				android:text="Get last transactions"
+				android:text="obtenir les dernières transactions"
 				android:textColor="@color/black"
 				android:textSize="36dp" />
 		</LinearLayout>
@@ -63,7 +63,7 @@
 					android:layout_width="374dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Transaction Type*"
+					android:hint="Account Number*"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
@@ -72,9 +72,9 @@
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
+						android:enabled="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
 						android:inputType="text"
 
 						android:textColor="@color/black" />
@@ -87,18 +87,18 @@
 					android:layout_width="375dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Amount*"
+					android:hint="From Date*"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/amount"
+						android:id="@+id/etxt_fromdate"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
+						android:enabled="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
 						android:inputType="text"
 
 						android:textColor="@color/black" />
@@ -110,18 +110,18 @@
 					android:layout_width="374dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Currency"
+					android:hint="To Date"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/currency"
+						android:id="@+id/etxt_todate"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
+						android:enabled="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
 						android:inputType="text"
 						android:textColor="@color/black" />
 
@@ -173,49 +173,9 @@
             android:drawableRight="@drawable/calendar"
             android:textColor="@color/black"
             /> -->
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/bizcertLayout"
-					android:layout_width="374dp"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="16dp"
-					android:hint="Reference Number*"
-					app:errorEnabled="true">
 
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/refrence_number"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:clickable="true"
-						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
-						android:inputType="text"
-						android:textColor="@color/black" />
 
-				</com.google.android.material.textfield.TextInputLayout>
 
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/location1"
-					android:layout_width="374dp"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="16dp"
-					android:hint="Location*"
-					app:errorEnabled="true">
-
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/location"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:clickable="true"
-						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
-						android:inputType="text"
-						android:textColor="@color/black" />
-
-				</com.google.android.material.textfield.TextInputLayout>
 				<!--   <EditText
             android:id="@+id/pin"
             android:layout_width="fill_parent"

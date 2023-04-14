@@ -6,7 +6,9 @@
     android:paddingTop="30dp"
     android:layout_height="wrap_content"
     android:background="@color/white"
+    android:layout_marginTop="-120dp"
     android:orientation="vertical">
+
 
 
 
@@ -19,7 +21,7 @@
         android:layout_marginRight="19.299988dip"
         android:orientation="vertical"
         android:paddingLeft="19.199982dip"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="100dp"
 
         android:paddingRight="19.199982dip"
         android:paddingBottom="18.699982dip"
@@ -28,6 +30,7 @@
             android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:layout_below="@id/heading_layout"
             android:layout_alignParentBottom="false">
     </ListView>

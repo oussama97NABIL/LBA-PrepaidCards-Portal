@@ -10,7 +10,21 @@
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:background="@drawable/murasakipurple"
-        />
+        >
+
+        <ImageView
+            android:id="@+id/img_h"
+            android:layout_width="271dp"
+            android:layout_height="167dp"
+            android:layout_marginStart="60dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="djskfsdjhfshd fjshd fjsdhf"
+            android:gravity="center"
+            android:padding="10dp"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/img_7" />
+    </LinearLayout>
 
 
     <TextView
@@ -18,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="180dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
@@ -26,20 +40,7 @@
         android:textColor="#FF000000"
         android:textSize="35dp"
          />
-    <TextView
-        android:id="@+id/bienvenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
-        android:layout_below="@+id/signin"
-        android:gravity="center"
-        android:text="Bienvenu sur le Portail Prépayé"
-        android:textColor="#FF000000"
-        android:textSize="18dp"
-        />
+
     <TextView
         android:id="@+id/identifiant"
         android:layout_width="match_parent"

@@ -26,12 +26,13 @@ import com.LBA.tools.assets.Globals;
 public class LastTransactionResult extends AbstractActivity  {
     private ListView lv;
     ImageButton canlBtn;
+    ImageButton back;
     private int nCounter=0;
     private int[] bgcolor = {R.color.white,R.color.colorTransparentWhite,R.color.white,R.color.colorTransparentWhite,R.color.white};
     private String selectedAccount;
     static private final String TAG = LastTransactionResult.class.getSimpleName();
     TextView textView_heading;
-    private boolean wallet = false;
+     boolean wallet = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +51,16 @@ public class LastTransactionResult extends AbstractActivity  {
 
 
         textView_heading = (TextView) findViewById(R.id.textView_heading);
+        back = (ImageButton) findViewById(R.id.Back);
         canlBtn = (ImageButton) findViewById(R.id.imageButton24);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initProgrees();
+                HomeTask task = new HomeTask(HomeActivity.class);
+                task.execute();
+            }
+        });
         canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,7 +131,7 @@ public class LastTransactionResult extends AbstractActivity  {
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
-    class VersionAdapter extends BaseAdapter {
+    public class VersionAdapter extends BaseAdapter {
         private LayoutInflater layoutInflater;
         private Boolean gray = true;
         public VersionAdapter(LastTransactionResult activity) {

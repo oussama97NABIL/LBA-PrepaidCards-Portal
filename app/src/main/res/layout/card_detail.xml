@@ -18,7 +18,7 @@
 			android:id="@+id/ll1"
 			android:layout_width="match_parent"
 			android:layout_height="27dp"
-			android:layout_weight="1">
+			android:layout_weight="-1">
 		</LinearLayout>
 
 
@@ -34,9 +34,9 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="16dp"
-				android:layout_marginTop="20dp"
+				android:layout_marginTop="0dp"
 				android:fontFamily="@font/roboto_light"
-				android:text="Get Card Information"
+				android:text="Les informations sur la carte"
 				android:textColor="@color/black"
 				android:textSize="36dp" />
 

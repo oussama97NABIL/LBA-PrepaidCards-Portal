@@ -329,6 +329,282 @@ public class HTTPClient extends AbstractActivity {
 
         }
     }
+    static public JSONObject  sendPostJSONblockCard(String service, JSONObject jsonObject) throws Exception {
+        int statusCode=-1;
+        // CloseableHttpClient httpclient = null;
+        HttpClient httpClient = null;
+        Globals.transactionId = null;
+        try {
+            //swap here between Test version and live version  with comment and uncomment even one
+            //hajer 20/06/2022
+            httpClient = getNewHttpClient();  //for test version
+            //httpClient = getProdHttpClient(); //for live version
+
+
+            final String url = Globals.serverURL+service;
+            final String AUTH_KEY = "Authorization";
+
+            final String AUTH_VALUE = Globals.authenToken;
+            Log.d(" log AUTH_VALUE", AUTH_VALUE );
+
+            HttpPost httpPost = new HttpPost(url);
+            Log.d("url",url);
+            httpPost.addHeader("Accept", "application/json");
+            //httpPost.addHeader("Accept", "*/*");
+
+            httpPost.addHeader("Content-Type", "application/json");
+            httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
+
+            httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
+            Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
+            //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
+
+            StringEntity se = new StringEntity(jsonObject.toString());
+            httpPost.setEntity(se);
+            HttpResponse httpResponse = httpClient.execute(httpPost);
+            if (httpResponse.getStatusLine().getStatusCode() != 200) {
+                // throw new Exception("sendPostJSON() failed" + httpResponse.getStatusLine().getStatusCode());
+                throw new Exception("SERVER ERROR "+httpResponse.getStatusLine().getStatusCode()+". TRY LATER");
+            }
+            else{
+                BufferedReader reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+                while ((inputLine = reader.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                reader.close();
+                JSONObject jsonRespObject = new JSONObject(response.toString());
+
+
+                return jsonRespObject;
+            }
+        } catch(Exception e){
+            Log.d("IB","getNewHttpClient",e);
+            e.printStackTrace();
+            throw new Exception("COMMUNICATION ERROR. TRY LATER");
+        }/* finally {
+            // younes
+            if(httpClient.getConnectionManager()!=null)
+                //httpclient.close();
+             httpClient.getConnectionManager().shutdown();
+
+}*/
+        finally {
+            /**
+             if(httpclient!=null)
+             httpclient.close();
+             **/
+
+        }
+    }
+    static public JSONObject  sendPostJSONupdateLimits(String service, JSONObject jsonObject) throws Exception {
+        int statusCode=-1;
+        // CloseableHttpClient httpclient = null;
+        HttpClient httpClient = null;
+        Globals.transactionId = null;
+        try {
+            //swap here between Test version and live version  with comment and uncomment even one
+            //hajer 20/06/2022
+            httpClient = getNewHttpClient();  //for test version
+            //httpClient = getProdHttpClient(); //for live version
+
+
+            final String url = Globals.serverURL+service;
+            final String AUTH_KEY = "Authorization";
+
+            final String AUTH_VALUE = Globals.authenToken;
+            Log.d(" log AUTH_VALUE", AUTH_VALUE );
+
+            HttpPost httpPost = new HttpPost(url);
+            Log.d("url",url);
+            httpPost.addHeader("Accept", "application/json");
+            //httpPost.addHeader("Accept", "*/*");
+
+            httpPost.addHeader("Content-Type", "application/json");
+            httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
+
+            httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
+            Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
+            //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
+
+            StringEntity se = new StringEntity(jsonObject.toString());
+            httpPost.setEntity(se);
+            HttpResponse httpResponse = httpClient.execute(httpPost);
+            if (httpResponse.getStatusLine().getStatusCode() != 200) {
+                // throw new Exception("sendPostJSON() failed" + httpResponse.getStatusLine().getStatusCode());
+                throw new Exception("SERVER ERROR "+httpResponse.getStatusLine().getStatusCode()+". TRY LATER");
+            }
+            else{
+                BufferedReader reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+                while ((inputLine = reader.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                reader.close();
+                JSONObject jsonRespObject = new JSONObject(response.toString());
+
+
+                return jsonRespObject;
+            }
+        } catch(Exception e){
+            Log.d("IB","getNewHttpClient",e);
+            e.printStackTrace();
+            throw new Exception("COMMUNICATION ERROR. TRY LATER");
+        }/* finally {
+            // younes
+            if(httpClient.getConnectionManager()!=null)
+                //httpclient.close();
+             httpClient.getConnectionManager().shutdown();
+
+}*/
+        finally {
+            /**
+             if(httpclient!=null)
+             httpclient.close();
+             **/
+
+        }
+    }
+    static public JSONObject  sendPostJSONAccountToCard(String service, JSONObject jsonObject) throws Exception {
+        int statusCode=-1;
+        // CloseableHttpClient httpclient = null;
+        HttpClient httpClient = null;
+        Globals.transactionId = null;
+        try {
+            //swap here between Test version and live version  with comment and uncomment even one
+            //hajer 20/06/2022
+            httpClient = getNewHttpClient();  //for test version
+            //httpClient = getProdHttpClient(); //for live version
+
+
+            final String url = Globals.serverURL+service;
+
+
+            final String AUTH_VALUE = Globals.authenToken;
+            Log.d(" log AUTH_VALUE", AUTH_VALUE );
+
+            HttpPost httpPost = new HttpPost(url);
+            Log.d("url",url);
+            httpPost.addHeader("Accept", "application/json");
+            //httpPost.addHeader("Accept", "*/*");
+
+            httpPost.addHeader("Content-Type", "application/json");
+            httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
+
+            httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
+            Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
+            //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
+
+            StringEntity se = new StringEntity(jsonObject.toString());
+            httpPost.setEntity(se);
+            HttpResponse httpResponse = httpClient.execute(httpPost);
+            if (httpResponse.getStatusLine().getStatusCode() != 200) {
+                // throw new Exception("sendPostJSON() failed" + httpResponse.getStatusLine().getStatusCode());
+                throw new Exception("SERVER ERROR "+httpResponse.getStatusLine().getStatusCode()+". TRY LATER");
+            }
+            else{
+                BufferedReader reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+                while ((inputLine = reader.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                reader.close();
+                JSONObject jsonRespObject = new JSONObject(response.toString());
+
+
+                return jsonRespObject;
+            }
+        } catch(Exception e){
+            Log.d("IB","getNewHttpClient",e);
+            e.printStackTrace();
+            throw new Exception("COMMUNICATION ERROR. TRY LATER");
+        }/* finally {
+            // younes
+            if(httpClient.getConnectionManager()!=null)
+                //httpclient.close();
+             httpClient.getConnectionManager().shutdown();
+
+}*/
+        finally {
+            /**
+             if(httpclient!=null)
+             httpclient.close();
+             **/
+
+        }
+    }
+    static public JSONObject  sendPostJSONCardToCard(String service, JSONObject jsonObject) throws Exception {
+        int statusCode=-1;
+        // CloseableHttpClient httpclient = null;
+        HttpClient httpClient = null;
+        Globals.transactionId = null;
+        try {
+            //swap here between Test version and live version  with comment and uncomment even one
+            //hajer 20/06/2022
+            httpClient = getNewHttpClient();  //for test version
+            //httpClient = getProdHttpClient(); //for live version
+
+
+            final String url = Globals.serverURL+service;
+
+
+            final String AUTH_VALUE = Globals.authenToken;
+            Log.d(" log AUTH_VALUE", AUTH_VALUE );
+
+            HttpPost httpPost = new HttpPost(url);
+            Log.d("url",url);
+            httpPost.addHeader("Accept", "application/json");
+            //httpPost.addHeader("Accept", "*/*");
+
+            httpPost.addHeader("Content-Type", "application/json");
+            httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
+
+            httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
+            Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
+            //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
+
+            StringEntity se = new StringEntity(jsonObject.toString());
+            httpPost.setEntity(se);
+            HttpResponse httpResponse = httpClient.execute(httpPost);
+            if (httpResponse.getStatusLine().getStatusCode() != 200) {
+                // throw new Exception("sendPostJSON() failed" + httpResponse.getStatusLine().getStatusCode());
+                throw new Exception("SERVER ERROR "+httpResponse.getStatusLine().getStatusCode()+". TRY LATER");
+            }
+            else{
+                BufferedReader reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+                while ((inputLine = reader.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                reader.close();
+                JSONObject jsonRespObject = new JSONObject(response.toString());
+
+
+                return jsonRespObject;
+            }
+        } catch(Exception e){
+            Log.d("IB","getNewHttpClient",e);
+            e.printStackTrace();
+            throw new Exception("COMMUNICATION ERROR. TRY LATER");
+        }/* finally {
+            // younes
+            if(httpClient.getConnectionManager()!=null)
+                //httpclient.close();
+             httpClient.getConnectionManager().shutdown();
+
+}*/
+        finally {
+            /**
+             if(httpclient!=null)
+             httpclient.close();
+             **/
+
+        }
+    }
     static public JSONObject  sendPostJSONgetBalance(String service, JSONObject jsonObject) throws Exception {
         int statusCode=-1;
         // CloseableHttpClient httpclient = null;

@@ -69,7 +69,7 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
         mRootView = inflater.inflate(R.layout.get_last_transaction_new, container, false);
         LastTransactionDetail l = new LastTransactionDetail();
 
-        getActivity().setTitle("Get last 10 transactions\n");
+        getActivity().setTitle("Obtenir les dernières transactions\n");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         btnLoad=(Button) mRootView.findViewById(R.id.btnLoad);
         TransactionType = (EditText) mRootView.findViewById(R.id.transactiontype);
@@ -92,7 +92,8 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
         textView3 = (TextView) mRootView.findViewById(R.id.textView3);
         canlBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         OpenTime();
-
+        initProgrees();
+        new CustomTask().execute();
         canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -228,8 +229,6 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
         protected String doInBackground(String... param) {
             try {
                 Transactions.GetLast10Transactions();
-                Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), LastTransactionResult.class);
-                startActivity(myWelcomeAct);
                 return null;
             } catch (Exception e) {
                 e.printStackTrace();
@@ -253,11 +252,7 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
 
-            TransactionType.setText(transactionType);
-            Amount.setText(Globals.balance);
-            Currency.setText(Globals.currency);
-            ReferenceNumber.setText(Globals.referenceNumber);
-            Location.setText(Globals.location);
+
         }
     }
     private class HomeTask extends AsyncTask<String, String, String> {

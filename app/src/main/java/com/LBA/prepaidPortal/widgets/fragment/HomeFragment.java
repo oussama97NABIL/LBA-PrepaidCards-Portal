@@ -63,9 +63,11 @@ import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.SharedPrefManager;
 import com.LBA.prepaidPortal.activity.Z_WelcomeActivity;
 import com.LBA.tools.assets.Globals;
+import com.LBA.tools.services.Card;
 import com.LBA.tools.services.Notifications;
 import com.LBA.tools.services.User;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.textfield.TextInputEditText;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.io.ByteArrayOutputStream;
@@ -85,6 +87,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     SharedPrefManager sharedPrefManager;
 
     CardView AccBtn;
+    String userCode;
+    String password;
     //ImageButton BillBtn;
     CardView MMBtn;
     //CardView ReqBtn;
@@ -111,7 +115,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     TextView textView4;
     TextView textView5;
     TextView textView6 ,welcomText;
-    Button txtHide;
+
     String encodedImage = null;
     boolean hidePager = false;
     String notificationId = "";
@@ -149,8 +153,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
 
         Log.e("onCreate: ", "  Globals.userType : "+  Globals.userType);
-        getActivity().setTitle("Home Activity\n");
+        getActivity().setTitle("Profile\n");
         super.onCreate(savedInstanceState);
+        getCardNumber();
         mRootView = inflater.inflate(R.layout.z_menu_test, container, false);
         sharedPrefManager = new SharedPrefManager(getActivity().getApplicationContext());
 
@@ -162,13 +167,11 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         //BillBtn = (ImageButton) findViewById(R.id.BillBtn);
         //ReqBtn = (CardView) findViewById(R.id.requests);
         TrBtn = (CardView) mRootView.findViewById(R.id.transfer);
-        expenseManager = (CardView) mRootView.findViewById(R.id.expenseManager);
-        CardBtn = (CardView) mRootView.findViewById(R.id.cardServices);
+        //expenseManager = (CardView) mRootView.findViewById(R.id.expenseManager);
         //StnBtn = (ImageButton) findViewById(R.id.StnBtn);
         QRBtn = (CardView) mRootView.findViewById(R.id.ghqr);
         MMBtn = (CardView) mRootView.findViewById(R.id.MMBtn);
-        BenefBtn = (CardView) mRootView.findViewById(R.id.BenefBtn);
-        payproxy = (CardView) mRootView.findViewById(R.id.payproxy);
+        //payproxy = (CardView) mRootView.findViewById(R.id.payproxy);
         AirBtn = (CardView) mRootView.findViewById(R.id.airtimeAndData);
         PaymentBtn = (CardView) mRootView.findViewById(R.id.PaymentBtn);
         Setting = (ImageButton) mRootView.findViewById(R.id.Setting);
@@ -177,14 +180,14 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         //proxy =(ImageButton) findViewById(R.id.proxy);
         balances = (Button) mRootView.findViewById(R.id.btnBalances);
         welcomText = (TextView) mRootView.findViewById(R.id.userWelcome);
-        txtHide = (Button) mRootView.findViewById(R.id.txtHide);
+//        txtHide = (Button) mRootView.findViewById(R.id.txtHide);
         //showUser = (TextView) findViewById(R.id.showUser);
         //textView13 = (TextView) findViewById(R.id.textView13);
         updateGhCard = (Button) mRootView.findViewById(R.id.updateGhCard);
         userImage = (RoundedImageView) mRootView.findViewById(R.id.userImage);
 
         //---------------      --------------------------
-        Spannable word = new SpannableString("Hello User Bienvenu");
+        Spannable word = new SpannableString("Bonjour User");
 
         word.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.MurasakiPurple)), 0, word.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
@@ -253,7 +256,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
         //------------ pubs ViewPager2 UP Adds ------------------------
 
-        viewPager2_up = mRootView.findViewById(R.id.viewPagerImageSlider2);
+        //viewPager2_up = mRootView.findViewById(R.id.viewPagerImageSlider2);
 
         /*  Here , i'm preparing a list of images from drawable
          *    after the websService is ready we will get them from the api
@@ -279,10 +282,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         //hajer 04/03/2022 viewPager2_up.setAdapter(new SliderAdapter(sliderItems2,viewPager2_up, this));
         //hajer 04/03/2022
 
-        viewPager2_up.setClipToPadding(false);
+       /*viewPager2_up.setClipToPadding(false);
         viewPager2_up.setClipChildren(false);
         viewPager2_up.setOffscreenPageLimit(3);
-        viewPager2_up.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+        viewPager2_up.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);*/
 
         CompositePageTransformer compositePageTransformer2 = new CompositePageTransformer();
         compositePageTransformer2.addTransformer(new MarginPageTransformer(10));
@@ -297,7 +300,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 }
         );
 
-        viewPager2_up.setPageTransformer(compositePageTransformer2);
+        /*viewPager2_up.setPageTransformer(compositePageTransformer2);
 
 
         viewPager2_up.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -307,7 +310,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
               //  sliderHandler.removeCallbacks(sliderRunnable);
               //  sliderHandler.postDelayed(sliderRunnable,3000);
             }
-        });
+        });*/
 
         /*---------------------Hooks "drawer" ------------------------*/
       /*  drawerLayout=findViewById(R.id.drawer_layout);
@@ -496,55 +499,19 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         }
         });
          **/
-// 3/28/2023       QRBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // initProgrees();
-//                // CustomTask task = new CustomTask(ScanQrActivity.class);
-//                // task.execute();
-//                Intent PaymentQrIntent= new Intent(Z_WelcomeActivity.this, QrPaymentActivity.class);
-//                startActivity(PaymentQrIntent);
-//
-////                qrScan.initiateScan(IntentIntegrator.QR_CODE_TYPES);
-//
-//            }
-//        });
-        //  to add later
-// 3/28/2023       BenefBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(ListBeneficiaryActivity.class);
-//                task.execute();
-//            }
-//        });
-        /*StnBtn.setOnClickListener(new View.OnClickListener() {
+
+
+        balances.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                initProgrees();
-                CustomTask task = new CustomTask(PaymentsServicesActivity.class);
-                task.execute();
-            }
-        });*/
-// 3/28/2023       AirBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(TransferACHMiniService.class);
-//                task.execute();
-//            }
-//        });
-        txtHide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!hidePager){
-                    viewPager2_up.setVisibility(View.GONE);
-                    txtHide.setText("Show");
-                    hidePager = true;
-                }else{
-                    viewPager2_up.setVisibility(View.VISIBLE);
-                    txtHide.setText("Hide");
-                    hidePager = false;
+            public void onClick(View view) {
+                try {
+                    //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+                    initProgrees();
+                    new CustomTask().execute();
+
+                } catch (Exception e) {
+                    //Log.d(TAG, "btnLoad.setOnClickListener()", e);
+                    Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -552,7 +519,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         updateGhCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/GhanaCU"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.creditagricole.ma/fr"));
                 startActivity(browserIntent);
             }
         });
@@ -615,28 +582,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
          }
 
          }**/
-        /*if (Globals.firstFetch = true) {
-             Z_WelcomeActivity.CustomTask3 task=new Z_WelcomeActivity.CustomTask3();
-        try {
-            //task.execute();
-            Notifications.GetUnviewedNotifications();
-            Globals.firstFetch = false;
 
-        } catch (Exception e) {
-            dismissProgress();
-            androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(Z_WelcomeActivity.this).create();
-            alertDialog.setMessage("Failed Save Notification History");
-            alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
-            alertDialog.show();
-         }
-        }
-
-         */
 
         // othman
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -668,6 +614,26 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     public void onClick(View view) {
 
     }
+    public void getCardNumber(){
+        try {
+            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+            initProgrees();
+            new CustomTaskCardNumber().execute();
+        } catch (Exception e) {
+            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
+            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+    public void getClientName(){
+        try {
+            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+            initProgrees();
+            new CustomTaskClientName().execute();
+        } catch (Exception e) {
+            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
+            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         switch (item.getItemId()){
@@ -684,6 +650,119 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         startActivity(intent);
 
         Toast.makeText(getActivity().getApplicationContext(), "You have been logged out", Toast.LENGTH_SHORT).show();
+    }
+    private class CustomTaskCardNumber extends AsyncTask<String, String, String> {
+        protected String doInBackground(String... param) {
+            try {
+                Card.CardDetails();
+                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
+                //startActivity(myWelcomeAct);
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            Log.e("TAG", "doInBackground: onPostExecute 3 ");
+
+            dismissProgress();
+            Log.e("TAG", "doInBackground: onPostExecute 4 ");
+
+            super.onPostExecute(param);
+
+            if(param!=null && param.contains("801")){
+                Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
+                try {
+                    // doLogout(null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
+
+            if(param!=null)
+                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+
+            TextInputEditText cardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);
+            cardNumber.setText(Globals.cardNumber);
+            getClientName();
+
+
+        }
+    }
+    private class CustomTaskClientName extends AsyncTask<String, String, String> {
+        protected String doInBackground(String... param) {
+            try {
+                Globals.user = userCode;
+                Globals.password = password;
+                User.login(userCode, password, Globals.authenCode,1);
+                Log.e("TAG", "doInBackground: CustomTaskClientName");
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            Log.e("TAG", "doInBackground: onPostExecute");
+
+            dismissProgress();
+            Log.e("TAG", "doInBackground: onPostExecute 2 ");
+
+            super.onPostExecute(param);
+
+            if(param!=null && param.contains("801")){
+                Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
+                try {
+                    // doLogout(null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
+
+            if(param!=null)
+                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+
+            TextView user = (TextView) mRootView.findViewById(R.id.userWelcome);
+            user.setText("Bonjour "+Globals.userWelcome);
+        }
+    }
+    private class CustomTask extends AsyncTask<String, String, String> {
+        protected String doInBackground(String... param) {
+            try {
+                Card.GetBalance();
+                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
+                //startActivity(myWelcomeAct);
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            dismissProgress();
+            super.onPostExecute(param);
+
+            if(param!=null && param.contains("801")){
+                Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
+                try {
+                    // doLogout(null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
+            Toast.makeText(getActivity().getApplicationContext(), "Votre solde est :"+Globals.availableBalance, Toast.LENGTH_SHORT).show();
+
+            if(param!=null)
+                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+            ;
+
+
+
+        }
     }
 
 }

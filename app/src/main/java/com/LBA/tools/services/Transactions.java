@@ -25,11 +25,12 @@ public class Transactions {
         Globals.transactionList.clear();
         JSONArray arrayTransactionList = jsonRespObject.getJSONArray("transactions");
         for(int i = 0 ; i < arrayTransactionList.length() ; i++){
+     //String transactionType, String amount, String currency, String date, String referenceNumber, String location
             Globals.transactionList.add(new LastTransactionDetail(
                     arrayTransactionList.getJSONObject(i).getString("transactionType"),
-                    arrayTransactionList.getJSONObject(i).getString("date"),
                     arrayTransactionList.getJSONObject(i).getString("amount"),
                     arrayTransactionList.getJSONObject(i).getString("currency"),
+                    arrayTransactionList.getJSONObject(i).getString("date"),
                     arrayTransactionList.getJSONObject(i).getString("referenceNumber"),
                     arrayTransactionList.getJSONObject(i).getString("location")
             ));
