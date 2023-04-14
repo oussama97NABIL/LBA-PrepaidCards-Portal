@@ -226,12 +226,12 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
 
             // Initialize the views in the layout
 
-            TextView tvTitleRef = (TextView) listItem.findViewById(R.id.titleRef);
+            //TextView tvTitleRef = (TextView) listItem.findViewById(R.id.titleRef);
             //TextView tvDesc = (TextView) listItem.findViewById(R.id.desc);
             TextView tvAmount = (TextView) listItem.findViewById(R.id.amount_list);
-            TextView tvValRef = (TextView) listItem.findViewById(R.id.valRef);
+            TextView tvValRef = (TextView) listItem.findViewById(R.id.titleRef);
             TextView tvDate = (TextView) listItem.findViewById(R.id.thumb);
-            TextView tvDate1 = (TextView) listItem.findViewById(R.id.body);
+            TextView tvDate1 = (TextView) listItem.findViewById(R.id.valRef);
 
 
             if(!wallet) {

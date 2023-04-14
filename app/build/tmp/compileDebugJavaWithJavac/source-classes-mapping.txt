@@ -250,23 +250,22 @@ com/LBA/tools/connection/MySSLSocketFactory.java
  com.LBA.tools.connection.MySSLSocketFactory
  com.LBA.tools.connection.MySSLSocketFactory$1
  com.LBA.tools.connection.MySSLSocketFactory$2
-com/LBA/prepaidPortal/widgets/fragment/TransactionListActivity.java
- com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity
- com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$1
- com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$HomeTask
- com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$HomeTask$1
- com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$VersionAdapter
+com/LBA/prepaidPortal/widgets/fragment/BlockCard.java
+ com.LBA.prepaidPortal.widgets.fragment.BlockCard
+ com.LBA.prepaidPortal.widgets.fragment.BlockCard$1
+ com.LBA.prepaidPortal.widgets.fragment.BlockCard$2
+ com.LBA.prepaidPortal.widgets.fragment.BlockCard$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.BlockCard$CustomTaskCardNumber
+ com.LBA.prepaidPortal.widgets.fragment.BlockCard$HomeTask
+ com.LBA.prepaidPortal.widgets.fragment.BlockCard$HomeTask$1
 com/LBA/tools/misc/StandingOrderEntry.java
  com.LBA.tools.misc.StandingOrderEntry
 com/LBA/tools/misc/MomoProviderEntry.java
  com.LBA.tools.misc.MomoProviderEntry
 com/LBA/tools/misc/ExpenseLimitEntry.java
  com.LBA.tools.misc.ExpenseLimitEntry
-com/LBA/prepaidPortal/activity/HomeActivity.java
- com.LBA.prepaidPortal.activity.HomeActivity
- com.LBA.prepaidPortal.activity.HomeActivity$1
- com.LBA.prepaidPortal.activity.HomeActivity$2
+com/LBA/prepaidPortal/activity/BaseActivity.java
+ com.LBA.prepaidPortal.activity.BaseActivity
 com/LBA/prepaidPortal/widgets/fragment/CardInformation1.java
  com.LBA.prepaidPortal.widgets.fragment.CardInformation1
  com.LBA.prepaidPortal.widgets.fragment.CardInformation1$1
@@ -325,13 +324,14 @@ com/LBA/prepaidPortal/activity/Z_WelcomeActivity.java
  com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask2
  com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask3
  com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask3$1
-com/LBA/prepaidPortal/widgets/fragment/BlockCard.java
- com.LBA.prepaidPortal.widgets.fragment.BlockCard
- com.LBA.prepaidPortal.widgets.fragment.BlockCard$1
- com.LBA.prepaidPortal.widgets.fragment.BlockCard$2
- com.LBA.prepaidPortal.widgets.fragment.BlockCard$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.BlockCard$CustomTaskCardNumber
- com.LBA.prepaidPortal.widgets.fragment.BlockCard$HomeTask
- com.LBA.prepaidPortal.widgets.fragment.BlockCard$HomeTask$1
-com/LBA/prepaidPortal/activity/BaseActivity.java
- com.LBA.prepaidPortal.activity.BaseActivity
+com/LBA/prepaidPortal/activity/HomeActivity.java
+ com.LBA.prepaidPortal.activity.HomeActivity
+ com.LBA.prepaidPortal.activity.HomeActivity$1
+ com.LBA.prepaidPortal.activity.HomeActivity$2
+com/LBA/prepaidPortal/widgets/fragment/TransactionListActivity.java
+ com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity
+ com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$1
+ com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$HomeTask
+ com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$HomeTask$1
+ com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$VersionAdapter
