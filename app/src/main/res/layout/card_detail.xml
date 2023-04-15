@@ -306,8 +306,8 @@
 
 		<include
 			android:id="@+id/footer_layout"
-			layout="@layout/footer_layout"
-			android:layout_width="fill_parent"
+			layout="@layout/footer_layout1"
+			android:layout_width="398dp"
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
 			android:layout_marginTop="-40dp" />

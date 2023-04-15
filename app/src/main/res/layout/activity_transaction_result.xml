@@ -38,7 +38,7 @@
     </LinearLayout>
     <include
         android:id="@+id/footer_layout"
-        layout="@layout/footer_layout"
+        layout="@layout/footer_layout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
