@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -38,6 +39,7 @@ import com.LBA.prepaidPortal.widgets.fragment.HomeFragment;
 public class HomeActivity extends AbstractActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+     private CardView CardToCard, Balance,Transaction,AccountToCard,BloqueCard,LimitUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,7 @@ public class HomeActivity extends AbstractActivity
         setContentView(R.layout.activity_home);
         initWidget();
         displaySelectedFragment(R.id.home_fragment);
+
     }
 
 
@@ -65,7 +68,6 @@ public class HomeActivity extends AbstractActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
-
         View header = navigationView.getHeaderView(0);
 
 
@@ -115,7 +117,6 @@ public class HomeActivity extends AbstractActivity
         else if (id == R.id.card_limit){
             fragment = new UpdatesLimit();
         }
-
         if (fragment != null) {
             FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
@@ -183,7 +184,4 @@ public class HomeActivity extends AbstractActivity
         super.onDestroy();
     }
 
-//    public NfcProvider getNfcProvider() {
-//        return new NfcProvider(this);
-//    }
 }

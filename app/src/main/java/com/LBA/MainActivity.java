@@ -155,21 +155,11 @@ public class MainActivity extends AbstractActivity  {
 
         protected String doInBackground(String... param) {
             try {
-                System.out.println("inside custom task 2");
-                // Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+                System.out.println("inside custom task 2");;
                 Globals.user = userCode;
                 Globals.password = password;
-                //Log.d(TAG, "1. CustomTask()" + "> ACCOUNT FOUND authToken["+Globals.authenCode+"]");
-
-                //omar
                 //oussama 2/15/2032
-               User.login(userCode, password, Globals.authenCode,1);
-                //User.GetToken();
-
-
-
-//                Globals.user = userCode;
-//                Globals.password = password;
+              // User.login(userCode, password, Globals.authenCode,1);
             } catch (Exception e) {
                 dismissProgress();
                 e.printStackTrace();
@@ -184,26 +174,13 @@ public class MainActivity extends AbstractActivity  {
             dismissProgress();
             if (param == null) {
                 Log.d("testLog","this is param " + param);
-               /* if(param.contains("00")) {
-
-                    //omar 18032022 save preferred credentials
-
-                } else {
-                Toast.makeText(MainActivity.this, "invalid login credentials", Toast.LENGTH_SHORT).show();*/
                 Intent destinationAct;
-
-                //hajer 07/06/2021
-
-                //destinationAct = new Intent(MainActivity.this, AuthenActivity.class);
                 destinationAct = new Intent(MainActivity.this, HomeActivity.class);
 
                 startActivity(destinationAct);
                 finish();
 
                 return;
-
-
-
         }else {
                 Toast.makeText(MainActivity.this, "invalid login Credentials", Toast.LENGTH_SHORT).show();
             }

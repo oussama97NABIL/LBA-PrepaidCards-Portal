@@ -94,7 +94,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     //CardView ReqBtn;
     CardView expenseManager;
     CardView TrBtn;
-    CardView CardBtn;
+    private CardView CardToCard, Balance,Transaction,AccountToCard,BloqueCard,LimitUpdate;
+
     //ImageButton StnBtn;
     CardView QRBtn;
     CardView BenefBtn;
@@ -115,6 +116,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     TextView textView4;
     TextView textView5;
     TextView textView6 ,welcomText;
+
 
     String encodedImage = null;
     boolean hidePager = false;
@@ -158,37 +160,33 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         getCardNumber();
         mRootView = inflater.inflate(R.layout.z_menu_test, container, false);
         sharedPrefManager = new SharedPrefManager(getActivity().getApplicationContext());
+        CardToCard = (CardView) mRootView.findViewById(R.id.accountServices);
+        Balance = (CardView) mRootView.findViewById(R.id.airtimeAndData);
+        Transaction = (CardView) mRootView.findViewById(R.id.transfer);
+        AccountToCard = (CardView) mRootView.findViewById(R.id.MMBtn);
+        BloqueCard = (CardView) mRootView.findViewById(R.id.PaymentBtn);
+        LimitUpdate = (CardView) mRootView.findViewById(R.id.ghqr);
 
 
         notificationText = mRootView.findViewById(R.id.notificationText);
 
 
-        AccBtn = (CardView) mRootView.findViewById(R.id.accountServices);
-        //BillBtn = (ImageButton) findViewById(R.id.BillBtn);
-        //ReqBtn = (CardView) findViewById(R.id.requests);
+        //AccBtn = (CardView) mRootView.findViewById(R.id.accountServices);
         TrBtn = (CardView) mRootView.findViewById(R.id.transfer);
-        //expenseManager = (CardView) mRootView.findViewById(R.id.expenseManager);
-        //StnBtn = (ImageButton) findViewById(R.id.StnBtn);
         QRBtn = (CardView) mRootView.findViewById(R.id.ghqr);
         MMBtn = (CardView) mRootView.findViewById(R.id.MMBtn);
-        //payproxy = (CardView) mRootView.findViewById(R.id.payproxy);
         AirBtn = (CardView) mRootView.findViewById(R.id.airtimeAndData);
         PaymentBtn = (CardView) mRootView.findViewById(R.id.PaymentBtn);
         Setting = (ImageButton) mRootView.findViewById(R.id.Setting);
         notifications_btn = (ImageButton) mRootView.findViewById(R.id.notifications_btn);
         history_btn = (ImageButton) mRootView.findViewById(R.id.history_btn);
-        //proxy =(ImageButton) findViewById(R.id.proxy);
         balances = (Button) mRootView.findViewById(R.id.btnBalances);
         welcomText = (TextView) mRootView.findViewById(R.id.userWelcome);
-//        txtHide = (Button) mRootView.findViewById(R.id.txtHide);
-        //showUser = (TextView) findViewById(R.id.showUser);
-        //textView13 = (TextView) findViewById(R.id.textView13);
         updateGhCard = (Button) mRootView.findViewById(R.id.updateGhCard);
         userImage = (RoundedImageView) mRootView.findViewById(R.id.userImage);
 
         //---------------      --------------------------
         Spannable word = new SpannableString("Bonjour User");
-
         word.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.MurasakiPurple)), 0, word.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         welcomText.setText(word);
@@ -200,39 +198,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
         viewPager2 = mRootView.findViewById(R.id.viewPagerImageSlider);
 
-        // Globals.MustUsedOperations.clear();
-// 3/28/2023       List<SliderItem> sliderItems = new ArrayList<>();
-//        List<Integer> images = Arrays.asList(R.drawable.background_1,R.drawable.background_2,R.drawable.background_selfonboarding2);
 
-// 3/28/2023       if(!Globals.MustUsedOperations.isEmpty()) {
-//            int  imageIndex =0;
-//            for(int j=0;j<Globals.MustUsedOperations.size();j++)
-//            {
-//                if(sliderItems.size()<3){
-//                    if(Globals.operationLinks.keySet().contains(Globals.MustUsedOperations.get(j)))
-//                    {
-//                        sliderItems.add(new SliderItem(images.get(imageIndex), Globals.operationLinks.get(Globals.MustUsedOperations.get(j)), Globals.MustUsedOperations.get(j)));
-//                        imageIndex++;
-//                    }
-//                }else {
-//                    break;
-//                }
-//
-//            }
-
-
-// 3/28/2023       }else {
-//            sliderItems.add(new SliderItem(R.drawable.background_1, AirtimeActivity.class, "Airtime Top Up"));
-//            sliderItems.add(new SliderItem(R.drawable.background_2, MobileMoneyActivity.class, "Mobile Money"));
-//            sliderItems.add(new SliderItem(R.drawable.background_selfonboarding2, QrPaymentActivity.class, "QR Instant Pay"));
-//
-//            //  viewPager2.setVisibility(View.GONE);
-//        }
-        /*
-            sliderItems.add(new SliderItem(R.drawable.pub_image_1, AirtimeActivity.class, ""));
-            sliderItems.add(new SliderItem(R.drawable.pub_image2, CardsServicesActivity.class, ""));
-            sliderItems.add(new SliderItem(R.drawable.pub_image3, PaymentsServicesActivity.class, ""));*/
-        //3/28/2023       viewPager2.setAdapter(new SliderAdapterForYou(sliderItems,viewPager2, this));
         viewPager2.setCurrentItem(1);
 
         viewPager2.setClipToPadding(false);
@@ -254,38 +220,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         );
         viewPager2.setPageTransformer(compositePageTransformer);
 
-        //------------ pubs ViewPager2 UP Adds ------------------------
 
-        //viewPager2_up = mRootView.findViewById(R.id.viewPagerImageSlider2);
-
-        /*  Here , i'm preparing a list of images from drawable
-         *    after the websService is ready we will get them from the api
-         *  */
-
-// 3/28/2023       List<SliderItem> sliderItems2 = new ArrayList<>();
-//        sliderItems2.add(new SliderItem(R.drawable.up_slider_1));
-//        sliderItems2.add(new SliderItem(R.drawable.up_slider_2));
-//        sliderItems2.add(new SliderItem(R.drawable.up_slider_3));
-//        sliderItems2.add(new SliderItem(R.drawable.up_slider_4));
-//        sliderItems2.add(new SliderItem(R.drawable.up_slider_5));
-//        sliderItems2.add(new SliderItem(R.drawable.up_slider_6));
-
-
-
-       // if(Globals.Ads.isEmpty() || Globals.Ads == null ) {
-  //         viewPager2_up.setAdapter(new StaticSliderAdapter(sliderItems2,viewPager2_up, this));
-//        }else {
-//            viewPager2_up.setAdapter(new SliderAdapter(Globals.Ads, viewPager2_up, this));
-//        }
-        //hajer 03/04/2022 end
-
-        //hajer 04/03/2022 viewPager2_up.setAdapter(new SliderAdapter(sliderItems2,viewPager2_up, this));
-        //hajer 04/03/2022
-
-       /*viewPager2_up.setClipToPadding(false);
-        viewPager2_up.setClipChildren(false);
-        viewPager2_up.setOffscreenPageLimit(3);
-        viewPager2_up.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);*/
 
         CompositePageTransformer compositePageTransformer2 = new CompositePageTransformer();
         compositePageTransformer2.addTransformer(new MarginPageTransformer(10));
@@ -300,47 +235,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 }
         );
 
-        /*viewPager2_up.setPageTransformer(compositePageTransformer2);
+        ;
 
-
-        viewPager2_up.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-              //  sliderHandler.removeCallbacks(sliderRunnable);
-              //  sliderHandler.postDelayed(sliderRunnable,3000);
-            }
-        });*/
-
-        /*---------------------Hooks "drawer" ------------------------*/
-      /*  drawerLayout=findViewById(R.id.drawer_layout);
-        navigationView=findViewById(R.id.nav_view);
-        toolbar=findViewById(R.id.toolbar);
-
-
-        navigationView.bringToFront();
-        ActionBarDrawerToggle toggle=new
-                ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_home);
-        OpenTime();
-
-*/
-        // 1309/to add later
-      /*  textView13.setText("Hello, "+Globals.firstName);
-        textView13.setTextSize(14);*/
-
-      /*
-        File pictureFile = getOutputMediaFile();
-        String yourFilePath = context.getFilesDir() + "/" + "profileImage.jpg";
-        File yourFile = new File( yourFilePath );
-        File mSaveBit; // Your image file
-        String filePath = mSaveBit.getPath();
-        Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-        mImageView.setImageBitmap(bitmap);
-        */
         if( Globals.profileImage != null){
             userImage.setImageBitmap(Globals.profileImage);
         }
@@ -368,18 +264,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 //            }
 //        });
 
-// 3/28/2023       notifications_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-                /*notificationText.setVisibility(View.GONE);
-                Globals.unviewdNotificationsList.clear();
-                 */
-//                Globals.notificationViewed = true;
-//                initProgrees();
-//  3/28/2023              CustomTask task = new CustomTask(NotificationsActivity.class);
-//                task.execute();
-        //           }
-//        });
 // 3/28/2023       history_btn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -396,14 +280,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 //                task.execute();
 //            }
 //        });
-// 3/28/2023       expenseManager.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(ExpenseManagerServices.class);
-//                task.execute();
-//            }
-//        });
+
         // younes
 // 3/28/2023       balances.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -423,71 +300,72 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 task.execute();
             }
         });*/
-        // younes
-
-//3/28/2023        MMBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task=new CustomTask(MobileMoneyActivity.class);
-//                task.execute();
-//            }
-//        });
-        //
-       /* ReqBtn.setOnClickListener(new View.OnClickListener() {
+        CardToCard.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                initProgrees();
-                CustomTask task = new CustomTask(RequestServicesActivity.class);
-                task.execute();
+            public void onClick(View view) {
+                Fragment fragmentToLoad = new CardToCard();
+                FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, fragmentToLoad);
+                fragmentTransaction.commit();
             }
-        });*/
-// 3/28/2023       TrBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(TransferServicesActivity.class);
-//                task.execute();
-//
-//            }
-//        });
+        });
+        Balance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragmentToLoad = new GetBalance();
+                FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, fragmentToLoad);
+                fragmentTransaction.commit();
+            }
+        });
+        Transaction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragmentToLoad = new TransactionListActivity();
+                FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, fragmentToLoad);
+                fragmentTransaction.commit();
+            }
+        });
+        AccountToCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragmentToLoad = new AccountToCard();
+                FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, fragmentToLoad);
+                fragmentTransaction.commit();
+            }
+        });
+        BloqueCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragmentToLoad = new BlockCard();
+                FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, fragmentToLoad);
+                fragmentTransaction.commit();
+            }
+        });
+        LimitUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragmentToLoad = new UpdatesLimit();
+                FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, fragmentToLoad);
+                fragmentTransaction.commit();
+            }
+        });
 
-// 3/28/2023       CardBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(CardsServicesActivity.class);
-//                task.execute();
-//            }
-//        });
 
-// 3/28/2023       PaymentBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(PaymentsServicesActivity.class); /// younes changed activity until future
-//                task.execute();
-//            }
-//        });
-        // handling show and hide the notification counter in the home page
- /*       if (Globals.notificationViewed || Globals.NOTIFICATION_LIST == 0 ) {
-            notificationText.setVisibility(View.GONE);
-        }
-        else {
-            NotificationManager notificationManager = (NotificationManager) getActivity().getApplicationContext().getSystemService(NOTIFICATION_SERVICE);
-            System.out.println("active notification in android: " + Globals.NOTIFICATION_LIST);
-            notificationText.setText(String.valueOf(Globals.NOTIFICATION_LIST));
-            notificationText.setVisibility(View.VISIBLE);
 
-        }*/
+
         Log.d("WelcomeActivity", "user["+Globals.user+"]");
-// 3/28/2023       qrScan = new IntentIntegrator(this);
-//        qrScan.setCaptureActivity(AnyOrientationCaptureActivity.class);
-//        qrScan.setOrientationLocked(false);
-//        qrScan.setPrompt("");
-//
-//        /// ADDED
-//        qrScan.setBarcodeImageEnabled(true);
+
         /**     QRBtn.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -616,21 +494,17 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     }
     public void getCardNumber(){
         try {
-            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
             initProgrees();
             new CustomTaskCardNumber().execute();
         } catch (Exception e) {
-            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
     public void getClientName(){
         try {
-            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
             initProgrees();
             new CustomTaskClientName().execute();
         } catch (Exception e) {
-            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }

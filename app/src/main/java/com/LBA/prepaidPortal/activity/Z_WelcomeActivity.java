@@ -163,7 +163,7 @@ public class Z_WelcomeActivity extends AbstractActivity  {
 
 
 
-        AccBtn = (CardView) findViewById(R.id.accountServices);
+        //AccBtn = (CardView) findViewById(R.id.accountServices);
         //BillBtn = (ImageButton) findViewById(R.id.BillBtn);
         //ReqBtn = (CardView) findViewById(R.id.requests);
         TrBtn = (CardView) findViewById(R.id.transfer);
