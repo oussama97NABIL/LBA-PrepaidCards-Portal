@@ -394,13 +394,13 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             }
         });
         //hajer 28/06/2022 start
-        updateGhCard.setOnClickListener(new View.OnClickListener() {
+       /* updateGhCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.creditagricole.ma/fr"));
                 startActivity(browserIntent);
             }
-        });
+        });*/
         //hajer 28/06/2022 end
 // 3/28/2023       payproxy.setOnClickListener(new View.OnClickListener() {
 //            @Override

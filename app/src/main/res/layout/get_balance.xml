@@ -88,7 +88,7 @@
 					android:layout_width="376dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Available Balance*"
+					android:hint="Date de début*"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
@@ -97,9 +97,9 @@
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
+						android:enabled="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
 						android:inputType="text"
 
 						android:textColor="@color/black" />
@@ -112,7 +112,7 @@
 					android:layout_width="378dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Balance*"
+					android:hint="Date de fin*"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
@@ -121,36 +121,16 @@
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
+						android:enabled="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
 						android:inputType="text"
 
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
 
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/refrealCodeLayout"
-					android:layout_width="378dp"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="16dp"
-					android:hint="Currency"
-					app:errorEnabled="true">
 
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/currency"
-						android:layout_width="380dp"
-						android:layout_height="wrap_content"
-						android:clickable="true"
-						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
-						android:inputType="text"
-						android:textColor="@color/black" />
-
-				</com.google.android.material.textfield.TextInputLayout>
 
 				<!--  ???  <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLayout"

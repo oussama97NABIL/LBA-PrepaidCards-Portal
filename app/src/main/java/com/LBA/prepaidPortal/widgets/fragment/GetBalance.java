@@ -236,9 +236,6 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
 
             if (param != null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
-            availableBalance.setText(Globals.availableBalance);
-            Balance.setText(Globals.balance);
-            currency.setText(Globals.currency);
             getCardNumber();
         }
     }
