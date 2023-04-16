@@ -61,7 +61,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.card_to_card, container, false);
 
-        getActivity().setTitle("Carte à Carte");
+        getActivity().setTitle("Transfert de Carte à Carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);

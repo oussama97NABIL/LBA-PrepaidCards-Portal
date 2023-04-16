@@ -61,7 +61,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.account_to_card, container, false);
 
-        getActivity().setTitle("Compte à Carte");
+        getActivity().setTitle("Transfert de Compte à Carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);

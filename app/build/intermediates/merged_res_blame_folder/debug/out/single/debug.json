@@ -8,6 +8,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\baseline_account_circle_24.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_perm_device_information_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_perm_device_information_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -60,12 +64,16 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\font\\josefinslabitalic.ttf"
     },
     {
-        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_home_phase2.png.flat",
-        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_phase2.png"
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_transaction_24.xml.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_transaction_24.xml"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_baseline_person_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\baseline_person_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_home_phase2.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_phase2.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_cancel_button.xml.flat",
@@ -92,24 +100,28 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\card_detail.xml"
     },
     {
-        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_bluetooth.png.flat",
-        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-mdpi\\bluetooth.png"
-    },
-    {
-        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_plafonds_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_plafonds_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_card_information.xml.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\fragment_card_information.xml"
     },
     {
-        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_newui_activity_confirmresetpin.xml.flat",
-        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\newui_activity_confirmresetpin.xml"
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_bluetooth.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-mdpi\\bluetooth.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_img_7.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\img_7.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_newui_activity_confirmresetpin.xml.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\newui_activity_confirmresetpin.xml"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\font_unlockregular.ttf.flat",
@@ -134,6 +146,10 @@
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_home_phase2.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home_phase2.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_transaction_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_transaction_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_td_item.xml.flat",
@@ -164,8 +180,20 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\baseline_update_24.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_statement_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_statement_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_baseline_account_circle_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\baseline_account_circle_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_perm_device_information_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_perm_device_information_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_plafonds_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_plafonds_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\font_monotonregular.ttf.flat",
@@ -224,6 +252,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\footer_layout.xml"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_perm_device_information_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_perm_device_information_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_baseline_update_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\baseline_update_24.png"
     },
@@ -264,6 +296,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\baseline_info_24.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_block_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_block_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_settings_black_24dp.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_settings_black_24dp.png"
     },
@@ -300,6 +336,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-xhdpi\\library_info.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_transaction_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_transaction_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_img.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\img.png"
     },
@@ -316,6 +356,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\baseline_card_travel_24.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_account_to_card_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_account_to_card_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_home_phase2_black.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_home_phase2_black.png"
     },
@@ -326,6 +370,10 @@
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_menu.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_menu.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_perm_device_information_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_perm_device_information_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_footer_layout1.xml.flat",
@@ -416,6 +464,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\murasakipurple.xml"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_account_to_card_24.xml.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_account_to_card_24.xml"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_baseline_info_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\baseline_info_24.png"
     },
@@ -496,8 +548,16 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\font\\roboto_light.ttf"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_statement_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_statement_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_next_arrow.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\ic_next_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_account_to_card_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_account_to_card_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_red_button.xml.flat",
@@ -540,6 +600,14 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_block_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_block_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_perm_device_information_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_perm_device_information_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
@@ -554,6 +622,10 @@
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_block_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_block_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_baseline_arrow_back_24.png.flat",
@@ -600,6 +672,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\trxlist_item.xml"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_statement_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_statement_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\font_josefinslabsemibold.ttf.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\font\\josefinslabsemibold.ttf"
     },
@@ -640,6 +716,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_account_to_card_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_account_to_card_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_get_last10transaction.xml.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\get_last10transaction.xml"
     },
@@ -666,6 +746,10 @@
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_baseline_logout_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\baseline_logout_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_block_24.xml.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_block_24.xml"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_baseline_person_outline_24.png.flat",
@@ -736,6 +820,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\transfers_phase2.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_perm_device_information_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_perm_device_information_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_notifications.xml.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_notifications.xml"
     },
@@ -788,6 +876,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-hdpi\\choose_interface.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_statement_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_statement_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_fingerprint_icon_b.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\fingerprint_icon_b.png"
     },
@@ -816,12 +908,20 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\gmoneywallet_to_card_fragment.xml"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_plafonds_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_plafonds_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_side_nav_bar.xml.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\font_josefinslabthin.ttf.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\font\\josefinslabthin.ttf"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_block_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_block_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\font_specialeliteregular.ttf.flat",
@@ -880,12 +980,20 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\baseline_person_24.xml"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_transaction_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_transaction_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_baseline_logout_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\baseline_logout_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_baseline_logout_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\baseline_logout_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_block_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_block_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_logout_phase2.png.flat",
@@ -926,6 +1034,10 @@
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_library_info_highligh.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-xhdpi\\library_info_highligh.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_plafonds_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_plafonds_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_transactions_option.png.flat",
@@ -1008,6 +1120,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\banque_agricole.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_statement_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_statement_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_mobile_money.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_mobile_money.png"
     },
@@ -1030,6 +1146,10 @@
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_baseline_account_box_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\baseline_account_box_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_baseline_transaction_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_transaction_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_mobile_money.png.flat",
@@ -1072,6 +1192,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\account_to_card.xml"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_statement_24.xml.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_statement_24.xml"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_back.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\back.png"
     },
@@ -1086,6 +1210,10 @@
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_gh_qr.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\gh_qr.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_account_to_card_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_account_to_card_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_settings_black_24dp.png.flat",
@@ -1120,12 +1248,24 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-hdpi\\transactions_option.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_account_to_card_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_account_to_card_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_perm_device_information_24.xml.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_perm_device_information_24.xml"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_baseline_menu_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\baseline_menu_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_baseline_credit_card_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\baseline_credit_card_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_transaction_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_transaction_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_bluetooth.png.flat",
@@ -1138,6 +1278,18 @@
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_newui_activity_resetpin.xml.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\newui_activity_resetpin.xml"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_transaction_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_transaction_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_plafonds_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_plafonds_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_plafonds_24.xml.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_plafonds_24.xml"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_nfc.png.flat",
@@ -1160,8 +1312,16 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_block_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_block_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_border_b.xml.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\button_border_b.xml"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_plafonds_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_plafonds_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_transactions_option_highlight.png.flat",
@@ -1204,6 +1364,10 @@
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\drawable\\custom_footer_next.xml"
     },
     {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_account_to_card_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_account_to_card_24.png"
+    },
+    {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_generate_statement.xml.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\src\\main\\res\\layout\\fragment_generate_statement.xml"
     },
@@ -1234,6 +1398,10 @@
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_baseline_menu_24.png.flat",
         "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\baseline_menu_24.png"
+    },
+    {
+        "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_statement_24.png.flat",
+        "source": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_statement_24.png"
     },
     {
         "merged": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_history.xml.flat",

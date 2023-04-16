@@ -15,32 +15,32 @@
             <menu>
                 <item
                     android:id="@+id/card_information"
-                    android:icon="@drawable/baseline_credit_card_24"
+                    android:icon="@drawable/ic_baseline_perm_device_information_24"
                     android:title="Les informations de la carte " />
                 <item
                     android:id="@+id/generate_statement"
-                    android:icon="@drawable/baseline_credit_card_24"
-                    android:title="Retourner le solde " />
+                    android:icon="@drawable/ic_baseline_statement_24"
+                    android:title="Générer des relevés " />
                 <item
                     android:id="@+id/last_transaction"
-                    android:icon="@drawable/baseline_credit_card_24"
-                    android:title="Denières transactions " />
+                    android:icon="@drawable/ic_baseline_transaction_24"
+                    android:title="10 Denières transactions " />
             </menu>
         </item>
         <item
             android:id="@+id/Fund_Card"
             android:icon="@drawable/baseline_credit_card_24"
-            android:title="Fund The Card"
+            android:title="Financement Par Carte"
             >
             <menu>
                 <item
                     android:id="@+id/account_card"
-                    android:icon="@drawable/baseline_account_box_24"
-                    android:title="Compte à Carte" />
+                    android:icon="@drawable/ic_baseline_account_to_card_24"
+                    android:title="Transfert de Compte à Carte" />
                 <item
                     android:id="@+id/card_card"
                     android:icon="@drawable/baseline_credit_card_24"
-                    android:title="Carte à Carte " />
+                    android:title="Transfert de Carte à Carte " />
             </menu>
         </item>
         <item
@@ -50,12 +50,12 @@
             <menu>
                 <item
                     android:id="@+id/card_operation"
-                    android:icon="@drawable/baseline_account_box_24"
-                    android:title="Bloquer la carte" />
+                    android:icon="@drawable/ic_baseline_block_24"
+                    android:title="Bloquer/Débloquer une carte" />
                 <item
                     android:id="@+id/card_limit"
-                    android:icon="@drawable/baseline_credit_card_24"
-                    android:title="Limite des mise à jours " />
+                    android:icon="@drawable/ic_baseline_plafonds_24"
+                    android:title="Plafonds " />
             </menu>
         </item>
         <item

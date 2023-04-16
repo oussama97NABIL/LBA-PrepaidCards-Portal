@@ -36,7 +36,7 @@
 				android:layout_marginLeft="16dp"
 				android:layout_marginTop="20dp"
 				android:fontFamily="@font/roboto_light"
-				android:text="Retourner le solde"
+				android:text="Générer des relevés"
 				android:textColor="@color/black"
 				android:textSize="36dp" />
 
@@ -61,6 +61,27 @@
 				android:layout_width="500dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical">
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/mobilelLayout"
+					android:layout_width="376dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Card Number*"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/cardNumber"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
+						android:inputType="text"
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/mobilelLayout"
@@ -238,8 +259,8 @@
 
 		<include
 			android:id="@+id/footer_layout"
-			layout="@layout/footer_layout1"
-			android:layout_width="387dp"
+			layout="@layout/footer_layout"
+			android:layout_width="350dp"
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
 			android:layout_marginBottom="150dp" />

@@ -61,7 +61,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.block_card, container, false);
 
-        getActivity().setTitle("Bloquer La Carte");
+        getActivity().setTitle("Bloquer/Débloquer une carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);

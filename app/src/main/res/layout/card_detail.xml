@@ -36,7 +36,7 @@
 				android:layout_marginLeft="16dp"
 				android:layout_marginTop="0dp"
 				android:fontFamily="@font/roboto_light"
-				android:text="Les informations sur la carte"
+				android:text="Les informations de la carte"
 				android:textColor="@color/black"
 				android:textSize="36dp" />
 

@@ -24,6 +24,8 @@ import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.tools.assets.Globals;
 import com.LBA.tools.misc.MySpinnerAdapter;
 import com.LBA.tools.services.Card;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -47,6 +49,7 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
     EditText Balance;
     EditText currency;
     ImageButton canlBtn;
+    MaterialButton nexBtn;
 
 
     TextView textView_heading;
@@ -63,13 +66,15 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.get_balance, container, false);
 
-        getActivity().setTitle("Retourner le solde");
+        getActivity().setTitle("Générer des relevés");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         availableBalance = (EditText) mRootView.findViewById(R.id.availablebalance);
         Balance = (EditText) mRootView.findViewById(R.id.balance);
         currency = (EditText) mRootView.findViewById(R.id.currency);
         canlBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
+        nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
         OpenTime();
+
 
         canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +82,12 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
                 initProgrees();
                 HomeTask task = new HomeTask(HomeActivity.class);
                 task.execute();
+            }
+        });
+        nexBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity().getApplicationContext(), "Les relevés sont bien générés", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -151,6 +162,16 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
+    public void getCardNumber(){
+        try {
+            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+            initProgrees();
+            new CustomTaskCardNumber().execute();
+        } catch (Exception e) {
+            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
+            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -218,6 +239,7 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
             availableBalance.setText(Globals.availableBalance);
             Balance.setText(Globals.balance);
             currency.setText(Globals.currency);
+            getCardNumber();
         }
     }
     private class HomeTask extends AsyncTask<String, String, String> {
@@ -252,6 +274,42 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
                         });
                 alertDialog.show();
             }
+        }
+    }
+    private class CustomTaskCardNumber extends AsyncTask<String, String, String> {
+        protected String doInBackground(String... param) {
+            try {
+                Card.CardDetails();
+                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
+                //startActivity(myWelcomeAct);
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            dismissProgress();
+            super.onPostExecute(param);
+
+            if(param!=null && param.contains("801")){
+                Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
+                try {
+                    // doLogout(null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
+
+            if(param!=null)
+                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+
+            TextInputEditText cardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);
+            cardNumber.setText(Globals.cardNumber);
+
+
+
         }
     }
     public void OpenTime() {

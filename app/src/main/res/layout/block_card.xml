@@ -36,7 +36,7 @@
 				android:layout_marginLeft="16dp"
 				android:layout_marginTop="20dp"
 				android:fontFamily="@font/roboto_light"
-				android:text="bloquer la carte"
+				android:text="bloquer/Débloquer une carte"
 				android:textColor="@color/black"
 				android:textSize="36dp" />
 

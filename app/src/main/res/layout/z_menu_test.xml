@@ -228,7 +228,7 @@
                                 android:layout_marginEnd="@dimen/_5sdp"
                                 android:layout_marginBottom="@dimen/_5sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Carte à\n Carte"
+                                android:text="Transfert \nde Carte à\n Carte"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
@@ -278,7 +278,7 @@
                                 android:layout_marginEnd="@dimen/_5sdp"
                                 android:layout_marginBottom="@dimen/_5sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Retourner\nLe solde"
+                                android:text="Générer\nLes relevés"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
@@ -386,7 +386,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Compte à\ncarte"
+                                android:text="Transfert \nde Compte à\n Carte"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />
@@ -498,7 +498,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Limite de \nmise à jour"
+                                android:text="Plafonds"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 app:fontFamily="@font/roboto_bold" />

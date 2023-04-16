@@ -61,7 +61,7 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.update_limit, container, false);
 
-        getActivity().setTitle("Limite des mise à jour");
+        getActivity().setTitle("Plafonds");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);

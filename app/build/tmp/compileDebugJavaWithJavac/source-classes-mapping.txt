@@ -174,12 +174,14 @@ com/LBA/prepaidPortal/widgets/fragment/TransactionListActivity.java
  com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$HomeTask
  com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$HomeTask$1
  com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity$VersionAdapter
-com/LBA/prepaidPortal/widgets/fragment/GetBalance.java
- com.LBA.prepaidPortal.widgets.fragment.GetBalance
- com.LBA.prepaidPortal.widgets.fragment.GetBalance$1
- com.LBA.prepaidPortal.widgets.fragment.GetBalance$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.GetBalance$HomeTask
- com.LBA.prepaidPortal.widgets.fragment.GetBalance$HomeTask$1
+com/LBA/prepaidPortal/widgets/fragment/UpdatesLimit.java
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$1
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$2
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$CustomTaskCardNumber
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$HomeTask
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$HomeTask$1
 com/LBA/prepaidPortal/activity/ResetPinActivity.java
  com.LBA.prepaidPortal.activity.ResetPinActivity
  com.LBA.prepaidPortal.activity.ResetPinActivity$1
@@ -197,10 +199,11 @@ com/LBA/prepaidPortal/activity/ResetPinActivity.java
  com.LBA.prepaidPortal.activity.ResetPinActivity$CustomTask$1
  com.LBA.prepaidPortal.activity.ResetPinActivity$HomeTask
  com.LBA.prepaidPortal.activity.ResetPinActivity$HomeTask$1
-com/LBA/prepaidPortal/activity/HomeActivity.java
- com.LBA.prepaidPortal.activity.HomeActivity
- com.LBA.prepaidPortal.activity.HomeActivity$1
- com.LBA.prepaidPortal.activity.HomeActivity$2
+com/LBA/prepaidPortal/activity/AbstractActivity.java
+ com.LBA.prepaidPortal.activity.AbstractActivity
+ com.LBA.prepaidPortal.activity.AbstractActivity$1
+ com.LBA.prepaidPortal.activity.AbstractActivity$2
+ com.LBA.prepaidPortal.activity.AbstractActivity$3
 com/LBA/prepaidPortal/widgets/fragment/Last10Transactions.java
  com.LBA.prepaidPortal.widgets.fragment.Last10Transactions
  com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$1
@@ -271,22 +274,14 @@ com/LBA/prepaidPortal/activity/NewMainPage.java
  com.LBA.prepaidPortal.activity.NewMainPage$CustomTaskBiometric
  com.LBA.prepaidPortal.activity.NewMainPage$CustomTaskBiometric$1
  com.LBA.prepaidPortal.activity.NewMainPage$CustomTaskBiometric$2
-com/LBA/prepaidPortal/widgets/fragment/HomeFragment.java
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$1
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$10
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$11
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$2
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$3
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$4
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$5
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$6
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$7
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$8
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$9
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$CustomTaskCardNumber
- com.LBA.prepaidPortal.widgets.fragment.HomeFragment$CustomTaskClientName
+com/LBA/prepaidPortal/activity/ConfirmResetPinActivity.java
+ com.LBA.prepaidPortal.activity.ConfirmResetPinActivity
+ com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$1
+ com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$1$1
+ com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$1$2
+ com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$1$3
+ com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$2
+ com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$3
 com/LBA/MainActivity.java
  com.LBA.MainActivity
  com.LBA.MainActivity$1
@@ -320,24 +315,31 @@ com/LBA/prepaidPortal/widgets/fragment/BlockCard.java
  com.LBA.prepaidPortal.widgets.fragment.BlockCard$CustomTaskCardNumber
  com.LBA.prepaidPortal.widgets.fragment.BlockCard$HomeTask
  com.LBA.prepaidPortal.widgets.fragment.BlockCard$HomeTask$1
-com/LBA/prepaidPortal/widgets/fragment/UpdatesLimit.java
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$1
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$2
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$CustomTaskCardNumber
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$HomeTask
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$HomeTask$1
-com/LBA/prepaidPortal/activity/ConfirmResetPinActivity.java
- com.LBA.prepaidPortal.activity.ConfirmResetPinActivity
- com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$1
- com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$1$1
- com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$1$2
- com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$1$3
- com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$2
- com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$3
-com/LBA/prepaidPortal/activity/AbstractActivity.java
- com.LBA.prepaidPortal.activity.AbstractActivity
- com.LBA.prepaidPortal.activity.AbstractActivity$1
- com.LBA.prepaidPortal.activity.AbstractActivity$2
- com.LBA.prepaidPortal.activity.AbstractActivity$3
+com/LBA/prepaidPortal/activity/HomeActivity.java
+ com.LBA.prepaidPortal.activity.HomeActivity
+ com.LBA.prepaidPortal.activity.HomeActivity$1
+ com.LBA.prepaidPortal.activity.HomeActivity$2
+com/LBA/prepaidPortal/widgets/fragment/HomeFragment.java
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$1
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$10
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$11
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$2
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$3
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$4
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$5
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$6
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$7
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$8
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$9
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$CustomTaskCardNumber
+ com.LBA.prepaidPortal.widgets.fragment.HomeFragment$CustomTaskClientName
+com/LBA/prepaidPortal/widgets/fragment/GetBalance.java
+ com.LBA.prepaidPortal.widgets.fragment.GetBalance
+ com.LBA.prepaidPortal.widgets.fragment.GetBalance$1
+ com.LBA.prepaidPortal.widgets.fragment.GetBalance$2
+ com.LBA.prepaidPortal.widgets.fragment.GetBalance$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.GetBalance$CustomTaskCardNumber
+ com.LBA.prepaidPortal.widgets.fragment.GetBalance$HomeTask
+ com.LBA.prepaidPortal.widgets.fragment.GetBalance$HomeTask$1
