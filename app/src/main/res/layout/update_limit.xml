@@ -21,33 +21,10 @@
 		</LinearLayout>
 
 
-
-		<LinearLayout
-			android:id="@+id/ll3"
-			android:layout_width="match_parent"
-			android:layout_height="150dp"
-			android:layout_weight="3"
-			android:orientation="vertical">
-
-			<TextView
-				android:id="@+id/txt1"
-				android:layout_width="330dp"
-				android:layout_height="wrap_content"
-				android:layout_marginLeft="16dp"
-				android:layout_marginTop="20dp"
-				android:fontFamily="@font/roboto_light"
-				android:text="Plafonds"
-				android:textColor="@color/black"
-				android:textSize="36dp" />
-
-
-		</LinearLayout>
-
-
 		<ScrollView
 			android:id="@+id/scroll_view"
 			android:layout_width="match_parent"
-			android:layout_height="522dp"
+			android:layout_height="645dp"
 			android:layout_marginStart="5dp"
 			android:layout_marginLeft="16dp"
 			android:layout_marginTop="7dp"
@@ -106,6 +83,7 @@
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
+
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/accountNbrLayout"
 					android:layout_width="378dp"
@@ -128,6 +106,7 @@
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
+
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/accountNbrLayout"
 					android:layout_width="378dp"
@@ -148,8 +127,6 @@
 						android:inputType="text"
 						android:textColor="@color/black" />
 				</com.google.android.material.textfield.TextInputLayout>
-
-
 
 
 				<!--  ???  <com.google.android.material.textfield.TextInputLayout
