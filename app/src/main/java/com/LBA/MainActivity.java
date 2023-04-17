@@ -158,8 +158,8 @@ public class MainActivity extends AbstractActivity  {
                 System.out.println("inside custom task 2");;
                 Globals.user = userCode;
                 Globals.password = password;
-                //oussama 2/15/2032
-              // User.login(userCode, password, Globals.authenCode,1);
+                //oussama 2/15/2023
+                User.login(userCode, password, Globals.authenCode,1);
             } catch (Exception e) {
                 dismissProgress();
                 e.printStackTrace();

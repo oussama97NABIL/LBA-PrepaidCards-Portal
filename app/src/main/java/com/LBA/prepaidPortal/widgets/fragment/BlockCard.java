@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -96,6 +97,13 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 }
             }
         });
+        String[] arraySpinner = new String[] {
+                "Bloquer","Débloquer"
+        };
+        Spinner s = (Spinner) mRootView.findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, arraySpinner);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        s.setAdapter(adapter);
 
 
 
@@ -211,7 +219,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
     private class CustomTask extends AsyncTask<String, String, String> {
         protected String doInBackground(String... param) {
             try {
-                Card.AccountToCard();
+                Card.BlockCard();
                 // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
                 //startActivity(myWelcomeAct);
                 return null;

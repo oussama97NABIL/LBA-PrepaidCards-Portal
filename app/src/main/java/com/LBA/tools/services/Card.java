@@ -149,22 +149,22 @@ public class Card {
 
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("cardToken", "6361899512621901" );
-        jsonObject.put("atmLimit", "10000" );
-        jsonObject.put("posLimits", "20000" );
-        jsonObject.put("onlineLimiits", "300000" );
+        jsonObject.put("token", "4281993108775830" );
 
 
 
-        JSONObject jsonRespObject = HTTPClient.sendPostJSONupdateLimits(Globals.serviceUpdateLimit, jsonObject);
+
+        JSONObject jsonRespObject = HTTPClient.sendPostJSONupdateLimits(Globals.serviceCardLimit, jsonObject);
         Log.e("TAG", "Update Limit: "+jsonRespObject);
 
         if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
             // throw new Exception("Pin request already done");
             throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
         // Globals.transactionId=jsonRespObject.getString(Globals.transactionIdTag);
-
+        Globals.atmLimit = jsonRespObject.getString("limitCash ");
     }
+
+
 
 
     static public void GetCardsToUnblockList() throws Exception{

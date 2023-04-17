@@ -179,7 +179,7 @@ public class Z_WelcomeActivity extends AbstractActivity  {
         notifications_btn = (ImageButton)findViewById(R.id.notifications_btn);
         history_btn = (ImageButton)findViewById(R.id.history_btn);
         //proxy =(ImageButton) findViewById(R.id.proxy);
-        balances = (Button) findViewById(R.id.btnBalances);
+        //balances = (Button) findViewById(R.id.btnBalances);
         welcomText = (TextView) findViewById(R.id.userWelcome);
 //        txtHide = (Button) findViewById(R.id.txtHide);
         //showUser = (TextView) findViewById(R.id.showUser);

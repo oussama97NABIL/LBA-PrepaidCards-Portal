@@ -148,6 +148,7 @@ public class Globals {
     static public String emailCustomer="";
     static public String telephone="";
     static public String nameCustomer="";
+    static public String atmLimit="";
     static public String userWelcome="";
     static public  List<String> accountnbr = new ArrayList<String>();
     static public int  globalNumberOfTries=0;
@@ -445,7 +446,7 @@ public class Globals {
     static public final String serviceUnviewedNotification= "/UnviewedNotifications";
     static public final String getAllNotifications= "/getAllNotifications";
     static public final String serviceOffStatement = "/OffStatement";
-    static public final String serviceCardLimit= "/CardLimit";
+    static public final String serviceCardLimit= "/getCardLimit";
     static public final String serviceStandingOrderList = "/StandingOrderList";
     static public List<StandingOrderEntry> SOList;
     static public boolean backFlag = false;

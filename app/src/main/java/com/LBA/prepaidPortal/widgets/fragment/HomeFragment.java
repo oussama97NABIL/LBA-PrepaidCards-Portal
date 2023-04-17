@@ -24,6 +24,8 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.text.style.ForegroundColorSpan;
 import android.util.Base64;
 import android.util.Log;
@@ -103,6 +105,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     CardView PaymentBtn;
     ImageButton Setting;
     TextView notificationText;
+    ImageView imageshowSolde;
     Button updateGhCard;
     Uri uri;
     CardView payproxy;
@@ -116,10 +119,11 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     TextView textView4;
     TextView textView5;
     TextView textView6 ,welcomText;
+    EditText showSolde;
 
 
     String encodedImage = null;
-    boolean hidePager = false;
+    boolean hidePager = true;
     String notificationId = "";
 
     // othman
@@ -169,6 +173,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
 
         notificationText = mRootView.findViewById(R.id.notificationText);
+        showSolde = mRootView.findViewById(R.id.showSolde);
+        imageshowSolde = mRootView.findViewById(R.id.imageView_show_hide);
+
 
 
         //AccBtn = (CardView) mRootView.findViewById(R.id.accountServices);
@@ -180,7 +187,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         Setting = (ImageButton) mRootView.findViewById(R.id.Setting);
         notifications_btn = (ImageButton) mRootView.findViewById(R.id.notifications_btn);
         history_btn = (ImageButton) mRootView.findViewById(R.id.history_btn);
-        balances = (Button) mRootView.findViewById(R.id.btnBalances);
+       // balances = (Button) mRootView.findViewById(R.id.btnBalances);
         welcomText = (TextView) mRootView.findViewById(R.id.userWelcome);
         updateGhCard = (Button) mRootView.findViewById(R.id.updateGhCard);
         userImage = (RoundedImageView) mRootView.findViewById(R.id.userImage);
@@ -300,6 +307,28 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 task.execute();
             }
         });*/
+
+        imageshowSolde.setImageResource(R.drawable.baseline_visibility_off_24);
+
+        imageshowSolde.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(hidePager){
+                    showSolde.setText("****");
+                    hidePager = false;
+                    imageshowSolde.setImageResource(R.drawable.baseline_visibility_off_24);
+                }else{
+                    try {
+                        initProgrees();
+                        new CustomTaskSolde().execute();
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                    imageshowSolde.setImageResource(R.drawable.baseline_visibility_24);
+                    hidePager = true;
+                }
+            }
+        });
         CardToCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -379,7 +408,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
          **/
 
 
-        balances.setOnClickListener(new View.OnClickListener() {
+       /* oussama balances.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -392,7 +421,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                     Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
-        });
+        });*/
         //hajer 28/06/2022 start
        /* updateGhCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -508,6 +537,15 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
+    public void getSolde(){
+        try {
+            initProgrees();
+            new CustomTaskSolde().execute();
+        } catch (Exception e) {
+            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         switch (item.getItemId()){
@@ -561,8 +599,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             TextInputEditText cardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
             getClientName();
-
-
         }
     }
     private class CustomTaskClientName extends AsyncTask<String, String, String> {
@@ -601,6 +637,41 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
             TextView user = (TextView) mRootView.findViewById(R.id.userWelcome);
             user.setText("Bonjour "+Globals.userWelcome);
+        }
+    }
+    private class CustomTaskSolde extends AsyncTask<String, String, String> {
+        protected String doInBackground(String... param) {
+            try {
+
+                Card.GetBalance();
+                Log.e("TAG", "doInBackground: CustomTaskClientName");
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            Log.e("TAG", "doInBackground: onPostExecute");
+
+            dismissProgress();
+            Log.e("TAG", "doInBackground: onPostExecute 2 ");
+
+            super.onPostExecute(param);
+
+            if(param!=null && param.contains("801")){
+                Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
+                try {
+                    // doLogout(null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
+
+            if(param!=null)
+                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+            showSolde.setText(Globals.availableBalance);
         }
     }
     private class CustomTask extends AsyncTask<String, String, String> {

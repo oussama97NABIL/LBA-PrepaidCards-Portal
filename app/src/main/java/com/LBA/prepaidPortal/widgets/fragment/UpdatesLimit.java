@@ -166,6 +166,16 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
+    public void getCardLimit(){
+        try {
+            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+            initProgrees();
+            new CustomTaskCardLimit().execute();
+        } catch (Exception e) {
+            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
+            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
 
     /*public void getCardInformations(){
         try {
@@ -273,6 +283,43 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
 
             TextInputEditText cardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
+            getCardLimit();
+
+
+        }
+    }
+    private class CustomTaskCardLimit extends AsyncTask<String, String, String> {
+        protected String doInBackground(String... param) {
+            try {
+                Card.UpdateLimit();
+                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
+                //startActivity(myWelcomeAct);
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            dismissProgress();
+            super.onPostExecute(param);
+
+            if(param!=null && param.contains("801")){
+                Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
+                try {
+                    // doLogout(null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
+
+            if(param!=null)
+                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+
+            TextInputEditText AtmLimit = (TextInputEditText) mRootView.findViewById(R.id.atmLimit);
+            AtmLimit.setText(Globals.atmLimit);
+
 
 
         }
