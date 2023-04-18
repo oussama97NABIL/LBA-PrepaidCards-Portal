@@ -224,8 +224,28 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
 
             EditText cardNumber = (EditText) mRootView.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
-
-
+            EditText statusCard = (EditText) mRootView.findViewById(R.id.status_Card);
+            statusCard.setText(Globals.statusCard);
+            EditText ProductCode = (EditText) mRootView.findViewById(R.id.product_code);
+            ProductCode.setText(Globals.productCode);
+            EditText titleCardHolder = (EditText) mRootView.findViewById(R.id.title_card_holder);
+            titleCardHolder.setText(Globals.titleCardHolder);
+            EditText familyName = (EditText) mRootView.findViewById(R.id.family_name);
+            familyName.setText(Globals.familyName);
+            EditText DocumentCode = (EditText) mRootView.findViewById(R.id.document_code);
+            DocumentCode.setText(Globals.documentCode);
+            EditText DocumentId = (EditText) mRootView.findViewById(R.id.document_id);
+            DocumentId.setText(Globals.documentId);
+            EditText Address = (EditText) mRootView.findViewById(R.id.address);
+            Address.setText(Globals.address);
+            EditText ExpiryDate = (EditText) mRootView.findViewById(R.id.expiry_date);
+            ExpiryDate.setText(Globals.expiryDate);
+            EditText MobileNumber = (EditText) mRootView.findViewById(R.id.mobile_number);
+            MobileNumber.setText(Globals.mobileNumber);
+            EditText City = (EditText) mRootView.findViewById(R.id.city);
+            City.setText(Globals.city);
+            EditText Country = (EditText) mRootView.findViewById(R.id.country);
+            Country.setText(Globals.country);
         }
     }
     private class HomeTask extends AsyncTask<String, String, String> {

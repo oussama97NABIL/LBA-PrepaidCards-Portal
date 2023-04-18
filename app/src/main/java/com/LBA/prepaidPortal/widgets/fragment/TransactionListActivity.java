@@ -220,7 +220,7 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
             View listItem = convertView;
             int pos = position;
             if (listItem == null) {
-                listItem = LayoutInflater.from((getContext())).inflate(R.layout.notifications_list_item,parent , false);
+                listItem = LayoutInflater.from((getContext())).inflate(R.layout.transactions_item,parent , false);
 
             }
 
@@ -228,10 +228,12 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
 
             //TextView tvTitleRef = (TextView) listItem.findViewById(R.id.titleRef);
             //TextView tvDesc = (TextView) listItem.findViewById(R.id.desc);
-            TextView tvAmount = (TextView) listItem.findViewById(R.id.amount_list);
-            TextView tvValRef = (TextView) listItem.findViewById(R.id.titleRef);
+            TextView tvAmount = (TextView) listItem.findViewById(R.id.amount);
+            TextView tvValRef = (TextView) listItem.findViewById(R.id.valRef);
             TextView tvDate = (TextView) listItem.findViewById(R.id.thumb);
-            TextView tvDate1 = (TextView) listItem.findViewById(R.id.valRef);
+            TextView tvDate1 = (TextView) listItem.findViewById(R.id.date);
+            TextView location = (TextView) listItem.findViewById(R.id.location);
+
 
 
             if(!wallet) {
@@ -242,14 +244,20 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
                 }
                 if (Globals.transactionList.get(pos).getDate() != null && Globals.transactionList.get(pos).getDate().length() > 0) {
                     tvDate1.setTextColor(getResources().getColor(R.color.MurasakiPurple));
-                    Log.d(TAG, "getDate Transaction"+Globals.transactionList.get(pos).getDate());
                     tvDate1.setText(Globals.transactionList.get(pos).getDate());
-
+                }
+                if (Globals.transactionList.get(pos).getAmount() != null && Globals.transactionList.get(pos).getAmount().length() > 0) {
+                    tvAmount.setTextColor(getResources().getColor(R.color.MurasakiPurple));
+                    tvAmount.setText(Globals.transactionList.get(pos).getAmount());
+                }
+                if (Globals.transactionList.get(pos).getAmount() != null && Globals.transactionList.get(pos).getAmount().length() > 0) {
+                    location.setTextColor(getResources().getColor(R.color.MurasakiPurple));
+                    location.setText(Globals.transactionList.get(pos).getLocation());
                 }
 
                 else {
-                    tvAmount.setTextColor(getResources().getColor(R.color.dark_grey_color));
-                    tvAmount.setText("undefined");
+                    tvDate.setTextColor(getResources().getColor(R.color.dark_grey_color));
+                    tvDate.setText("undefined");
                 }
 
             }

@@ -72,7 +72,7 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
 
         //getCardInformations();
         OpenTime();
-        getCardNumber();
+        getCardLimit();
 
         canBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,16 +156,7 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
             toDatePickerDialog.show();
         }
     }
-    public void getCardNumber(){
-        try {
-            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
-            initProgrees();
-            new CustomTaskCardNumber().execute();
-        } catch (Exception e) {
-            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
-            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    }
+
     public void getCardLimit(){
         try {
             //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
@@ -316,11 +307,14 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
 
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
-
-            TextInputEditText AtmLimit = (TextInputEditText) mRootView.findViewById(R.id.atmLimit);
-            AtmLimit.setText(Globals.atmLimit);
-
-
+            TextInputEditText CardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);
+            CardNumber.setText(Globals.cardNumber);
+            TextInputEditText LimitCash = (TextInputEditText) mRootView.findViewById(R.id.limitCash);
+            LimitCash.setText(Globals.limitCash);
+            TextInputEditText LimitPurchase = (TextInputEditText) mRootView.findViewById(R.id.limitPurchase);
+            LimitPurchase.setText(Globals.limitPurchase);
+            TextInputEditText LimitEcom = (TextInputEditText) mRootView.findViewById(R.id.limitEcom);
+            LimitEcom.setText(Globals.limitEcom);
 
         }
     }

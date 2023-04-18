@@ -149,6 +149,9 @@ public class Globals {
     static public String telephone="";
     static public String nameCustomer="";
     static public String atmLimit="";
+    static public String limitCash="";
+    static public String limitPurchase="";
+    static public String limitEcom="";
     static public String userWelcome="";
     static public  List<String> accountnbr = new ArrayList<String>();
     static public int  globalNumberOfTries=0;
@@ -552,4 +555,16 @@ public class Globals {
 
 
     static public String cardNumber="";
+    static public String statusCard="";
+    static public String productCode="";
+    static public String titleCardHolder="";
+    static public String familyName="";
+    static public String documentCode="";
+    static public String documentId="";
+    static public String address="";
+    static public String expiryDate="";
+    static public String birthDate="";
+    static public String mobileNumber="";
+    static public String city="";
+    static public String country="";
 }

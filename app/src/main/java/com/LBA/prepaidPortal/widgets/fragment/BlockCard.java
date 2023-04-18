@@ -90,7 +90,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                     //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
                     initProgrees();
                     new CustomTask().execute();
-                    Toast.makeText(getActivity().getApplicationContext(), "Les données sont bien été envoyé au service", Toast.LENGTH_SHORT).show();
+
                 } catch (Exception e) {
                     //Log.d(TAG, "btnLoad.setOnClickListener()", e);
                     Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
