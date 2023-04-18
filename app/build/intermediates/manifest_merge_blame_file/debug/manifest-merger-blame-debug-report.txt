@@ -6,78 +6,78 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
-8-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml
+8-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml
+9-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:4:5-67
-11-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:4:22-64
+11-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
-12-->[androidx.biometric:biometric:1.1.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:24:5-72
-12-->[androidx.biometric:biometric:1.1.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:24:22-69
+12-->[androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:24:5-72
+12-->[androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:24:22-69
 13    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-13-->[androidx.biometric:biometric:1.1.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
-13-->[androidx.biometric:biometric:1.1.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
+13-->[androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
+13-->[androidx.biometric:biometric:1.1.0] C:\Users\oussa\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
 14
 15    <application
-15-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:5:5-32:19
+15-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:5:5-32:19
 16        android:allowBackup="true"
-16-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:6:9-35
+16-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:6:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-17-->[androidx.core:core:1.5.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+17-->[androidx.core:core:1.5.0] C:\Users\oussa\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 18        android:debuggable="true"
 19        android:icon="@mipmap/ic_launcher"
-19-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:7:9-43
+19-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:7:9-43
 20        android:label="@string/app_name"
-20-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:8:9-41
+20-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:8:9-41
 21        android:supportsRtl="true"
-21-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:9:9-35
+21-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:9:9-35
 22        android:testOnly="true"
 23        android:theme="@style/AppTheme" >
-23-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:10:9-40
+23-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:10:9-40
 24        <uses-library
-24-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:11:9-89
+24-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:11:9-89
 25            android:name="org.apache.http.legacy"
-25-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:11:23-61
+25-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:11:23-61
 26            android:required="false" />
-26-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:11:62-87
+26-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:11:62-87
 27
 28        <activity
-28-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:12:9-15:20
+28-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:12:9-15:20
 29            android:name="com.LBA.prepaidPortal.activity.HomeActivity"
-29-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:13:13-71
+29-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:13:13-71
 30            android:exported="false" >
-30-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:14:13-37
+30-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:14:13-37
 31        </activity>
 32        <activity android:name="com.LBA.prepaidPortal.activity.Z_WelcomeActivity" />
-32-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:16:9-64
-32-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:16:19-61
+32-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:16:9-64
+32-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:16:19-61
 33        <activity android:name="com.LBA.prepaidPortal.activity.LastTransactionResult" />
-33-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:17:9-68
-33-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:17:19-65
+33-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:17:9-68
+33-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:17:19-65
 34        <activity
-34-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:18:9-21:20
+34-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:18:9-21:20
 35            android:name="com.LBA.prepaidPortal.activity.BaseActivity"
-35-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:19:13-71
+35-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:19:13-71
 36            android:exported="false" >
-36-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:20:13-37
+36-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:20:13-37
 37        </activity>
 38        <activity
-38-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:23:9-31:20
+38-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:23:9-31:20
 39            android:name="com.LBA.MainActivity"
-39-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:24:13-48
+39-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:24:13-48
 40            android:exported="true" >
-40-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:25:13-36
+40-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:25:13-36
 41            <intent-filter>
-41-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:26:13-30:29
+41-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:26:13-30:29
 42                <action android:name="android.intent.action.MAIN" />
-42-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:27:17-69
-42-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:27:25-66
+42-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:27:17-69
+42-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:27:25-66
 43
 44                <category android:name="android.intent.category.LAUNCHER" />
-44-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:29:17-77
-44-->C:\Users\BITS_DEV\Desktop\LBA\app\src\main\AndroidManifest.xml:29:27-74
+44-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:29:17-77
+44-->C:\Users\oussa\Desktop\LBA-PrepaidCards-Portal\app\src\main\AndroidManifest.xml:29:27-74
 45            </intent-filter>
 46        </activity>
 47    </application>

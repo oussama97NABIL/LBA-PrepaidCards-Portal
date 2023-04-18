@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\BITS_DEV\\Desktop\\LBA\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\BITS_DEV\\.gradle\\caches\\transforms-3\\97e7ec19bd11dff7ae3d399ac9d0fa5b\\transformed\\core-1.5.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\oussa\\.gradle\\caches\\transforms-3\\97e7ec19bd11dff7ae3d399ac9d0fa5b\\transformed\\core-1.5.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\BITS_DEV\\.gradle\\caches\\transforms-3\\d76f35a08c08216004feed386d7db8d0\\transformed\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\oussa\\.gradle\\caches\\transforms-3\\d76f35a08c08216004feed386d7db8d0\\transformed\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

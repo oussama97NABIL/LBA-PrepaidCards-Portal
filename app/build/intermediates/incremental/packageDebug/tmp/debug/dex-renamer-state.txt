@@ -1,4 +1,4 @@
-#Mon Apr 17 15:11:19 WET 2023
-base.0=C\:\\Users\\BITS_DEV\\Desktop\\LBA\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon Apr 17 21:34:40 WET 2023
+base.0=C\:\\Users\\oussa\\Desktop\\LBA-PrepaidCards-Portal\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
