@@ -161,7 +161,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         Log.e("onCreate: ", "  Globals.userType : "+  Globals.userType);
         getActivity().setTitle("Profile\n");
         super.onCreate(savedInstanceState);
-        getCardNumber();
+        getClientName();
         mRootView = inflater.inflate(R.layout.z_menu_test, container, false);
         sharedPrefManager = new SharedPrefManager(getActivity().getApplicationContext());
         CardToCard = (CardView) mRootView.findViewById(R.id.accountServices);
@@ -598,7 +598,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
             TextInputEditText cardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
-            getClientName();
         }
     }
     private class CustomTaskClientName extends AsyncTask<String, String, String> {
@@ -637,6 +636,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
             TextView user = (TextView) mRootView.findViewById(R.id.userWelcome);
             user.setText("Bonjour "+Globals.userWelcome);
+            EditText cardNumber = (EditText) mRootView.findViewById(R.id.cardNumber);
+            cardNumber.setText(Globals.cardNumber);
         }
     }
     private class CustomTaskSolde extends AsyncTask<String, String, String> {

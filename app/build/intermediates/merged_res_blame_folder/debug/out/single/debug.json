@@ -4,12 +4,12 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\custom_white_button.xml"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_mobile_money.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_mobile_money.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_img.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\img.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_mobile_money.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_mobile_money.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_menu.png.flat",

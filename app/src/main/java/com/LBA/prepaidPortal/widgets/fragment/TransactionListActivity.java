@@ -64,7 +64,7 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.activity_transaction_result, container, false);
 
-        getActivity().setTitle("10 dernières transaction");
+        getActivity().setTitle("Les Dernières transaction");
 
 
         initProgrees();
@@ -240,7 +240,6 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
                 if (Globals.transactionList.get(pos).getReferenceNumber() != null && Globals.transactionList.get(pos).getReferenceNumber().length() > 0) {
                     tvValRef.setTextColor(getResources().getColor(R.color.black));
                     tvValRef.setText(Globals.transactionList.get(pos).getReferenceNumber());
-
                 }
                 if (Globals.transactionList.get(pos).getDate() != null && Globals.transactionList.get(pos).getDate().length() > 0) {
                     tvDate1.setTextColor(getResources().getColor(R.color.MurasakiPurple));

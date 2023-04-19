@@ -28,9 +28,9 @@ public class Card {
         JSONObject jsonRespObject = HTTPClient.sendPostJSONgetBalance(Globals.serviceGetBalance, jsonObject);
         Log.e("TAG", "CardDetails: "+jsonRespObject);
 
-        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+        /*if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
 
-            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
+            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");*/
 
 
         Globals.availableBalance = jsonRespObject.getString("availableBalance");
@@ -66,15 +66,12 @@ public class Card {
 
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("token", "4281993108775830" );
-        //Log.e("TAG", "Token: "+Globals.authenToken);
-
-
         JSONObject jsonRespObject = HTTPClient.sendPostJSONcardDetail(Globals.serviceCardDetails, jsonObject);
         Log.e("TAG", "CardDetails: "+jsonRespObject);
 
-        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+        /*if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
 
-            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
+            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");*/
 
 
         Globals.cardNumber = jsonRespObject.getString("cardNumber");
@@ -95,6 +92,7 @@ public class Card {
         Globals.mobileNumber= jsonRespObject.getString("mobileNumber");
         Globals.city= jsonRespObject.getString("city");
         Globals.country= jsonRespObject.getString("country");
+
 
         Log.e("TAG", "cardNumber "+Globals.cardNumber);
 
@@ -130,7 +128,7 @@ public class Card {
         jsonObject.put("memo", "transfert to my card" );
 
 
-        JSONObject jsonRespObject = HTTPClient.sendPostJSONCardToCard(Globals.serviceCardToCard, jsonObject);
+        JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceCardToCard, jsonObject);
         Log.e("TAG", "Card To card: "+jsonRespObject);
 
         if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
@@ -139,30 +137,29 @@ public class Card {
         // Globals.transactionId=jsonRespObject.getString(Globals.transactionIdTag);
 
     }
-    static public void BlockCard() throws Exception{
+    static public void BlockCard(String operation) throws Exception{
 
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("cardToken", "4281993108775830" );
-        jsonObject.put("operation", "B" );
+        jsonObject.put("cardToken", "4281993108775830");
+        jsonObject.put("operation", operation );
 
 
+        Log.e("TAG", "doInBackground blockCard: " );
+        JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceBlockCard, jsonObject);
+        Log.e("TAG", "Block Card 2 : "+jsonRespObject);
 
-        JSONObject jsonRespObject = HTTPClient.sendPostJSONblockCard(Globals.serviceBlockCard, jsonObject);
-        Log.e("TAG", "Block Card: "+jsonRespObject.getString("message"));
-
-        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+        if(jsonRespObject.has("message") )
             // throw new Exception("Pin request already done");
-            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
+            throw new Exception(""+ jsonRespObject.getString("message"));
         // Globals.transactionId=jsonRespObject.getString(Globals.transactionIdTag);
-
+        Globals.message = jsonRespObject.getString("message");
     }
     static public void UpdateLimit() throws Exception{
 
 
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("token", "4281993108775830" );
-
 
 
 

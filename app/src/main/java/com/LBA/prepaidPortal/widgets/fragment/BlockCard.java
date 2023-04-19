@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,6 +45,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
     private SimpleDateFormat dateFormatter;
     private int nCounter=0;
     private String selectedAccount;
+    private String selectedOperation ;
     TextView BankCode;
     TextView BankName;
     ImageButton canBtn;
@@ -100,14 +102,12 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
         String[] arraySpinner = new String[] {
                 "Bloquer","Débloquer"
         };
+        selectedOperation = "Bloquer";
         Spinner s = (Spinner) mRootView.findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, arraySpinner);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s.setAdapter(adapter);
-
-
-
-
+        s.setOnItemSelectedListener(this);
         /**
          TextView txtBalance;
          TextView txtCurrency;
@@ -199,29 +199,28 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
     }
     public void onItemSelected(AdapterView<?> parent, View arg1, int pos, long id) {
         if(parent instanceof Spinner && pos>0) {
-            this.selectedAccount = (String) parent.getItemAtPosition(pos);
-            /*try {
-                if(nCounter>0) {
-                    String balanceData = Account.GetBalance(selectedAccount);
-                    txtBalance.setText(balanceData.substring(0, 0 + 20));
-                    txtCurrency.setText(balanceData.substring(0 + 20, 0 + 20 + 3));
-                    //txtValueDate.setText(balanceData.substring(0 + 20 + 3, 0 + 20 + 3 + 8));
-                }
-                nCounter++;
-            } catch (Exception e) {
-                Toast.makeText(TransactionListActivity.this, "Balance Retrieval Failed", Toast.LENGTH_LONG).show();
-            }*/
+            Log.i(TAG, "onItemSelected pos: "+pos);
+            this.selectedOperation = (String) parent.getItemAtPosition(pos);
+            Log.i(TAG, "onItemSelected selectedOperation: "+selectedOperation);
+
         }
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
     private class CustomTask extends AsyncTask<String, String, String> {
+
         protected String doInBackground(String... param) {
             try {
-                Card.BlockCard();
-                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
-                //startActivity(myWelcomeAct);
+                  if(selectedOperation.equals("Bloquer")){
+                      selectedOperation = "B";
+                  }
+                  else {
+                      selectedOperation = "U";
+                  }
+                    Log.e(TAG, "selectedOperation: "+selectedOperation);
+                    Card.BlockCard(selectedOperation);
+                Log.e(TAG, "doInBackground: 1" );
                 return null;
             } catch (Exception e) {
                 e.printStackTrace();
@@ -231,9 +230,12 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
         protected void onPostExecute(String param) {
             dismissProgress();
             super.onPostExecute(param);
+            Log.e(TAG, "doInBackground: 2" );
 
             if(param!=null && param.contains("801")){
                 Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
+                Log.e(TAG, "doInBackground: 3" );
+
                 try {
                     // doLogout(null);
                 } catch (Exception e) {
@@ -242,9 +244,13 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 return;
             }
 
-            if(param!=null)
+            if(param!=null) {
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
-            ;
+                Log.e(TAG, "doInBackground: 4" );
+
+            }
+
+
 
 
 
@@ -281,8 +287,6 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
 
             TextInputEditText cardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
-
-
         }
     }
 

@@ -64,8 +64,9 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
         canlBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
 
-        getCardInformations();
+
         OpenTime();
+        getCardInformations();
 
         canlBtn.setOnClickListener(new View.OnClickListener() {
             @Override

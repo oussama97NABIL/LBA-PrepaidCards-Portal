@@ -255,17 +255,21 @@ public class Globals {
     static public String transactionIdTag="transactionId";
 
     static public String sessionTKO;
+    static public String userName="";
     static public String transactionId;
     static public String userLimit = null;
     static public String UpdateAccountMessage = null;
     static public Double ecgAmountDue;
     static public String ecgClientName;
     static public String user;
+    static public String operation;
+    static public String message;
     static public String cardToken;
     static public String password;
+    static public String userCode="";
     static public String sessionId = " "; // YOUNES TEST
     static public String authenCode; // MAW20160521
-    static public String authenToken; // MAW20160611
+    static public String authenToken =""; // MAW20160611
 
     static public List<String> accountsList;
     static public List<String> cardsList;

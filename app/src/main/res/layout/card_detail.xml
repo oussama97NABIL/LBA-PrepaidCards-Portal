@@ -5,23 +5,32 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:id="@+id/root"
-	android:orientation="vertical">
+	android:orientation="vertical"
+	>
 	<include layout="@layout/page_title" />
+	<include
+		android:id="@+id/footer_layout"
+		layout="@layout/footer_layout1"
+		android:layout_width="398dp"
+		android:layout_height="90dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginTop="-10dp" />
+	<HorizontalScrollView
+		android:id="@+id/horizontalScrollView1"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:fillViewport="true">
 	<LinearLayout
 
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="vertical">
-
-
 		<LinearLayout
 			android:id="@+id/ll1"
 			android:layout_width="match_parent"
 			android:layout_height="27dp"
 			android:layout_weight="-1">
 		</LinearLayout>
-
-
 		<ScrollView
 			android:id="@+id/scroll_view"
 			android:layout_width="match_parent"
@@ -32,17 +41,19 @@
 			android:layout_marginEnd="5dp"
 			android:layout_marginRight="16dp"
 			android:layout_marginBottom="20dp"
+			android:orientation="vertical"
 			android:layout_weight="1">
 
 			<LinearLayout
 				android:id="@+id/ll2"
 				android:layout_width="500dp"
 				android:layout_height="match_parent"
-				android:orientation="vertical">
+				android:orientation="vertical"
+				>
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/mobilelLayout"
-					android:layout_width="374dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Card Number*"
@@ -66,7 +77,7 @@
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/accountNbrLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Bank Code*"
@@ -89,7 +100,7 @@
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/refrealCodeLayout"
-					android:layout_width="374dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Bank Name"
@@ -157,7 +168,7 @@
             /> -->
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/bizcertLayout"
-					android:layout_width="374dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Client Code*"
@@ -179,7 +190,7 @@
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/dobLayout"
-					android:layout_width="374dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Branch*"
@@ -227,10 +238,10 @@
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Client Type*"
+					android:hint="Client Type* (I=Individual)"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -252,10 +263,10 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Status Card*"
+					android:hint="Status Card* (N=Normal, B=Blocked)"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -277,7 +288,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Product code*"
@@ -299,7 +310,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Title Card Holder*"
@@ -321,7 +332,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Family Name*"
@@ -343,7 +354,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Document Code*"
@@ -365,7 +376,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Document Id*"
@@ -387,7 +398,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Address*"
@@ -409,7 +420,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Expiry Date*"
@@ -431,7 +442,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Mobile Number*"
@@ -453,7 +464,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="City*"
@@ -475,7 +486,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
-					android:layout_width="375dp"
+					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Country*"
@@ -531,15 +542,9 @@
 
 		</ScrollView>
 
-		<include
-			android:id="@+id/footer_layout"
-			layout="@layout/footer_layout1"
-			android:layout_width="398dp"
-			android:layout_height="90dp"
-			android:layout_alignParentBottom="true"
-			android:layout_marginTop="-0dp" />
+
 
 	</LinearLayout>
 
-
+	</HorizontalScrollView>
 </RelativeLayout>

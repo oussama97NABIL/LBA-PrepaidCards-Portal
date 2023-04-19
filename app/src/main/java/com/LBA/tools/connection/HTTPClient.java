@@ -209,18 +209,28 @@ public class HTTPClient extends AbstractActivity {
         HttpClient httpClient = null;
         Globals.transactionId = null;
         try {
-    //swap here between Test version and live version  with comment and uncomment even one
-          //hajer 20/06/2022
+            //swap here between Test version and live version  with comment and uncomment even one
+            //hajer 20/06/2022
             httpClient = getNewHttpClient();  //for test version
             //httpClient = getProdHttpClient(); //for live version
 
 
             final String url = Globals.serverURL+service;
+            final String AUTH_VALUE = Globals.authenToken;
+            Log.d(" log AUTH_VALUE", AUTH_VALUE );
+
             HttpPost httpPost = new HttpPost(url);
             Log.d("url",url);
             httpPost.addHeader("Accept", "application/json");
+            //httpPost.addHeader("Accept", "*/*");
+
             httpPost.addHeader("Content-Type", "application/json");
             httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
+
+            httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
+            //Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
+            //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
+
             StringEntity se = new StringEntity(jsonObject.toString());
             httpPost.setEntity(se);
             HttpResponse httpResponse = httpClient.execute(httpPost);
@@ -237,6 +247,7 @@ public class HTTPClient extends AbstractActivity {
                 }
                 reader.close();
                 JSONObject jsonRespObject = new JSONObject(response.toString());
+                Log.e("TAG", "jsonRespObject: "+jsonRespObject );
 
 
                 return jsonRespObject;
@@ -273,8 +284,6 @@ public class HTTPClient extends AbstractActivity {
 
 
             final String url = Globals.serverURL+service;
-            final String AUTH_KEY = "Authorization";
-
             final String AUTH_VALUE = Globals.authenToken;
             Log.d(" log AUTH_VALUE", AUTH_VALUE );
 
@@ -339,13 +348,9 @@ public class HTTPClient extends AbstractActivity {
             //hajer 20/06/2022
             httpClient = getNewHttpClient();  //for test version
             //httpClient = getProdHttpClient(); //for live version
-
-
             final String url = Globals.serverURL+service;
-            final String AUTH_KEY = "Authorization";
-
             final String AUTH_VALUE = Globals.authenToken;
-            Log.d(" log AUTH_VALUE", AUTH_VALUE );
+
 
             HttpPost httpPost = new HttpPost(url);
             Log.d("url",url);
@@ -356,7 +361,7 @@ public class HTTPClient extends AbstractActivity {
             httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
 
             httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
-            Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
+          //  Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
             //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
 
             StringEntity se = new StringEntity(jsonObject.toString());
@@ -408,25 +413,19 @@ public class HTTPClient extends AbstractActivity {
             //hajer 20/06/2022
             httpClient = getNewHttpClient();  //for test version
             //httpClient = getProdHttpClient(); //for live version
-
-
             final String url = Globals.serverURL+service;
-            final String AUTH_KEY = "Authorization";
-
             final String AUTH_VALUE = Globals.authenToken;
             Log.d(" log AUTH_VALUE", AUTH_VALUE );
 
             HttpPost httpPost = new HttpPost(url);
             Log.d("url",url);
             httpPost.addHeader("Accept", "application/json");
-            //httpPost.addHeader("Accept", "*/*");
 
             httpPost.addHeader("Content-Type", "application/json");
             httpPost.addHeader("User-Agent", "Android cbg-MB("+ Globals.appVersionName+"."+Globals.appVersionCode+") ["+System.getProperty("http.agent")+"]");
 
             httpPost.addHeader("Authorization", "Bearer "+AUTH_VALUE);
             Log.d("DEBUG", "HEADERS: " + httpPost.getFirstHeader("Authorization"));
-            //httpPost.addHeader(AUTH_KEY, AUTH_VALUE);
 
             StringEntity se = new StringEntity(jsonObject.toString());
             httpPost.setEntity(se);

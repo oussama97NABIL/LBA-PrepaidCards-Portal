@@ -52,9 +52,8 @@ public class User {
         Log.e("TAG", "Login: "+jsonRespObject);
 
         if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
-            // throw new Exception("Pin request already done");
-            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
-
+            throw new Exception("Bienvenu");
+            //throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
 
         Globals.notificationViewed = false;
 
@@ -62,7 +61,7 @@ public class User {
         //Log.d("", "" + Globals.ERmsg);
 
         Globals.userWelcome = jsonRespObject.getString("clientName");
-
+        Globals.cardNumber = jsonRespObject.getString("cardNumber");
         Globals.authenToken = jsonRespObject.getString("token");
         Log.e("TAG", "login: Globals.authenToken" + Globals.authenToken);
        /* Globals.sessionId = jsonRespObject.getString("sessionId");
