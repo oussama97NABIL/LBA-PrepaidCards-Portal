@@ -21,11 +21,12 @@ public class Card {
 
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("token", "4281993108775830" );
-        //Log.e("TAG", "Token: "+Globals.authenToken);
+        jsonObject.put("token", "4281993108775830");
+
+        Log.e("TAG", "Token: "+Globals.user);
 
 
-        JSONObject jsonRespObject = HTTPClient.sendPostJSONgetBalance(Globals.serviceGetBalance, jsonObject);
+        JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceGetBalance, jsonObject);
         Log.e("TAG", "CardDetails: "+jsonRespObject);
 
         /*if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))

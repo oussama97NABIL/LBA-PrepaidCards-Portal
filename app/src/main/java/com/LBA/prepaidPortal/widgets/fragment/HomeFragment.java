@@ -537,10 +537,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
-    public void getSolde(){
+    public void getCurrency(){
         try {
             initProgrees();
-            new CustomTaskSolde().execute();
+            new CustomTaskCurrency().execute();
         } catch (Exception e) {
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
@@ -638,6 +638,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             user.setText("Bonjour "+Globals.userWelcome);
             EditText cardNumber = (EditText) mRootView.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
+            getCurrency();
         }
     }
     private class CustomTaskSolde extends AsyncTask<String, String, String> {
@@ -673,6 +674,42 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
             showSolde.setText(Globals.availableBalance);
+        }
+    }
+    private class CustomTaskCurrency extends AsyncTask<String, String, String> {
+        protected String doInBackground(String... param) {
+            try {
+
+                Card.GetBalance();
+                Log.e("TAG", "doInBackground: CustomTaskClientName");
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            Log.e("TAG", "doInBackground: onPostExecute");
+
+            dismissProgress();
+            Log.e("TAG", "doInBackground: onPostExecute 2 ");
+
+            super.onPostExecute(param);
+
+            if(param!=null && param.contains("801")){
+                Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
+                try {
+                    // doLogout(null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
+
+            if(param!=null)
+                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+            EditText currency= (EditText) mRootView.findViewById(R.id.currency);
+            currency.setText(Globals.currency);
         }
     }
     private class CustomTask extends AsyncTask<String, String, String> {

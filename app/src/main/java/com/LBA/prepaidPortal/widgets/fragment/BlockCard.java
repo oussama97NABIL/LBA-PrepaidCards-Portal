@@ -1,8 +1,11 @@
 package com.LBA.prepaidPortal.widgets.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,7 +24,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
+import com.LBA.MainActivity;
 import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.tools.assets.Globals;
@@ -88,15 +94,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
         nexBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
-                    initProgrees();
-                    new CustomTask().execute();
-
-                } catch (Exception e) {
-                    //Log.d(TAG, "btnLoad.setOnClickListener()", e);
-                    Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                }
+                  DialogBlockCard();
             }
         });
         String[] arraySpinner = new String[] {
@@ -175,16 +173,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
         }
     }
 
-    /*public void getCardInformations(){
-        try {
-            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
-            initProgrees();
-            new CustomTask().execute();
-        } catch (Exception e) {
-            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
-            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    }*/
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -203,6 +192,73 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
             this.selectedOperation = (String) parent.getItemAtPosition(pos);
             Log.i(TAG, "onItemSelected selectedOperation: "+selectedOperation);
 
+        }
+    }
+    private void DialogBlockCard(){
+        {
+                final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.new_benef_conf);
+                // set title
+                TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
+                validation_title.setText(R.string.Confirmation);
+                final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
+                txtCode.setText(Globals.transactionId);
+                dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        try {
+                            dialog.dismiss();
+                            initProgrees();
+                            HomeTask task = new HomeTask(HomeActivity.class);
+                            task.execute();
+                        } catch (Exception e) {
+                            Log.d(TAG, "btnLoad.setOnClickListener()", e);
+                            //  Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                            androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                            alertDialog.setMessage( e.getMessage());
+                            alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                            alertDialog.show();
+                        }
+                    }
+                });
+                dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        try {
+                            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+                            initProgrees();
+                            new CustomTask().execute();
+                        } catch (Exception e) {
+                            Log.d(TAG, "btnLoad.setOnClickListener()", e);
+                            // Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                            androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                            alertDialog.setMessage(e.getMessage());
+                            alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                            alertDialog.show();
+                        }
+                    }
+                });
+                Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/gilroy_bold.ttf");
+                validation_title.setTypeface(tf);
+                txtCode.setTypeface(tf);
+                final TextView textView = (TextView) dialog.findViewById(R.id.textView);
+                textView.setTypeface(tf);
+                final TextView textView2 = (TextView) dialog.findViewById(R.id.textView2);
+                textView2.setTypeface(tf);
+                final Button btnOk = (Button) dialog.findViewById(R.id.btnOk);
+                btnOk.setTypeface(tf);
+                dialog.show();
         }
     }
     public void onNothingSelected(AdapterView<?> arg0) {
@@ -247,13 +303,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
             if(param!=null) {
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
                 Log.e(TAG, "doInBackground: 4" );
-
             }
-
-
-
-
-
         }
     }
     private class CustomTaskCardNumber extends AsyncTask<String, String, String> {
@@ -324,6 +374,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
             }
         }
     }
+
     public void OpenTime() {
         Calendar c = Calendar.getInstance();
         int timeOfDay = c.get(Calendar.HOUR_OF_DAY);

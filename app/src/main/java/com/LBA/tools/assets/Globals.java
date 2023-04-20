@@ -138,6 +138,7 @@ public class Globals {
     static public String phone;
     static public String lname;
     static public String fname;
+    static public String token="";
     static public String ClientId; // added by younes for self signup
     static public String errorCustId=""; // added by youunes to display message after SignUp
     static public String errorUserId=""; // added by younes to display error after create user
