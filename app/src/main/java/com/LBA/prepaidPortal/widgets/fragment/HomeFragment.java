@@ -262,54 +262,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 task.execute();*/
             }
         });
-// 3/28/2023       Setting.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(SettingsActivity.class);
-//                task.execute();
-//            }
-//        });
-
-// 3/28/2023       history_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(Account_History.class);
-//                task.execute();
-//            }
-//        });
-// 3/28/2023       AccBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(AccountServicesActivity.class);
-//                task.execute();
-//            }
-//        });
-
-        // younes
-// 3/28/2023       balances.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initProgrees();
-//                CustomTask task = new CustomTask(AccountBalanceActivity.class);
-//                Globals.activity = Z_WelcomeActivity.class;
-//                task.execute();
-//            }
-//        });
-        //
-        /*BillBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initProgrees();
-                CustomTask task=new CustomTask(BillsServicesActivity.class);
-                task.execute();
-            }
-        });*/
 
         imageshowSolde.setImageResource(R.drawable.baseline_visibility_off_24);
-
         imageshowSolde.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -567,8 +521,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         protected String doInBackground(String... param) {
             try {
                 Card.CardDetails();
-                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
-                //startActivity(myWelcomeAct);
                 return null;
             } catch (Exception e) {
                 e.printStackTrace();
