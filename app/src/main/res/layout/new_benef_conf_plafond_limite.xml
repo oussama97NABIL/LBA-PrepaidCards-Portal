@@ -2,13 +2,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white">
-
     <RelativeLayout
         android:id="@+id/heading_layout"
         android:layout_width="match_parent"
         android:layout_height="55.0dip"
-        android:layout_marginTop="@dimen/_50sdp"
-        android:background="@color/white">
+        android:layout_marginTop="0dp"
+        android:background="@color/GoldenFoil">
 
         <TextView
             android:id="@+id/validation_title"
@@ -23,16 +22,7 @@
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@color/black"
             android:textStyle="bold" />
-        <!--    <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="44dp"
-                android:layout_marginLeft="200px"
-                android:layout_marginRight="200px"
-                android:background="@color/red"
-                />-->
+
     </RelativeLayout>
 
     <LinearLayout

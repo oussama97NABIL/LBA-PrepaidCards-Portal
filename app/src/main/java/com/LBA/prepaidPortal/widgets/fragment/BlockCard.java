@@ -3,6 +3,7 @@ package com.LBA.prepaidPortal.widgets.fragment;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -23,9 +24,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.LBA.MainActivity;
@@ -50,6 +53,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
     private Button btnLoad;
     private DatePickerDialog fromDatePickerDialog;
     private DatePickerDialog toDatePickerDialog;
+    FragmentManager fm;
     private SimpleDateFormat dateFormatter;
     private int nCounter=0;
     private String selectedAccount;
@@ -71,7 +75,6 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.block_card, container, false);
-
         getActivity().setTitle("Bloquer/Débloquer une carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
@@ -129,34 +132,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
 
         return mRootView;
     }
-    /*private void findViewsById() {
-        fromDateEtxt = (EditText) findViewById(R.id.etxt_fromdate);
-        fromDateEtxt.setInputType(InputType.TYPE_NULL);
-        fromDateEtxt.requestFocus();
-        toDateEtxt = (EditText) findViewById(R.id.etxt_todate);
-        toDateEtxt.setInputType(InputType.TYPE_NULL);
-    }*/
-    /*private void setDateTimeField() {
-        fromDateEtxt.setOnClickListener(this);
-        toDateEtxt.setOnClickListener(this);
-        Calendar newCalendar = Calendar.getInstance();
-        fromDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                fromDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-        toDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                toDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-    }*/
     public void onClick(View view) {
         if (view == fromDateEtxt) {
             fromDatePickerDialog.show();
@@ -174,8 +150,11 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
-
-
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        fm = getFragmentManager();
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -206,16 +185,16 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 validation_title.setText(R.string.Confirmation);
                 final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
                 txtCode.setText(Globals.transactionId);
-                dialog.findViewById(R.id.Back).setOnClickListener(new View.OnClickListener() {
+                /*dialog.findViewById(R.id.Back).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Fragment fragmentToLoad = new BlockCard();
                         FragmentTransaction fragmentTransaction =
-                                    getActivity().getSupportFragmentManager().beginTransaction();
+                                    fm.beginTransaction();
                         fragmentTransaction.replace(R.id.content_frame, fragmentToLoad);
                         fragmentTransaction.commit();
                     }
-                });
+                });*/
                 dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
