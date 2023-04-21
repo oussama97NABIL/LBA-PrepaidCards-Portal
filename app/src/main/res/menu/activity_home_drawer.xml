@@ -4,7 +4,7 @@
         <item
             android:id="@+id/home_fragment"
             android:icon="@drawable/baseline_person_24"
-            android:title="Profile "
+            android:title="Mon compte "
             />
 
         <item

@@ -221,12 +221,12 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
             branch.setText(Globals.Branch);
 
             EditText client_type = (EditText) mRootView.findViewById(R.id.client_type);
-            client_type.setText(Globals.clientType);
+            client_type.setText(Globals.clientType+"ndividual");
 
             EditText cardNumber = (EditText) mRootView.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
             EditText statusCard = (EditText) mRootView.findViewById(R.id.status_Card);
-            statusCard.setText(Globals.statusCard);
+            statusCard.setText(Globals.statusCard+"ormal");
             EditText ProductCode = (EditText) mRootView.findViewById(R.id.product_code);
             ProductCode.setText(Globals.productCode);
             EditText titleCardHolder = (EditText) mRootView.findViewById(R.id.title_card_holder);

@@ -230,56 +230,17 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 }
                 return;
             }
-
-            if(param!=null)
-                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
-            ;
-
-
-
-        }
-    }
-    private class CustomTaskCardNumber extends AsyncTask<String, String, String> {
-        protected String doInBackground(String... param) {
-            try {
-                Card.CardDetails();
-                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
-                //startActivity(myWelcomeAct);
-                return null;
-            } catch (Exception e) {
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        protected void onPostExecute(String param) {
-            dismissProgress();
-            super.onPostExecute(param);
-
-            if(param!=null && param.contains("801")){
-                Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
-                try {
-                    // doLogout(null);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                return;
-            }
-
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
 
-            TextInputEditText cardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);
-            cardNumber.setText(Globals.cardNumber);
-            getCardLimit();
-
-
+            Toast.makeText(getActivity().getApplicationContext(), Globals.message, Toast.LENGTH_LONG).show();
         }
     }
     private void DialogPlafondsLimit(){
         {
             final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.new_benef_conf);
+            dialog.setContentView(R.layout.new_benef_conf_plafond_limite);
             // set title
             TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
             validation_title.setText(R.string.Confirmation);

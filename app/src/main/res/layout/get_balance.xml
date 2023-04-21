@@ -69,18 +69,15 @@
 					android:hint="Date de début*"
 					app:errorEnabled="true">
 
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/availablebalance"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:clickable="true"
-						android:ems="10"
-						android:enabled="true"
-						android:focusable="true"
-						android:focusableInTouchMode="true"
-						android:inputType="text"
-
-						android:textColor="@color/black" />
+					<EditText
+						android:id="@+id/startDate"
+						android:layout_width="fill_parent"
+						android:layout_height="40dp"
+						android:drawableRight="@drawable/calendar"
+						android:paddingRight="5dp"
+						android:inputType="textPersonName"
+						android:textColorHint="@color/black"
+						android:textColor="@color/black"/>
 
 				</com.google.android.material.textfield.TextInputLayout>
 
@@ -93,8 +90,8 @@
 					android:hint="Date de fin*"
 					app:errorEnabled="true">
 
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/balance"
+					<EditText
+						android:id="@+id/endDate"
 						android:layout_width="377dp"
 						android:layout_height="wrap_content"
 						android:clickable="true"

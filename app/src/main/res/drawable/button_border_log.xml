@@ -4,6 +4,7 @@
 
     <solid android:color="@color/GoldenFoil"/>
 
+
     <stroke
         android:width="0dp"
         android:color="@color/Black" />

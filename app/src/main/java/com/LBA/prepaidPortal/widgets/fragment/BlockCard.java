@@ -25,6 +25,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.LBA.MainActivity;
 import com.LBA.prepaidPortal.R;
@@ -204,6 +206,16 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 validation_title.setText(R.string.Confirmation);
                 final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
                 txtCode.setText(Globals.transactionId);
+                dialog.findViewById(R.id.Back).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Fragment fragmentToLoad = new BlockCard();
+                        FragmentTransaction fragmentTransaction =
+                                    getActivity().getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.content_frame, fragmentToLoad);
+                        fragmentTransaction.commit();
+                    }
+                });
                 dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

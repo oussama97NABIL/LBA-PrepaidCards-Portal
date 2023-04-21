@@ -159,7 +159,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
 
         Log.e("onCreate: ", "  Globals.userType : "+  Globals.userType);
-        getActivity().setTitle("Profile\n");
+        getActivity().setTitle("Mon Compte\n");
         super.onCreate(savedInstanceState);
         getClientName();
         mRootView = inflater.inflate(R.layout.z_menu_test, container, false);
@@ -170,8 +170,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         AccountToCard = (CardView) mRootView.findViewById(R.id.MMBtn);
         BloqueCard = (CardView) mRootView.findViewById(R.id.PaymentBtn);
         LimitUpdate = (CardView) mRootView.findViewById(R.id.ghqr);
-
-
         notificationText = mRootView.findViewById(R.id.notificationText);
         showSolde = mRootView.findViewById(R.id.showSolde);
         imageshowSolde = mRootView.findViewById(R.id.imageView_show_hide);
