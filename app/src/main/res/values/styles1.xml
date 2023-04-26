@@ -4,7 +4,7 @@
     <!-- Base application theme. -->
     <!-- <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"> -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
-
+             <item name="android:windowAnimationStyle">@style/animation</item>
     </style>
 
     <style name="CustomFontDialog" parent="android:Theme.Holo.Light.Dialog">
@@ -125,6 +125,11 @@
         <item name="cardCornerRadius">16dp</item>
         <item name="cardElevation">4dp</item>
         <item name="cardBackgroundColor">@color/transparent</item>
+    </style>
+    <style name="animation">
+          <item name="android:windowEnterAnimation">@anim/fragment_fade_enter</item>
+          <item name="android:windowExitAnimation">@anim/fragment_fade_exit</item>
+
     </style>
 
     <!--

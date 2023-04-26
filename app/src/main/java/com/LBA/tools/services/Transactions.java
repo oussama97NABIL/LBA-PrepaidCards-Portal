@@ -15,7 +15,7 @@ public class Transactions {
 
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("token", "4281993108775830" );
-        JSONObject jsonRespObject = HTTPClient.sendPostJSONLastTransactions(Globals.service10LastTransactions, jsonObject);
+        JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.service10LastTransactions, jsonObject);
         Log.e("TAG", "getLastTransactoins: "+jsonRespObject);
 
         if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))

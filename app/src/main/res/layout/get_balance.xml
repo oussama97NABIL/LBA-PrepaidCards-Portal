@@ -44,7 +44,7 @@
 					android:layout_width="376dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Card Number*"
+					android:hint="Numero de la carte*"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
@@ -100,9 +100,7 @@
 						android:focusable="true"
 						android:focusableInTouchMode="true"
 						android:inputType="text"
-
 						android:textColor="@color/black" />
-
 				</com.google.android.material.textfield.TextInputLayout>
 
 

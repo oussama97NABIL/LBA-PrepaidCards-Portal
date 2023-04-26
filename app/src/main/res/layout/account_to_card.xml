@@ -18,42 +18,8 @@
 			android:layout_weight="5">
 		</LinearLayout>
 
-		<LinearLayout
-			android:id="@+id/ll3"
-			android:layout_width="171dp"
-			android:layout_height="150dp"
-			android:background="@drawable/murasakipurple"
-			android:layout_weight="3"
-			android:layout_marginTop="35dp"
-			android:layout_marginLeft="30dp"
-			android:orientation="vertical">
+z
 
-			<TextView
-				android:id="@+id/première"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:gravity="center"
-				android:text="Première étape" />
-		</LinearLayout>
-
-		<LinearLayout
-			android:id="@+id/ll5"
-			android:layout_width="171dp"
-			android:layout_height="150dp"
-			android:layout_marginLeft="210dp"
-			android:layout_marginTop="-102dp"
-			android:layout_weight="3"
-
-			android:orientation="vertical">
-
-			<TextView
-				android:id="@+id/deuxième"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:gravity="center"
-				android:text="Deuxième étape" />
-
-		</LinearLayout>
 
 
 		<ScrollView

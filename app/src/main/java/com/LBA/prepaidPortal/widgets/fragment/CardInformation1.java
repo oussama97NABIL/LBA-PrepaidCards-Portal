@@ -207,11 +207,6 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
 
-
-
-
-            BankCode = (EditText) mRootView.findViewById(R.id.bankcode);
-            BankCode.setText(Globals.bankCode);
             BankName = (EditText) mRootView.findViewById(R.id.bankname);
             BankName.setText(Globals.bankName);
             EditText clientCode = (EditText) mRootView.findViewById(R.id.clientcode);
@@ -226,9 +221,10 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
             EditText cardNumber = (EditText) mRootView.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
             EditText statusCard = (EditText) mRootView.findViewById(R.id.status_Card);
-            statusCard.setText(Globals.statusCard+"ormal");
-            EditText ProductCode = (EditText) mRootView.findViewById(R.id.product_code);
-            ProductCode.setText(Globals.productCode);
+            if(Globals.statusCard.equals("N")){
+            statusCard.setText(Globals.statusCard+"ormal");}
+            else{
+                statusCard.setText(Globals.statusCard+"ocked");}
             EditText titleCardHolder = (EditText) mRootView.findViewById(R.id.title_card_holder);
             titleCardHolder.setText(Globals.titleCardHolder);
             EditText familyName = (EditText) mRootView.findViewById(R.id.family_name);
@@ -242,7 +238,7 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
             EditText ExpiryDate = (EditText) mRootView.findViewById(R.id.expiry_date);
             ExpiryDate.setText(Globals.expiryDate);
             EditText MobileNumber = (EditText) mRootView.findViewById(R.id.mobile_number);
-            MobileNumber.setText(Globals.mobileNumber);
+            MobileNumber.setText("0712549874");
             EditText City = (EditText) mRootView.findViewById(R.id.city);
             City.setText(Globals.city);
             EditText Country = (EditText) mRootView.findViewById(R.id.country);

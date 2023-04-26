@@ -36,7 +36,8 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:gravity="center"
-				android:text="Première étape" />
+				android:textSize="26sp"
+				android:text="1" />
 		</LinearLayout>
 
 		<LinearLayout
@@ -54,7 +55,8 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:gravity="center"
-				android:text="Deuxième étape" />
+				android:textSize="26sp"
+				android:text="2" />
 
 		</LinearLayout>
 

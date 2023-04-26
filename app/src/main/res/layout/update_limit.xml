@@ -7,6 +7,7 @@
 	android:id="@+id/root"
 	android:orientation="vertical">
 	<include layout="@layout/page_title" />
+
 	<LinearLayout
 
 		android:layout_width="match_parent"
@@ -19,12 +20,49 @@
 			android:layout_height="27dp"
 			android:layout_weight="5">
 		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/ll3"
+			android:layout_width="171dp"
+			android:layout_height="150dp"
+			android:background="@drawable/murasakipurple"
+			android:layout_weight="3"
+			android:layout_marginTop="35dp"
+			android:layout_marginLeft="30dp"
+			android:orientation="vertical">
 
+			<TextView
+				android:id="@+id/première"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:textSize="26sp"
+				android:text="1" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/ll5"
+			android:layout_width="171dp"
+			android:layout_height="150dp"
+			android:layout_marginLeft="210dp"
+			android:layout_marginTop="-102dp"
+			android:layout_weight="3"
+
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/deuxième"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:textSize="26sp"
+				android:text="2" />
+
+		</LinearLayout>
 
 		<ScrollView
 			android:id="@+id/scroll_view"
 			android:layout_width="match_parent"
-			android:layout_height="645dp"
+			android:layout_height="522dp"
 			android:layout_marginStart="5dp"
 			android:layout_marginLeft="16dp"
 			android:layout_marginTop="7dp"
@@ -33,9 +71,11 @@
 			android:layout_marginBottom="20dp"
 			android:layout_weight="2">
 
+
 			<LinearLayout
 				android:id="@+id/ll2"
 				android:layout_width="500dp"
+				android:layout_marginTop="20dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical">
 

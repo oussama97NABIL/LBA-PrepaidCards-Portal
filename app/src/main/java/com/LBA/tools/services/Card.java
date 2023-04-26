@@ -21,7 +21,8 @@ public class Card {
 
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("token", "4281993108775830");
+        Log.e("TAG", "Token: "+Globals.token);
+        jsonObject.put("token", Globals.token);
 
         Log.e("TAG", "Token: "+Globals.user);
 
@@ -29,9 +30,9 @@ public class Card {
         JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceGetBalance, jsonObject);
         Log.e("TAG", "CardDetails: "+jsonRespObject);
 
-        /*if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
 
-            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");*/
+            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
 
 
         Globals.availableBalance = jsonRespObject.getString("availableBalance");
@@ -67,12 +68,12 @@ public class Card {
 
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("token", "4281993108775830" );
-        JSONObject jsonRespObject = HTTPClient.sendPostJSONcardDetail(Globals.serviceCardDetails, jsonObject);
+        JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceCardDetails, jsonObject);
         Log.e("TAG", "CardDetails: "+jsonRespObject);
 
-        /*if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
 
-            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");*/
+            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
 
 
         Globals.cardNumber = jsonRespObject.getString("cardNumber");
@@ -96,27 +97,24 @@ public class Card {
 
 
         Log.e("TAG", "cardNumber "+Globals.cardNumber);
-
     }
     static public void AccountToCard() throws Exception{
 
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("cardToken", "6361899512621901" );
-        jsonObject.put("accountNumber", "54823158647" );
-        jsonObject.put("amount", "20000" );
-        jsonObject.put("currency", "USD" );
-        jsonObject.put("memo", "transfert to my card" );
+        jsonObject.put("token", "4281993108775830" );
 
 
-        JSONObject jsonRespObject = HTTPClient.sendPostJSONAccountToCard(Globals.serviceAccountToCard, jsonObject);
+
+        JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceAccountToCard, jsonObject);
         Log.e("TAG", "Account To card: "+jsonRespObject);
 
-        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("92"))
             // throw new Exception("Pin request already done");
-            throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
+            throw new Exception("DONNEE ERRONE <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
         // Globals.transactionId=jsonRespObject.getString(Globals.transactionIdTag);
 
+        Globals.message = jsonRespObject.getString("message");
     }
     static public void CardToCard() throws Exception{
 
@@ -132,10 +130,11 @@ public class Card {
         JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceCardToCard, jsonObject);
         Log.e("TAG", "Card To card: "+jsonRespObject);
 
-        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
+        if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("01"))
             // throw new Exception("Pin request already done");
             throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
         // Globals.transactionId=jsonRespObject.getString(Globals.transactionIdTag);
+        Globals.message = jsonRespObject.getString("message");
 
     }
     static public void BlockCard(String operation) throws Exception{
@@ -161,10 +160,7 @@ public class Card {
 
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("token", "4281993108775830" );
-
-
-
-        JSONObject jsonRespObject = HTTPClient.sendPostJSONupdateLimits(Globals.serviceCardLimit, jsonObject);
+        JSONObject jsonRespObject = HTTPClient.sendPostJSON(Globals.serviceCardLimit, jsonObject);
         Log.e("TAG", "Update Limit: "+jsonRespObject);
 
         if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00") && jsonRespObject.has("message"))

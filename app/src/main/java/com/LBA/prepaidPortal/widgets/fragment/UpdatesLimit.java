@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -230,10 +231,52 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 }
                 return;
             }
+            if(param.contains("Successfull")){
+                DialogToValidation(true,param);
+            }
+            else {
+                DialogToValidation(false,param);
+            }
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
 
             Toast.makeText(getActivity().getApplicationContext(), Globals.message, Toast.LENGTH_LONG).show();
+        }
+    }
+    private void DialogToValidation(boolean isSuccessful , String message){
+        {
+            final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+            dialog.setContentView(R.layout.confirm_dialog_plafond);
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+            dialog.setCancelable(false);
+            dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+
+            Button okey = dialog.findViewById(R.id.btn_okay);
+            Button cancel = dialog.findViewById(R.id.btn_cancel);
+            if(!isSuccessful){
+                ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
+                image.setImageResource(R.drawable.error_icon);
+                TextView success = (TextView) dialog.findViewById(R.id.textView);
+                success.setText("Failure");
+                TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);
+                Felicitation.setText(message);
+            }
+            okey.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Okay", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+            cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Annuler", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.show();
         }
     }
     private void DialogPlafondsLimit(){
@@ -328,7 +371,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 }
                 return;
             }
-
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
             TextInputEditText CardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);

@@ -7,7 +7,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +22,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -222,7 +225,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                     @Override
                     public void onClick(View v) {
                         try {
-                            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+                            dialog.dismiss();
                             initProgrees();
                             new CustomTask().execute();
                         } catch (Exception e) {
@@ -240,16 +243,44 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                         }
                     }
                 });
-                Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/gilroy_bold.ttf");
-                validation_title.setTypeface(tf);
-                txtCode.setTypeface(tf);
-                final TextView textView = (TextView) dialog.findViewById(R.id.textView);
-                textView.setTypeface(tf);
-                final TextView textView2 = (TextView) dialog.findViewById(R.id.textView2);
-                textView2.setTypeface(tf);
-                final Button btnOk = (Button) dialog.findViewById(R.id.btnOk);
-                btnOk.setTypeface(tf);
+
                 dialog.show();
+        }
+    }
+    private void DialogToValidation(boolean isSuccessful , String message){
+        {
+            final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+            dialog.setContentView(R.layout.confirm_dialog);
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+            dialog.setCancelable(false);
+            dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+
+            Button okey = dialog.findViewById(R.id.btn_okay);
+            Button cancel = dialog.findViewById(R.id.btn_cancel);
+            if(!isSuccessful){
+                ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
+                image.setImageResource(R.drawable.error_icon);
+                TextView success = (TextView) dialog.findViewById(R.id.textView);
+                success.setText("Failure");
+                TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);
+                Felicitation.setText(message);
+            }
+            okey.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Okay", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+            cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Annuler", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.show();
         }
     }
     public void onNothingSelected(AdapterView<?> arg0) {
@@ -278,11 +309,10 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
             dismissProgress();
             super.onPostExecute(param);
             Log.e(TAG, "doInBackground: 2" );
-
+            Log.e(TAG, "param " +param);
             if(param!=null && param.contains("801")){
                 Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
                 Log.e(TAG, "doInBackground: 3" );
-
                 try {
                     // doLogout(null);
                 } catch (Exception e) {
@@ -290,7 +320,12 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 }
                 return;
             }
-
+            if(param.contains("Successfull")){
+                  DialogToValidation(true,param);
+            }
+            else {
+                DialogToValidation(false,param);
+            }
             if(param!=null) {
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
                 Log.e(TAG, "doInBackground: 4" );

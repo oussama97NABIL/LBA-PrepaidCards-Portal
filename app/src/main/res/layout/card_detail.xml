@@ -56,7 +56,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Card Number*"
+					android:hint="Le numéro de la carte*"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
@@ -73,37 +73,12 @@
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
-
-
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/accountNbrLayout"
-					android:layout_width="470dp"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="16dp"
-					android:hint="Bank Code*"
-					app:errorEnabled="true">
-
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/bankcode"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:clickable="true"
-						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
-						android:inputType="text"
-
-						android:textColor="@color/black" />
-
-				</com.google.android.material.textfield.TextInputLayout>
-
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/refrealCodeLayout"
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Bank Name"
+					android:hint="Nom de la Banque"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
@@ -171,7 +146,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Client Code*"
+					android:hint="Code du Client*"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
@@ -241,7 +216,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Client Type* (I=Individual)"
+					android:hint="Type du client*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -266,13 +241,11 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Status Card* (N=Normal, B=Blocked)"
+					android:hint="Carte de Status*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
-
 					>
-
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/status_Card"
 						android:layout_width="match_parent"
@@ -286,34 +259,13 @@
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
+
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/pinConfLayout"
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Product code*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/product_code"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:clickable="true"
-						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
-						android:inputType="text"
-						android:textColor="@color/black" />
-				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
-					android:layout_width="470dp"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="16dp"
-					android:hint="Title Card Holder*"
+					android:hint="Titulaire de la carte*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -335,7 +287,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Family Name*"
+					android:hint="Nom*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -357,7 +309,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Document Code*"
+					android:hint="Document Type*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -401,7 +353,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Address*"
+					android:hint="Addresse*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -423,7 +375,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Expiry Date*"
+					android:hint="Expire le*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -445,7 +397,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Mobile Number*"
+					android:hint="Numéro de téléphone*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -467,7 +419,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="City*"
+					android:hint="Ville*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"
@@ -489,7 +441,7 @@
 					android:layout_width="470dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Country*"
+					android:hint="Pays*"
 					android:inputType="numberPassword"
 					app:counterMaxLength="6"
 					app:errorEnabled="true"

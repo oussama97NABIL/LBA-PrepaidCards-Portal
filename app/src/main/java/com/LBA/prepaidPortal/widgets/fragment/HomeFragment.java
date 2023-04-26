@@ -119,7 +119,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     TextView textView4;
     TextView textView5;
     TextView textView6 ,welcomText;
-    EditText showSolde;
+    TextView showSolde;
 
 
     String encodedImage = null;
@@ -555,7 +555,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             try {
                 Globals.user = userCode;
                 Globals.password = password;
-                User.login(userCode, password, Globals.authenCode,1);
+
                 Log.e("TAG", "doInBackground: CustomTaskClientName");
                 return null;
             } catch (Exception e) {
@@ -624,6 +624,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
             showSolde.setText(Globals.availableBalance);
+            TextView currency= (TextView) mRootView.findViewById(R.id.currency);
+            currency.setText(Globals.currency);
         }
     }
     private class CustomTaskCurrency extends AsyncTask<String, String, String> {
@@ -658,7 +660,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
-            EditText currency= (EditText) mRootView.findViewById(R.id.currency);
+             TextView currency= (TextView) mRootView.findViewById(R.id.currency);
             currency.setText(Globals.currency);
         }
     }

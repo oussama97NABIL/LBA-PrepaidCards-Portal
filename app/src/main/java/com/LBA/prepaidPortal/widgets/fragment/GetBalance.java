@@ -113,7 +113,7 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
         nexBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity().getApplicationContext(), "Les relevés sont bien générés", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), "génération du relevé", Toast.LENGTH_SHORT).show();
             }
         });
 

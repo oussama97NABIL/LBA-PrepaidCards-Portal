@@ -24,6 +24,55 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="180dp"
+        android:layout_height="95dp"
+        android:layout_weight="3"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/première"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:text="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll5"
+        android:layout_width="180dp"
+        android:layout_height="95dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/murasakipurple"
+        android:layout_weight="3"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/deuxième"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:text="2" />
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1">
 
     <LinearLayout
         android:id="@+id/details"
@@ -32,7 +81,10 @@
         android:layout_column="0"
         android:layout_below="@id/heading_layout"
         android:layout_gravity="center_vertical"
-        android:layout_margin="30px"
+        android:layout_marginStart="30px"
+        android:layout_marginTop="170px"
+        android:layout_marginEnd="30px"
+        android:layout_marginBottom="30px"
         android:orientation="vertical"
         android:paddingTop="20dp">
 
@@ -129,8 +181,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="5"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    />
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow
@@ -144,7 +195,7 @@
                     android:layout_weight=".5"
                     android:inputType="numberDecimal"
                     android:textAlignment="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
             </TableRow>
 
             <TableRow
@@ -200,7 +251,7 @@
                     android:layout_column="4"
                     android:layout_weight=".5"
                     android:width="@android:dimen/thumbnail_width"
-                    android:text="Voulez confirmer votre choix ?"
+                    android:text="Veuillez confirmer votre choix "
                     android:textAlignment="gravity"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
@@ -217,6 +268,7 @@
                     android:layout_column="9"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -237,10 +289,10 @@
 
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true">
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
 
 
             <Button
@@ -251,9 +303,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/custom_white_button"
                 android:clickable="true"
+                android:elevation="5dp"
                 android:enabled="true"
                 android:text="Non"
-                android:elevation="5dp"
                 android:textColor="@color/black" />
 
             <Button
@@ -268,5 +320,5 @@
                 android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
-
+    </ScrollView>
 </RelativeLayout>

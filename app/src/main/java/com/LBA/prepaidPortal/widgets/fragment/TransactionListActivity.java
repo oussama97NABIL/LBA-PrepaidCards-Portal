@@ -233,12 +233,10 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
             TextView tvDate = (TextView) listItem.findViewById(R.id.thumb);
             TextView tvDate1 = (TextView) listItem.findViewById(R.id.date);
             TextView location = (TextView) listItem.findViewById(R.id.location);
-
-
-
+            TextView tvTransType = (TextView) listItem.findViewById(R.id.transaction_type);
             if(!wallet) {
                 if (Globals.transactionList.get(pos).getReferenceNumber() != null && Globals.transactionList.get(pos).getReferenceNumber().length() > 0) {
-                    tvValRef.setTextColor(getResources().getColor(R.color.black));
+                    tvValRef.setTextColor(getResources().getColor(R.color.MurasakiPurple));
                     tvValRef.setText(Globals.transactionList.get(pos).getReferenceNumber());
                 }
                 if (Globals.transactionList.get(pos).getDate() != null && Globals.transactionList.get(pos).getDate().length() > 0) {
@@ -252,6 +250,10 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
                 if (Globals.transactionList.get(pos).getAmount() != null && Globals.transactionList.get(pos).getAmount().length() > 0) {
                     location.setTextColor(getResources().getColor(R.color.MurasakiPurple));
                     location.setText(Globals.transactionList.get(pos).getLocation());
+                }
+                if (Globals.transactionList.get(pos).getTransactionType() != null && Globals.transactionList.get(pos).getTransactionType().length() > 0) {
+                    tvTransType.setTextColor(getResources().getColor(R.color.Black));
+                    tvTransType.setText(Globals.transactionList.get(pos).getTransactionType());
                 }
 
                 else {

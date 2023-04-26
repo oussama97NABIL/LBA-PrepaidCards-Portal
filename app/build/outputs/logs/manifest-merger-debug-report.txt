@@ -9,6 +9,7 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\BITS_DEV
 MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:17:1-29:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d76f35a08c08216004feed386d7db8d0\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\1bc1de6a32330280351f65a0393bdf57\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.shuhart.stepview:stepview:1.5.1] C:\Users\BITS_DEV\.gradle\caches\transforms-3\0a9a153d595ca62366ab963187aed16c\transformed\jetified-stepview-1.5.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\BITS_DEV\.gradle\caches\transforms-3\62be83210208ccdc6bef32902742be53\transformed\jetified-sdp-android-1.0.6\AndroidManifest.xml:2:1-11:12
 MERGED from [com.intuit.ssp:ssp-android:1.0.6] C:\Users\BITS_DEV\.gradle\caches\transforms-3\668279eb7e55e942e0d3b7431f1c8315\transformed\jetified-ssp-android-1.0.6\AndroidManifest.xml:2:1-11:12
 MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\839dd89a5913b008621380d1d9f221a6\transformed\jetified-roundedimageview-2.3.0\AndroidManifest.xml:2:1-9:12
@@ -141,6 +142,8 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\BITS_DEV\.gradle\cache
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d76f35a08c08216004feed386d7db8d0\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\1bc1de6a32330280351f65a0393bdf57\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\1bc1de6a32330280351f65a0393bdf57\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.shuhart.stepview:stepview:1.5.1] C:\Users\BITS_DEV\.gradle\caches\transforms-3\0a9a153d595ca62366ab963187aed16c\transformed\jetified-stepview-1.5.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuhart.stepview:stepview:1.5.1] C:\Users\BITS_DEV\.gradle\caches\transforms-3\0a9a153d595ca62366ab963187aed16c\transformed\jetified-stepview-1.5.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\BITS_DEV\.gradle\caches\transforms-3\62be83210208ccdc6bef32902742be53\transformed\jetified-sdp-android-1.0.6\AndroidManifest.xml:7:5-9:41
 MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\BITS_DEV\.gradle\caches\transforms-3\62be83210208ccdc6bef32902742be53\transformed\jetified-sdp-android-1.0.6\AndroidManifest.xml:7:5-9:41
 MERGED from [com.intuit.ssp:ssp-android:1.0.6] C:\Users\BITS_DEV\.gradle\caches\transforms-3\668279eb7e55e942e0d3b7431f1c8315\transformed\jetified-ssp-android-1.0.6\AndroidManifest.xml:7:5-9:41

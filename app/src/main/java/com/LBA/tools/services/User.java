@@ -52,7 +52,7 @@ public class User {
         Log.e("TAG", "Login: "+jsonRespObject);
 
         if(jsonRespObject.has("responseCode") && !jsonRespObject.getString("responseCode").equals("00"))
-            throw new Exception("Bienvenu");
+            throw new Exception("");
             //throw new Exception("PIN REQUEST FAILED <RespCode=["+(jsonRespObject.has("responseCode")?jsonRespObject.getString("responseCode"):"")+"]>");
 
         Globals.notificationViewed = false;
