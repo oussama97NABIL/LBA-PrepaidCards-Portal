@@ -17,6 +17,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.Nullable;
 
 import com.LBA.prepaidPortal.R;
@@ -29,7 +30,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 
-public class CardInformation1 extends BaseFragment implements AdapterView.OnItemSelectedListener {
+public class CardInformation1 extends BaseFragment implements AdapterView.OnItemSelectedListener,IOnBackPressed {
     Spinner spinCardNumber;
     TextView txtBalance;
     TextView txtCurrency;
@@ -57,6 +58,7 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.card_detail, container, false);
+        setupOnBackPressed();
 
         getActivity().setTitle("Les informations de la carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
@@ -136,6 +138,18 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
             toDatePickerDialog.show();
         }
     }
+    private void setupOnBackPressed(){
+        requireActivity().getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+               if(isEnabled()){
+                   Toast.makeText(requireContext(), "Go back", Toast.LENGTH_SHORT).show();
+                   setEnabled(false);
+                   requireActivity().onBackPressed();
+               }
+            }
+        });
+    }
 
     public void getCardInformations(){
         try {
@@ -178,6 +192,18 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
+
+    @Override
+    public boolean onBackPressed() {
+        if (getFragmentManager() != null) {
+            //action not popBackStack
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
     private class CustomTask extends AsyncTask<String, String, String> {
         protected String doInBackground(String... param) {
             try {

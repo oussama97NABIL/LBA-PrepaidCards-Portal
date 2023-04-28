@@ -80,8 +80,8 @@
     <string name="Validation">Validation</string>
     <string name="Confirmation">Confirmation</string>
     <array name="details">
-        <item>Rectification</item>
-        <item>Confirmation</item>
-        <item>Validation</item>
+        <item>SAISIE</item>
+        <item>VALIDATION</item>
+        <item>CONFIRMATION</item>
     </array>
 </resources>

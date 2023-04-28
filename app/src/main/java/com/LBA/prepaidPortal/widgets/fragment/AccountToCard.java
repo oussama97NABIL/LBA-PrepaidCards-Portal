@@ -1,18 +1,22 @@
 package com.LBA.prepaidPortal.widgets.fragment;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -85,20 +89,9 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         nexBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
-                    initProgrees();
-                    new CustomTask().execute();
-                } catch (Exception e) {
-                    //Log.d(TAG, "btnLoad.setOnClickListener()", e);
-                    Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                }
+                DialogAccountToCard();
             }
         });
-
-
-
-
         /**
          TextView txtBalance;
          TextView txtCurrency;
@@ -204,6 +197,101 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
             }*/
         }
     }
+    private void DialogAccountToCard(){
+        {
+            final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.new_benef_conf_account_to_card);
+            // set title
+            TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
+            validation_title.setText(R.string.Validation);
+            /*final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
+            txtCode.setText(Globals.transactionId);*/
+            dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        dialog.dismiss();
+                        initProgrees();
+                        HomeTask task = new HomeTask(HomeActivity.class);
+                        task.execute();
+                    } catch (Exception e) {
+                        Log.d(TAG, "btnLoad.setOnClickListener()", e);
+                        //  Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                        androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                        alertDialog.setMessage( e.getMessage());
+                        alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        alertDialog.show();
+                    }
+                }
+            });
+            dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        dialog.dismiss();
+                        initProgrees();
+                        new CustomTask().execute();
+                    } catch (Exception e) {
+                        Log.d(TAG, "btnLoad.setOnClickListener()", e);
+                        // Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                        androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                        alertDialog.setMessage(e.getMessage());
+                        alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        alertDialog.show();
+                    }
+                }
+            });
+
+            dialog.show();
+        }
+    }
+    private void DialogToValidation(boolean isSuccessful , String message){
+        {
+            final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+            dialog.setContentView(R.layout.confirm_dialog_account_to_card);
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+            dialog.setCancelable(false);
+            dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+
+            Button okey = dialog.findViewById(R.id.btn_okay);
+            Button cancel = dialog.findViewById(R.id.btn_cancel);
+            if(!isSuccessful){
+                ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
+                image.setImageResource(R.drawable.error_icon);
+                TextView success = (TextView) dialog.findViewById(R.id.textView);
+                success.setText("Failure");
+                TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);
+                Felicitation.setText(message);
+            }
+            okey.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Okay", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+            cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Annuler", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.show();
+        }
+    }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
@@ -211,8 +299,6 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         protected String doInBackground(String... param) {
             try {
                 Card.AccountToCard();
-                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
-                //startActivity(myWelcomeAct);
                 return null;
             } catch (Exception e) {
                 e.printStackTrace();
@@ -232,12 +318,17 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                 }
                 return;
             }
-
-            if(param!=null)
-                if(param!=null)
+            if(param!=null){
                     Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
-
-            Toast.makeText(getActivity().getApplicationContext(), Globals.message, Toast.LENGTH_LONG).show();
+                    Log.e(TAG, "doInBackground: 4" );
+            }else{
+                if(Globals.message.contains("Successfull")){
+                    DialogToValidation(true,Globals.message);
+                }
+                else {
+                    DialogToValidation(false,Globals.message);
+                }
+            }
         }
     }
     private class CustomTaskCardNumber extends AsyncTask<String, String, String> {

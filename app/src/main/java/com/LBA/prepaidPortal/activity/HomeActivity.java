@@ -30,6 +30,7 @@ import com.LBA.prepaidPortal.widgets.fragment.CardInformation1;
 import com.LBA.prepaidPortal.widgets.fragment.CardToCard;
 
 import com.LBA.prepaidPortal.widgets.fragment.GetBalance;
+import com.LBA.prepaidPortal.widgets.fragment.IOnBackPressed;
 import com.LBA.prepaidPortal.widgets.fragment.Last10Transactions;
 import com.LBA.prepaidPortal.widgets.fragment.TransactionListActivity;
 import com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit;
@@ -137,6 +138,10 @@ public class HomeActivity extends AbstractActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
+            super.onBackPressed();
+        }
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content_frame);
+        if (!(fragment instanceof IOnBackPressed) || !((IOnBackPressed) fragment).onBackPressed()) {
             super.onBackPressed();
         }
     }

@@ -84,7 +84,6 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                              @Nullable Bundle savedInstanceState) {
 
         mRootView = inflater.inflate(R.layout.block_card, container, false);
-        MainFragmentBinding binding = MainFragmentBinding.inflate(inflater, container, false);
         getActivity().setTitle("Bloquer/Débloquer une carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
@@ -190,7 +189,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 dialog.setContentView(R.layout.new_benef_conf);
                 // set title
                 TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
-                validation_title.setText(R.string.Confirmation);
+                validation_title.setText(R.string.Validation);
                 final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
                 txtCode.setText(Globals.transactionId);
                 /*dialog.findViewById(R.id.Back).setOnClickListener(new View.OnClickListener() {
@@ -248,7 +247,6 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                         }
                     }
                 });
-
                 dialog.show();
         }
     }
