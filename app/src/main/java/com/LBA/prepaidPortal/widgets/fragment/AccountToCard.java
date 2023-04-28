@@ -25,13 +25,18 @@ import androidx.annotation.Nullable;
 
 import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.HomeActivity;
+import com.LBA.prepaidPortal.databinding.FragmentCardInformationBinding;
+import com.LBA.prepaidPortal.databinding.FragmentHomeBinding;
 import com.LBA.tools.assets.Globals;
 import com.LBA.tools.services.Card;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.shuhart.stepview.StepView;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -40,8 +45,13 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
     TextView txtBalance;
     TextView txtCurrency;
     private EditText fromDateEtxt;
+
+    private int position = 0;
+    private StepView mStepView;
+
     private EditText toDateEtxt;
     private Button btnLoad;
+
     private DatePickerDialog fromDatePickerDialog;
     private DatePickerDialog toDatePickerDialog;
     private SimpleDateFormat dateFormatter;
@@ -51,6 +61,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
     TextView BankName;
     ImageButton canBtn;
     MaterialButton nexBtn;
+
 
     TextView textView_heading;
     TextView textView;
@@ -71,6 +82,9 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
         canBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
+        mStepView = (StepView) mRootView. findViewById(R.id.step_view);
+        List<String> steps = Arrays.asList(new String[]{"SAISIE", "VALIDATION", "CONFIRMATION"});
+        mStepView.setSteps(steps);
 
 
 
@@ -92,6 +106,9 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                 DialogAccountToCard();
             }
         });
+
+
+
         /**
          TextView txtBalance;
          TextView txtCurrency;

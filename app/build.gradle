@@ -26,6 +26,9 @@ android {
     lintOptions {
         abortOnError false
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -38,6 +41,7 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     testImplementation 'junit:junit:4.12'
     implementation 'com.shuhart.stepview:stepview:1.5.1'
+    implementation 'com.android.databinding:library:3.5.0'
     //responsive ui
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
