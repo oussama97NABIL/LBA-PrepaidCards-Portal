@@ -54,7 +54,7 @@
             android:layout_marginTop="@dimen/_2sdp"
             android:layout_marginBottom="@dimen/_3sdp"
             android:fontFamily="@font/roboto_regular"
-            android:text="référence number: "
+            android:text="Numéro de Référence: "
             android:textColor="@color/black"
             android:textSize="@dimen/_13ssp"/>
         <TextView
@@ -115,7 +115,7 @@
 
             android:textSize="@dimen/_13ssp"
             android:layout_below="@id/transactionId"
-            android:text="Amount:"
+            android:text="Montant:"
             android:layout_marginBottom="@dimen/_16sdp"
             android:textColor="@color/black"
             android:layout_weight="1"

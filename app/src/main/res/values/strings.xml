@@ -79,4 +79,9 @@
     <string name="Amount">AMOUNT</string>
     <string name="Validation">Validation</string>
     <string name="Confirmation">Confirmation</string>
+    <array name="details">
+        <item>Rectification</item>
+        <item>Confirmation</item>
+        <item>Validation</item>
+    </array>
 </resources>

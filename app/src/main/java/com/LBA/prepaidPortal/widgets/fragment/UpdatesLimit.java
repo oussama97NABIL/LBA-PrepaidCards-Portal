@@ -154,7 +154,7 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         }
     }
 
-    public void getCardLimit(){
+    public void     getCardLimit(){
         try {
             //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
             initProgrees();
@@ -221,6 +221,7 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         protected void onPostExecute(String param) {
             dismissProgress();
             super.onPostExecute(param);
+            Log.d(TAG, "Param" +param);
 
             if(param!=null && param.contains("801")){
                 Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
@@ -231,16 +232,20 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 }
                 return;
             }
-            if(param.contains("Successfull")){
-                DialogToValidation(true,param);
-            }
-            else {
-                DialogToValidation(false,param);
-            }
-            if(param!=null)
-                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
 
-            Toast.makeText(getActivity().getApplicationContext(), Globals.message, Toast.LENGTH_LONG).show();
+
+            if(param!=null) {
+
+                Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
+                Log.e(TAG, "doInBackground: 4" );
+            }else{
+                if(Globals.message.contains("Successfull")){
+                    DialogToValidation(true,Globals.message);
+                }
+                else {
+                    DialogToValidation(false,Globals.message);
+                }
+            }
         }
     }
     private void DialogToValidation(boolean isSuccessful , String message){

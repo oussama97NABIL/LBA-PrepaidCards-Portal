@@ -41,8 +41,10 @@ import com.LBA.tools.assets.Globals;
 import com.LBA.tools.services.Card;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.shuhart.stepview.StepView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -51,6 +53,9 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
     Spinner spinCardNumber;
     TextView txtBalance;
     TextView txtCurrency;
+    private StepView stepView;
+
+
     private EditText fromDateEtxt;
     private EditText toDateEtxt;
     private Button btnLoad;
@@ -77,16 +82,16 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
         mRootView = inflater.inflate(R.layout.block_card, container, false);
+        MainFragmentBinding binding = MainFragmentBinding.inflate(inflater, container, false);
         getActivity().setTitle("Bloquer/Débloquer une carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
         canBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
-
-
-
+        StepView stepView = (StepView) mRootView.findViewById(R.id.step_view);
         //getCardInformations();
         OpenTime();
         getCardNumber();
