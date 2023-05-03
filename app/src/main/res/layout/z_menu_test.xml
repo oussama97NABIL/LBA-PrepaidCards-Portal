@@ -219,12 +219,12 @@
                     android:layout_marginLeft="56dp"
                     android:layout_below="@id/textView14"/>
                 <TextView
-                    android:id="@+id/currency"
+                    android:id="@+id/balance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
                     android:focusable="false"
-                    android:text="****"
+                    android:text="MAD"
                     android:focusableInTouchMode="false"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="280dp"

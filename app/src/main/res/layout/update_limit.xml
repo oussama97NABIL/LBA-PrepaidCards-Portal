@@ -38,11 +38,11 @@
 			app:sv_doneCircleColor="@color/MurasakiPurple"
 			app:sv_doneCircleRadius="20dp"
 			app:sv_doneStepLineColor="@color/black"
-			app:sv_doneStepMarkColor="@color/MurasakiPurple"
+			app:sv_doneStepMarkColor="@color/white"
 			app:sv_doneTextColor="@android:color/darker_gray"
 			app:sv_nextStepLineColor="@color/black"
 			app:sv_nextTextColor="@color/black"
-			app:sv_selectedCircleColor="@color/MurasakiPurple"
+			app:sv_selectedCircleColor="@color/colorAccent"
 			app:sv_selectedCircleRadius="12dp"
 			app:sv_selectedStepNumberColor="@color/black"
 			app:sv_selectedTextColor="@color/black"
@@ -53,7 +53,6 @@
 			app:sv_steps="@array/details"
 			app:sv_stepsNumber="3"
 			app:sv_textSize="12sp" />
-
 		<androidx.constraintlayout.widget.ConstraintLayout
 			android:id="@+id/rectification"
 			android:layout_width="373dp"
@@ -71,7 +70,7 @@
 			android:layout_height="522dp"
 			android:layout_marginStart="5dp"
 			android:layout_marginLeft="16dp"
-			android:layout_marginTop="7dp"
+			android:layout_marginTop="60dp"
 			android:layout_marginEnd="5dp"
 			android:layout_marginRight="16dp"
 			android:layout_marginBottom="20dp"
@@ -80,14 +79,14 @@
 
 			<LinearLayout
 				android:id="@+id/ll2"
-				android:layout_width="500dp"
+				android:layout_width="326dp"
 				android:layout_marginTop="20dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical">
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/mobilelLayout"
-					android:layout_width="376dp"
+					android:layout_width="350dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Numéro de la carte*"
@@ -109,7 +108,7 @@
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/accountNbrLayout"
-					android:layout_width="378dp"
+					android:layout_width="350dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Atm Limit*"
@@ -117,7 +116,7 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/limitCash"
-						android:layout_width="377dp"
+						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
@@ -130,7 +129,7 @@
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/accountNbrLayout"
-					android:layout_width="378dp"
+					android:layout_width="350dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Pos Limit*"
@@ -138,9 +137,8 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/limitPurchase"
-						android:layout_width="377dp"
+						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
 						android:focusable="false"
@@ -153,7 +151,7 @@
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/accountNbrLayout"
-					android:layout_width="378dp"
+					android:layout_width="350dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Online Limits*"
@@ -161,7 +159,7 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/limitEcom"
-						android:layout_width="377dp"
+						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
@@ -171,113 +169,8 @@
 						android:inputType="text"
 						android:textColor="@color/black" />
 				</com.google.android.material.textfield.TextInputLayout>
-
-
-				<!--  ???  <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailLayout"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:hint=""
-            style="@style/MyTextInputLayout_overlay"
-            android:layout_marginStart="16dp"
-            app:errorEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textViewemail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:ems="10"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:inputType="phone" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/customerSpinnerLayout"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:hint="DOMICILE BRANCH">
-
-            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-                android:id="@+id/customerTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                tools:ignore="KeyboardInaccessibleWidget" />
-        </com.google.android.material.textfield.TextInputLayout>-->
-
-
-				<!--     <EditText
-            android:id="@+id/dob"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:paddingRight="5dp"
-            android:inputType="textPersonName"
-            android:drawableRight="@drawable/calendar"
-            android:textColor="@color/black"
-            /> -->
-
-				<!--   <EditText
-            android:id="@+id/pin"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:background="@drawable/button_border_fields"
-            android:inputType="numberPassword"
-            android:textAlignment="gravity"
-            android:maxLength="6"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />
--->
-
-				<!--<EditText
-            android:id="@+id/pinConf"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:maxLength="6"
-            android:width="150dp"
-            android:background="@drawable/button_border_fields"
-            android:inputType="numberPassword"
-            android:textAlignment="gravity"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />-->
-
-				<!--   <EditText
-            android:id="@+id/pass"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:inputType="textPassword"
-            android:textAlignment="gravity"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />-->
-
-				<!--
-
-        <EditText
-            android:id="@+id/passConf"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:background="@drawable/button_border_fields"
-            android:inputType="textPassword"
-            android:textAlignment="gravity"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />-->
-
-
 			</LinearLayout>
-
-
 		</ScrollView>
-
 		<include
 			android:id="@+id/footer_layout"
 			layout="@layout/footer_layout"

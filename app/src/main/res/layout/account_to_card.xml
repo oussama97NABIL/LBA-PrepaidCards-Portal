@@ -37,11 +37,11 @@
 			app:sv_doneCircleColor="@color/MurasakiPurple"
 			app:sv_doneCircleRadius="20dp"
 			app:sv_doneStepLineColor="@color/black"
-			app:sv_doneStepMarkColor="@color/MurasakiPurple"
+			app:sv_doneStepMarkColor="@color/white"
 			app:sv_doneTextColor="@android:color/darker_gray"
 			app:sv_nextStepLineColor="@color/black"
 			app:sv_nextTextColor="@color/black"
-			app:sv_selectedCircleColor="@color/MurasakiPurple"
+			app:sv_selectedCircleColor="@color/colorAccent"
 			app:sv_selectedCircleRadius="12dp"
 			app:sv_selectedStepNumberColor="@color/black"
 			app:sv_selectedTextColor="@color/black"
@@ -72,7 +72,7 @@
 			android:layout_height="522dp"
 			android:layout_marginStart="5dp"
 			android:layout_marginLeft="16dp"
-			android:layout_marginTop="7dp"
+			android:layout_marginTop="30dp"
 			android:layout_marginEnd="5dp"
 			android:layout_marginRight="16dp"
 			android:layout_marginBottom="20dp"
@@ -80,14 +80,14 @@
 
 			<LinearLayout
 				android:id="@+id/ll2"
-				android:layout_width="500dp"
+				android:layout_width="326dp"
 				android:layout_marginTop="50dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical">
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/mobilelLayout"
-					android:layout_width="376dp"
+					android:layout_width="350dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Numéro de la carte*"
@@ -120,7 +120,7 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/account_number"
-						android:layout_width="377dp"
+						android:layout_width="350dp"
 						android:layout_height="wrap_content"
 						android:clickable="true"
 						android:ems="10"
@@ -136,7 +136,7 @@
 
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/refrealCodeLayout"
-					android:layout_width="378dp"
+					android:layout_width="350dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Montant"
@@ -157,7 +157,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/refrealCodeLayout"
-					android:layout_width="378dp"
+					android:layout_width="350dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
 					android:hint="Memo"

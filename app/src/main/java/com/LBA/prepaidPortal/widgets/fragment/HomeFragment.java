@@ -204,6 +204,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         viewPager2 = mRootView.findViewById(R.id.viewPagerImageSlider);
 
 
+
         viewPager2.setCurrentItem(1);
 
         viewPager2.setClipToPadding(false);
@@ -624,8 +625,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
             showSolde.setText(Globals.availableBalance);
-            TextView currency= (TextView) mRootView.findViewById(R.id.currency);
-            currency.setText(Globals.currency);
+
         }
     }
     private class CustomTaskCurrency extends AsyncTask<String, String, String> {
@@ -660,8 +660,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
             if(param!=null)
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
-             TextView currency= (TextView) mRootView.findViewById(R.id.currency);
-            currency.setText(Globals.currency);
+             TextView currency= (TextView) mRootView.findViewById(R.id.balance);
+             currency.setText(Globals.balance);
         }
     }
     private class CustomTask extends AsyncTask<String, String, String> {

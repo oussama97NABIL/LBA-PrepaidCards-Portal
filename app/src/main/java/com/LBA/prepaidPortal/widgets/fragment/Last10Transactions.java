@@ -75,7 +75,7 @@ public class Last10Transactions extends BaseFragment implements AdapterView.OnIt
         TransactionType = (EditText) mRootView.findViewById(R.id.transactiontype);
         Amount = (EditText) mRootView.findViewById(R.id.amount);
         Currency = (EditText) mRootView.findViewById(R.id.currency);
-        ReferenceNumber = (EditText) mRootView.findViewById(R.id.refrence_number);
+
         Location = (EditText) mRootView.findViewById(R.id.location);
 
 

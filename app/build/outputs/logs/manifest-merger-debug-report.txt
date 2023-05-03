@@ -4,6 +4,8 @@ ADDED from C:\Users\BITS_DEV\Desktop\LBA_new\app\src\main\AndroidManifest.xml:2:
 INJECTED from C:\Users\BITS_DEV\Desktop\LBA_new\app\src\main\AndroidManifest.xml:2:1-34:12
 INJECTED from C:\Users\BITS_DEV\Desktop\LBA_new\app\src\main\AndroidManifest.xml:2:1-34:12
 INJECTED from C:\Users\BITS_DEV\Desktop\LBA_new\app\src\main\AndroidManifest.xml:2:1-34:12
+MERGED from [androidx.databinding:databinding-adapters:7.0.3] C:\Users\BITS_DEV\.gradle\caches\transforms-3\804f5cef2c8055f0399a1981ab0eea6e\transformed\databinding-adapters-7.0.3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.databinding:databinding-runtime:7.0.3] C:\Users\BITS_DEV\.gradle\caches\transforms-3\0c04245b2da26fe59610149e702f545f\transformed\databinding-runtime-7.0.3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\f794c157ce27c216c504b2261e60ef5d\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\BITS_DEV\.gradle\caches\transforms-3\c649c7616e40631ba13966002d4bc285\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\afc0deba7b9b8de622d45124ddb6b7dd\transformed\biometric-1.1.0\AndroidManifest.xml:17:1-29:12
@@ -29,14 +31,15 @@ MERGED from [androidx.customview:customview:1.0.0] C:\Users\BITS_DEV\.gradle\cac
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\6d6e532017af0c907cd34d38d04e17fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d35f0010fbff61dfb15ae12685344215\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.5.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.databinding:viewbinding:7.0.3] C:\Users\BITS_DEV\.gradle\caches\transforms-3\aedac3ef7d5f2c617ead8656bf92c449\transformed\jetified-viewbinding-7.0.3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\02660f3bb5ba5d35d36b84f966b5477a\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\58c33f79541fa64793747c2f03ce017d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\5267a53a2d15588de00a1bdb2c39ebb8\transformed\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\a59437bec093e25b88e1ed0cf3a9ded1\transformed\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\02660f3bb5ba5d35d36b84f966b5477a\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\fb3449e72dc29f308cc217ab7482dbfb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d6b2c6310d0da332cb9475defea77305\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\2d52251ccbf37567fe83dbfcfab10bfb\transformed\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\fb3449e72dc29f308cc217ab7482dbfb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\72de0627c0c71c2c0ac6e20b5aa28ba3\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\5dc1b0d68d5be8d395af6b357c3240c1\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\eb3bd80f829817dc46cef00554f9b4ab\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -132,6 +135,10 @@ uses-sdk
 INJECTED from C:\Users\BITS_DEV\Desktop\LBA_new\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\BITS_DEV\Desktop\LBA_new\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\BITS_DEV\Desktop\LBA_new\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:databinding-adapters:7.0.3] C:\Users\BITS_DEV\.gradle\caches\transforms-3\804f5cef2c8055f0399a1981ab0eea6e\transformed\databinding-adapters-7.0.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:databinding-adapters:7.0.3] C:\Users\BITS_DEV\.gradle\caches\transforms-3\804f5cef2c8055f0399a1981ab0eea6e\transformed\databinding-adapters-7.0.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:databinding-runtime:7.0.3] C:\Users\BITS_DEV\.gradle\caches\transforms-3\0c04245b2da26fe59610149e702f545f\transformed\databinding-runtime-7.0.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:databinding-runtime:7.0.3] C:\Users\BITS_DEV\.gradle\caches\transforms-3\0c04245b2da26fe59610149e702f545f\transformed\databinding-runtime-7.0.3\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\f794c157ce27c216c504b2261e60ef5d\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\f794c157ce27c216c504b2261e60ef5d\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\BITS_DEV\.gradle\caches\transforms-3\c649c7616e40631ba13966002d4bc285\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
@@ -182,22 +189,24 @@ MERGED from [androidx.loader:loader:1.0.0] C:\Users\BITS_DEV\.gradle\caches\tran
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d35f0010fbff61dfb15ae12685344215\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.5.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.5.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.0.3] C:\Users\BITS_DEV\.gradle\caches\transforms-3\aedac3ef7d5f2c617ead8656bf92c449\transformed\jetified-viewbinding-7.0.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:7.0.3] C:\Users\BITS_DEV\.gradle\caches\transforms-3\aedac3ef7d5f2c617ead8656bf92c449\transformed\jetified-viewbinding-7.0.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\02660f3bb5ba5d35d36b84f966b5477a\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\02660f3bb5ba5d35d36b84f966b5477a\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\58c33f79541fa64793747c2f03ce017d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\58c33f79541fa64793747c2f03ce017d\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\5267a53a2d15588de00a1bdb2c39ebb8\transformed\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\5267a53a2d15588de00a1bdb2c39ebb8\transformed\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\a59437bec093e25b88e1ed0cf3a9ded1\transformed\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\a59437bec093e25b88e1ed0cf3a9ded1\transformed\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d88cacb3ad7019752e911e94c62f5798\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\02660f3bb5ba5d35d36b84f966b5477a\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\02660f3bb5ba5d35d36b84f966b5477a\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\fb3449e72dc29f308cc217ab7482dbfb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\fb3449e72dc29f308cc217ab7482dbfb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d6b2c6310d0da332cb9475defea77305\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\d6b2c6310d0da332cb9475defea77305\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\2d52251ccbf37567fe83dbfcfab10bfb\transformed\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\2d52251ccbf37567fe83dbfcfab10bfb\transformed\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\fb3449e72dc29f308cc217ab7482dbfb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\fb3449e72dc29f308cc217ab7482dbfb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\72de0627c0c71c2c0ac6e20b5aa28ba3\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\72de0627c0c71c2c0ac6e20b5aa28ba3\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\BITS_DEV\.gradle\caches\transforms-3\5dc1b0d68d5be8d395af6b357c3240c1\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44

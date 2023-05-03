@@ -1,13 +1,10 @@
 package com.LBA.prepaidPortal.widgets.fragment;
 
-import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -29,12 +27,11 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.LBA.MainActivity;
 import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.LBA.tools.assets.Globals;
@@ -44,8 +41,9 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.shuhart.stepview.StepView;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -53,8 +51,8 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
     Spinner spinCardNumber;
     TextView txtBalance;
     TextView txtCurrency;
-    private StepView stepView;
-
+    private StepView mStepView;
+    protected final int MAX_HEIGHT = 500;
 
     private EditText fromDateEtxt;
     private EditText toDateEtxt;
@@ -83,14 +81,20 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        mRootView = inflater.inflate(R.layout.block_card, container, false);
+        mRootView = inflater.inflate(R.layout.block_card_new, container, false);
         getActivity().setTitle("Bloquer/Débloquer une carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
         canBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
-        StepView stepView = (StepView) mRootView.findViewById(R.id.step_view);
+        mStepView = (StepView) mRootView. findViewById(R.id.step_view);
+        Log.e(TAG, "onCreateView: HC -----  mStepView.getState()");
+        mStepView.done(false);
+
+
+        List<String> steps = Arrays.asList(new String[]{"SAISIE", "VALIDATION", "CONFIRMATION"});
+        mStepView.setSteps(steps);
         //getCardInformations();
         OpenTime();
         getCardNumber();
@@ -106,9 +110,32 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
         nexBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                  DialogBlockCard();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    DialogBlockCard();
+                }
             }
         });
+        mStepView.getState()
+                .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
+                .animationType(StepView.ANIMATION_CIRCLE)
+                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorAccent))
+                .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
+                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorPrimary))
+                // You should specify only stepsNumber or steps array of strings.
+                // In case you specify both steps array is chosen.
+
+                // You should specify only steps number or steps array of strings.
+                // In case you specify both steps array is chosen.
+                .stepsNumber(3)
+                .animationType(StepView.ANIMATION_LINE)
+                .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
+                .animationDuration(getResources().getInteger(android.R.integer.config_shortAnimTime))
+                .stepLineWidth(getResources().getDimensionPixelSize(R.dimen._1sdp))
+                .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
+                .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen._16sdp))
+                .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
+                // other state methods are equal to the corresponding xml attributes
+                .commit();
         String[] arraySpinner = new String[] {
                 "Bloquer","Débloquer"
         };
@@ -182,82 +209,101 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
 
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void DialogBlockCard(){
         {
-                final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.setContentView(R.layout.new_benef_conf);
-                // set title
-                TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
-                validation_title.setText(R.string.Validation);
-                final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
-                txtCode.setText(Globals.transactionId);
-                /*dialog.findViewById(R.id.Back).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Fragment fragmentToLoad = new BlockCard();
-                        FragmentTransaction fragmentTransaction =
-                                    fm.beginTransaction();
-                        fragmentTransaction.replace(R.id.content_frame, fragmentToLoad);
-                        fragmentTransaction.commit();
+
+            final Dialog dialog = new Dialog(getActivity());
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            lp.copyFrom(dialog.getWindow().getAttributes());
+            int dialogWidth = lp.width;
+            int dialogHeight = lp.height;
+
+            if (dialogWidth < MAX_HEIGHT) {
+                dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
+            }
+
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.getWindow().setBackgroundDrawable(getActivity().getDrawable(R.drawable.white_rect));
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.new_benef_conf);
+            // set title
+            TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
+            validation_title.setText(R.string.Validation);
+            /*final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
+            txtCode.setText(Globals.transactionId);*/
+            // mStepView.done(false);
+            TextView cardNumber = (TextView) dialog.findViewById(R.id.cardNumber);
+            cardNumber.setText(Globals.cardNumber);
+            mStepView.go(1, true);
+
+            dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        dialog.dismiss();
+                        initProgrees();
+                       HomeTask task = new HomeTask(HomeActivity.class);
+                        task.execute();
+                    } catch (Exception e) {
+                        Log.d(TAG, "btnLoad.setOnClickListener()", e);
+                        //  Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                        androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                        alertDialog.setMessage( e.getMessage());
+                        alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        alertDialog.show();
                     }
-                });*/
-                dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        try {
-                            dialog.dismiss();
-                            initProgrees();
-                            HomeTask task = new HomeTask(HomeActivity.class);
-                            task.execute();
-                        } catch (Exception e) {
-                            Log.d(TAG, "btnLoad.setOnClickListener()", e);
-                            //  Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                            androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
-                            alertDialog.setMessage( e.getMessage());
-                            alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                                    new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            dialog.dismiss();
-                                        }
-                                    });
-                            alertDialog.show();
-                        }
+                }
+            });
+            dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        dialog.dismiss();
+                        initProgrees();
+                        new CustomTask().execute();
+                    } catch (Exception e) {
+                        Log.d(TAG, "btnLoad.setOnClickListener()", e);
+                        // Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                        androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                        alertDialog.setMessage(e.getMessage());
+                        alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                        alertDialog.show();
                     }
-                });
-                dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        try {
-                            dialog.dismiss();
-                            initProgrees();
-                            new CustomTask().execute();
-                        } catch (Exception e) {
-                            Log.d(TAG, "btnLoad.setOnClickListener()", e);
-                            // Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                            androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
-                            alertDialog.setMessage(e.getMessage());
-                            alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                                    new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            dialog.dismiss();
-                                        }
-                                    });
-                            alertDialog.show();
-                        }
-                    }
-                });
-                dialog.show();
+                }
+            });
+
+            dialog.show();
         }
     }
     private void DialogToValidation(boolean isSuccessful , String message){
         {
-            final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
-            dialog.setContentView(R.layout.confirm_dialog);
+            final Dialog dialog = new Dialog(getActivity());
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            lp.copyFrom(dialog.getWindow().getAttributes());
+            int dialogWidth = lp.width;
+            int dialogHeight = lp.height;
+            if (dialogWidth < MAX_HEIGHT) {
+                dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
+            }
+
+            dialog.setContentView(R.layout.confirm_dialog_block_card);
             dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
             dialog.setCancelable(false);
             dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
 
+
+            mStepView.go(2,true);
             Button okey = dialog.findViewById(R.id.btn_okay);
             Button cancel = dialog.findViewById(R.id.btn_cancel);
             if(!isSuccessful){
@@ -271,6 +317,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
             okey.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    mStepView.done(true);
                     Toast.makeText(getActivity().getApplicationContext(), "Okay", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
                 }

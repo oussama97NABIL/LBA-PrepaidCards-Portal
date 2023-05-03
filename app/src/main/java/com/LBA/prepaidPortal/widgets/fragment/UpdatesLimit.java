@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +25,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.HomeActivity;
@@ -30,9 +35,12 @@ import com.LBA.tools.assets.Globals;
 import com.LBA.tools.services.Card;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.shuhart.stepview.StepView;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -40,6 +48,8 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
     Spinner spinCardNumber;
     TextView txtBalance;
     TextView txtCurrency;
+    private StepView mStepView;
+    protected final int MAX_HEIGHT = 500;
     private EditText fromDateEtxt;
     private EditText toDateEtxt;
     private Button btnLoad;
@@ -72,7 +82,12 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
         canBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
+        mStepView = (StepView) mRootView. findViewById(R.id.step_view);
+        Log.e(TAG, "onCreateView: HC -----  mStepView.getState()");
+        mStepView.done(false);
 
+        List<String> steps = Arrays.asList(new String[]{"SAISIE", "VALIDATION", "CONFIRMATION"});
+        mStepView.setSteps(steps);
 
 
         //getCardInformations();
@@ -90,10 +105,32 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         nexBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogPlafondsLimit();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    DialogPlafondsLimit();
+                }
             }
         });
+        mStepView.getState()
+                .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
+                .animationType(StepView.ANIMATION_CIRCLE)
+                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorAccent))
+                .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
+                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorPrimary))
+                // You should specify only stepsNumber or steps array of strings.
+                // In case you specify both steps array is chosen.
 
+                // You should specify only steps number or steps array of strings.
+                // In case you specify both steps array is chosen.
+                .stepsNumber(3)
+                .animationType(StepView.ANIMATION_LINE)
+                .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
+                .animationDuration(getResources().getInteger(android.R.integer.config_shortAnimTime))
+                .stepLineWidth(getResources().getDimensionPixelSize(R.dimen._1sdp))
+                .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
+                .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen._16sdp))
+                .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
+                // other state methods are equal to the corresponding xml attributes
+                .commit();
 
 
 
@@ -154,7 +191,7 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         }
     }
 
-    public void     getCardLimit(){
+    public void  getCardLimit(){
         try {
             //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
             initProgrees();
@@ -248,52 +285,34 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
             }
         }
     }
-    private void DialogToValidation(boolean isSuccessful , String message){
-        {
-            final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
-            dialog.setContentView(R.layout.confirm_dialog_plafond);
-            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-            dialog.setCancelable(false);
-            dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
-
-            Button okey = dialog.findViewById(R.id.btn_okay);
-            Button cancel = dialog.findViewById(R.id.btn_cancel);
-            if(!isSuccessful){
-                ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
-                image.setImageResource(R.drawable.error_icon);
-                TextView success = (TextView) dialog.findViewById(R.id.textView);
-                success.setText("Failure");
-                TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);
-                Felicitation.setText(message);
-            }
-            okey.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Okay", Toast.LENGTH_SHORT).show();
-                    dialog.dismiss();
-                }
-            });
-            cancel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Annuler", Toast.LENGTH_SHORT).show();
-                    dialog.dismiss();
-                }
-            });
-
-            dialog.show();
-        }
-    }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void DialogPlafondsLimit(){
         {
-            final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+
+            final Dialog dialog = new Dialog(getActivity());
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            lp.copyFrom(dialog.getWindow().getAttributes());
+            int dialogWidth = lp.width;
+            int dialogHeight = lp.height;
+
+            if (dialogWidth < MAX_HEIGHT) {
+                dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
+            }
+
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.getWindow().setBackgroundDrawable(getActivity().getDrawable(R.drawable.white_rect));
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setContentView(R.layout.new_benef_conf_plafond_limite);
             // set title
             TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
-            validation_title.setText(R.string.Confirmation);
-            final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
-            txtCode.setText(Globals.transactionId);
+            validation_title.setText(R.string.Validation);
+            /*final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
+            txtCode.setText(Globals.transactionId);*/
+            // mStepView.done(false);
+            TextView cardNumber = (TextView) dialog.findViewById(R.id.cardNumber);
+            cardNumber.setText(Globals.cardNumber);
+            mStepView.go(1, true);
+
             dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -321,7 +340,7 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 @Override
                 public void onClick(View v) {
                     try {
-                        //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
+                        dialog.dismiss();
                         initProgrees();
                         new CustomTask().execute();
                     } catch (Exception e) {
@@ -339,17 +358,54 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                     }
                 }
             });
-            Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/gilroy_bold.ttf");
-            validation_title.setTypeface(tf);
-            txtCode.setTypeface(tf);
-            final TextView textView = (TextView) dialog.findViewById(R.id.textView);
-            textView.setTypeface(tf);
-            final TextView textView2 = (TextView) dialog.findViewById(R.id.textView2);
-            textView2.setTypeface(tf);
-            final Button btnOk = (Button) dialog.findViewById(R.id.btnOk);
-            btnOk.setTypeface(tf);
+
             dialog.show();
         }
+    }
+    private void DialogToValidation(boolean isSuccessful , String message){
+        final Dialog dialog = new Dialog(getActivity());
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(dialog.getWindow().getAttributes());
+        int dialogWidth = lp.width;
+        int dialogHeight = lp.height;
+        if (dialogWidth < MAX_HEIGHT) {
+            dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
+        }
+
+        dialog.setContentView(R.layout.confirm_dialog_plafond);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+
+
+        mStepView.go(2,true);
+        Button okey = dialog.findViewById(R.id.btn_okay);
+        Button cancel = dialog.findViewById(R.id.btn_cancel);
+        if(!isSuccessful){
+            ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
+            image.setImageResource(R.drawable.error_icon);
+            TextView success = (TextView) dialog.findViewById(R.id.textView);
+            success.setText("Failure");
+            TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);
+            Felicitation.setText(message);
+        }
+        okey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mStepView.done(true);
+                Toast.makeText(getActivity().getApplicationContext(), "Okay", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity().getApplicationContext(), "Annuler", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
     private class CustomTaskCardLimit extends AsyncTask<String, String, String> {
         protected String doInBackground(String... param) {

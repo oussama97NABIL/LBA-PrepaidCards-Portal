@@ -32,12 +32,12 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\banque_agricole.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_menu.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_menu.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_generate_statement.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\fragment_generate_statement.xml"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_menu.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_menu.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_baseline_visibility_off_24.png.flat",
@@ -60,12 +60,12 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_notifications.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_baseline_account_circle_24.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\baseline_account_circle_24.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_baseline_info_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\baseline_info_24.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_baseline_account_circle_24.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\baseline_account_circle_24.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_plafonds_24.png.flat",
@@ -116,36 +116,36 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_history.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_block_24.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_block_24.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_baseline_credit_card_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\baseline_credit_card_24.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_block_24.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_block_24.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_transaction_log.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-hdpi\\transaction_log.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_baseline_account_box_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\baseline_account_box_24.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_transaction_log.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-hdpi\\transaction_log.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_nfc.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-hdpi\\nfc.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_menu.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_menu.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_page_title.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\page_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_menu.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_menu.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
@@ -192,20 +192,20 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\baseline_visibility_24.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_home_phase2.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home_phase2.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_white_container_main_menu.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\custom_white_container_main_menu.xml"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_background_agricole.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable-xxhdpi\\background_agricole.png"
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_home_phase2.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home_phase2.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_card_to_card_fragment.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\card_to_card_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_background_agricole.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable-xxhdpi\\background_agricole.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_mobile_money.xml.flat",
@@ -224,12 +224,12 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-xhdpi\\transactions_option_highlight.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_perm_device_information_24.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_perm_device_information_24.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_admin_panel_settings.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\admin_panel_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_baseline_perm_device_information_24.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_perm_device_information_24.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_red_notification.xml.flat",
@@ -264,28 +264,28 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\img_6.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_branch_locator_phase2.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_branch_locator_phase2.png"
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_transactions.xml.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\transactions.xml"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_baseline_menu_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\baseline_menu_24.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_transactions.xml.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\transactions.xml"
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_branch_locator_phase2.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_branch_locator_phase2.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_baseline_credit_card_24.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\baseline_credit_card_24.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_library_info.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-hdpi\\library_info.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_baseline_credit_card_24.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\baseline_credit_card_24.png"
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_baseline_account_circle_24.png.flat",
@@ -348,12 +348,12 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-mdpi\\nfc.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_settings_black_24dp.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_settings_black_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_card_detail.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\card_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_settings_black_24dp.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_settings_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_baseline_arrow_back_24.png.flat",
@@ -376,12 +376,12 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_logout_phase2.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_statement_24.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_statement_24.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_header_layout_white.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\header_layout_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_statement_24.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_statement_24.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_baseline_account_box_24.png.flat",
@@ -500,12 +500,12 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\steper_layout.xml"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_branch_locator_phase2.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_branch_locator_phase2.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_baseline_arrow_drop_up_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\baseline_arrow_drop_up_24.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_branch_locator_phase2.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_branch_locator_phase2.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_mobile_money.png.flat",
@@ -542,10 +542,6 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_img_2.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\img_2.png"
-    },
-    {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_get_last10transaction.xml.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\get_last10transaction.xml"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_home_phase2_black.png.flat",
@@ -616,12 +612,12 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_home_highlight.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-xhdpi\\home_highlight.png"
-    },
-    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_baseline_logout_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\baseline_logout_24.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_home_highlight.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-xhdpi\\home_highlight.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_baseline_account_to_card_24.png.flat",
@@ -656,16 +652,16 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\baseline_person_24.png"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_mobile_money.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_mobile_money.png"
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_baseline_visibility_24.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\baseline_visibility_24.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_baseline_visibility_24.png.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\baseline_visibility_24.png"
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_mobile_money.png.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_mobile_money.png"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_user_avatar.png.flat",
@@ -738,6 +734,10 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_img_4.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\img_4.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_confirm_dialog_card_to_card.xml.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\confirm_dialog_card_to_card.xml"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_baseline_person_outline_24.png.flat",
@@ -1088,6 +1088,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\admin_panel_settings.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_block_card_new.xml.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\block_card_new.xml"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_history.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_history.png"
     },
@@ -1272,6 +1276,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_confirm_dialog_block_card.xml.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\confirm_dialog_block_card.xml"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_terminal_options.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-hdpi\\terminal_options.png"
     },
@@ -1386,10 +1394,6 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_baseline_person_outline_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\baseline_person_outline_24.png"
-    },
-    {
-        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_confirm_dialog.xml.flat",
-        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\confirm_dialog.xml"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_baseline_person_24.png.flat",

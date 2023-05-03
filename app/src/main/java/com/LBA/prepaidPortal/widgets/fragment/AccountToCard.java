@@ -1,10 +1,12 @@
 package com.LBA.prepaidPortal.widgets.fragment;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,11 +25,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 
 import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.HomeActivity;
-import com.LBA.prepaidPortal.databinding.FragmentCardInformationBinding;
-import com.LBA.prepaidPortal.databinding.FragmentHomeBinding;
 import com.LBA.tools.assets.Globals;
 import com.LBA.tools.services.Card;
 import com.google.android.material.button.MaterialButton;
@@ -34,6 +40,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.shuhart.stepview.StepView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
@@ -49,8 +56,10 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
     private int position = 0;
     private StepView mStepView;
 
+
     private EditText toDateEtxt;
     private Button btnLoad;
+    protected final int MAX_HEIGHT = 500;
 
     private DatePickerDialog fromDatePickerDialog;
     private DatePickerDialog toDatePickerDialog;
@@ -69,6 +78,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
     TextView textView3;
     View mRootView;
 
+
     static private final String TAG = CardInformation1.class.getSimpleName();
     @Nullable
     @Override
@@ -83,6 +93,10 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         canBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
         mStepView = (StepView) mRootView. findViewById(R.id.step_view);
+        Log.e(TAG, "onCreateView: HC -----  mStepView.getState()");
+        mStepView.done(false);
+
+
         List<String> steps = Arrays.asList(new String[]{"SAISIE", "VALIDATION", "CONFIRMATION"});
         mStepView.setSteps(steps);
 
@@ -103,12 +117,32 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         nexBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogAccountToCard();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    DialogAccountToCard();
+                }
             }
         });
+        mStepView.getState()
+                .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
+                .animationType(StepView.ANIMATION_CIRCLE)
+                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorAccent))
+                .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
+                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorPrimary))
+                // You should specify only stepsNumber or steps array of strings.
+                // In case you specify both steps array is chosen.
 
-
-
+                // You should specify only steps number or steps array of strings.
+                // In case you specify both steps array is chosen.
+                .stepsNumber(3)
+                .animationType(StepView.ANIMATION_LINE)
+                .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
+                .animationDuration(getResources().getInteger(android.R.integer.config_shortAnimTime))
+                .stepLineWidth(getResources().getDimensionPixelSize(R.dimen._1sdp))
+                .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
+                .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen._16sdp))
+                .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
+                // other state methods are equal to the corresponding xml attributes
+                .commit();
         /**
          TextView txtBalance;
          TextView txtCurrency;
@@ -214,9 +248,22 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
             }*/
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void DialogAccountToCard(){
         {
-            final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+
+            final Dialog dialog = new Dialog(getActivity());
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            lp.copyFrom(dialog.getWindow().getAttributes());
+            int dialogWidth = lp.width;
+            int dialogHeight = lp.height;
+
+            if (dialogWidth < MAX_HEIGHT) {
+                dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
+            }
+
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.getWindow().setBackgroundDrawable(getActivity().getDrawable(R.drawable.white_rect));
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setContentView(R.layout.new_benef_conf_account_to_card);
             // set title
@@ -224,6 +271,8 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
             validation_title.setText(R.string.Validation);
             /*final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
             txtCode.setText(Globals.transactionId);*/
+           // mStepView.done(false);
+           mStepView.go(1, true);
             dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -275,12 +324,22 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
     }
     private void DialogToValidation(boolean isSuccessful , String message){
         {
-            final Dialog dialog = new Dialog(getActivity(),android.R.style.Theme_Material_Light_NoActionBar_Fullscreen);
+            final Dialog dialog = new Dialog(getActivity());
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            lp.copyFrom(dialog.getWindow().getAttributes());
+            int dialogWidth = lp.width;
+            int dialogHeight = lp.height;
+            if (dialogWidth < MAX_HEIGHT) {
+                dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
+            }
+
             dialog.setContentView(R.layout.confirm_dialog_account_to_card);
             dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
             dialog.setCancelable(false);
             dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
 
+
+            mStepView.go(2,true);
             Button okey = dialog.findViewById(R.id.btn_okay);
             Button cancel = dialog.findViewById(R.id.btn_cancel);
             if(!isSuccessful){
@@ -294,6 +353,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
             okey.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    mStepView.done(true);
                     Toast.makeText(getActivity().getApplicationContext(), "Okay", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
                 }

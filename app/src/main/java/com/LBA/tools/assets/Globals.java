@@ -286,7 +286,7 @@ public class Globals {
     public static String clientType;
     public static String availableBalance;
     public static String balance;
-    public static String currency;
+    public static String currency = "";
     public static String transactionType;
     public static String referenceNumber;
     public static String location;
