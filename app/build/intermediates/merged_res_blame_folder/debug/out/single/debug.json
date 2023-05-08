@@ -68,6 +68,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\baseline_info_24.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsmediumitalic.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsmediumitalic.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_baseline_plafonds_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_plafonds_24.png"
     },
@@ -376,6 +380,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_logout_phase2.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinssemibolditalic.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinssemibolditalic.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_statement_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_statement_24.png"
     },
@@ -488,6 +496,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\backgound_login.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsextralight.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsextralight.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_baseline_visibility_24.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\baseline_visibility_24.xml"
     },
@@ -556,6 +568,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\baseline_account_circle_24.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsextrabolditalic.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsextrabolditalic.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_monotonregular.ttf.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\monotonregular.ttf"
     },
@@ -594,6 +610,10 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_app_bar_home.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\app_bar_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsextralightitalic.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsextralightitalic.ttf"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_baseline_visibility_off_24.xml.flat",
@@ -740,6 +760,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\img_4.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinssemibold.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinssemibold.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_baseline_person_outline_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\baseline_person_outline_24.png"
     },
@@ -764,6 +788,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\baseline_menu_24.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_popinslightitalic.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\popinslightitalic.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_white_button.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\custom_white_button.xml"
     },
@@ -774,6 +802,10 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_img.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\img.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_currencyandnumcard.xml.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\currencyandnumcard.xml"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_baseline_account_to_card_24.png.flat",
@@ -794,6 +826,10 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_baseline_block_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_block_24.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsbold.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsbold.ttf"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_ic_baseline_plafonds_24.xml.flat",
@@ -952,6 +988,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\baseline_account_box_24.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsregular.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsregular.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_baseline_arrow_drop_up_24.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\baseline_arrow_drop_up_24.xml"
     },
@@ -1076,6 +1116,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsblack.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsblack.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_baseline_account_circle_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\baseline_account_circle_24.png"
     },
@@ -1086,6 +1130,10 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_footer_layout.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\footer_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsbolditalic.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsbolditalic.ttf"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_block_card_new.xml.flat",
@@ -1150,6 +1198,10 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_call_us_b.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\call_us_b.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsmedium.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsmedium.ttf"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_baseline_menu_24.xml.flat",
@@ -1344,6 +1396,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-xhdpi\\terminal_options.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsextrabold.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsextrabold.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_border_log.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\drawable\\button_border_log.xml"
     },
@@ -1484,6 +1540,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsitalic.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsitalic.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_card_information.xml.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\layout\\fragment_card_information.xml"
     },
@@ -1512,6 +1572,10 @@
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_phase2.png"
     },
     {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsblackitalic.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinsblackitalic.ttf"
+    },
+    {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_baseline_credit_card_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\baseline_credit_card_24.png"
     },
@@ -1526,6 +1590,10 @@
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_baseline_visibility_24.png.flat",
         "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\baseline_visibility_24.png"
+    },
+    {
+        "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\font_poppinslight.ttf.flat",
+        "source": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\src\\main\\res\\font\\poppinslight.ttf"
     },
     {
         "merged": "C:\\Users\\BITS_DEV\\Desktop\\LBA_new\\app\\build\\intermediates\\merged_res\\debug\\drawable_scan_b.png.flat",

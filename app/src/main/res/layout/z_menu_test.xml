@@ -15,21 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF">
-
-        <!--  <com.google.android.material.card.MaterialCardView
-              android:id="@+id/userWelcomeCard"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_margin="10sdp"
-              app:layout_constraintTop_toTopOf="parent"
-              app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintStart_toStartOf="parent"
-              android:background="@color/white"
-              app:cardCornerRadius="17sdp"
-              android:foreground="?android:attr/selectableItemBackground"
-              android:clickable="true"
-              android:focusable="true"
-              android:layout_weight="1">-->
         <RelativeLayout
             android:id="@+id/userWelcomeCard"
             android:layout_width="match_parent"
@@ -51,7 +36,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="-2dp"
                 android:layout_marginTop="@dimen/_5sdp"
-
                 android:layout_toRightOf="@id/userImage"
                 android:padding="@dimen/_10sdp"
                 android:text=""
@@ -71,9 +55,6 @@
                 android:src="@drawable/user_avatar"
                 app:riv_corner_radius="@dimen/_30sdp" />
         </RelativeLayout>
-        <!--  </com.google.android.material.card.MaterialCardView>-->
-
-
         <Button
             android:id="@+id/updateGhCard"
             android:layout_width="320dp"
@@ -83,73 +64,13 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="@dimen/_15sdp"
             android:background="@drawable/custom_grey_button"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/poppinsmedium"
             android:text="Bienvenu à la banque agricole"
             android:textColor="@color/white"
             android:textSize="13sp"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userWelcomeCard" />
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/mobilelLayout"
-            android:layout_width="376dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:hint="Mon numéro de carte: "
-            app:errorEnabled="true"
-            app:layout_constraintTop_toBottomOf="@+id/updateGhCard"
-            tools:layout_editor_absoluteX="16dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/cardNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:ems="10"
-                android:enabled="false"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:inputType="text"
-                android:textColor="@color/black" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="2dp"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Votre solde est : "
-            android:textColor="@color/black"
-            android:textSize="@dimen/_14ssp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mobilelLayout" />
-        <TextView
-            android:id="@+id/currencyView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="260dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="2dp"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Currency : "
-            android:textColor="@color/black"
-            android:textSize="@dimen/_14ssp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mobilelLayout" />
-
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPagerImageSlider"
             android:layout_width="match_parent"
@@ -158,85 +79,136 @@
             android:paddingStart="@dimen/_80sdp"
             android:paddingEnd="@dimen/_80sdp"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-        <!--
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="38sdp"
-                    android:layout_marginTop="16sdp"
-                    android:text="Menu"
-                    android:textColor="@color/black"
-                    app:layout_constraintTop_toBottomOf="@id/viewPagerImageSlider"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:textSize="22sdp"
-                    android:fontFamily="@font/roboto_regular"/>
-                    -->
-
-        <!--    <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/viewPagerImageSlider"
-                android:orientation="horizontal">
-                -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/viewPagerImageSlider">
+            app:layout_constraintTop_toBottomOf="@id/updateGhCard">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/mobilelLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="Mon numéro de carte: "
+                    android:fontFamily="@font/poppinsmedium"
+                    app:errorEnabled="true"
+                    android:background="@drawable/currencyandnumcard"
+                    app:layout_constraintTop_toBottomOf="@+id/mobile"
+                    tools:layout_editor_absoluteX="16dp">
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cardNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:inputType="text"
+                        android:textColor="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+             <LinearLayout
+                android:layout_width="match_parent"
+                 android:layout_marginStart="20dp"
+                 android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                 android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                 app:layout_constraintTop_toBottomOf="@id/mobilelLayout"
+                 android:background="@drawable/currencyandnumcard"
+                 >
                 <TextView
-                    android:id="@+id/showSolde"
+                    android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Votre solde est : "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mobilelLayout" />
+                 <TextView
+                     android:id="@+id/showSolde"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="****"
+                     android:enabled="false"
+                     android:focusable="false"
+                     android:focusableInTouchMode="false"
+                     android:layout_alignParentTop="true"
+                     android:layout_marginStart="130dp"
+                     android:layout_marginTop="-5dp"
+                     android:fontFamily="@font/poppinsmedium"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/_11ssp" />
+                 <ImageView
+                     android:id="@+id/imageView_show_hide"
+                     android:layout_width="30dp"
+                     android:layout_height="32dp"
+                     android:layout_marginTop="-5dp"
+                     android:layout_marginStart="130dp"
+                     android:layout_below="@id/textView14"/>
+                 <TextView
+                     android:id="@+id/balance"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:enabled="false"
+                     android:focusable="false"
+                     android:text="MAD"
+                     android:focusableInTouchMode="false"
+                     android:layout_alignParentTop="true"
+                     android:layout_marginStart="245dp"
+                     android:layout_marginTop="-40dp"
+                     android:fontFamily="@font/poppinsmedium"
+                     app:layout_constraintTop_toBottomOf="@id/currencyView"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/_11ssp" />
+                 <TextView
+                     android:id="@+id/currencyView"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentStart="true"
+                     android:layout_alignParentLeft="true"
+                     android:layout_alignParentTop="true"
+                     android:layout_marginStart="233dp"
+                     android:layout_marginLeft="50dp"
+                     android:layout_marginTop="-59dp"
+                     android:fontFamily="@font/poppinsmedium"
+                     android:text="Currency : "
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/_11ssp"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@id/mobilelLayout" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                    android:text="****"
-                    android:enabled="false"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="-5dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_14ssp" />
-                <ImageView
-                    android:id="@+id/imageView_show_hide"
-                    android:layout_width="30dp"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="-5dp"
-                    android:layout_marginLeft="56dp"
-                    android:layout_below="@id/textView14"/>
-                <TextView
-                    android:id="@+id/balance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:focusable="false"
-                    android:text="MAD"
-                    android:focusableInTouchMode="false"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="280dp"
-                    android:layout_marginTop="-50dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_14ssp" />
-                <LinearLayout
+
+            </LinearLayout>
+
+                 <LinearLayout
                     android:id="@+id/linearLayout"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_100sdp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="15dp"
                     android:orientation="horizontal"
                     android:paddingLeft="@dimen/_10sdp"
                     android:paddingRight="@dimen/_10sdp">
@@ -271,7 +243,7 @@
                                 android:padding="@dimen/_5sdp"
                                 android:text="Transfert \nde Carte à\n Carte"
                                 android:textColor="@color/white"
-                                android:textSize="18sp"
+                                android:textSize="@dimen/_12ssp"
                                 app:fontFamily="@font/roboto_bold" />
 
                             <ImageView
@@ -315,15 +287,13 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginStart="@dimen/_5sdp"
                                 android:layout_marginTop="@dimen/_5sdp"
-
                                 android:layout_marginEnd="@dimen/_5sdp"
                                 android:layout_marginBottom="@dimen/_5sdp"
                                 android:padding="@dimen/_5sdp"
                                 android:text="Générer\nLes relevés"
                                 android:textColor="@color/white"
-                                android:textSize="18sp"
+                                android:textSize="@dimen/_12ssp"
                                 app:fontFamily="@font/roboto_bold" />
-
                             <ImageView
                                 android:id="@+id/bus1"
                                 android:layout_width="31dp"
@@ -339,6 +309,7 @@
                                 app:srcCompat="@drawable/airtime_data" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -355,11 +326,9 @@
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
-
                         app:cardBackgroundColor="@color/transparent"
                         app:cardCornerRadius="@dimen/_17sdp"
                         app:cardElevation="5dp">
-
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -380,9 +349,8 @@
                                 android:padding="@dimen/_5sdp"
                                 android:text="Dernière 10\n Transaction"
                                 android:textColor="@color/white"
-                                android:textSize="18sp"
+                                android:textSize="@dimen/_12ssp"
                                 app:fontFamily="@font/roboto_bold" />
-
                             <ImageView
                                 android:id="@+id/cycle"
                                 android:layout_width="30dp"
@@ -405,7 +373,6 @@
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
-
                         app:cardBackgroundColor="@color/transparent"
                         app:cardCornerRadius="@dimen/_17sdp"
                         app:cardElevation="@dimen/_5sdp">
@@ -429,7 +396,7 @@
                                 android:padding="@dimen/_5sdp"
                                 android:text="Transfert \nde Compte à\n Carte"
                                 android:textColor="@color/white"
-                                android:textSize="18sp"
+                                android:textSize="@dimen/_12ssp"
                                 app:fontFamily="@font/roboto_bold" />
 
                             <ImageView
@@ -490,7 +457,7 @@
                                 android:padding="@dimen/_5sdp"
                                 android:text="Bloquer la\ncarte"
                                 android:textColor="@color/white"
-                                android:textSize="18sp"
+                                android:textSize="@dimen/_12ssp"
                                 app:fontFamily="@font/roboto_bold" />
 
                             <ImageView
@@ -515,7 +482,6 @@
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
-
                         app:cardBackgroundColor="@color/transparent"
                         app:cardCornerRadius="@dimen/_17sdp"
                         app:cardElevation="@dimen/_5sdp">
@@ -534,14 +500,13 @@
                                 android:layout_alignParentTop="true"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginStart="@dimen/_10sdp"
-
                                 android:layout_marginTop="@dimen/_10sdp"
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:padding="@dimen/_5sdp"
                                 android:text="Plafonds"
                                 android:textColor="@color/white"
-                                android:textSize="18sp"
+                                android:textSize="@dimen/_12ssp"
                                 app:fontFamily="@font/roboto_bold" />
 
                             <ImageView
@@ -563,6 +528,7 @@
 
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
+
 
                 </LinearLayout>
 
