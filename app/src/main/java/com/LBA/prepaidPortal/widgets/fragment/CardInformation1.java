@@ -30,7 +30,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 
-public class CardInformation1 extends BaseFragment implements AdapterView.OnItemSelectedListener,IOnBackPressed {
+public class CardInformation1 extends BaseFragment implements AdapterView.OnItemSelectedListener{
     Spinner spinCardNumber;
     TextView txtBalance;
     TextView txtCurrency;
@@ -193,15 +193,7 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
         // TODO Auto-generated method stub
     }
 
-    @Override
-    public boolean onBackPressed() {
-        if (getFragmentManager() != null) {
-            //action not popBackStack
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 
 
     private class CustomTask extends AsyncTask<String, String, String> {

@@ -62,6 +62,9 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
     TextView BankName;
     ImageButton canBtn;
     MaterialButton nexBtn;
+    TextInputEditText atmLimit;
+    TextInputEditText posLimit;
+    TextInputEditText onlineLimit;
 
     TextView textView_heading;
     TextView textView;
@@ -82,6 +85,9 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
         canBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
+        atmLimit = (TextInputEditText) mRootView.findViewById(R.id.limitCash);
+        posLimit = (TextInputEditText) mRootView.findViewById(R.id.limitPurchase);
+        onlineLimit = (TextInputEditText) mRootView.findViewById(R.id.limitEcom);
         mStepView = (StepView) mRootView. findViewById(R.id.step_view);
         Log.e(TAG, "onCreateView: HC -----  mStepView.getState()");
         mStepView.done(false);
@@ -105,6 +111,18 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         nexBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (atmLimit.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Veuillez entrer Atm Limit", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (posLimit.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Veuiller entrer Pos Limit", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (onlineLimit.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Veuiller entrer Online Limit", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     DialogPlafondsLimit();
                 }
@@ -442,7 +460,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
             LimitPurchase.setText(Globals.limitPurchase);
             TextInputEditText LimitEcom = (TextInputEditText) mRootView.findViewById(R.id.limitEcom);
             LimitEcom.setText(Globals.limitEcom);
-
         }
     }
 

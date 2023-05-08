@@ -84,32 +84,6 @@
 				android:layout_marginTop="50dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical">
-
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/mobilelLayout"
-					android:layout_width="350dp"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="16dp"
-					android:hint="Numéro de la carte*"
-					android:text="4281993108775830"
-					app:errorEnabled="true">
-
-					<com.google.android.material.textfield.TextInputEditText
-						android:id="@+id/cardNumber"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:clickable="true"
-						android:ems="10"
-						android:enabled="false"
-						android:focusable="false"
-						android:focusableInTouchMode="false"
-						android:inputType="text"
-
-						android:textColor="@color/black" />
-
-				</com.google.android.material.textfield.TextInputLayout>
-
-
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/accountNbrLayout"
 					android:layout_width="378dp"
@@ -127,6 +101,27 @@
 						android:enabled="true"
 						android:focusable="true"
 						android:focusableInTouchMode="true"
+						android:inputType="number"
+						android:textColor="@color/black" />
+				</com.google.android.material.textfield.TextInputLayout>
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/mobilelLayout"
+					android:layout_width="350dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Titulaire de la carte*"
+					android:text="4281993108775830"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/user"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="false"
+						android:focusable="false"
+						android:focusableInTouchMode="false"
 						android:inputType="text"
 
 						android:textColor="@color/black" />
@@ -151,7 +146,7 @@
 						android:enabled="true"
 						android:focusable="true"
 						android:focusableInTouchMode="true"
-						android:inputType="text"
+						android:inputType="number"
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
@@ -160,7 +155,28 @@
 					android:layout_width="350dp"
 					android:layout_height="wrap_content"
 					android:layout_marginStart="16dp"
-					android:hint="Memo"
+					android:hint="Référence de carte bénéficiaire"
+					app:errorEnabled="true">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/reférence_carte"
+						android:layout_width="380dp"
+						android:layout_height="wrap_content"
+						android:clickable="true"
+						android:ems="10"
+						android:enabled="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
+						android:inputType="number"
+						android:textColor="@color/black" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/refrealCodeLayout"
+					android:layout_width="350dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:hint="Motif"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
@@ -176,111 +192,7 @@
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
-
-
-				<!--  ???  <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailLayout"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:hint=""
-            style="@style/MyTextInputLayout_overlay"
-            android:layout_marginStart="16dp"
-            app:errorEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textViewemail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:ems="10"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:inputType="phone" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/customerSpinnerLayout"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:hint="DOMICILE BRANCH">
-
-            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-                android:id="@+id/customerTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                tools:ignore="KeyboardInaccessibleWidget" />
-        </com.google.android.material.textfield.TextInputLayout>-->
-
-
-				<!--     <EditText
-            android:id="@+id/dob"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:paddingRight="5dp"
-            android:inputType="textPersonName"
-            android:drawableRight="@drawable/calendar"
-            android:textColor="@color/black"
-            /> -->
-
-				<!--   <EditText
-            android:id="@+id/pin"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:background="@drawable/button_border_fields"
-            android:inputType="numberPassword"
-            android:textAlignment="gravity"
-            android:maxLength="6"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />
--->
-
-				<!--<EditText
-            android:id="@+id/pinConf"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:maxLength="6"
-            android:width="150dp"
-            android:background="@drawable/button_border_fields"
-            android:inputType="numberPassword"
-            android:textAlignment="gravity"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />-->
-
-				<!--   <EditText
-            android:id="@+id/pass"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:inputType="textPassword"
-            android:textAlignment="gravity"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />-->
-
-				<!--
-
-        <EditText
-            android:id="@+id/passConf"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:background="@drawable/button_border_fields"
-            android:inputType="textPassword"
-            android:textAlignment="gravity"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />-->
-
-
 			</LinearLayout>
-
-
 		</ScrollView>
 
 		<include

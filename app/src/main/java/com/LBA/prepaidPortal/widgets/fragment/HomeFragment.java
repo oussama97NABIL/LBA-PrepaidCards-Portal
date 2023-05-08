@@ -465,8 +465,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         notificationText.setText(String.valueOf(Globals.unviewdNotificationsList.size()));
 
         */
-
-
         return mRootView;
     }
 

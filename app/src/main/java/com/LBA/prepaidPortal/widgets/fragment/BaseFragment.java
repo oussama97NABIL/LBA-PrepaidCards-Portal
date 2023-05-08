@@ -71,16 +71,12 @@ public class BaseFragment extends Fragment {
             @Override
             public void onShow(DialogInterface dialog) {
                 // TODO Auto-generated method stub
-
                 final int idAlertTitle = getActivity().getApplicationContext().getResources().getIdentifier("alertTitle", "id", "android");
                 TextView textDialog = (TextView) ((AlertDialog) dialog).findViewById(idAlertTitle);
-
                 textDialog.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "fonts/gilroy_bold.ttf"));
             }
         });
-
         pDialog.setCancelable(false);
-
         pDialog.setCanceledOnTouchOutside(false);
         delay=0;
         pDialog.show();
@@ -92,8 +88,6 @@ public class BaseFragment extends Fragment {
             pDialog.dismiss();}
         if(Globals.timeout != null)
             delay= Integer.parseInt(Globals.timeout);
-
-
     }
 
 
@@ -101,5 +95,8 @@ public class BaseFragment extends Fragment {
         apptimeoutManager.progreesDialog();
     }
 
+    public void onBackPressed() {
+
+    }
 
 }

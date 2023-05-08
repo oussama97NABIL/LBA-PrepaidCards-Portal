@@ -1,12 +1,16 @@
 package com.LBA.prepaidPortal.widgets.fragment;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,8 +27,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 
 import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.HomeActivity;
@@ -35,8 +42,10 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.shuhart.stepview.StepView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -46,8 +55,18 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
     TextView txtBalance;
     TextView txtCurrency;
     private EditText fromDateEtxt;
+
+    private int position = 0;
+    private StepView mStepView;
+    TextInputEditText accountNumber;
+    TextInputEditText montant;
+    TextInputEditText memo;
+    TextInputEditText reférenceCarte;
+
     private EditText toDateEtxt;
     private Button btnLoad;
+    protected final int MAX_HEIGHT = 500;
+
     private DatePickerDialog fromDatePickerDialog;
     private DatePickerDialog toDatePickerDialog;
     private SimpleDateFormat dateFormatter;
@@ -57,14 +76,14 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
     TextView BankName;
     ImageButton canBtn;
     MaterialButton nexBtn;
-    private StepView mStepView;
-    protected final int MAX_HEIGHT = 500;
+
 
     TextView textView_heading;
     TextView textView;
     TextView textView2;
     TextView textView3;
     View mRootView;
+
 
     static private final String TAG = CardInformation1.class.getSimpleName();
     @Nullable
@@ -80,15 +99,14 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
         canBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
         mStepView = (StepView) mRootView. findViewById(R.id.step_view);
+        accountNumber = (TextInputEditText) mRootView.findViewById(R.id.account_number);
+        montant = (TextInputEditText) mRootView.findViewById(R.id.amount);
+        reférenceCarte = (TextInputEditText) mRootView.findViewById(R.id.reférence_carte);
+        memo = (TextInputEditText) mRootView.findViewById(R.id.memo);
         Log.e(TAG, "onCreateView: HC -----  mStepView.getState()");
         mStepView.done(false);
-
         List<String> steps = Arrays.asList(new String[]{"SAISIE", "VALIDATION", "CONFIRMATION"});
-        //  StepView StepViewBinding = DataBindingUtil.setContentView((Activity) getActivity().getApplicationContext(), R.layout.account_to_card);
-        /*StepViewBinding binding = DataBindingUtil.setContentView((Activity) getActivity().getApplicationContext(), R.layout.account_to_card);
-        StepViewBinding.stepView.done(false);*/
         mStepView.setSteps(steps);
-
         //getCardInformations();
         OpenTime();
         getCardNumber();
@@ -104,7 +122,22 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
         nexBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogCardToCard();
+                if (montant.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Veuiller entrer le montant", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (memo.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Veuiller entrer le motif", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (reférenceCarte.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Veuiller entrer la référence de carte bénéficiaire", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+                    DialogCardToCard();
+                }
             }
         });
         mStepView.getState()
@@ -126,12 +159,8 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                 .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen._16sdp))
                 .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
-                // other state methods are equal to the corresponding xml attributes
+                // other state methods are equal to the corresponding xml attr ibutes
                 .commit();
-
-
-
-
         /**
          TextView txtBalance;
          TextView txtCurrency;
@@ -153,34 +182,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
 
         return mRootView;
     }
-    /*private void findViewsById() {
-        fromDateEtxt = (EditText) findViewById(R.id.etxt_fromdate);
-        fromDateEtxt.setInputType(InputType.TYPE_NULL);
-        fromDateEtxt.requestFocus();
-        toDateEtxt = (EditText) findViewById(R.id.etxt_todate);
-        toDateEtxt.setInputType(InputType.TYPE_NULL);
-    }*/
-    /*private void setDateTimeField() {
-        fromDateEtxt.setOnClickListener(this);
-        toDateEtxt.setOnClickListener(this);
-        Calendar newCalendar = Calendar.getInstance();
-        fromDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                fromDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-        toDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                toDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-    }*/
     public void onClick(View view) {
         if (view == fromDateEtxt) {
             fromDatePickerDialog.show();
@@ -198,6 +200,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
+
 
     /*public void getCardInformations(){
         try {
@@ -221,24 +224,37 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
         }
         return super.onOptionsItemSelected(item);
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if(getView() == null){
+            return;
+        }
+
+        getView().setFocusableInTouchMode(true);
+        getView().requestFocus();
+        getView().setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK){
+                    // handle back button's click listener
+                    return true;
+                }
+                return false;
+            }
+        });
+    }
     public void onItemSelected(AdapterView<?> parent, View arg1, int pos, long id) {
         if(parent instanceof Spinner && pos>0) {
             this.selectedAccount = (String) parent.getItemAtPosition(pos);
-            /*try {
-                if(nCounter>0) {
-                    String balanceData = Account.GetBalance(selectedAccount);
-                    txtBalance.setText(balanceData.substring(0, 0 + 20));
-                    txtCurrency.setText(balanceData.substring(0 + 20, 0 + 20 + 3));
-                    //txtValueDate.setText(balanceData.substring(0 + 20 + 3, 0 + 20 + 3 + 8));
-                }
-                nCounter++;
-            } catch (Exception e) {
-                Toast.makeText(TransactionListActivity.this, "Balance Retrieval Failed", Toast.LENGTH_LONG).show();
-            }*/
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void DialogCardToCard(){
         {
+
             final Dialog dialog = new Dialog(getActivity());
             WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
             lp.copyFrom(dialog.getWindow().getAttributes());
@@ -255,11 +271,27 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
             dialog.setContentView(R.layout.new_benef_conf_card_to_card);
             // set title
             TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
-            validation_title.setText(R.string.Validation);
-            /*final TextView txtCode = (TextView) dialog.findViewById(R.id.transactionId);
-            txtCode.setText(Globals.transactionId);*/
-            // mStepView.done(false);
+            validation_title.setText("Validation et Otp");
+
+
+            TextView user = (TextView) dialog.findViewById(R.id.nom_carte);
+            user.setText(Globals.userWelcome);
+            TextView numCompte = (TextView) dialog.findViewById(R.id.num_carte_txt);
+            numCompte.setText(Globals.cardNumber);
+
+
+            TextView reférence_carteTxt = (TextView) dialog.findViewById(R.id.reférence_carte_txt);
+            reférence_carteTxt.setText(reférenceCarte.getText());
+
+            TextView montant_text = (TextView) dialog.findViewById(R.id.montant_text);
+            montant_text.setText(montant.getText());
+
+            TextView motif_text = (TextView) dialog.findViewById(R.id.motif_text);
+            motif_text.setText(memo.getText());
+
+
             mStepView.go(1, true);
+
             dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -283,9 +315,15 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                     }
                 }
             });
+            EditText code_verification = (EditText) dialog.findViewById(R.id.codeVerification);
+
             dialog.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if (code_verification.getText().toString().isEmpty()) {
+                        Toast.makeText(getActivity().getApplicationContext(), "Veuiller entrer le code de vérification", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     try {
                         dialog.dismiss();
                         initProgrees();
@@ -319,15 +357,29 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
             if (dialogWidth < MAX_HEIGHT) {
                 dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
             }
-
             dialog.setContentView(R.layout.confirm_dialog_card_to_card);
             dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
             dialog.setCancelable(false);
             dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+            TextView dateTransaction = (TextView) dialog.findViewById(R.id.date);
+            Calendar calendar = Calendar.getInstance();
+            Date currentDate = calendar.getTime();
 
+            TextView reférence_carteTxt = (TextView) dialog.findViewById(R.id.reférence_carte_txt);
+            reférence_carteTxt.setText(reférenceCarte.getText());
 
+            TextView montant_text = (TextView) dialog.findViewById(R.id.montant_text);
+            montant_text.setText(montant.getText());
+
+            TextView motif_text = (TextView) dialog.findViewById(R.id.motif_text);
+            motif_text.setText(memo.getText());
+
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            String formattedDate = sdf.format(currentDate);
+            dateTransaction.setText(formattedDate);
+            TextView user = (TextView) dialog.findViewById(R.id.nom_carte);
+            user.setText(Globals.userWelcome);
             mStepView.go(2,true);
-
             Button okey = dialog.findViewById(R.id.btn_okay);
             Button cancel = dialog.findViewById(R.id.btn_cancel);
             if(!isSuccessful){
@@ -364,8 +416,6 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
         protected String doInBackground(String... param) {
             try {
                 Card.CardToCard();
-                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
-                //startActivity(myWelcomeAct);
                 return null;
             } catch (Exception e) {
                 e.printStackTrace();
@@ -395,40 +445,6 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                 else {
                     DialogToValidation(false,Globals.message);
                 }
-            }
-        }
-    }
-    private class HomeTask extends AsyncTask<String, String, String> {
-        Class activity;
-        public HomeTask(Class pActivity) {
-            super();
-            activity=pActivity;
-        }
-        protected String doInBackground(String... param) {
-            try {
-                Intent myAccountServicesAct = new Intent(getActivity().getApplicationContext(), activity);
-                startActivity(myAccountServicesAct);
-                return null;
-            } catch (Exception e) {
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        protected void onPostExecute(String param) {
-            dismissProgress();
-            super.onPostExecute(param);
-            if(param!=null) {
-                //   Toast.makeText(CardLimitActivity.this, param, Toast.LENGTH_SHORT).show();
-                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
-                alertDialog.setMessage(param);
-                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-
-                            }
-                        });
-                alertDialog.show();
             }
         }
     }
@@ -463,8 +479,43 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
 
             TextInputEditText cardNumber = (TextInputEditText) mRootView.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
+            TextInputEditText NomCarte = (TextInputEditText) mRootView.findViewById(R.id.user);
+            NomCarte.setText(Globals.userWelcome);
+        }
+    }
 
+    private class HomeTask extends AsyncTask<String, String, String> {
+        Class activity;
+        public HomeTask(Class pActivity) {
+            super();
+            activity=pActivity;
+        }
+        protected String doInBackground(String... param) {
+            try {
+                Intent myAccountServicesAct = new Intent(getActivity().getApplicationContext(), activity);
+                startActivity(myAccountServicesAct);
+                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        protected void onPostExecute(String param) {
+            dismissProgress();
+            super.onPostExecute(param);
+            if(param!=null) {
+                //   Toast.makeText(CardLimitActivity.this, param, Toast.LENGTH_SHORT).show();
+                androidx.appcompat.app.AlertDialog alertDialog = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext()).create();
+                alertDialog.setMessage(param);
+                alertDialog.setButton(androidx.appcompat.app.AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
 
+                            }
+                        });
+                alertDialog.show();
+            }
         }
     }
     public void OpenTime() {

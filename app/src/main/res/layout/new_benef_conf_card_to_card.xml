@@ -5,9 +5,6 @@
     android:background="@android:color/white">
 
 
-
-
-
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
@@ -20,6 +17,8 @@
         android:layout_marginBottom="20dp"
         android:layout_weight="1">
 
+
+
         <LinearLayout
             android:id="@+id/details"
             android:layout_width="match_parent"
@@ -27,10 +26,8 @@
             android:layout_column="0"
             android:layout_below="@id/heading_layout"
             android:layout_gravity="start"
-
             android:orientation="vertical"
             android:paddingTop="20dp">
-
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -48,14 +45,10 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"></TableRow>
-
-
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
                 </TableRow>
-
                 <TableRow
                     android:layout_width="match_parent"
                     android:background="@color/GoldenFoil"
@@ -70,7 +63,7 @@
                         android:layout_column="4"
                         android:textSize="@dimen/_18ssp"
                         android:layout_weight=".5"
-                        android:text="@string/Validation"
+                        android:text="Validation et Otp"
                         android:textAppearance="?android:textAppearanceLarge"
                         android:textColor="@color/black"
                         android:textStyle="bold"
@@ -100,17 +93,6 @@
                 </TableRow> -->
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="5"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-                </TableRow>
-
-                <TableRow
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -130,6 +112,22 @@
 
 
                 </TableRow>
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:layout_weight=".5"
+                        />
+                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -137,17 +135,166 @@
 
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-160dp"
 
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="Titulaire de carte: " />
+                    <TextView
+                        android:id="@+id/nom_carte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-100dp"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="Titulaire de carte " />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-160dp"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="Numéro de carte: " />
+                    <TextView
+                        android:id="@+id/num_carte_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-100dp"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="NumCompte " />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-80dp"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="Numéro de carte bénéficiaire: " />
+                    <TextView
+                        android:id="@+id/reférence_carte_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-80dp"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="47852333 " />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-132dp"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="Montant de virement: " />
+                    <TextView
+                        android:id="@+id/montant_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-100dp"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="NumCompte " />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-228dp"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="Motif: " />
+                    <TextView
+                        android:id="@+id/motif_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-100dp"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="NumCompte " />
+                </TableRow>
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="4"
-                        android:layout_weight=".5"
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
-                        android:text="Nous avons envoyé un code à "                        />
-
+                        android:layout_weight=".5"
+                        />
                 </TableRow>
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:layout_weight=".5"
+                        android:text="Nous avons envoyé un code à,"
+                        />
+                </TableRow>
+
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -158,7 +305,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight=".5"
-                        android:text="0712549874"
+                        android:text="00 233 78000882"
                         android:inputType="numberDecimal"
                         android:textAlignment="center"
                         android:textSize="20dp"
@@ -189,14 +336,46 @@
                         android:layout_column="4"
                         android:layout_weight=".5"
                         android:width="@android:dimen/thumbnail_width"
-                        android:text=""
+                        android:text="Entrer le code vérification: "
+                        android:layout_gravity="center"
                         android:textAlignment="gravity"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@color/black" />
                 </TableRow>
+                <TableRow
 
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
+                    <EditText
+                        android:id="@+id/codeVerification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:layout_weight=".5"
+                        android:width="50dp"
+                        android:inputType="number"
+                        android:layout_gravity="center"
+                        android:textAlignment="gravity"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black" />
+                </TableRow>
+                <TableRow
 
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:layout_weight=".5"
+                        />
+                </TableRow>
                 <TableRow
 
                     android:layout_width="match_parent"
@@ -208,13 +387,12 @@
                         android:layout_column="4"
 
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_15ssp"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
                         android:text="Veuillez confirmer votre choix "                       />
 
 
-
                 </TableRow>
 
                 <TableRow
@@ -232,18 +410,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="9"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                </TableRow>
             </TableLayout>
 
 
@@ -277,7 +446,12 @@
                     android:enabled="true"
                     android:text="Oui"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+
+
         </LinearLayout>
+
     </ScrollView>
+
 </RelativeLayout>

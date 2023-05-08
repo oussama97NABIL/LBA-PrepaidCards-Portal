@@ -15,137 +15,281 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1">
-    <LinearLayout
-        android:id="@+id/details"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_below="@id/heading_layout"
-        android:layout_gravity="start"
-
-        android:orientation="vertical"
-        android:paddingTop="20dp">
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
-    <TableRow
-        android:layout_width="match_parent"
-        android:background="@color/GoldenFoil"
-        android:layout_marginTop="20.0dip"
-        android:layout_height="match_parent">
-
-
-        <TextView
-            android:id="@+id/validation_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="4"
-            android:textSize="@dimen/_18ssp"
-            android:layout_weight=".5"
-            android:text="Confirmation"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:layout_marginLeft="8.0dip"
-            android:layout_marginTop="12.0dip"
-            android:layout_marginBottom="10.0dip"
-            />
-    </TableRow>
-
-
-        <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="137dp"
-        android:layout_height="168dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/confirm_icon" />
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="60dp"
-        android:gravity="center"
-        android:text="Success"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Félicitation! Votre paiement a été effectué avec succès."
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="1dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:id="@+id/details"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_100sdp"
-            android:background="@android:color/white">
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_below="@id/heading_layout"
+            android:layout_gravity="start"
 
-    <Button
-        android:id="@+id/btn_cancel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="-130dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/transparent"
-        android:stateListAnimator="@null"
-        android:text="Annuler"
-        android:textAllCaps="false"
-        android:textColor="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/divider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:background="@color/GoldenFoil"
+                    android:layout_marginTop="20.0dip"
+                    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_okay"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="-130dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/transparent"
-        android:stateListAnimator="@null"
-        android:text="Okay"
-        android:textAllCaps="false"
-        android:textColor="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </TableLayout>
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/validation_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_weight=".5"
+                        android:text="Confirmation"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginTop="12.0dip"
+                        android:layout_marginBottom="10.0dip"
+                        />
+                </TableRow>
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="137dp"
+                    android:layout_height="168dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/confirm_icon" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="60dp"
+                    android:gravity="center"
+                    android:text="Success"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Félicitation! Votre paiement a été effectué avec succès."
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:text="Date de Transaction: " />
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal" android:text="Titulaire de carte " />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-60dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:text="Expéditeur: " />
+                        <TextView
+                            android:id="@+id/nom_carte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:text="Titulaire de carte " />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-50dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:text="Destinataire: " />
+                        <TextView
+                            android:id="@+id/reférence_carte_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:text="Titulaire de carte " />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:text="Montant de virememnt: " />
+                        <TextView
+                            android:id="@+id/montant_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:text="Titulaire de carte " />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-95dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:text="Motif: " />
+                        <TextView
+                            android:id="@+id/motif_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_column="4"
+                            android:layout_weight=".5"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:text="Titulaire de carte " />
+
+                    </TableRow>
+                </TableLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@android:color/white">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="-130dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:color/transparent"
+                        android:stateListAnimator="@null"
+                        android:text="Annuler"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/holo_blue_dark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/divider"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <Button
+                        android:id="@+id/btn_okay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="-130dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:color/transparent"
+                        android:stateListAnimator="@null"
+                        android:text="Okay"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/holo_blue_dark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/divider"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </TableLayout>
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>

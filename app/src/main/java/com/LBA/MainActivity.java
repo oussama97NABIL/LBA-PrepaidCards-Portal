@@ -19,6 +19,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.LBA.prepaidPortal.activity.AbstractActivity;
+import com.LBA.prepaidPortal.activity.ForgotPassword;
 import com.LBA.prepaidPortal.activity.Z_WelcomeActivity;
 import com.LBA.tools.assets.Globals;
 import com.LBA.tools.services.Account;
@@ -28,6 +29,8 @@ import com.LBA.prepaidPortal.R;
 import com.LBA.prepaidPortal.activity.HomeActivity;
 import com.google.gson.Gson;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AbstractActivity  {
@@ -35,12 +38,13 @@ public class MainActivity extends AbstractActivity  {
     String password;
     EditText username;
     EditText pass;
+    TextView forgotPass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        forgotPass = (TextView) findViewById(R.id.forgotpass);
         MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
 
          username = (EditText) findViewById(R.id.username);
@@ -72,6 +76,13 @@ public class MainActivity extends AbstractActivity  {
                     Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+        forgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent forgotpassword = new Intent(MainActivity.this, ForgotPassword.class);
+                startActivity(forgotpassword);
             }
         });
 

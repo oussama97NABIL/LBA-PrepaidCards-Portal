@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -40,7 +41,7 @@ import com.LBA.prepaidPortal.widgets.fragment.HomeFragment;
 public class HomeActivity extends AbstractActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-     private CardView CardToCard, Balance,Transaction,AccountToCard,BloqueCard,LimitUpdate;
+    private int count=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,56 +97,52 @@ public class HomeActivity extends AbstractActivity
 
         if (id == R.id.home_fragment) {
             fragment = new HomeFragment();
+
         }
         else if (id == R.id.card_information){
             fragment = new CardInformation1();
+
         }
         else if (id == R.id.generate_statement){
             fragment = new GetBalance();
+
         }
         else if (id == R.id.last_transaction){
             fragment = new TransactionListActivity();
+
         }
         else if (id == R.id.account_card){
             fragment = new AccountToCard();
+
         }
         else if (id == R.id.card_card){
             fragment = new CardToCard();
+
         }
         else if (id == R.id.card_operation){
             fragment = new BlockCard();
+
         }
         else if (id == R.id.card_limit){
             fragment = new UpdatesLimit();
+
         }
+
         if (fragment != null) {
             FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
+                    getSupportFragmentManager().beginTransaction().addToBackStack(null);
             fragmentTransaction.replace(R.id.content_frame, fragment);
             fragmentTransaction.commit();
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
-
-
-
-
-    @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content_frame);
-        if (!(fragment instanceof IOnBackPressed) || !((IOnBackPressed) fragment).onBackPressed()) {
-            super.onBackPressed();
-        }
+        FragmentTransaction fragmentTransaction =
+                getSupportFragmentManager().beginTransaction().addToBackStack(null);
+        fragmentTransaction.replace(R.id.content_frame,new HomeFragment() );
+        fragmentTransaction.commit();
     }
-
     private void logoutMenu(HomeActivity homeActivity){
         AlertDialog.Builder builder = new AlertDialog.Builder(homeActivity);
         builder.setTitle("Se déconnecter");
@@ -166,12 +163,6 @@ public class HomeActivity extends AbstractActivity
         });
         builder.show();
     }
-
-
-
-
-
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

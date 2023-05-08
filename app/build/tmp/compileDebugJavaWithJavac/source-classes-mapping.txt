@@ -26,13 +26,23 @@ com/LBA/prepaidPortal/widgets/fragment/IOnBackPressed.java
  com.LBA.prepaidPortal.widgets.fragment.IOnBackPressed
 com/LBA/tools/services/Requests.java
  com.LBA.tools.services.Requests
-com/LBA/prepaidPortal/widgets/fragment/Last10Transactions.java
- com.LBA.prepaidPortal.widgets.fragment.Last10Transactions
- com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$1
- com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$2
- com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$HomeTask
- com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$HomeTask$1
+com/LBA/prepaidPortal/activity/Z_WelcomeActivity.java
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$1
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$10
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$2
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$3
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$4
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$5
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$6
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$7
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$8
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$9
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask$1
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask2
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask3
+ com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask3$1
 com/LBA/tools/misc/BankEntry.java
  com.LBA.tools.misc.BankEntry
 com/LBA/tools/services/Expense.java
@@ -41,20 +51,8 @@ com/LBA/tools/misc/ForexEntry.java
  com.LBA.tools.misc.ForexEntry
 com/LBA/tools/misc/BranchGeoEntry.java
  com.LBA.tools.misc.BranchGeoEntry
-com/LBA/prepaidPortal/widgets/fragment/UpdatesLimit.java
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$1
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$2
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$3
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$3$1
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$4
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$4$1
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$5
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$6
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$CustomTaskCardLimit
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$HomeTask
- com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$HomeTask$1
+com/LBA/tools/connection/HTTPClient.java
+ com.LBA.tools.connection.HTTPClient
 com/LBA/tools/misc/MyMomoProviderSpinnerAdapter.java
  com.LBA.tools.misc.MyMomoProviderSpinnerAdapter
 com/LBA/prepaidPortal/widgets/fragment/CustomTask.java
@@ -163,6 +161,7 @@ com/LBA/prepaidPortal/widgets/fragment/HomeFragment.java
 com/LBA/MainActivity.java
  com.LBA.MainActivity
  com.LBA.MainActivity$1
+ com.LBA.MainActivity$2
  com.LBA.MainActivity$CustomTask
  com.LBA.MainActivity$CustomTask2
 com/LBA/prepaidPortal/widgets/fragment/BaseFragment.java
@@ -202,6 +201,9 @@ com/LBA/tools/services/User.java
  com.LBA.tools.services.User$1
  com.LBA.tools.services.User$2
  com.LBA.tools.services.User$3
+com/LBA/prepaidPortal/activity/ForgotPassword.java
+ com.LBA.prepaidPortal.activity.ForgotPassword
+ com.LBA.prepaidPortal.activity.ForgotPassword$1
 com/LBA/tools/services/Bills.java
  com.LBA.tools.services.Bills
 com/LBA/tools/misc/EStatementEntry.java
@@ -220,20 +222,8 @@ com/LBA/prepaidPortal/activity/ConfirmResetPinActivity.java
  com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$1$3
  com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$2
  com.LBA.prepaidPortal.activity.ConfirmResetPinActivity$3
-com/LBA/prepaidPortal/widgets/fragment/CardToCard.java
- com.LBA.prepaidPortal.widgets.fragment.CardToCard
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$1
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$2
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$3
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$3$1
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$4
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$4$1
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$5
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$6
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$CustomTaskCardNumber
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$HomeTask
- com.LBA.prepaidPortal.widgets.fragment.CardToCard$HomeTask$1
+com/LBA/prepaidPortal/activity/BaseActivity.java
+ com.LBA.prepaidPortal.activity.BaseActivity
 com/LBA/tools/misc/MyBranchesSpinnerAdapter.java
  com.LBA.tools.misc.MyBranchesSpinnerAdapter
 com/LBA/prepaidPortal/activity/LastTransactionResult.java
@@ -294,31 +284,6 @@ com/LBA/tools/misc/MomoProviderEntry.java
  com.LBA.tools.misc.MomoProviderEntry
 com/LBA/tools/misc/ExpenseLimitEntry.java
  com.LBA.tools.misc.ExpenseLimitEntry
-com/LBA/prepaidPortal/activity/HomeActivity.java
- com.LBA.prepaidPortal.activity.HomeActivity
- com.LBA.prepaidPortal.activity.HomeActivity$1
- com.LBA.prepaidPortal.activity.HomeActivity$2
-com/LBA/prepaidPortal/widgets/fragment/CardInformation1.java
- com.LBA.prepaidPortal.widgets.fragment.CardInformation1
- com.LBA.prepaidPortal.widgets.fragment.CardInformation1$1
- com.LBA.prepaidPortal.widgets.fragment.CardInformation1$2
- com.LBA.prepaidPortal.widgets.fragment.CardInformation1$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.CardInformation1$HomeTask
- com.LBA.prepaidPortal.widgets.fragment.CardInformation1$HomeTask$1
-com/LBA/prepaidPortal/widgets/fragment/AccountToCard.java
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$1
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$2
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$3
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$3$1
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$4
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$4$1
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$5
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$6
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$CustomTask
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$CustomTaskCardNumber
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$HomeTask
- com.LBA.prepaidPortal.widgets.fragment.AccountToCard$HomeTask$1
 com/LBA/prepaidPortal/activity/NewMainPage.java
  com.LBA.prepaidPortal.activity.NewMainPage
  com.LBA.prepaidPortal.activity.NewMainPage$1
@@ -342,27 +307,56 @@ com/LBA/prepaidPortal/activity/NewMainPage.java
  com.LBA.prepaidPortal.activity.NewMainPage$CustomTaskBiometric
  com.LBA.prepaidPortal.activity.NewMainPage$CustomTaskBiometric$1
  com.LBA.prepaidPortal.activity.NewMainPage$CustomTaskBiometric$2
-com/LBA/tools/connection/HTTPClient.java
- com.LBA.tools.connection.HTTPClient
 com/LBA/tools/misc/AirtimeNetworkEntry.java
  com.LBA.tools.misc.AirtimeNetworkEntry
-com/LBA/prepaidPortal/activity/Z_WelcomeActivity.java
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$1
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$10
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$2
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$3
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$4
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$5
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$6
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$7
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$8
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$9
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask$1
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask2
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask3
- com.LBA.prepaidPortal.activity.Z_WelcomeActivity$CustomTask3$1
+com/LBA/prepaidPortal/widgets/fragment/CardToCard.java
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$1
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$2
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$3
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$4
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$4$1
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$5
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$5$1
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$6
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$7
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$CustomTaskCardNumber
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$HomeTask
+ com.LBA.prepaidPortal.widgets.fragment.CardToCard$HomeTask$1
+com/LBA/prepaidPortal/activity/HomeActivity.java
+ com.LBA.prepaidPortal.activity.HomeActivity
+ com.LBA.prepaidPortal.activity.HomeActivity$1
+ com.LBA.prepaidPortal.activity.HomeActivity$2
+com/LBA/prepaidPortal/widgets/fragment/Last10Transactions.java
+ com.LBA.prepaidPortal.widgets.fragment.Last10Transactions
+ com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$1
+ com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$2
+ com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$HomeTask
+ com.LBA.prepaidPortal.widgets.fragment.Last10Transactions$HomeTask$1
+com/LBA/prepaidPortal/widgets/fragment/CardInformation1.java
+ com.LBA.prepaidPortal.widgets.fragment.CardInformation1
+ com.LBA.prepaidPortal.widgets.fragment.CardInformation1$1
+ com.LBA.prepaidPortal.widgets.fragment.CardInformation1$2
+ com.LBA.prepaidPortal.widgets.fragment.CardInformation1$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.CardInformation1$HomeTask
+ com.LBA.prepaidPortal.widgets.fragment.CardInformation1$HomeTask$1
+com/LBA/prepaidPortal/widgets/fragment/AccountToCard.java
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$1
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$2
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$3
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$4
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$4$1
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$5
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$5$1
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$6
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$7
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$CustomTaskCardNumber
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$HomeTask
+ com.LBA.prepaidPortal.widgets.fragment.AccountToCard$HomeTask$1
 com/LBA/prepaidPortal/widgets/fragment/BlockCard.java
  com.LBA.prepaidPortal.widgets.fragment.BlockCard
  com.LBA.prepaidPortal.widgets.fragment.BlockCard$1
@@ -377,5 +371,17 @@ com/LBA/prepaidPortal/widgets/fragment/BlockCard.java
  com.LBA.prepaidPortal.widgets.fragment.BlockCard$CustomTaskCardNumber
  com.LBA.prepaidPortal.widgets.fragment.BlockCard$HomeTask
  com.LBA.prepaidPortal.widgets.fragment.BlockCard$HomeTask$1
-com/LBA/prepaidPortal/activity/BaseActivity.java
- com.LBA.prepaidPortal.activity.BaseActivity
+com/LBA/prepaidPortal/widgets/fragment/UpdatesLimit.java
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$1
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$2
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$3
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$3$1
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$4
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$4$1
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$5
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$6
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$CustomTask
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$CustomTaskCardLimit
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$HomeTask
+ com.LBA.prepaidPortal.widgets.fragment.UpdatesLimit$HomeTask$1
