@@ -37,17 +37,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TableRow>
+
 
 
                 <TableRow
@@ -58,49 +50,40 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:background="@color/GoldenFoil"
                     android:layout_marginTop="20.0dip"
                     android:layout_height="match_parent">
 
 
                     <TextView
                         android:id="@+id/validation_title"
-                        android:layout_width="wrap_content"
+                        android:layout_width="17dp"
                         android:layout_height="wrap_content"
                         android:layout_column="4"
-                        android:textSize="@dimen/_18ssp"
-                        android:layout_weight=".5"
-                        android:text="@string/Validation"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
                         android:layout_marginLeft="8.0dip"
                         android:layout_marginTop="12.0dip"
                         android:layout_marginBottom="10.0dip"
-                        />
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:gravity="center_horizontal"
+                        android:text="@string/Validation"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="bold" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginStart="-280dp"
+                        android:layout_marginTop="55dp"
+                        android:background="@color/grey9" />
+
                 </TableRow>
-                <!--<TableRow
 
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="4"
-                        android:layout_weight="0.5"
-                        android:width="@android:dimen/thumbnail_width"
-                        android:text="VALIDATION ET OTP"
-                        android:textAlignment="gravity"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/black" />
-
-                </TableRow> -->
 
                 <TableRow
                     android:layout_width="match_parent"
+                    android:layout_marginTop="59dp"
                     android:layout_height="match_parent">
 
                     <TextView
@@ -108,12 +91,14 @@
                         android:layout_height="wrap_content"
                         android:layout_column="5"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 </TableRow>
 
                 <TableRow
 
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-45dp">
 
                     <TextView
                         android:id="@+id/textView2"
@@ -121,14 +106,12 @@
                         android:layout_height="wrap_content"
                         android:layout_column="4"
                         android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/grey8"
                         android:gravity="center_horizontal"
+                        android:fontFamily="@font/poppinsmedium"
                         android:layout_weight=".5"
                         android:text="Confirmation pour la limite de la carte,"
                         />
-
-
-
                 </TableRow>
 
                 <TableRow
@@ -153,9 +136,10 @@
                         android:layout_column="4"
                         android:layout_weight=".5"
                         android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textColor="@color/marron"
                         android:gravity="center_horizontal"
-                        android:text="Etes vous sûr de vouloir limiter la carte de numéro "/>
+                        android:text="Etes vous sûr de vouloir limiter la carte de numéro"/>
 
 
                 </TableRow>
@@ -172,62 +156,23 @@
                         android:layout_weight=".5"
                         android:text=""
                         android:inputType="numberDecimal"
+                        android:fontFamily="@font/poppinsmedium"
                         android:textAlignment="center"
                         android:textSize="20dp"
                         android:textStyle="bold"
-                        android:textColor="@color/DebianRed" />
+                        android:textColor="@color/red_close" />
                 </TableRow>
-
                 <TableRow
 
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/textChequeMsg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="4"
-                        android:layout_weight=".5"
-                        android:width="@android:dimen/thumbnail_width"
-                        android:text=""
-                        android:textAlignment="gravity"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/black" />
-                </TableRow>
+                    android:layout_height="match_parent"/>
 
 
 
                 <TableRow
 
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/svBenf"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="4"
-
-                        android:layout_weight=".5"
-                        android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black"
-                        android:gravity="center_horizontal"
-                        android:text="Veuillez confirmer votre choix "                       />
-
-
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="9"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-                </TableRow>
+                    android:layout_height="match_parent"/>
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -257,26 +202,29 @@
 
                 <Button
                     android:id="@+id/btnNOk"
-                    android:layout_width="wrap_content"
+                    android:layout_width="25dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
                     android:layout_centerHorizontal="true"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_white_button"
+                    android:background="@drawable/custom_annuler_button"
                     android:clickable="true"
                     android:elevation="5dp"
                     android:enabled="true"
-                    android:text="Non"
-                    android:textColor="@color/black" />
+                    android:text="Annuler"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/btnOk"
-                    android:layout_width="wrap_content"
+                    android:layout_width="25dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_red_button"
+                    android:background="@drawable/custom_ok_button"
                     android:clickable="true"
                     android:enabled="true"
-                    android:text="Oui"
+                    android:text="Ok"
                     android:textColor="@color/white" />
             </LinearLayout>
         </LinearLayout>

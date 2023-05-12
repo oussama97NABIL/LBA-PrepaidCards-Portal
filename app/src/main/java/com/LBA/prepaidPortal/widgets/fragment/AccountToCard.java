@@ -6,9 +6,13 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -99,7 +103,9 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.account_to_card, container, false);
 
-        getActivity().setTitle("Transfert de Compte à Carte");
+        SpannableString s = new SpannableString("Transfert de Compte à Carte");
+        s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        getActivity().setTitle(s);
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
@@ -117,6 +123,17 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         //getCardInformations();
         OpenTime();
         getCardNumber();
+
+        memo.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (b) {
+                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+                } else {
+                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+                }
+            }
+        });
 
         canBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -315,9 +332,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                 public void onClick(View v) {
                     try {
                         dialog.dismiss();
-                        initProgrees();
-                        HomeTask task = new HomeTask(HomeActivity.class);
-                        task.execute();
+
                     } catch (Exception e) {
                         Log.d(TAG, "btnLoad.setOnClickListener()", e);
                         //  Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
@@ -384,10 +399,8 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
             String formattedDate = sdf.format(currentDate);
             dateTransaction.setText(formattedDate);
-
             TextView reférence_carteTxt = (TextView) dialog.findViewById(R.id.reférence_carte_txt);
             reférence_carteTxt.setText(reférenceCarte.getText());
-
             TextView montant_text = (TextView) dialog.findViewById(R.id.montant_text);
             montant_text.setText(montant.getText());
 
@@ -405,7 +418,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                 ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
                 image.setImageResource(R.drawable.error_icon);
                 TextView success = (TextView) dialog.findViewById(R.id.textView);
-                success.setText("Failure");
+                success.setText("Echoué");
                 TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);
                 Felicitation.setText(message);
             }

@@ -1882,7 +1882,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_weight="1"
-            android:background="@drawable/custom_white_button"
+            android:background="@drawable/custom_annuler_button"
             android:clickable="true"
             android:enabled="true"
             android:layout_marginLeft="@dimen/_16sdp"

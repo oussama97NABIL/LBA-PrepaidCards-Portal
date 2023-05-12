@@ -184,7 +184,7 @@ public class Z_WelcomeActivity extends AbstractActivity  {
 //        txtHide = (Button) findViewById(R.id.txtHide);
         //showUser = (TextView) findViewById(R.id.showUser);
         //textView13 = (TextView) findViewById(R.id.textView13);
-        updateGhCard = (Button) findViewById(R.id.updateGhCard);
+
         userImage = (RoundedImageView) findViewById(R.id.userImage);
 
         //---------------      --------------------------
@@ -199,7 +199,7 @@ public class Z_WelcomeActivity extends AbstractActivity  {
         welcomText.append(wordTwo);
         //------------ pubs ViewPager2 ------------------------
 
-        viewPager2 = findViewById(R.id.viewPagerImageSlider);
+        //5/9/2023viewPager2 = findViewById(R.id.viewPagerImageSlider);
 
         // Globals.MustUsedOperations.clear();
 // 3/28/2023       List<SliderItem> sliderItems = new ArrayList<>();

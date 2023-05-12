@@ -16,8 +16,10 @@
     <color name="blue">#ff0000ff</color>
     <color name="black">#ff000000</color>
     <color name="white">#fff</color>
+    <color name="grey_v">#CACACA</color>
     <color name="text_shadow">#7F000000</color>
     <color name="text_shadow_white">#FFFFFF</color>
+    <color name="text_grey_color">#787878</color>
     <color name="text_grey">#ff424242</color>
     <color name="blue_bg">#ff2ea3db</color>
     <color name="colorGold">#FFD700</color>
@@ -36,6 +38,7 @@
     <color name="bg_table_row_color2">#ffbfbfbf</color>
     <color name="bg_table_row_color3">#ff2ea3db</color>
     <color name="Black">#ff000000</color>
+    <color name="marron">#4D4D4D</color>
     <color name="light_gray">#ffd8d8d8</color>
     <color name="tile_recent_light_grey">#ff8f8f8f</color>
     <color name="btn_blue">#ff2e87cc</color>
@@ -47,7 +50,7 @@
     <color name="grey_bg">#ffe4e4e4</color>
     <color name="green_bg">#ff74981a</color>
     <color name="cbg_red">#D94136</color>
-
+    <color name="red_close">#D50758</color>
     <!-- Phase 2 colors-->
     <color name="button_dark_red">#9D272A</color>
     <color name="button_light_red">#E52D37</color>
@@ -63,6 +66,10 @@
     <color name="grey4">#585858</color>
     <color name="grey5">#686868</color>
     <color name="grey6">#E0E0E0</color>
+    <color name="grey7">#848484</color>
+    <color name="grey8">#757575</color>
+    <color name="grey9">#C4C4C4</color>
+    <color name="grey10">#515151</color>
     <!-- grt=ry for the transaction pages -->
 
     <color name="tr_text_grey">#C1C0C8</color>

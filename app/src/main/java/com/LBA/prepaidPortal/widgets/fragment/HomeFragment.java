@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -106,7 +107,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     ImageButton Setting;
     TextView notificationText;
     ImageView imageshowSolde;
-    Button updateGhCard;
+    TextView BienvenuBanque;
     Uri uri;
     CardView payproxy;
     ImageButton notifications_btn , history_btn;
@@ -159,8 +160,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
 
         Log.e("onCreate: ", "  Globals.userType : "+  Globals.userType);
-        getActivity().setTitle("Mon Compte\n");
-        super.onCreate(savedInstanceState);
+        SpannableString spannableString = new SpannableString("Mon Compte\n");
+        spannableString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        getActivity().setTitle(spannableString);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getClientName();
         mRootView = inflater.inflate(R.layout.z_menu_test, container, false);
         sharedPrefManager = new SharedPrefManager(getActivity().getApplicationContext());
@@ -187,7 +190,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         history_btn = (ImageButton) mRootView.findViewById(R.id.history_btn);
        // balances = (Button) mRootView.findViewById(R.id.btnBalances);
         welcomText = (TextView) mRootView.findViewById(R.id.userWelcome);
-        updateGhCard = (Button) mRootView.findViewById(R.id.updateGhCard);
+        BienvenuBanque = (TextView) mRootView.findViewById(R.id.bienvenu);
         userImage = (RoundedImageView) mRootView.findViewById(R.id.userImage);
 
         //---------------      --------------------------
@@ -199,18 +202,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
         wordTwo.setSpan(new ForegroundColorSpan(Color.BLACK), 0, wordTwo.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         welcomText.append(wordTwo);
-        //------------ pubs ViewPager2 ------------------------
 
-        viewPager2 = mRootView.findViewById(R.id.viewPagerImageSlider);
-
-
-
-        viewPager2.setCurrentItem(1);
-
-        viewPager2.setClipToPadding(false);
-        viewPager2.setClipChildren(false);
-        viewPager2.setOffscreenPageLimit(3);
-        viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
 
         CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
         compositePageTransformer.addTransformer(new MarginPageTransformer(10));
@@ -224,7 +216,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                     }
                 }
         );
-        viewPager2.setPageTransformer(compositePageTransformer);
+//        viewPager2.setPageTransformer(compositePageTransformer);
 
 
 

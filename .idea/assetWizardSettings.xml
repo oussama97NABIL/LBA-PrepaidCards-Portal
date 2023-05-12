@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/verified_user/baseline_verified_user_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/keyboard_arrow_down/baseline_keyboard_arrow_down_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="baseline_verified_confirmation_24" />
+                            <entry key="color" value="d50758" />
+                            <entry key="outputName" value="spinner" />
                             <entry key="sourceFile" value="D:\MasterCard NFC Reader\Samples\sample-mpos-application-src" />
                           </map>
                         </option>

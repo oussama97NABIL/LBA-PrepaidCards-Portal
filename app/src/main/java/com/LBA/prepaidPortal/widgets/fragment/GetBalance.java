@@ -4,8 +4,12 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -72,7 +76,9 @@ public class GetBalance extends BaseFragment implements AdapterView.OnItemSelect
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.get_balance, container, false);
 
-        getActivity().setTitle("Générer des relevés");
+        SpannableString s = new SpannableString("Générer des relevés");
+        s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        getActivity().setTitle(s);
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         starDate = (EditText) mRootView.findViewById(R.id.startDate);
         endDate = (EditText) mRootView.findViewById(R.id.endDate);

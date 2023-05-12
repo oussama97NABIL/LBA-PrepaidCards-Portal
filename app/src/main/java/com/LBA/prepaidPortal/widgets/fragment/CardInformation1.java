@@ -3,8 +3,14 @@ package com.LBA.prepaidPortal.widgets.fragment;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -59,8 +65,10 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.card_detail, container, false);
         setupOnBackPressed();
+        SpannableString s = new SpannableString("Les informations de la carte");
+        s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        getActivity().setTitle(s);
 
-        getActivity().setTitle("Les informations de la carte");
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
@@ -91,46 +99,11 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
          private DatePickerDialog fromDatePickerDialog;
          private DatePickerDialog toDatePickerDialog;
          **/
-        /*Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/miloot_bold.otf"); omar
-        btnLoad.setTypeface(tf);
-        textView_heading.setTypeface(tf);
-        textView.setTypeface(tf);
-        textView2.setTypeface(tf);
-        textView3.setTypeface(tf);
 
-        Button button_sign_out = (Button) findViewById(R.id.button_sign_out);
-        button_sign_out.setTypeface(tf);*/
 
         return mRootView;
     }
-    /*private void findViewsById() {
-        fromDateEtxt = (EditText) findViewById(R.id.etxt_fromdate);
-        fromDateEtxt.setInputType(InputType.TYPE_NULL);
-        fromDateEtxt.requestFocus();
-        toDateEtxt = (EditText) findViewById(R.id.etxt_todate);
-        toDateEtxt.setInputType(InputType.TYPE_NULL);
-    }*/
-    /*private void setDateTimeField() {
-        fromDateEtxt.setOnClickListener(this);
-        toDateEtxt.setOnClickListener(this);
-        Calendar newCalendar = Calendar.getInstance();
-        fromDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                fromDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-        toDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                toDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-    }*/
     public void onClick(View view) {
         if (view == fromDateEtxt) {
             fromDatePickerDialog.show();
@@ -256,7 +229,7 @@ public class CardInformation1 extends BaseFragment implements AdapterView.OnItem
             EditText ExpiryDate = (EditText) mRootView.findViewById(R.id.expiry_date);
             ExpiryDate.setText(Globals.expiryDate);
             EditText MobileNumber = (EditText) mRootView.findViewById(R.id.mobile_number);
-            MobileNumber.setText("0712549874");
+            MobileNumber.setText("00 233 78000882");
             EditText City = (EditText) mRootView.findViewById(R.id.city);
             City.setText(Globals.city);
             EditText Country = (EditText) mRootView.findViewById(R.id.country);

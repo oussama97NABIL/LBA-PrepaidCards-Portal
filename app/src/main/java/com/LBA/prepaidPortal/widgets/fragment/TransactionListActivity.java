@@ -7,10 +7,14 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -64,7 +68,9 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.activity_transaction_result, container, false);
 
-        getActivity().setTitle("Les Dernières transaction");
+        SpannableString s = new SpannableString("Les dernières transactions");
+        s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        getActivity().setTitle(s);
 
 
         initProgrees();
@@ -236,25 +242,25 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
             TextView tvTransType = (TextView) listItem.findViewById(R.id.transaction_type);
             if(!wallet) {
                 if (Globals.transactionList.get(pos).getReferenceNumber() != null && Globals.transactionList.get(pos).getReferenceNumber().length() > 0) {
-                    tvValRef.setTextColor(getResources().getColor(R.color.MurasakiPurple));
+                    tvValRef.setTextColor(getResources().getColor(R.color.Black));
                     tvValRef.setText(Globals.transactionList.get(pos).getReferenceNumber());
                 }
                 if (Globals.transactionList.get(pos).getDate() != null && Globals.transactionList.get(pos).getDate().length() > 0) {
-                    tvDate1.setTextColor(getResources().getColor(R.color.MurasakiPurple));
+                    tvDate1.setTextColor(getResources().getColor(R.color.GoldenFoil));
                     tvDate1.setText(Globals.transactionList.get(pos).getDate());
                 }
                 if (Globals.transactionList.get(pos).getAmount() != null && Globals.transactionList.get(pos).getAmount().length() > 0) {
-                    tvAmount.setTextColor(getResources().getColor(R.color.MurasakiPurple));
+                    tvAmount.setTextColor(getResources().getColor(R.color.Black));
                     tvAmount.setText(Globals.transactionList.get(pos).getAmount());
                 }
                 if (Globals.transactionList.get(pos).getAmount() != null && Globals.transactionList.get(pos).getAmount().length() > 0) {
-                    location.setTextColor(getResources().getColor(R.color.MurasakiPurple));
+                    location.setTextColor(getResources().getColor(R.color.Black));
                     location.setText(Globals.transactionList.get(pos).getLocation());
                 }
-                if (Globals.transactionList.get(pos).getTransactionType() != null && Globals.transactionList.get(pos).getTransactionType().length() > 0) {
+               /* if (Globals.transactionList.get(pos).getTransactionType() != null && Globals.transactionList.get(pos).getTransactionType().length() > 0) {
                     tvTransType.setTextColor(getResources().getColor(R.color.Black));
                     tvTransType.setText(Globals.transactionList.get(pos).getTransactionType());
-                }
+                }*/
 
                 else {
                     tvDate.setTextColor(getResources().getColor(R.color.dark_grey_color));

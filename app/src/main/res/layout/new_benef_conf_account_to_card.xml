@@ -51,19 +51,17 @@
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
-                    android:background="@color/GoldenFoil"
                     android:layout_marginTop="20.0dip"
                     android:layout_height="match_parent">
-
-
                     <TextView
                         android:id="@+id/validation_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="4"
-                        android:textSize="@dimen/_18ssp"
+                        android:textSize="@dimen/_16ssp"
                         android:layout_weight=".5"
                         android:text="Validation et Otp"
+                        android:fontFamily="@font/poppinsmedium"
                         android:textAppearance="?android:textAppearanceLarge"
                         android:textColor="@color/black"
                         android:textStyle="bold"
@@ -73,25 +71,6 @@
                         android:layout_marginBottom="10.0dip"
                         />
                 </TableRow>
-                <!--<TableRow
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_column="4"
-                        android:layout_weight="0.5"
-                        android:width="@android:dimen/thumbnail_width"
-                        android:text="VALIDATION ET OTP"
-                        android:textAlignment="gravity"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/black" />
-
-                </TableRow> -->
-
                 <TableRow
 
                     android:layout_width="match_parent"
@@ -103,7 +82,8 @@
                         android:layout_height="wrap_content"
                         android:layout_column="4"
                         android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/grey10"
+                        android:fontFamily="@font/poppinsmedium"
                         android:gravity="center_horizontal"
                         android:layout_weight=".5"
                         android:text="Afin de traiter votre transaction,"
@@ -141,8 +121,9 @@
 
                         android:layout_column="4"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
-                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp"
+                        android:textColor="@color/grey10"
+                        android:fontFamily="@font/poppinsmedium"
                         android:gravity="center_horizontal"
                         android:text="Titulaire de carte: " />
                     <TextView
@@ -151,8 +132,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="-100dp"
                         android:layout_column="4"
+                        android:fontFamily="@font/poppinsmedium"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_9ssp"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
                         android:text="Titulaire de carte " />
@@ -168,9 +150,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="-140dp"
                         android:layout_column="4"
+                        android:fontFamily="@font/poppinsmedium"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
-                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp"
+                        android:textColor="@color/grey10"
                         android:gravity="center_horizontal"
                         android:text="Numéro de compte: " />
                     <TextView
@@ -179,8 +162,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="-100dp"
                         android:layout_column="4"
+                        android:fontFamily="@font/poppinsmedium"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_9ssp"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
                         android:text="NumCompte " />
@@ -195,8 +179,9 @@
                         android:layout_marginLeft="-80dp"
                         android:layout_column="4"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
-                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp"
+                        android:textColor="@color/grey10"
+                        android:fontFamily="@font/poppinsmedium"
                         android:gravity="center_horizontal"
                         android:text="Numéro de carte bénéficiaire: " />
                     <TextView
@@ -206,7 +191,8 @@
                         android:layout_marginLeft="-120dp"
                         android:layout_column="4"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_9ssp"
+                        android:fontFamily="@font/poppinsmedium"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
                         android:text="47852333 " />
@@ -220,8 +206,9 @@
                         android:layout_marginLeft="-130dp"
                         android:layout_column="4"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
-                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textColor="@color/grey10"
                         android:gravity="center_horizontal"
                         android:text="Montant de virement: " />
                     <TextView
@@ -231,7 +218,8 @@
                         android:layout_marginLeft="-100dp"
                         android:layout_column="4"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_9ssp"
+                        android:fontFamily="@font/poppinsmedium"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
                         android:text="NumCompte " />
@@ -245,8 +233,9 @@
                         android:layout_marginLeft="-225dp"
                         android:layout_column="4"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
-                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textColor="@color/grey10"
                         android:gravity="center_horizontal"
                         android:text="Motif: " />
                     <TextView
@@ -256,7 +245,8 @@
                         android:layout_marginLeft="-100dp"
                         android:layout_column="4"
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_11ssp"
+                        android:textSize="@dimen/_9ssp"
+                        android:fontFamily="@font/poppinsmedium"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
                         android:text="NumCompte " />
@@ -287,8 +277,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="4"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_10ssp"
                         android:textColor="@color/black"
+                        android:fontFamily="@font/poppinsmedium"
                         android:gravity="center_horizontal"
                         android:layout_weight=".5"
                         android:text="Nous avons envoyé un code à,"
@@ -306,9 +297,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight=".5"
                         android:text="00 233 78000882"
+                        android:fontFamily="@font/poppinsmedium"
                         android:inputType="numberDecimal"
                         android:textAlignment="center"
-                        android:textSize="20dp"
+                        android:textSize="@dimen/_10ssp"
                         android:textStyle="bold"
                         android:textColor="@color/DebianRed" />
                 </TableRow>
@@ -333,10 +325,13 @@
                         android:id="@+id/textChequeMsg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="55dp"
                         android:layout_column="4"
                         android:layout_weight=".5"
+                        android:textSize="@dimen/_9ssp"
                         android:width="@android:dimen/thumbnail_width"
                         android:text="Entrer le code vérification: "
+                        android:fontFamily="@font/poppinsmedium"
                         android:layout_gravity="center"
                         android:textAlignment="gravity"
                         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -357,6 +352,7 @@
                         android:inputType="number"
                         android:layout_gravity="center"
                         android:textAlignment="gravity"
+                        android:background="@drawable/custom_eidttext"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@color/black" />
                 </TableRow>
@@ -385,9 +381,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="4"
-
                         android:layout_weight=".5"
-                        android:textSize="@dimen/_15ssp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textSize="@dimen/_10ssp"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
                         android:text="Veuillez confirmer votre choix "                       />
@@ -425,26 +421,29 @@
 
                 <Button
                     android:id="@+id/btnNOk"
-                    android:layout_width="wrap_content"
+                    android:layout_width="25dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
                     android:layout_centerHorizontal="true"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_white_button"
+                    android:background="@drawable/custom_annuler_button"
                     android:clickable="true"
                     android:elevation="5dp"
                     android:enabled="true"
-                    android:text="Non"
-                    android:textColor="@color/black" />
+                    android:text="Annuler"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/btnOk"
-                    android:layout_width="wrap_content"
+                    android:layout_width="25dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
                     android:layout_weight="1"
-                    android:background="@drawable/custom_red_button"
+                    android:background="@drawable/custom_ok_button"
                     android:clickable="true"
                     android:enabled="true"
-                    android:text="Oui"
+                    android:text="Ok"
                     android:textColor="@color/white" />
 
             </LinearLayout>

@@ -15,6 +15,10 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="SpinnerItemTextStyle" parent="@android:style/TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:fontFamily">@font/poppinsmedium</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

@@ -5,9 +5,15 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.AbsoluteSizeSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.TypefaceSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -82,7 +88,10 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                              @Nullable Bundle savedInstanceState) {
 
         mRootView = inflater.inflate(R.layout.block_card_new, container, false);
-        getActivity().setTitle("Bloquer/Débloquer une carte");
+
+        SpannableString spannableString = new SpannableString("Bloquer/Débloquer une carte");
+        spannableString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        getActivity().setTitle(spannableString);
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
@@ -91,8 +100,6 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
         mStepView = (StepView) mRootView. findViewById(R.id.step_view);
         Log.e(TAG, "onCreateView: HC -----  mStepView.getState()");
         mStepView.done(false);
-
-
         List<String> steps = Arrays.asList(new String[]{"SAISIE", "VALIDATION", "CONFIRMATION"});
         mStepView.setSteps(steps);
         //getCardInformations();
@@ -139,6 +146,11 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
         String[] arraySpinner = new String[] {
                 "Bloquer","Débloquer"
         };
+        spannableString.setSpan(new TypefaceSpan("sans-serif"), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(new AbsoluteSizeSpan(16, true), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+// Définition du premier élément du tableau avec la police et la taille du texte personnalisées
+
         selectedOperation = "Bloquer";
         Spinner s = (Spinner) mRootView.findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, arraySpinner);
@@ -297,7 +309,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
             }
 
-            dialog.setContentView(R.layout.confirm_dialog_block_card);
+            dialog.setContentView(R.layout.confirm_dialog_block_card_new);
             dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
             dialog.setCancelable(false);
             dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
@@ -310,7 +322,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
                 image.setImageResource(R.drawable.error_icon);
                 TextView success = (TextView) dialog.findViewById(R.id.textView);
-                success.setText("Failure");
+                success.setText("Echoué");
                 TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);
                 Felicitation.setText(message);
             }

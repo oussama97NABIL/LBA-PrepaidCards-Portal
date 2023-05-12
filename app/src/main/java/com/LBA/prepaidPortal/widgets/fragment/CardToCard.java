@@ -6,9 +6,13 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -91,8 +95,9 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.card_to_card, container, false);
-
-        getActivity().setTitle("Transfert de Carte à Carte");
+        SpannableString s = new SpannableString("Transfert de Carte à Carte");
+        s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        getActivity().setTitle(s);
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
@@ -110,6 +115,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
         //getCardInformations();
         OpenTime();
         getCardNumber();
+
 
         canBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -159,7 +165,6 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                 .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen._16sdp))
                 .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
-                // other state methods are equal to the corresponding xml attr ibutes
                 .commit();
         /**
          TextView txtBalance;
@@ -170,16 +175,6 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
          private DatePickerDialog fromDatePickerDialog;
          private DatePickerDialog toDatePickerDialog;
          **/
-        /*Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/miloot_bold.otf"); omar
-        btnLoad.setTypeface(tf);
-        textView_heading.setTypeface(tf);
-        textView.setTypeface(tf);
-        textView2.setTypeface(tf);
-        textView3.setTypeface(tf);
-
-        Button button_sign_out = (Button) findViewById(R.id.button_sign_out);
-        button_sign_out.setTypeface(tf);*/
-
         return mRootView;
     }
 
@@ -200,18 +195,6 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
-
-
-    /*public void getCardInformations(){
-        try {
-            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
-            initProgrees();
-            new CustomTask().execute();
-        } catch (Exception e) {
-            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
-            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    }*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -268,7 +251,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.getWindow().setBackgroundDrawable(getActivity().getDrawable(R.drawable.white_rect));
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.new_benef_conf_card_to_card);
+            dialog.setContentView(R.layout.new_benef_conf_card_to_card_new);
             // set title
             TextView validation_title = (TextView) dialog.findViewById(R.id.validation_title);
             validation_title.setText("Validation et Otp");
@@ -297,9 +280,6 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                 public void onClick(View v) {
                     try {
                         dialog.dismiss();
-                        initProgrees();
-                        HomeTask task = new HomeTask(HomeActivity.class);
-                        task.execute();
                     } catch (Exception e) {
                         Log.d(TAG, "btnLoad.setOnClickListener()", e);
                         //  Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
@@ -357,7 +337,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
             if (dialogWidth < MAX_HEIGHT) {
                 dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
             }
-            dialog.setContentView(R.layout.confirm_dialog_card_to_card);
+            dialog.setContentView(R.layout.confirm_dialog_card_to_card_new);
             dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
             dialog.setCancelable(false);
             dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
@@ -386,7 +366,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                 ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
                 image.setImageResource(R.drawable.error_icon);
                 TextView success = (TextView) dialog.findViewById(R.id.textView);
-                success.setText("Failure");
+                success.setText("Echoué");
                 TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);
                 Felicitation.setText(message);
             }
@@ -452,8 +432,6 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
         protected String doInBackground(String... param) {
             try {
                 Card.CardDetails();
-                // Intent myWelcomeAct = new Intent(getActivity().getApplicationContext(), CardInformationResult.class);
-                //startActivity(myWelcomeAct);
                 return null;
             } catch (Exception e) {
                 e.printStackTrace();

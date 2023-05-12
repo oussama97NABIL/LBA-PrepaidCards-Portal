@@ -4,10 +4,14 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -79,7 +83,9 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.update_limit, container, false);
 
-        getActivity().setTitle("Plafonds");
+        SpannableString s = new SpannableString("Plafonds");
+        s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        getActivity().setTitle(s);
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         BankCode = (TextView) mRootView.findViewById(R.id.bankCode);
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
@@ -134,11 +140,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorAccent))
                 .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorPrimary))
-                // You should specify only stepsNumber or steps array of strings.
-                // In case you specify both steps array is chosen.
-
-                // You should specify only steps number or steps array of strings.
-                // In case you specify both steps array is chosen.
                 .stepsNumber(3)
                 .animationType(StepView.ANIMATION_LINE)
                 .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
@@ -287,8 +288,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 }
                 return;
             }
-
-
             if(param!=null) {
 
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();

@@ -60,27 +60,28 @@ public class HomeActivity extends AbstractActivity
     private void initWidget() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_menu);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
+        toggle.setDrawerIndicatorEnabled(false);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START);
+                } else {
+                    drawer.openDrawer(GravityCompat.START);
+                }
+            }
+        });
         View header = navigationView.getHeaderView(0);
-
-
-        /*TextView statusText = (TextView) header.findViewById(R.id.status_text);
-        statusText.setText("status");
-
-        TextView currentInterfaceText = (TextView) header.findViewById(R.id.current_interface_text);
-        currentInterfaceText.setText("interface");
-
-        TextView additionalInfoText = (TextView) header.findViewById(R.id.additional_info_text);
-        additionalInfoText.setText("plus info");*/
     }
 
 

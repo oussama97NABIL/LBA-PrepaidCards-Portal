@@ -173,11 +173,10 @@
         android:layout_marginBottom="8dp"
         android:layout_toStartOf="@+id/imageButton3"
         android:layout_toLeftOf="@+id/imageButton3"
-        android:background="@drawable/custom_white_button"
+        android:background="@drawable/custom_annuler_button"
         android:text="EDIT"
         android:visibility="gone"
         android:textColor="@color/black" />
-
     <Button
         android:id="@+id/save"
         android:layout_width="150dp"
@@ -188,7 +187,6 @@
         android:layout_marginStart="28dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="18dp"
-
         android:layout_marginEnd="9dp"
         android:layout_marginRight="29dp"
         android:layout_marginBottom="8dp"

@@ -50,453 +50,528 @@
 				android:layout_height="match_parent"
 				android:orientation="vertical"
 				>
-
+				<TextView
+					android:id="@+id/numéroCarte"
+					android:layout_width="470dp"
+					android:layout_height="80dp"
+					android:layout_marginStart="16dp"
+					android:text="Numéro de la carte"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/mobilelLayout"
-					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_width="310dp"
+					android:layout_height="80dp"
+					android:layout_marginTop="-50dp"
 					android:layout_marginStart="16dp"
-					android:hint="Le numéro de la carte*"
-					app:errorEnabled="true">
+					app:layout_constraintTop_toBottomOf="@id/numéroCarte"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true"
+					>
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/cardNumber"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
+						android:background="@drawable/custom_eidttext"
+						android:fontFamily="@font/poppinsmedium"
 						android:clickable="true"
+						android:textSize="@dimen/_10ssp"
 						android:ems="10"
 						android:enabled="false"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
-
-						android:textColor="@color/black" />
-
+						android:textColor="@color/black"
+						/>
 				</com.google.android.material.textfield.TextInputLayout>
+				<TextView
+					android:id="@+id/nomBanque"
+					android:layout_width="470dp"
+					android:layout_height="80dp"
+					android:layout_marginStart="16dp"
+					android:text="Nom de la Banque"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/refrealCodeLayout"
-					android:layout_width="470dp"
+					android:layout_width="310dp"
 					android:layout_height="wrap_content"
+					android:layout_marginTop="-50dp"
 					android:layout_marginStart="16dp"
-					android:hint="Nom de la Banque"
+					app:layout_constraintTop_toBottomOf="@id/nomBanque"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/bankname"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:background="@drawable/custom_eidttext"
+						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
+						android:textSize="@dimen/_10ssp"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
+				<TextView
+					android:id="@+id/codeClient"
+					android:layout_width="470dp"
+					android:layout_height="80dp"
+					android:layout_marginStart="16dp"
+					android:text="Code du client"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
 
-				<!--  ???  <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailLayout"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:hint=""
-            style="@style/MyTextInputLayout_overlay"
-            android:layout_marginStart="16dp"
-            app:errorEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textViewemail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:ems="10"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:inputType="phone" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/customerSpinnerLayout"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:hint="DOMICILE BRANCH">
-
-            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-                android:id="@+id/customerTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                tools:ignore="KeyboardInaccessibleWidget" />
-        </com.google.android.material.textfield.TextInputLayout>-->
-
-
-				<!--     <EditText
-            android:id="@+id/dob"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:paddingRight="5dp"
-            android:inputType="textPersonName"
-            android:drawableRight="@drawable/calendar"
-            android:textColor="@color/black"
-            /> -->
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/bizcertLayout"
-					android:layout_width="470dp"
+					android:layout_width="310dp"
 					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
 					android:layout_marginStart="16dp"
-					android:hint="Code du Client*"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/clientcode"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:textSize="@dimen/_10ssp"
+						android:background="@drawable/custom_eidttext"
+						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
+				<TextView
+					android:id="@+id/codeClient"
+					android:layout_width="470dp"
+					android:layout_height="80dp"
+					android:layout_marginStart="16dp"
+					android:text="Agence"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
 
 				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/dobLayout"
-					android:layout_width="470dp"
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
 					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
 					android:layout_marginStart="16dp"
-					android:hint="Agence*"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
 					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/branch"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:fontFamily="@font/poppinsmedium"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
+						android:textSize="@dimen/_10ssp"
 						android:enabled="false"
+						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
-				<!--   <EditText
-            android:id="@+id/pin"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:background="@drawable/button_border_fields"
-            android:inputType="numberPassword"
-            android:textAlignment="gravity"
-            android:maxLength="6"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />
--->
-
-				<!--<EditText
-            android:id="@+id/pinConf"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:maxLength="6"
-            android:width="150dp"
-            android:background="@drawable/button_border_fields"
-            android:inputType="numberPassword"
-            android:textAlignment="gravity"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />-->
+				<TextView
+					android:id="@+id/codeClient"
+					android:layout_width="470dp"
+					android:layout_height="80dp"
+					android:layout_marginStart="16dp"
+					android:text="Type du client"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
 
 				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
-					android:layout_width="470dp"
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
 					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
 					android:layout_marginStart="16dp"
-					android:hint="Type du client*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-
-					>
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/client_type"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
+						android:textSize="@dimen/_10ssp"
 						android:enabled="false"
+						android:fontFamily="@font/poppinsmedium"
+						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
+				<TextView
+					android:id="@+id/codeClient"
 					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
-					android:hint="Carte Status*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:text="Carte status"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
+					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
+					android:layout_marginStart="16dp"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
+
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/status_Card"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:textSize="@dimen/_10ssp"
+						android:background="@drawable/custom_eidttext"
+						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 
 				</com.google.android.material.textfield.TextInputLayout>
+				<TextView
+					android:id="@+id/codeClient"
+					android:layout_width="470dp"
+					android:layout_height="80dp"
+					android:layout_marginStart="16dp"
+					android:text="Titulaire de la carte"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
 
 				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
-					android:layout_width="470dp"
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
 					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
 					android:layout_marginStart="16dp"
-					android:hint="Titulaire de la carte*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
+
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/title_card_holder"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:textSize="@dimen/_10ssp"
+						android:fontFamily="@font/poppinsmedium"
+						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
+
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
+				<TextView
+					android:id="@+id/codeClient"
 					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
-					android:hint="Nom*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:text="Nom"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
+					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
+					android:layout_marginStart="16dp"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
+
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/family_name"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
+						android:fontFamily="@font/poppinsmedium"
 						android:ems="10"
 						android:enabled="false"
+						android:textSize="@dimen/_10ssp"
+						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
+
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
+				<TextView
+					android:id="@+id/codeClient"
 					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
-					android:hint="Document Type*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:text="Document Type"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
+					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
+					android:layout_marginStart="16dp"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/document_code"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
+						android:textSize="@dimen/_10ssp"
 						android:ems="10"
 						android:enabled="false"
+						android:background="@drawable/custom_eidttext"
+						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
+
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
+				<TextView
+					android:id="@+id/codeClient"
 					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
-					android:hint="Document Id*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:text="Document Id"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
+					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
+					android:layout_marginStart="16dp"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/document_id"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
+						android:fontFamily="@font/poppinsmedium"
+						android:textSize="@dimen/_10ssp"
 						android:ems="10"
 						android:enabled="false"
+						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
+				<TextView
+					android:id="@+id/codeClient"
 					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
-					android:hint="Addresse*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:text="Addresse"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
+					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
+					android:layout_marginStart="16dp"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/address"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:textSize="@dimen/_10ssp"
+						android:background="@drawable/custom_eidttext"
+						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
+				<TextView
+					android:id="@+id/codeClient"
 					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
-					android:hint="Date d'expiration*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:text="Date d'expiration"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
+					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
+					android:layout_marginStart="16dp"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/expiry_date"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:background="@drawable/custom_eidttext"
+						android:textSize="@dimen/_10ssp"
+						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
+				<TextView
+					android:id="@+id/codeClient"
 					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
-					android:hint="Numéro de téléphone*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:text="Numéro de téléphone"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
+					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
+					android:layout_marginStart="16dp"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/mobile_number"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:textSize="@dimen/_10ssp"
+						android:fontFamily="@font/poppinsmedium"
+						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
+				<TextView
+					android:id="@+id/codeClient"
 					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
-					android:hint="Ville*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:text="Ville"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
+					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
+					android:layout_marginStart="16dp"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/city"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:textSize="@dimen/_10ssp"
+						android:background="@drawable/custom_eidttext"
+						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 				</com.google.android.material.textfield.TextInputLayout>
-				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/pinConfLayout"
+				<TextView
+					android:id="@+id/codeClient"
 					android:layout_width="470dp"
-					android:layout_height="wrap_content"
+					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
-					android:hint="Pays*"
-					android:inputType="numberPassword"
-					app:counterMaxLength="6"
-					app:errorEnabled="true"
-					>
+					android:text="Pays"
+					android:textColor="@color/grey1"
+					android:fontFamily="@font/poppinsmedium"/>
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/bizcertLayout"
+					android:layout_width="310dp"
+					android:layout_height="wrap_content"
+					app:layout_constraintTop_toBottomOf="@id/codeClient"
+					android:layout_marginTop="-50dp"
+					android:layout_marginStart="16dp"
+					android:fontFamily="@font/poppinsmedium"
+					android:textColorHint="@color/grey1"
+					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/country"
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="50dp"
 						android:clickable="true"
+						android:textSize="@dimen/_10ssp"
 						android:ems="10"
 						android:enabled="false"
+						android:background="@drawable/custom_eidttext"
+						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
 						android:textColor="@color/black" />
 				</com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-
-				<!--   <EditText
-            android:id="@+id/pass"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:inputType="textPassword"
-            android:textAlignment="gravity"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />-->
-
-				<!--
-
-        <EditText
-            android:id="@+id/passConf"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_column="7"
-            android:width="150dp"
-            android:background="@drawable/button_border_fields"
-            android:inputType="textPassword"
-            android:textAlignment="gravity"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white" />-->
-
-
 			</LinearLayout>
-
-
 		</ScrollView>
-
-
-
 	</LinearLayout>
-
 	</HorizontalScrollView>
 </RelativeLayout>

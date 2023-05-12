@@ -11,7 +11,8 @@
         <uses-library android:name ="org.apache.http.legacy" android:required ="false"/>
         <activity
             android:name="com.LBA.prepaidPortal.activity.HomeActivity"
-            android:exported="false">
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
         </activity>
         <activity android:name=".activity.Z_WelcomeActivity" />
         <activity android:name=".activity.LastTransactionResult" />
