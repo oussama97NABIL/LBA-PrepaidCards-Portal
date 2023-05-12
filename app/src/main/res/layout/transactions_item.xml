@@ -4,17 +4,15 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/accountServices"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="140dp"
         app:cardCornerRadius="@dimen/_5sdp"
         app:cardUseCompatPadding="true"
         app:cardElevation="@dimen/_5sdp"
         android:layout_weight="1">
     <View
-        android:layout_width="20dp"
+        android:layout_width="10dp"
         android:layout_height="match_parent"
         android:background="@color/GoldenFoil"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_10sdp"
        />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -64,7 +62,7 @@
             android:id="@+id/transactionId"
             android:layout_width="111dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
             android:layout_marginStart="26dp"
             android:layout_marginBottom="@dimen/_16sdp"
             android:layout_weight="1"
@@ -84,7 +82,7 @@
             android:layout_below="@id/valRef"
             android:fontFamily="@font/poppinsmedium"
             android:layout_marginEnd="15dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="2dp"
             android:textColor="@color/black"
             android:layout_weight="1"
             />
@@ -96,6 +94,7 @@
             android:textSize="@dimen/_9ssp"
             android:layout_below="@id/transactionId"
             android:layout_marginStart="26dp"
+            android:layout_marginTop="-13dp"
             android:text="Montant:"
             android:textColor="@color/grey7"
             android:layout_weight="1"
@@ -109,7 +108,7 @@
             android:layout_below="@id/location"
             android:fontFamily="@font/poppinsmedium"
             android:layout_marginEnd="15dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="7dp"
             android:textColor="@color/black"
             android:layout_weight="1"
             />
@@ -119,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_below="@id/amount"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="15dp"
             android:textColor="@color/black"
             android:fontFamily="@font/poppinsmedium"

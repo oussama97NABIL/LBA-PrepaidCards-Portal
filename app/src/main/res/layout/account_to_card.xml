@@ -4,6 +4,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:windowSoftInputMode="adjustResize"
 	android:id="@+id/root"
 	android:visibility="visible"
 	android:orientation="vertical">
@@ -75,6 +76,7 @@
 			android:layout_marginEnd="5dp"
 			android:layout_marginRight="16dp"
 			android:layout_marginBottom="20dp"
+
 			android:layout_weight="2">
 
 			<LinearLayout
@@ -236,7 +238,7 @@
 					android:textColor="@color/grey1"
 					android:fontFamily="@font/poppinsmedium"/>
 				<com.google.android.material.textfield.TextInputLayout
-					android:id="@+id/mobilelLayout"
+					android:id="@+id/motif"
 					android:layout_width="310dp"
 					android:layout_height="80dp"
 					android:layout_marginTop="-50dp"

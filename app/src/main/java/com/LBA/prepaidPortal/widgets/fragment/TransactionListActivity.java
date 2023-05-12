@@ -72,14 +72,8 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
         s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         getActivity().setTitle(s);
 
-
         initProgrees();
         new CustomTask().execute();
-
-
-
-
-
 
         textView_heading = (TextView) mRootView.findViewById(R.id.textView_heading);
 
@@ -144,10 +138,6 @@ public class TransactionListActivity extends BaseFragment implements AdapterView
         protected void onPostExecute(String param) {
             dismissProgress();
             super.onPostExecute(param);
-
-
-
-
             if(param!=null && param.contains("801")){
                 Toast.makeText(getActivity().getApplicationContext(), "Session expired", Toast.LENGTH_LONG).show();
                 try {

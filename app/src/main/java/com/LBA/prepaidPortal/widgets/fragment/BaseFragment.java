@@ -55,10 +55,6 @@ public class BaseFragment extends Fragment {
     //start fatim 08042022
     protected  int delay=0;
     protected ApptimeoutManager apptimeoutManager;
-
-
-
-
     public void initProgrees() {
         // pDialog = new ProgressDialog(AbstractActivity.this);
         pDialog = new ProgressDialog(new ContextThemeWrapper(getActivity(), R.style.CustomFontDialog));
@@ -89,8 +85,6 @@ public class BaseFragment extends Fragment {
         if(Globals.timeout != null)
             delay= Integer.parseInt(Globals.timeout);
     }
-
-
     public synchronized void getProgress(){
         apptimeoutManager.progreesDialog();
     }

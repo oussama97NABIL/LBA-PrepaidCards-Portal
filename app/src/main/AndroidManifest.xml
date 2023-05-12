@@ -12,7 +12,8 @@
         <activity
             android:name="com.LBA.prepaidPortal.activity.HomeActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustPan"
+            >
         </activity>
         <activity android:name=".activity.Z_WelcomeActivity" />
         <activity android:name=".activity.LastTransactionResult" />
@@ -24,6 +25,7 @@
 
         <activity
             android:name="com.LBA.MainActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

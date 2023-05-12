@@ -7,6 +7,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -26,6 +28,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,6 +69,9 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
     TextView txtBalance;
     TextView txtCurrency;
     private EditText fromDateEtxt;
+    private ScrollView mScrollView;
+    private ViewGroup mMainLayout;
+    private int mInitialScrollY;
 
     private int position = 0;
     private StepView mStepView;
@@ -102,7 +108,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.account_to_card, container, false);
-
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         SpannableString s = new SpannableString("Transfert de Compte à Carte");
         s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         getActivity().setTitle(s);
@@ -111,6 +117,8 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         BankName = (TextView) mRootView.findViewById(R.id.bankname);
         canBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
+        mScrollView = mRootView.findViewById(R.id.scroll_view);
+        mMainLayout = mRootView.findViewById(R.id.motif);
         mStepView = (StepView) mRootView. findViewById(R.id.step_view);
         accountNumber = (TextInputEditText) mRootView.findViewById(R.id.account_number);
         montant = (TextInputEditText) mRootView.findViewById(R.id.amount);
@@ -123,17 +131,6 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         //getCardInformations();
         OpenTime();
         getCardNumber();
-
-        memo.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-                } else {
-                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-                }
-            }
-        });
 
         canBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,6 +167,17 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                 }
             }
         });
+
+        /*memo.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (b) {
+                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+                } else {
+                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+                }
+            }
+        });*/
         mStepView.getState()
                 .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
                 .animationType(StepView.ANIMATION_CIRCLE)
@@ -188,7 +196,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                 .stepLineWidth(getResources().getDimensionPixelSize(R.dimen._1sdp))
                 .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen._16sdp))
-                .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
+                .typeface(ResourcesCompat.getFont(getContext(), R.font.poppinsmedium))
                 // other state methods are equal to the corresponding xml attr ibutes
                 .commit();
         /**
@@ -229,6 +237,70 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
             //Log.d(TAG, "btnLoad.setOnClickListener()", e);
             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
+    }
+    private void setEditTextFocusChangeListener(ViewGroup viewGroup) {
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            View child = viewGroup.getChildAt(i);
+            if (child instanceof EditText) {
+                final EditText motif = (EditText) child;
+                motif.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                    @Override
+                    public void onFocusChange(View v, boolean hasFocus) {
+                        if (hasFocus) {
+                            scrollToView(v);
+                        }
+                    }
+                });
+            } else if (child instanceof ViewGroup) {
+                setEditTextFocusChangeListener((ViewGroup) child);
+            }
+        }
+    }
+    private void scrollToView(final View view) {
+        // Get the screen height
+        final int screenHeight = getResources().getDisplayMetrics().heightPixels;
+
+        // Calculate the difference between the bottom of the screen and the bottom of the EditText
+        final Rect rect = new Rect();
+        view.getGlobalVisibleRect(rect);
+        int keyboardHeight = screenHeight - rect.bottom;
+
+        if (keyboardHeight > 0) {
+            // Set the initial scroll Y position of the ScrollView
+            mInitialScrollY = mScrollView.getScrollY();
+
+            // Scroll the ScrollView up by the height of the soft keyboard
+            mScrollView.scrollBy(0, keyboardHeight);
+
+            // Add a layout listener to the main layout to move it up when the soft keyboard is shown
+            mMainLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    // Calculate the difference between the bottom of the screen and the bottom of the main layout
+                    Rect r = new Rect();
+                    mMainLayout.getWindowVisibleDisplayFrame(r);
+                    int screenHeight = mMainLayout.getRootView().getHeight();
+                    int keypadHeight = screenHeight - r.bottom;
+
+                    // If the keypad is shown, move the main layout up
+                    if (keypadHeight > getStatusBarHeight()) {
+                        mMainLayout.setY(mMainLayout.getY() - keypadHeight);
+                    } else {
+                        // Otherwise, reset the position of the main layout and scroll the ScrollView to its initial position
+                        mMainLayout.setY(0);
+                        mScrollView.scrollTo(0, mInitialScrollY);
+                    }
+                }
+            });
+        }
+    }
+    private int getStatusBarHeight() {
+        int result = 0;
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
     }
 
 
@@ -407,7 +479,6 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
             TextView motif_text = (TextView) dialog.findViewById(R.id.motif_text);
             motif_text.setText(memo.getText());
 
-
             TextView user = (TextView) dialog.findViewById(R.id.nom_carte);
             user.setText(Globals.userWelcome);
 
@@ -445,6 +516,9 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
 
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
+    }
+    private void adjustScrollViewPosition(View view, int scrollAmount) {
+        view.scrollBy(0, scrollAmount);
     }
 
 

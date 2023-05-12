@@ -254,9 +254,6 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 public void onClick(View v) {
                     try {
                         dialog.dismiss();
-                        initProgrees();
-                       HomeTask task = new HomeTask(HomeActivity.class);
-                        task.execute();
                     } catch (Exception e) {
                         Log.d(TAG, "btnLoad.setOnClickListener()", e);
                         //  Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();

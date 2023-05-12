@@ -66,6 +66,8 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
     TextView BankName;
     ImageButton canBtn;
     MaterialButton nexBtn;
+    TextInputEditText memo;
+    TextInputEditText reférenceCarte;
     TextInputEditText atmLimit;
     TextInputEditText posLimit;
     TextInputEditText onlineLimit;
@@ -95,6 +97,8 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         posLimit = (TextInputEditText) mRootView.findViewById(R.id.limitPurchase);
         onlineLimit = (TextInputEditText) mRootView.findViewById(R.id.limitEcom);
         mStepView = (StepView) mRootView. findViewById(R.id.step_view);
+        reférenceCarte = (TextInputEditText) mRootView.findViewById(R.id.reférence_carte);
+        memo = (TextInputEditText) mRootView.findViewById(R.id.memo);
         Log.e(TAG, "onCreateView: HC -----  mStepView.getState()");
         mStepView.done(false);
 
@@ -134,6 +138,17 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 }
             }
         });
+        onlineLimit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (b) {
+                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+                } else {
+                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+                }
+            }
+        });
+
         mStepView.getState()
                 .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
                 .animationType(StepView.ANIMATION_CIRCLE)
@@ -335,9 +350,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 public void onClick(View v) {
                     try {
                         dialog.dismiss();
-                        initProgrees();
-                        HomeTask task = new HomeTask(HomeActivity.class);
-                        task.execute();
                     } catch (Exception e) {
                         Log.d(TAG, "btnLoad.setOnClickListener()", e);
                         //  Toast.makeText(DSTVActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();

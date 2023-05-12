@@ -4,6 +4,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:windowSoftInputMode="adjustResize"
 	android:id="@+id/root"
 	android:orientation="vertical">
 	<include layout="@layout/page_title" />
@@ -80,7 +81,7 @@
 			<LinearLayout
 				android:id="@+id/ll2"
 				android:layout_width="326dp"
-				android:layout_marginTop="20dp"
+				android:layout_marginTop="-5dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical">
 				<TextView

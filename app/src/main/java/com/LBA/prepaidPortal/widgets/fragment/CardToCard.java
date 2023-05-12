@@ -146,6 +146,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                 }
             }
         });
+
         mStepView.getState()
                 .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
                 .animationType(StepView.ANIMATION_CIRCLE)
@@ -164,7 +165,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                 .stepLineWidth(getResources().getDimensionPixelSize(R.dimen._1sdp))
                 .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen._16sdp))
-                .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
+                .typeface(ResourcesCompat.getFont(getContext(), R.font.poppinsmedium))
                 .commit();
         /**
          TextView txtBalance;

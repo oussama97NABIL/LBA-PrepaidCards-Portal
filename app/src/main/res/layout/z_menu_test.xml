@@ -18,7 +18,7 @@
         <RelativeLayout
             android:id="@+id/userWelcomeCard"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:layout_marginTop="0dp"
             android:layout_marginStart="15dp"
             android:elevation="12dp"
@@ -38,7 +38,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="-2dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
                 android:layout_toRightOf="@id/userImage"
                 android:padding="@dimen/_10sdp"
                 android:text=""
@@ -48,11 +48,11 @@
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/userImage"
-                android:layout_width="35dp"
-                android:layout_height="34dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="@dimen/_33sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_17sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:scaleType="fitXY"
                 android:src="@drawable/usewelcome"
@@ -80,7 +80,7 @@
                 android:fontFamily="@font/poppinsmedium"
                 android:text="BIENVENU A LA BANQUE AGRICOLE"
                 android:textColor="@color/Black"
-                android:textSize="@dimen/_9ssp"
+                android:textSize="@dimen/_10ssp"
                 app:layout_constraintStart_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/userWelcomeCard" />
@@ -110,7 +110,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -548,7 +548,7 @@
                                 android:layout_marginTop="@dimen/_10sdp"
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginRight="28dp"
-                                android:layout_marginBottom="23dp"
+                                android:layout_marginBottom="21dp"
                                 android:backgroundTint="@color/white"
                                 app:srcCompat="@drawable/ic_baseline_plafonds_24_home"
                                 />
