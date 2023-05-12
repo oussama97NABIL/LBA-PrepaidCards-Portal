@@ -138,23 +138,14 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 }
             }
         });
-        onlineLimit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-                } else {
-                    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-                }
-            }
-        });
+
 
         mStepView.getState()
                 .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
                 .animationType(StepView.ANIMATION_CIRCLE)
-                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorAccent))
+                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.yellow))
                 .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
-                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorPrimary))
+                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.Black))
                 .stepsNumber(3)
                 .animationType(StepView.ANIMATION_LINE)
                 .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
@@ -165,9 +156,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
                 // other state methods are equal to the corresponding xml attributes
                 .commit();
-
-
-
         /**
          TextView txtBalance;
          TextView txtCurrency;
@@ -189,34 +177,7 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
 
         return mRootView;
     }
-    /*private void findViewsById() {
-        fromDateEtxt = (EditText) findViewById(R.id.etxt_fromdate);
-        fromDateEtxt.setInputType(InputType.TYPE_NULL);
-        fromDateEtxt.requestFocus();
-        toDateEtxt = (EditText) findViewById(R.id.etxt_todate);
-        toDateEtxt.setInputType(InputType.TYPE_NULL);
-    }*/
-    /*private void setDateTimeField() {
-        fromDateEtxt.setOnClickListener(this);
-        toDateEtxt.setOnClickListener(this);
-        Calendar newCalendar = Calendar.getInstance();
-        fromDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                fromDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-        toDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                toDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-    }*/
     public void onClick(View view) {
         if (view == fromDateEtxt) {
             fromDatePickerDialog.show();
@@ -236,16 +197,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         }
     }
 
-    /*public void getCardInformations(){
-        try {
-            //Account.GetTransactionList(selectedAccount, fromDateEtxt.getText().toString().trim(), toDateEtxt.getText().toString().trim());
-            initProgrees();
-            new CustomTask().execute();
-        } catch (Exception e) {
-            //Log.d(TAG, "btnLoad.setOnClickListener()", e);
-            Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    }*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -344,7 +295,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
             TextView cardNumber = (TextView) dialog.findViewById(R.id.cardNumber);
             cardNumber.setText(Globals.cardNumber);
             mStepView.go(1, true);
-
             dialog.findViewById(R.id.btnNOk).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -402,7 +352,8 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         }
 
         dialog.setContentView(R.layout.confirm_dialog_plafond);
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(getActivity().getDrawable(R.drawable.white_rect));
+        //dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
         dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
 

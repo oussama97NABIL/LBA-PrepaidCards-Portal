@@ -47,6 +47,7 @@
     <color name="btn_red_hover">#ffd03a24</color>
     <color name="transparent">@android:color/transparent</color>
     <color name="yellow_bg">#fff29b16</color>
+    <color name="yellow">#CAD400</color>
     <color name="grey_bg">#ffe4e4e4</color>
     <color name="green_bg">#ff74981a</color>
     <color name="cbg_red">#D94136</color>

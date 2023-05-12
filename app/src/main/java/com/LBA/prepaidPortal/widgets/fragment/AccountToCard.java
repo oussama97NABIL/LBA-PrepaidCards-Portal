@@ -108,7 +108,6 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.account_to_card, container, false);
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         SpannableString s = new SpannableString("Transfert de Compte à Carte");
         s.setSpan(new ForegroundColorSpan(Color.WHITE), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         getActivity().setTitle(s);
@@ -118,7 +117,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         canBtn = (ImageButton) mRootView.findViewById(R.id.imageButton24);
         nexBtn = (MaterialButton) mRootView.findViewById(R.id.imageButton23);
         mScrollView = mRootView.findViewById(R.id.scroll_view);
-        mMainLayout = mRootView.findViewById(R.id.motif);
+        //mMainLayout = mRootView.findViewById(R.id.memo);
         mStepView = (StepView) mRootView. findViewById(R.id.step_view);
         accountNumber = (TextInputEditText) mRootView.findViewById(R.id.account_number);
         montant = (TextInputEditText) mRootView.findViewById(R.id.amount);
@@ -181,16 +180,17 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         mStepView.getState()
                 .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
                 .animationType(StepView.ANIMATION_CIRCLE)
-                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorAccent))
+                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.yellow))
+                .nextStepCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.grey6))
                 .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
-                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorPrimary))
+                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.Black))
                 // You should specify only stepsNumber or steps array of strings.
                 // In case you specify both steps array is chosen.
 
                 // You should specify only steps number or steps array of strings.
                 // In case you specify both steps array is chosen.
                 .stepsNumber(3)
-                .animationType(StepView.ANIMATION_LINE)
+                .animationType(StepView.ANIMATION_ALL)
                 .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
                 .animationDuration(getResources().getInteger(android.R.integer.config_shortAnimTime))
                 .stepLineWidth(getResources().getDimensionPixelSize(R.dimen._1sdp))
@@ -462,7 +462,8 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                 dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
             }
             dialog.setContentView(R.layout.confirm_dialog_account_to_card);
-            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+           // dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+            dialog.getWindow().setBackgroundDrawable(getActivity().getDrawable(R.drawable.white_rect));
             dialog.setCancelable(false);
             dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
             TextView dateTransaction = (TextView) dialog.findViewById(R.id.date);

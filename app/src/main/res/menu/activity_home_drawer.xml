@@ -24,7 +24,7 @@
                 <item
                     android:id="@+id/last_transaction"
                     android:icon="@drawable/ic_baseline_transaction_24"
-                    android:title="10 Denières transactions " />
+                    android:title="Les denières transactions " />
             </menu>
         </item>
         <item

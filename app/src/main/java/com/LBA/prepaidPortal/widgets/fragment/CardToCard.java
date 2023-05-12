@@ -150,9 +150,9 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
         mStepView.getState()
                 .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
                 .animationType(StepView.ANIMATION_CIRCLE)
-                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorAccent))
+                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.yellow))
                 .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
-                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorPrimary))
+                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.Black))
                 // You should specify only stepsNumber or steps array of strings.
                 // In case you specify both steps array is chosen.
 
@@ -338,8 +338,9 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
             if (dialogWidth < MAX_HEIGHT) {
                 dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
             }
+            dialog.getWindow().setBackgroundDrawable(getActivity().getDrawable(R.drawable.white_rect));
             dialog.setContentView(R.layout.confirm_dialog_card_to_card_new);
-            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+            //dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
             dialog.setCancelable(false);
             dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
             TextView dateTransaction = (TextView) dialog.findViewById(R.id.date);
