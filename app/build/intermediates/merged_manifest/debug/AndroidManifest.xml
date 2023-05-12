@@ -27,7 +27,8 @@
 
         <activity
             android:name="com.LBA.prepaidPortal.activity.HomeActivity"
-            android:exported="false" >
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity android:name="com.LBA.prepaidPortal.activity.Z_WelcomeActivity" />
         <activity android:name="com.LBA.prepaidPortal.activity.LastTransactionResult" />
