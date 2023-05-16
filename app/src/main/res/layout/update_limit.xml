@@ -18,8 +18,8 @@
 		<LinearLayout
 			android:id="@+id/ll1"
 			android:layout_width="match_parent"
-			android:layout_height="27dp"
-			android:layout_weight="5">
+			android:layout_height="10dp"
+			android:layout_weight="0">
 		</LinearLayout>
 		<com.shuhart.stepview.StepView
 			android:id="@+id/step_view"
@@ -71,23 +71,26 @@
 			android:layout_height="522dp"
 			android:layout_marginStart="5dp"
 			android:layout_marginLeft="16dp"
-			android:layout_marginTop="60dp"
+			android:layout_marginTop="40dp"
 			android:layout_marginEnd="5dp"
 			android:layout_marginRight="16dp"
 			android:layout_marginBottom="20dp"
 			android:layout_weight="2">
-
-
 			<LinearLayout
 				android:id="@+id/ll2"
-				android:layout_width="326dp"
-				android:layout_marginTop="-5dp"
+				android:layout_width="325dp"
+				android:background="@drawable/currencyandnumcard"
+				android:layout_marginTop="1dp"
+				android:elevation="12dp"
+				android:paddingBottom="30dp"
+				android:layout_marginStart="10dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical">
 				<TextView
 					android:id="@+id/numéroCarte"
 					android:layout_width="470dp"
 					android:layout_height="80dp"
+					android:layout_marginTop="15dp"
 					android:layout_marginStart="16dp"
 					android:text="Numéro de carte"
 					android:textColor="@color/grey1"
@@ -96,7 +99,7 @@
 					android:id="@+id/mobilelLayout"
 					android:layout_width="310dp"
 					android:layout_height="80dp"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					app:layout_constraintTop_toBottomOf="@id/numéroCarte"
 					android:fontFamily="@font/poppinsmedium"
@@ -106,11 +109,12 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/cardNumber"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:background="@drawable/custom_eidttext"
 						android:textSize="@dimen/_10ssp"
 						android:fontFamily="@font/poppinsmedium"
+						android:paddingStart="15dp"
 						android:clickable="false"
 						android:ems="10"
 						android:enabled="false"
@@ -133,7 +137,7 @@
 					android:id="@+id/mobilelLayout"
 					android:layout_width="310dp"
 					android:layout_height="80dp"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					app:layout_constraintTop_toBottomOf="@id/numéroCarte"
 					android:fontFamily="@font/poppinsmedium"
@@ -142,11 +146,12 @@
 					>
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/limitCash"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
 						android:textSize="@dimen/_10ssp"
+						android:paddingStart="15dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="true"
@@ -168,7 +173,7 @@
 					android:id="@+id/mobilelLayout"
 					android:layout_width="310dp"
 					android:layout_height="80dp"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					app:layout_constraintTop_toBottomOf="@id/numéroCarte"
 					android:fontFamily="@font/poppinsmedium"
@@ -177,12 +182,13 @@
 					>
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/limitPurchase"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
 						android:textSize="@dimen/_10ssp"
 						android:clickable="true"
+						android:paddingStart="15dp"
 						android:ems="10"
 						android:enabled="true"
 						android:focusable="true"
@@ -203,7 +209,7 @@
 					android:id="@+id/mobilelLayout"
 					android:layout_width="310dp"
 					android:layout_height="80dp"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					app:layout_constraintTop_toBottomOf="@id/numéroCarte"
 					android:fontFamily="@font/poppinsmedium"
@@ -212,11 +218,12 @@
 					>
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/limitEcom"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
 						android:clickable="true"
+						android:paddingStart="15dp"
 						android:textSize="@dimen/_10ssp"
 						android:ems="10"
 						android:enabled="true"
@@ -226,15 +233,16 @@
 						android:textColor="@color/black"
 						/>
 				</com.google.android.material.textfield.TextInputLayout>
+				<include
+					android:id="@+id/footer_layout"
+					layout="@layout/footer_layout"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:layout_marginBottom="24dp" />
 			</LinearLayout>
 		</ScrollView>
-		<include
-			android:id="@+id/footer_layout"
-			layout="@layout/footer_layout"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:layout_alignParentBottom="true"
-			android:layout_marginBottom="50dp" />
+
 	</LinearLayout>
 
 

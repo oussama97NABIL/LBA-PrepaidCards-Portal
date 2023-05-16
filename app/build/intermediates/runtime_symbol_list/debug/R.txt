@@ -3372,7 +3372,9 @@ int id mirror 0x7f0a01e3
 int id mobile 0x7f0a01e4
 int id mobile_number 0x7f0a01e5
 int id mobilelLayout 0x7f0a01e6
+int id montant 0x7f0a0359
 int id montant_text 0x7f0a01e7
+int id montantlayout 0x7f0a035a
 int id month_grid 0x7f0a01e8
 int id month_navigation_bar 0x7f0a01e9
 int id month_navigation_fragment_toggle 0x7f0a01ea
@@ -3380,6 +3382,8 @@ int id month_navigation_next 0x7f0a01eb
 int id month_navigation_previous 0x7f0a01ec
 int id month_title 0x7f0a01ed
 int id motdepasse 0x7f0a01ee
+int id motif 0x7f0a01ef
+int id motifLayout 0x7f0a035b
 int id motif_text 0x7f0a01f0
 int id motion_base 0x7f0a01f1
 int id mtrl_anchor_parent 0x7f0a01f2
@@ -3432,6 +3436,8 @@ int id num 0x7f0a0220
 int id num_carte_txt 0x7f0a0221
 int id num_compte_txt 0x7f0a0222
 int id numéroCarte 0x7f0a0223
+int id numéroCompte 0x7f0a035c
+int id numéroCompteLayout 0x7f0a035d
 int id off 0x7f0a0224
 int id on 0x7f0a0225
 int id onAttachStateChangeListener 0x7f0a0226
@@ -3468,6 +3474,8 @@ int id rectangles 0x7f0a0244
 int id rectification 0x7f0a0245
 int id reference 0x7f0a0246
 int id referenceNumber 0x7f0a0247
+int id referencecarte 0x7f0a035e
+int id referencecarteLayout 0x7f0a035f
 int id referencenumber 0x7f0a0248
 int id refrealCodeLayout 0x7f0a0249
 int id refrencenumvie 0x7f0a024a
@@ -3688,6 +3696,8 @@ int id titleDividerNoCustom 0x7f0a0320
 int id titleRef 0x7f0a0321
 int id title_card_holder 0x7f0a0322
 int id title_template 0x7f0a0323
+int id titulairecarte 0x7f0a0360
+int id titulairecartelayout 0x7f0a0361
 int id toggle 0x7f0a0324
 int id toolbar 0x7f0a0325
 int id top 0x7f0a0326

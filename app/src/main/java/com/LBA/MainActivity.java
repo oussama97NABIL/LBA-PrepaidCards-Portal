@@ -89,6 +89,8 @@ public class MainActivity extends AbstractActivity  {
 
     }
 
+
+
     private class CustomTask extends AsyncTask<String, String, String> {
 
         Boolean finger;

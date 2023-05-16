@@ -16,7 +16,7 @@
 			android:id="@+id/ll1"
 			android:layout_width="match_parent"
 			android:layout_height="27dp"
-			android:layout_weight="5">
+			android:layout_weight="0">
 		</LinearLayout>
 
 		<com.shuhart.stepview.StepView
@@ -80,14 +80,19 @@
 
 			<LinearLayout
 				android:id="@+id/ll2"
-				android:layout_width="326dp"
-				android:layout_marginTop="50dp"
+				android:layout_width="325dp"
+				android:background="@drawable/currencyandnumcard"
+				android:layout_marginTop="10dp"
+				android:elevation="12dp"
+				android:paddingBottom="40dp"
+				android:layout_marginStart="10dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical">
 				<TextView
 					android:id="@+id/numéroCarte"
 					android:layout_width="470dp"
 					android:layout_height="80dp"
+					android:layout_marginTop="20dp"
 					android:layout_marginStart="16dp"
 					android:text="Numéro de la carte"
 					android:textColor="@color/grey1"
@@ -96,7 +101,7 @@
 					android:id="@+id/mobilelLayout"
 					android:layout_width="310dp"
 					android:layout_height="80dp"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-60dp"
 					android:layout_marginStart="16dp"
 					app:layout_constraintTop_toBottomOf="@id/numéroCarte"
 					android:fontFamily="@font/poppinsmedium"
@@ -106,9 +111,10 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/cardNumber"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:background="@drawable/custom_eidttext"
+						android:paddingStart="15dp"
 						android:fontFamily="@font/poppinsmedium"
 						android:clickable="false"
 						android:textSize="@dimen/_10ssp"
@@ -122,7 +128,7 @@
 				</com.google.android.material.textfield.TextInputLayout>
 				<Spinner
 					android:id="@+id/spinner"
-					android:layout_width="310dp"
+					android:layout_width="290dp"
 					android:layout_height="50dp"
 					android:layout_marginLeft="15dp"
 					android:clickable="true"
@@ -136,18 +142,18 @@
 					android:textColor="@color/black"
 					android:drawableEnd="@drawable/spinner"
 					/>
+				<include
+					android:id="@+id/footer_layout"
+					layout="@layout/footer_layout"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:layout_marginTop="240dp" />
 			</LinearLayout>
 
 
 		</ScrollView>
 
-		<include
-			android:id="@+id/footer_layout"
-			layout="@layout/footer_layout"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:layout_alignParentBottom="true"
-			android:layout_marginBottom="50dp" />
 	</LinearLayout>
 
 

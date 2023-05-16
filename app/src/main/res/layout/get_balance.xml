@@ -35,12 +35,17 @@
 
 			<LinearLayout
 				android:id="@+id/ll2"
-				android:layout_width="500dp"
+				android:layout_width="320dp"
+				android:background="@drawable/currencyandnumcard"
+				android:paddingBottom="40dp"
+				android:elevation="12dp"
+				android:layout_marginStart="10dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical">
 				<TextView
 					android:id="@+id/numéroCarte"
 					android:layout_width="470dp"
+					android:layout_marginTop="20dp"
 					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
 					android:text="Numéro de la carte"
@@ -57,13 +62,13 @@
 					android:textColorHint="@color/grey1"
 					app:errorEnabled="true"
 					>
-
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/cardNumber"
-						android:layout_width="match_parent"
+						android:layout_width="280dp"
 						android:layout_height="50dp"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
+						android:paddingStart="15dp"
 						android:clickable="true"
 						android:textSize="@dimen/_10ssp"
 						android:ems="10"
@@ -96,10 +101,11 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/startDate"
-						android:layout_width="match_parent"
+						android:layout_width="280dp"
 						android:layout_height="50dp"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
+						android:paddingStart="15dp"
 						android:clickable="true"
 						android:textSize="@dimen/_10ssp"
 						android:ems="10"
@@ -132,9 +138,10 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/endDate"
-						android:layout_width="match_parent"
+						android:layout_width="280dp"
 						android:layout_height="50dp"
 						android:background="@drawable/custom_eidttext"
+						android:paddingStart="15dp"
 						android:fontFamily="@font/poppinsmedium"
 						android:clickable="true"
 						android:textSize="@dimen/_10ssp"
@@ -152,19 +159,19 @@
 
 
 
-
+				<include
+					android:id="@+id/footer_layout"
+					layout="@layout/footer_layout"
+					android:layout_width="350dp"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:layout_marginTop="150dp" />
 			</LinearLayout>
 
 
 		</ScrollView>
 
-		<include
-			android:id="@+id/footer_layout"
-			layout="@layout/footer_layout"
-			android:layout_width="350dp"
-			android:layout_height="wrap_content"
-			android:layout_alignParentBottom="true"
-			android:layout_marginBottom="150dp" />
+
 	</LinearLayout>
 
 

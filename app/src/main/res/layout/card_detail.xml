@@ -8,13 +8,7 @@
 	android:orientation="vertical"
 	>
 	<include layout="@layout/page_title" />
-	<include
-		android:id="@+id/footer_layout"
-		layout="@layout/footer_layout1"
-		android:layout_width="398dp"
-		android:layout_height="90dp"
-		android:layout_alignParentBottom="true"
-		android:layout_marginTop="-10dp" />
+
 	<HorizontalScrollView
 		android:id="@+id/horizontalScrollView1"
 		android:layout_width="fill_parent"
@@ -28,13 +22,13 @@
 		<LinearLayout
 			android:id="@+id/ll1"
 			android:layout_width="match_parent"
-			android:layout_height="27dp"
-			android:layout_weight="-1">
+			android:layout_height="1dp"
+			android:layout_weight="1">
 		</LinearLayout>
 		<ScrollView
 			android:id="@+id/scroll_view"
 			android:layout_width="match_parent"
-			android:layout_height="588dp"
+			android:layout_height="670dp"
 			android:layout_marginStart="5dp"
 			android:layout_marginLeft="16dp"
 			android:layout_marginTop="7dp"
@@ -42,16 +36,22 @@
 			android:layout_marginRight="16dp"
 			android:layout_marginBottom="20dp"
 			android:orientation="vertical"
-			android:layout_weight="1">
+			android:layout_weight="2">
 
 			<LinearLayout
 				android:id="@+id/ll2"
-				android:layout_width="500dp"
+				android:layout_width="325dp"
+				android:layout_marginStart="10dp"
+				android:paddingBottom="2dp"
+				android:layout_marginTop="-0dp"
+				android:background="@drawable/currencyandnumcard"
+				android:elevation="12dp"
 				android:layout_height="match_parent"
 				android:orientation="vertical"
 				>
 				<TextView
 					android:id="@+id/numéroCarte"
+					android:layout_marginTop="20dp"
 					android:layout_width="470dp"
 					android:layout_height="80dp"
 					android:layout_marginStart="16dp"
@@ -62,7 +62,7 @@
 					android:id="@+id/mobilelLayout"
 					android:layout_width="310dp"
 					android:layout_height="80dp"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					app:layout_constraintTop_toBottomOf="@id/numéroCarte"
 					android:fontFamily="@font/poppinsmedium"
@@ -72,11 +72,12 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/cardNumber"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
 						android:clickable="true"
+						android:paddingStart="15dp"
 						android:textSize="@dimen/_10ssp"
 						android:ems="10"
 						android:enabled="false"
@@ -99,7 +100,7 @@
 					android:id="@+id/refrealCodeLayout"
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					app:layout_constraintTop_toBottomOf="@id/nomBanque"
 					android:fontFamily="@font/poppinsmedium"
@@ -108,10 +109,11 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/bankname"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
+						android:paddingStart="15dp"
 						android:enabled="false"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
@@ -136,7 +138,7 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
@@ -144,11 +146,12 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/clientcode"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:paddingStart="15dp"
 						android:textSize="@dimen/_10ssp"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
@@ -172,7 +175,7 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
@@ -180,12 +183,13 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/branch"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:fontFamily="@font/poppinsmedium"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:textSize="@dimen/_10ssp"
+						android:paddingStart="15dp"
 						android:enabled="false"
 						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
@@ -208,7 +212,7 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
@@ -216,12 +220,13 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/client_type"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:textSize="@dimen/_10ssp"
 						android:enabled="false"
+						android:paddingStart="15dp"
 						android:fontFamily="@font/poppinsmedium"
 						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
@@ -244,7 +249,7 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
@@ -252,13 +257,14 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/status_Card"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
 						android:textSize="@dimen/_10ssp"
 						android:background="@drawable/custom_eidttext"
+						android:paddingStart="15dp"
 						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
@@ -280,7 +286,7 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
@@ -288,11 +294,12 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/title_card_holder"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:paddingStart="15dp"
 						android:textSize="@dimen/_10ssp"
 						android:fontFamily="@font/poppinsmedium"
 						android:background="@drawable/custom_eidttext"
@@ -316,7 +323,7 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
@@ -324,12 +331,13 @@
 
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/family_name"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:fontFamily="@font/poppinsmedium"
 						android:ems="10"
 						android:enabled="false"
+						android:paddingStart="15dp"
 						android:textSize="@dimen/_10ssp"
 						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
@@ -351,18 +359,19 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
 					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/document_code"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:textSize="@dimen/_10ssp"
 						android:ems="10"
+						android:paddingStart="15dp"
 						android:enabled="false"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
@@ -385,19 +394,20 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
 					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/document_id"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:fontFamily="@font/poppinsmedium"
 						android:textSize="@dimen/_10ssp"
 						android:ems="10"
+						android:paddingStart="15dp"
 						android:enabled="false"
 						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
@@ -418,18 +428,19 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
 					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/address"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
+						android:paddingStart="15dp"
 						android:textSize="@dimen/_10ssp"
 						android:background="@drawable/custom_eidttext"
 						android:fontFamily="@font/poppinsmedium"
@@ -451,14 +462,14 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
 					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/expiry_date"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
@@ -466,6 +477,7 @@
 						android:background="@drawable/custom_eidttext"
 						android:textSize="@dimen/_10ssp"
 						android:fontFamily="@font/poppinsmedium"
+						android:paddingStart="15dp"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
 						android:inputType="text"
@@ -484,20 +496,21 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
 					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/mobile_number"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
 						android:textSize="@dimen/_10ssp"
 						android:fontFamily="@font/poppinsmedium"
+						android:paddingStart="15dp"
 						android:background="@drawable/custom_eidttext"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
@@ -517,20 +530,21 @@
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
 					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
+					android:layout_marginTop="-65dp"
 					android:layout_marginStart="16dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
 					app:errorEnabled="true">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/city"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
 						android:clickable="true"
 						android:ems="10"
 						android:enabled="false"
 						android:textSize="@dimen/_10ssp"
 						android:background="@drawable/custom_eidttext"
+						android:paddingStart="15dp"
 						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
@@ -545,31 +559,44 @@
 					android:text="Pays"
 					android:textColor="@color/grey1"
 					android:fontFamily="@font/poppinsmedium"/>
+
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/bizcertLayout"
 					android:layout_width="310dp"
 					android:layout_height="wrap_content"
-					app:layout_constraintTop_toBottomOf="@id/codeClient"
-					android:layout_marginTop="-50dp"
 					android:layout_marginStart="16dp"
+					android:layout_marginTop="-65dp"
 					android:fontFamily="@font/poppinsmedium"
 					android:textColorHint="@color/grey1"
-					app:errorEnabled="true">
+					app:errorEnabled="true"
+					app:layout_constraintTop_toBottomOf="@id/codeClient">
+
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/country"
-						android:layout_width="match_parent"
+						android:layout_width="290dp"
 						android:layout_height="50dp"
+						android:background="@drawable/custom_eidttext"
 						android:clickable="true"
-						android:textSize="@dimen/_10ssp"
 						android:ems="10"
 						android:enabled="false"
-						android:background="@drawable/custom_eidttext"
-						android:fontFamily="@font/poppinsmedium"
 						android:focusable="false"
 						android:focusableInTouchMode="false"
+						android:fontFamily="@font/poppinsmedium"
 						android:inputType="text"
-						android:textColor="@color/black" />
+						android:paddingStart="15dp"
+						android:textColor="@color/black"
+						android:textSize="@dimen/_10ssp" />
 				</com.google.android.material.textfield.TextInputLayout>
+				<include
+					android:id="@+id/footer_layout"
+					layout="@layout/footer_layout1"
+					android:layout_width="398dp"
+					android:layout_height="90dp"
+					android:layout_alignParentBottom="true"
+					android:layout_marginStart="2dp"
+					android:layout_marginTop="2dp"
+					android:layout_marginEnd="2dp"
+					android:layout_marginBottom="-10dp" />
 			</LinearLayout>
 		</ScrollView>
 	</LinearLayout>

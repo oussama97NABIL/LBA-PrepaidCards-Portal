@@ -3373,7 +3373,9 @@ id mirror
 id mobile
 id mobile_number
 id mobilelLayout
+id montant
 id montant_text
+id montantlayout
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3381,6 +3383,8 @@ id month_navigation_next
 id month_navigation_previous
 id month_title
 id motdepasse
+id motif
+id motifLayout
 id motif_text
 id motion_base
 id mtrl_anchor_parent
@@ -3433,6 +3437,8 @@ id num
 id num_carte_txt
 id num_compte_txt
 id numéroCarte
+id numéroCompte
+id numéroCompteLayout
 id off
 id on
 id onAttachStateChangeListener
@@ -3469,6 +3475,8 @@ id rectangles
 id rectification
 id reference
 id referenceNumber
+id referencecarte
+id referencecarteLayout
 id referencenumber
 id refrealCodeLayout
 id refrencenumvie
@@ -3689,6 +3697,8 @@ id titleDividerNoCustom
 id titleRef
 id title_card_holder
 id title_template
+id titulairecarte
+id titulairecartelayout
 id toggle
 id toolbar
 id top
