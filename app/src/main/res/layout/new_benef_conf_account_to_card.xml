@@ -3,8 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white">
-
-
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
@@ -16,9 +14,6 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1">
-
-
-
         <LinearLayout
             android:id="@+id/details"
             android:layout_width="match_parent"
@@ -30,6 +25,7 @@
             android:paddingTop="20dp">
             <TableLayout
                 android:layout_width="match_parent"
+
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true">
@@ -49,39 +45,46 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_marginTop="20.0dip"
-                    android:layout_height="match_parent">
+                    android:layout_marginTop="20.0dip">
                     <TextView
                         android:id="@+id/validation_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="4"
-                        android:textSize="@dimen/_16ssp"
-                        android:layout_weight=".5"
-                        android:text="Validation et Otp"
-                        android:fontFamily="@font/poppinsmedium"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
                         android:layout_marginLeft="8.0dip"
                         android:layout_marginTop="12.0dip"
                         android:layout_marginBottom="10.0dip"
-                        />
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:gravity="center_horizontal"
+                        android:text="Validation et Otp"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3px"
+                        android:layout_marginStart="-280dp"
+                        android:layout_marginTop="55dp"
+                        android:layout_marginEnd="28dp"
+                        android:background="@color/grey9"
+                         />
                 </TableRow>
                 <TableRow
-
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="26dp">
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="4"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_13ssp"
                         android:textColor="@color/grey10"
                         android:fontFamily="@font/poppinsmedium"
                         android:gravity="center_horizontal"
@@ -136,6 +139,7 @@
                         android:layout_weight=".5"
                         android:textSize="@dimen/_9ssp"
                         android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:gravity="center_horizontal"
                         android:text="Titulaire de carte " />
 
@@ -164,6 +168,7 @@
                         android:layout_column="4"
                         android:fontFamily="@font/poppinsmedium"
                         android:layout_weight=".5"
+                        android:textStyle="bold"
                         android:textSize="@dimen/_9ssp"
                         android:textColor="@color/black"
                         android:gravity="center_horizontal"
@@ -194,6 +199,7 @@
                         android:textSize="@dimen/_9ssp"
                         android:fontFamily="@font/poppinsmedium"
                         android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:gravity="center_horizontal"
                         android:text="47852333 " />
                 </TableRow>
@@ -221,6 +227,7 @@
                         android:textSize="@dimen/_9ssp"
                         android:fontFamily="@font/poppinsmedium"
                         android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:gravity="center_horizontal"
                         android:text="NumCompte " />
                 </TableRow>
@@ -248,6 +255,7 @@
                         android:textSize="@dimen/_9ssp"
                         android:fontFamily="@font/poppinsmedium"
                         android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:gravity="center_horizontal"
                         android:text="NumCompte " />
                 </TableRow>

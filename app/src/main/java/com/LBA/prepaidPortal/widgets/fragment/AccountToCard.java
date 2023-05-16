@@ -130,7 +130,6 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
         //getCardInformations();
         OpenTime();
         getCardNumber();
-
         canBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -184,14 +183,9 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
                 .nextStepCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.grey6))
                 .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.Black))
-                // You should specify only stepsNumber or steps array of strings.
-                // In case you specify both steps array is chosen.
-
-                // You should specify only steps number or steps array of strings.
-                // In case you specify both steps array is chosen.
                 .stepsNumber(3)
                 .animationType(StepView.ANIMATION_ALL)
-                .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
+                .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.Black))
                 .animationDuration(getResources().getInteger(android.R.integer.config_shortAnimTime))
                 .stepLineWidth(getResources().getDimensionPixelSize(R.dimen._1sdp))
                 .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
@@ -488,7 +482,7 @@ public class AccountToCard extends BaseFragment implements AdapterView.OnItemSel
             Button cancel = dialog.findViewById(R.id.btn_cancel);
             if(!isSuccessful){
                 ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
-                image.setImageResource(R.drawable.error_icon);
+                image.setImageResource(R.drawable.failed_1);
                 TextView success = (TextView) dialog.findViewById(R.id.textView);
                 success.setText("Echoué");
                 TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);

@@ -125,14 +125,9 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
         mStepView.getState()
                 .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
                 .animationType(StepView.ANIMATION_CIRCLE)
-                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorAccent))
+                .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.yellow))
                 .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
-                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.colorPrimary))
-                // You should specify only stepsNumber or steps array of strings.
-                // In case you specify both steps array is chosen.
-
-                // You should specify only steps number or steps array of strings.
-                // In case you specify both steps array is chosen.
+                .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.Black))
                 .stepsNumber(3)
                 .animationType(StepView.ANIMATION_LINE)
                 .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
@@ -140,7 +135,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                 .stepLineWidth(getResources().getDimensionPixelSize(R.dimen._1sdp))
                 .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen._16sdp))
-                .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
+                .typeface(ResourcesCompat.getFont(getContext(), R.font.poppinsmedium))
                 // other state methods are equal to the corresponding xml attributes
                 .commit();
         String[] arraySpinner = new String[] {

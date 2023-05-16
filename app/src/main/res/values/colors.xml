@@ -71,6 +71,7 @@
     <color name="grey8">#757575</color>
     <color name="grey9">#C4C4C4</color>
     <color name="grey10">#515151</color>
+    <color name="grey_line">#A2A2A2</color>
     <!-- grt=ry for the transaction pages -->
 
     <color name="tr_text_grey">#C1C0C8</color>

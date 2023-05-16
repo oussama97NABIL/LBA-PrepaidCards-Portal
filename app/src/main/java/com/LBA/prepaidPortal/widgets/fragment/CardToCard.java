@@ -153,11 +153,6 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
                 .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.yellow))
                 .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.Black))
-                // You should specify only stepsNumber or steps array of strings.
-                // In case you specify both steps array is chosen.
-
-                // You should specify only steps number or steps array of strings.
-                // In case you specify both steps array is chosen.
                 .stepsNumber(3)
                 .animationType(StepView.ANIMATION_LINE)
                 .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
@@ -366,7 +361,7 @@ public class CardToCard extends BaseFragment implements AdapterView.OnItemSelect
             Button cancel = dialog.findViewById(R.id.btn_cancel);
             if(!isSuccessful){
                 ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
-                image.setImageResource(R.drawable.error_icon);
+                image.setImageResource(R.drawable.failed_1);
                 TextView success = (TextView) dialog.findViewById(R.id.textView);
                 success.setText("Echoué");
                 TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);

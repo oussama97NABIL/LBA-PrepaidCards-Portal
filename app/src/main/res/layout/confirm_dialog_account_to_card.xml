@@ -37,24 +37,28 @@
 
         <TextView
             android:id="@+id/validation_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="2dp"
+            android:layout_height="44dp"
             android:layout_column="4"
-            android:textSize="@dimen/_18ssp"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginEnd="-320.0dip"
+            android:layout_marginBottom="10.0dip"
             android:layout_weight=".5"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_horizontal"
             android:text="Confirmation"
             android:textAppearance="?android:textAppearanceLarge"
-            android:fontFamily="@font/poppinsmedium"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:layout_marginLeft="8.0dip"
-            android:layout_marginTop="12.0dip"
-            android:layout_marginBottom="10.0dip"
-            />
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="260dp"
+            android:layout_height="3px"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="26dp"
+            android:background="@color/grey9" />
     </TableRow>
-
-
         <ImageView
         android:id="@+id/imageView"
         android:layout_width="111dp"
@@ -81,7 +85,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
@@ -119,20 +122,19 @@
                         android:id="@+id/date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="26dp"
+                        android:textStyle="bold"
                         android:layout_column="4"
                         android:layout_weight=".5"
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="@dimen/_9ssp"
                         android:textColor="@color/black"
-                        android:gravity="center_horizontal" android:text="Titulaire de carte " />
-
+                        android:gravity="center_horizontal"
+                        android:text="Titulaire de carte " />
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -148,9 +150,10 @@
                         android:id="@+id/nom_carte"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="26dp"
                         android:layout_column="4"
                         android:layout_weight=".5"
+                        android:textStyle="bold"
                         android:textSize="@dimen/_9ssp"
                         android:fontFamily="@font/poppinsmedium"
                         android:textColor="@color/black"
@@ -178,8 +181,9 @@
                         android:id="@+id/reférence_carte_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="26dp"
                         android:fontFamily="@font/poppinsmedium"
+                        android:textStyle="bold"
                         android:layout_column="4"
                         android:layout_weight=".5"
                         android:textSize="@dimen/_9ssp"
@@ -207,9 +211,10 @@
                         android:id="@+id/montant_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="26dp"
                         android:fontFamily="@font/poppinsmedium"
                         android:layout_column="4"
+                        android:textStyle="bold"
                         android:layout_weight=".5"
                         android:textSize="@dimen/_9ssp"
                         android:textColor="@color/black"
@@ -220,8 +225,6 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -237,12 +240,13 @@
                         android:id="@+id/motif_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="26dp"
                         android:fontFamily="@font/poppinsmedium"
                         android:layout_column="4"
                         android:layout_weight=".5"
                         android:textSize="@dimen/_9ssp"
                         android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:gravity="center_horizontal"
                         android:text="Titulaire de carte " />
                 </TableRow>

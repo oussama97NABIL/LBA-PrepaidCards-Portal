@@ -1256,6 +1256,7 @@ color grey7
 color grey8
 color grey9
 color grey_bg
+color grey_line
 color grey_v
 color header
 color highlighted_text_material_dark
@@ -2750,6 +2751,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable error_icon
+drawable failed_1
 drawable fingerprint_dialog_error
 drawable fingerprint_dialog_fp_icon
 drawable fingerprint_icon_b

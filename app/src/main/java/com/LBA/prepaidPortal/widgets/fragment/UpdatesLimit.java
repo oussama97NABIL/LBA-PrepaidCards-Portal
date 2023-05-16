@@ -138,22 +138,20 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 }
             }
         });
-
-
         mStepView.getState()
                 .selectedTextColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.white))
-                .animationType(StepView.ANIMATION_CIRCLE)
+                .animationType(StepView.ANIMATION_ALL) // Ajout de ANIMATION_ALL
                 .selectedCircleColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.yellow))
                 .selectedCircleRadius(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .selectedStepNumberColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.Black))
                 .stepsNumber(3)
-                .animationType(StepView.ANIMATION_LINE)
-                .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
+                // Ajout de allNextCirclesEnabled avec la valeur true
                 .animationDuration(getResources().getInteger(android.R.integer.config_shortAnimTime))
                 .stepLineWidth(getResources().getDimensionPixelSize(R.dimen._1sdp))
                 .textSize(getResources().getDimensionPixelSize(R.dimen._14sdp))
                 .stepNumberTextSize(getResources().getDimensionPixelSize(R.dimen._16sdp))
-                .typeface(ResourcesCompat.getFont(getContext(), R.font.roboto_light))
+                .typeface(ResourcesCompat.getFont(getContext(), R.font.poppinsmedium))
+                .doneStepLineColor(ContextCompat.getColor(getActivity().getApplicationContext(), R.color.black))
                 // other state methods are equal to the corresponding xml attributes
                 .commit();
         /**
