@@ -253,7 +253,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 return;
             }
             if(param!=null) {
-
                 Toast.makeText(getActivity().getApplicationContext(), param, Toast.LENGTH_LONG).show();
                 Log.e(TAG, "doInBackground: 4" );
             }else{
@@ -348,7 +347,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         if (dialogWidth < MAX_HEIGHT) {
             dialog.getWindow().setLayout(dialogWidth, MAX_HEIGHT);
         }
-
         dialog.setContentView(R.layout.confirm_dialog_plafond);
         dialog.getWindow().setBackgroundDrawable(getActivity().getDrawable(R.drawable.white_rect));
         //dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -361,7 +359,7 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
         Button cancel = dialog.findViewById(R.id.btn_cancel);
         if(!isSuccessful){
             ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
-            image.setImageResource(R.drawable.error_icon);
+            image.setImageResource(R.drawable.failed_1);
             TextView success = (TextView) dialog.findViewById(R.id.textView);
             success.setText("Failure");
             TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);
@@ -382,7 +380,6 @@ public class UpdatesLimit extends BaseFragment implements AdapterView.OnItemSele
                 dialog.dismiss();
             }
         });
-
         dialog.show();
     }
     private class CustomTaskCardLimit extends AsyncTask<String, String, String> {

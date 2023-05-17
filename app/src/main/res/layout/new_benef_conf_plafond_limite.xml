@@ -105,7 +105,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="4"
-                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginTop="-3dp"
+                        android:textSize="@dimen/_13ssp"
                         android:textColor="@color/grey8"
                         android:gravity="center_horizontal"
                         android:fontFamily="@font/poppinsmedium"
@@ -140,40 +141,49 @@
                         android:textColor="@color/marron"
                         android:gravity="center_horizontal"
                         android:text="Etes vous sûr de vouloir limiter la carte de numéro"/>
-
-
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="9"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/cardNumber"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight=".5"
+                        android:layout_marginTop="10dp"
                         android:text=""
                         android:inputType="numberDecimal"
                         android:fontFamily="@font/poppinsmedium"
                         android:textAlignment="center"
-                        android:textSize="20dp"
+                        android:textSize="15dp"
                         android:textStyle="bold"
                         android:textColor="@color/red_close" />
                 </TableRow>
-                <TableRow
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
-
-
-                <TableRow
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -202,7 +212,7 @@
 
                 <Button
                     android:id="@+id/btnNOk"
-                    android:layout_width="25dp"
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_centerHorizontal="true"
@@ -216,7 +226,7 @@
 
                 <Button
                     android:id="@+id/btnOk"
-                    android:layout_width="25dp"
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"

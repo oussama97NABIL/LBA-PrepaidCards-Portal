@@ -153,8 +153,6 @@
 					android:layout_alignParentBottom="true"
 					android:layout_marginTop="240dp" />
 			</LinearLayout>
-
-
 		</ScrollView>
 
 	</LinearLayout>

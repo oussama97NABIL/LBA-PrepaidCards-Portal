@@ -88,7 +88,6 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
                              @Nullable Bundle savedInstanceState) {
 
         mRootView = inflater.inflate(R.layout.block_card_new, container, false);
-
         SpannableString spannableString = new SpannableString("Bloquer/Débloquer une carte");
         spannableString.setSpan(new ForegroundColorSpan(Color.WHITE), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         getActivity().setTitle(spannableString);
@@ -314,7 +313,7 @@ public class BlockCard extends BaseFragment implements AdapterView.OnItemSelecte
             Button cancel = dialog.findViewById(R.id.btn_cancel);
             if(!isSuccessful){
                 ImageView image =  (ImageView) dialog.findViewById(R.id.imageView);
-                image.setImageResource(R.drawable.error_icon);
+                image.setImageResource(R.drawable.failed_1);
                 TextView success = (TextView) dialog.findViewById(R.id.textView);
                 success.setText("Echoué");
                 TextView Felicitation = (TextView) dialog.findViewById(R.id.textView2);

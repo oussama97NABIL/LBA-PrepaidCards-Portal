@@ -254,14 +254,14 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             }
         });
 
-        imageshowSolde.setImageResource(R.drawable.baseline_visibility_off_24);
+        imageshowSolde.setImageResource(R.drawable.baseline_visibility_24);
         imageshowSolde.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(hidePager){
                     showSolde.setText("****");
                     hidePager = false;
-                    imageshowSolde.setImageResource(R.drawable.baseline_visibility_off_24);
+                    imageshowSolde.setImageResource(R.drawable.baseline_visibility_24);
                 }else{
                     try {
                         initProgrees();
@@ -269,7 +269,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                     } catch (Exception e) {
                         Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                     }
-                    imageshowSolde.setImageResource(R.drawable.baseline_visibility_24);
+                    imageshowSolde.setImageResource(R.drawable.baseline_visibility_off_24);
                     hidePager = true;
                 }
             }
